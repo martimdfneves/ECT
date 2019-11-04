@@ -1,0 +1,90 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+//
+// This file contains Fast Corner delays for the design using part EP4CE115F29C7,
+// with speed grade M, core voltage 1.2VmV, and temperature 0 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim-Altera (VHDL) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "Mux2_1")
+  (DATE "02/23/2018 14:13:46")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \\muxOut\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (316:316:316) (356:356:356))
+        (IOPATH i o (1609:1609:1609) (1634:1634:1634))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE \\input0\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (288:288:288) (668:668:668))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE \\sel\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (278:278:278) (658:658:658))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE \\input1\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (288:288:288) (668:668:668))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE \\muxOut\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1473:1473:1473) (1644:1644:1644))
+        (PORT datab (1452:1452:1452) (1622:1622:1622))
+        (PORT datad (1446:1446:1446) (1608:1608:1608))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (158:158:158))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+)

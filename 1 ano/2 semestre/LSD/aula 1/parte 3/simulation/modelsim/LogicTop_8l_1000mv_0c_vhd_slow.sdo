@@ -1,0 +1,153 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+
+// 
+// Device: Altera EP4CE115F29C8L Package FBGA780
+// 
+
+//
+// This file contains Slow Corner delays for the design using part EP4CE115F29C8L,
+// with speed grade 8L, core voltage 1.0VmV, and temperature 0 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim-Altera (VHDL) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "LogicTop")
+  (DATE "02/21/2018 11:46:12")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \\LEDG\[5\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1283:1283:1283) (1349:1349:1349))
+        (IOPATH i o (3089:3089:3089) (3094:3094:3094))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \\LEDG\[4\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1174:1174:1174) (1235:1235:1235))
+        (IOPATH i o (3059:3059:3059) (3064:3064:3064))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \\LEDG\[3\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (524:524:524) (514:514:514))
+        (IOPATH i o (3104:3104:3104) (3099:3099:3099))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \\LEDG\[2\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (862:862:862) (825:825:825))
+        (IOPATH i o (3094:3094:3094) (3089:3089:3089))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \\LEDG\[1\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (1708:1708:1708) (1587:1587:1587))
+        (IOPATH i o (3034:3034:3034) (3029:3029:3029))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE \\LEDG\[0\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (6895:6895:6895) (6658:6658:6658))
+        (IOPATH i o (3029:3029:3029) (3034:3034:3034))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE \\SW\[1\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (864:864:864) (840:840:840))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE \\SW\[0\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (864:864:864) (840:840:840))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE \\inst\|norOut\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (6256:6256:6256) (6535:6535:6535))
+        (PORT datad (6160:6160:6160) (6439:6439:6439))
+        (IOPATH dataa combout (454:454:454) (521:521:521))
+        (IOPATH datad combout (178:178:178) (153:153:153))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE \\inst\|nandOut\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (6256:6256:6256) (6535:6535:6535))
+        (PORT datad (6161:6161:6161) (6440:6440:6440))
+        (IOPATH dataa combout (396:396:396) (431:431:431))
+        (IOPATH datad combout (178:178:178) (153:153:153))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE \\inst\|xorOut\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (6256:6256:6256) (6535:6535:6535))
+        (PORT datad (6160:6160:6160) (6438:6438:6438))
+        (IOPATH dataa combout (454:454:454) (521:521:521))
+        (IOPATH datad combout (178:178:178) (153:153:153))
+      )
+    )
+  )
+)

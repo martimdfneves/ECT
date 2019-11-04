@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Feb 28 12:34:42 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : AdderDemo
+Top-level Entity Name : AdderDemo
+Family : Cyclone IV E
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

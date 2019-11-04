@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity start is
+	port(clk   : in  std_logic;
+		  stst  : in  std_logic;
+		  out_t : out std_logic;
+		  out_l : out std_logic);
+end start;
+
+architecture hardware of start is
+signal d        : std_logic;
+signal s_clk1Hz : std_logic;
+begin
+
+clk_div_1hz : entity work.ClkDividerN(RTL)
+							generic map(k			=> 50000000)
+							port map(clkIn			=> clk,
+										clkOut		=> s_clk1Hz);
+	process(stst)
+	begin
+		if (rising_edge(stst)) then
+			if (d = '0') then
+				d <= '1';
+			else
+				d <= '0';
+			end if;
+		end if;
+	end process;
+	
+	out_t <= s_clk1Hz when(d='1') else '0';--Trocar clk para a simulação por s_clk1Hz
+	out_l <= s_clk1Hz when(d='0') else '0';--Trocar clk para a simulação por s_clk1Hz
+end hardware;

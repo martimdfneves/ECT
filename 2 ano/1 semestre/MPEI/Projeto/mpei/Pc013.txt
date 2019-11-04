@@ -1,0 +1,5 @@
+CPU: i5-7500
+MotherBoard: Asus ROG Strix B250F
+Ram: 4Gb
+GPU: radeon 590
+Armazenamento: HDD 256GB

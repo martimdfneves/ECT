@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Mar 21 11:02:51 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : CmpN_Demo
+Top-level Entity Name : CmpN_Demo
+Family : Cyclone IV E
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,5 @@
+CPU: ryzen 7 2700
+MotherBoard: ASrock X470
+Ram: 16Gb
+GPU: nvidia RTX2080
+Armazenamento: HDD 2TB

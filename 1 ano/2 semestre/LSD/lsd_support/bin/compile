@@ -1,0 +1,52 @@
+#! /bin/bash
+#
+# LSD.TOS, April 2018 (DO NOT REMOVE THIS LINE)
+#
+# Compile a quartus project. It is assumed that the name and revision of the project is equal to the name of the directory where it resides.
+#
+
+if [[ $# != 1 ]]; then
+  echo "Usage: compile project_dir"
+  exit 1
+fi
+
+if [[ $1 == */ ]]; then
+  echo "$1 has a trailing /"
+  exit 1
+fi
+
+if [[ ! -d $1 ]]; then
+  echo "$1 is not a directory"
+  exit 1
+fi
+
+if [[ ! -e $1/$1.qpf ]]; then
+  echo "$1/$1.qpf does not exist"
+  exit 1
+fi
+
+#
+# compile
+#
+set -e
+cd $1
+quartus_map --read_settings_files=on  --write_settings_files=off $1 -c $1
+quartus_fit --read_settings_files=off --write_settings_files=off $1 -c $1
+quartus_asm --read_settings_files=off --write_settings_files=off $1 -c $1
+quartus_sta                                                      $1 -c $1
+quartus_drc --read_settings_files=off --write_settings_files=off $1 -c $1
+quartus_eda --read_settings_files=off --write_settings_files=off $1 -c $1
+
+#
+# copy sof file
+#
+if [[ -d ../sof ]]; then
+  cp output_files/$1.sof ../sof
+fi
+
+#
+# report Fmax
+#
+set +e
+grep -B 1 -A 5 --color=never "; Slow 1200mV 85C Model Fmax Summary" output_files/$1.sta.rpt
+exit 0

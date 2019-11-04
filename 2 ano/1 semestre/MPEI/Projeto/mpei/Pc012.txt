@@ -1,0 +1,5 @@
+CPU: i5-8200
+MotherBoard: MSI Z370
+Ram: 12Gb
+GPU: nvidia RTX2070ti
+Armazenamento: HDD 1TB

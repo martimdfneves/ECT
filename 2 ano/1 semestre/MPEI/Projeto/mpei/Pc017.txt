@@ -1,0 +1,5 @@
+CPU: i9-7960
+MotherBoard: Asus Prime B250F
+Ram: 8Gb
+GPU: radeon 580
+Armazenamento: HDD 2TB

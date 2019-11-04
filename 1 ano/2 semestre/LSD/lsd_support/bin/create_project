@@ -1,0 +1,62 @@
+#! /bin/bash
+#
+# LSD.TOS, April 2018 (DO NOT REMOVE THIS LINE)
+#
+# Create a new project. The name of the project will also be the name of the directory that will be created.
+# The top-level entity will be the project name followed by "_tl"; it should be placed in a file named <project_name>_tl.vhd
+# Extra files will be copied into the project directory
+#
+
+if (( $# == 0 )); then
+  echo "Usage: $0 project_name [extra_vhdl_project_files ...]"
+  exit 1
+fi
+
+if [[ "$(dirname $1)" != "." ]]; then
+  echo "The project name cannot contain directories"
+  exit 1
+fi
+
+if [[ -d $1 ]]; then
+  echo "The directory $1 already exists"
+  exit 1
+fi
+
+set -e
+dir=$(dirname $0)
+dir=$(readlink -f $dir/../useful_files)
+date=$(date)
+proj=$1
+shift
+
+mkdir $proj
+extra=""
+for file in $*; do
+  if [[ $file != *.vhd ]]; then
+    echo "The file $file must have have .vhd extension"
+    exit 1
+  fi
+  if [[ ! -e $file ]]; then
+    echo "Warning: the file $file does not exist, an empty file with that name will be put in the project"
+    touch $proj/$(basename $file)
+  else
+    echo "Copying file $file to the project ..."
+    cp -f $file $proj
+  fi
+  file=$(basename $file)
+  chmod 600 $proj/$file
+  if [[ $file != "${proj}_tl.vhd" ]]; then
+    extra="${extra}set_global_assignment -name VHDL_FILE ${file}\\n"
+  fi
+done
+for ext in cdf cof frf qpf qsf sdc srf; do
+  echo "Creating $proj/$proj.$ext ..."
+  sed -e "s/XXX_PROJECT_NAME_XXX/$proj/" -e "s/XXX_DATE_XXX/$date/" -e "s/XXX_EXTRA_XXX/$extra/" $dir/project_template.$ext >$proj/$proj.$ext
+  chmod 600 $proj/$proj.$ext
+done
+if [[ ! -e ${proj}/${proj}_tl.vhd ]]; then
+  echo "Creating ${proj}/${proj}_tl.vhd ..."
+  touch ${proj}/${proj}_tl.vhd
+  chmod 600 ${proj}/${proj}_tl.vhd
+fi
+echo "Project $proj created"

@@ -1,0 +1,5 @@
+CPU: i7-7800
+MotherBoard: Gigabyte B450
+Ram: 4Gb
+GPU: nvidia RTX2080
+Armazenamento: SSD 2TB

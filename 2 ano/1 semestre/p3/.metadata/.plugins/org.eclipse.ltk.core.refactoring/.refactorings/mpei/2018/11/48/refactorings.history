@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;mpei.Counting_Bloom_Filter.java&apos; to &apos;Count_Bloom_Filter.java&apos;&#x0D;&#x0A;- Original project: &apos;mpei&apos;&#x0D;&#x0A;- Original element: &apos;mpei.Counting_Bloom_Filter.java&apos;&#x0D;&#x0A;- Renamed element: &apos;mpei.Count_Bloom_Filter.java&apos;" description="Rename compilation unit &apos;Counting_Bloom_Filter.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;mpei{Counting_Bloom_Filter.java" name="Count_Bloom_Filter.java" references="false" stamp="1543402217699" version="1.0"/>
+</session>

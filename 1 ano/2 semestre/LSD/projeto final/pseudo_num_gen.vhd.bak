@@ -1,0 +1,42 @@
+library IEEE;
+use     IEEE.STD_LOGIC_1164.ALL;
+use     IEEE.NUMERIC_STD.ALL;
+
+entity pseudo_num_gen is 
+	generic 
+	(
+	num_bits : integer range 1 to 24;
+	semente  : std_logic_vector(47 downto 0));
+	port( my_clock   : in  std_logic;
+			write_data : in  std_logic_vector(3 downto 0);
+			read_data  : out std_logic_vector(3 downto 0);
+			user       : in  std_logic;
+			my_enable  : in  std_logic := '1';                   
+			rng  	     : out std_logic_vector(num_bits-1 downto 0));
+end pseudo_num_gen;
+
+architecture heavy of pseudo_num_gen is 
+	constant NUM_WORDS : integer := 8;
+	subtype TDataWord is std_logic_vector(3 downto 0);
+	type TMemory is array (0 to NUM_WORDS-1) of TDataWord;
+	signal s_memory : Tmemory;
+	signal s_address : std_logic;
+	begin
+	entity work.pseudo_random_generator(heavy)
+	generic map(N_BITS => num_bits,
+					SEED => semente)
+	port map(clock => my_clock,
+				enable => my_enable,
+				rnd => rng)
+				
+process(my_clock)
+if(rising_edge(my_clock)) then
+	if user = '1' then 
+	s_memory(to_integer(unsigned(s_address)) <= writeData;
+	s_address <= s_address + std_logic(unsigned(1));
+	else 
+	s_memory(to_integer(unsigned(s_address)) <= rng;
+	s_address <= s_address + std_logic(unsigned(1));
+	end if;
+end if;
+end process;

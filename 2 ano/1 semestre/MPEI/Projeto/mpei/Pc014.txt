@@ -1,0 +1,5 @@
+CPU: i7-8700
+MotherBoard: Asus Prime A320
+Ram: 8Gb
+GPU: nvidia radeon vega 56
+Armazenamento: HDD 1TB

@@ -1,0 +1,98 @@
+|AdderDemo
+LEDR[10] <= Adder4:inst1.s[0]
+LEDR[11] <= Adder4:inst1.s[1]
+LEDR[12] <= Adder4:inst1.s[2]
+LEDR[13] <= Adder4:inst1.s[3]
+LEDR[14] <= Adder4:inst1.cout
+KEY[0] => Adder4:inst1.cin
+KEY[0] => AddSub4:inst.sub
+SW[10] => AddSub4:inst.b[0]
+SW[11] => AddSub4:inst.b[1]
+SW[12] => AddSub4:inst.b[2]
+SW[13] => AddSub4:inst.b[3]
+SW[14] => Adder4:inst1.a[0]
+SW[15] => Adder4:inst1.a[1]
+SW[16] => Adder4:inst1.a[2]
+SW[17] => Adder4:inst1.a[3]
+
+
+|AdderDemo|Adder4:inst1
+a[0] => fulladder:bit0.a
+a[1] => fulladder:bit1.a
+a[2] => fulladder:bit2.a
+a[3] => fulladder:bit3.a
+b[0] => fulladder:bit0.b
+b[1] => fulladder:bit1.b
+b[2] => fulladder:bit2.b
+b[3] => fulladder:bit3.b
+cin => fulladder:bit0.cin
+s[0] <= fulladder:bit0.s
+s[1] <= fulladder:bit1.s
+s[2] <= fulladder:bit2.s
+s[3] <= fulladder:bit3.s
+cout <= fulladder:bit3.cout
+
+
+|AdderDemo|Adder4:inst1|FullAdder:bit0
+a => s_signal.IN0
+a => c2_signal.IN0
+b => s_signal.IN1
+b => c2_signal.IN1
+cin => c1_signal.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderDemo|Adder4:inst1|FullAdder:bit1
+a => s_signal.IN0
+a => c2_signal.IN0
+b => s_signal.IN1
+b => c2_signal.IN1
+cin => c1_signal.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderDemo|Adder4:inst1|FullAdder:bit2
+a => s_signal.IN0
+a => c2_signal.IN0
+b => s_signal.IN1
+b => c2_signal.IN1
+cin => c1_signal.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderDemo|Adder4:inst1|FullAdder:bit3
+a => s_signal.IN0
+a => c2_signal.IN0
+b => s_signal.IN1
+b => c2_signal.IN1
+cin => c1_signal.IN1
+cin => s.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AdderDemo|AddSub4:inst
+b[0] => s_b.DATAB
+b[0] => s_b.DATAA
+b[1] => s_b.DATAB
+b[1] => s_b.DATAA
+b[2] => s_b.DATAB
+b[2] => s_b.DATAA
+b[3] => s_b.DATAB
+b[3] => s_b.DATAA
+sub => s_b.OUTPUTSELECT
+sub => s_b.OUTPUTSELECT
+sub => s_b.OUTPUTSELECT
+sub => s_b.OUTPUTSELECT
+s[0] <= s_b.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s_b.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s_b.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s_b.DB_MAX_OUTPUT_PORT_TYPE
+
+

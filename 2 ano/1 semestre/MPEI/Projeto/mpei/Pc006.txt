@@ -1,0 +1,5 @@
+CPU: i9-9900
+MotherBoard: MSI X470 plus
+Ram: 8Gb
+GPU: nvidia RTX2080
+Armazenamento: SSD 2TB

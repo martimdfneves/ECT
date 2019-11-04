@@ -1,0 +1,1244 @@
+TimeQuest Timing Analyzer report for mini_projeto_parte_3
+Thu Apr 12 19:54:04 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'relogio'
+ 13. Slow 1200mV 85C Model Setup: 'estado'
+ 14. Slow 1200mV 85C Model Hold: 'relogio'
+ 15. Slow 1200mV 85C Model Hold: 'estado'
+ 16. Slow 1200mV 85C Model Metastability Summary
+ 17. Slow 1200mV 0C Model Fmax Summary
+ 18. Slow 1200mV 0C Model Setup Summary
+ 19. Slow 1200mV 0C Model Hold Summary
+ 20. Slow 1200mV 0C Model Recovery Summary
+ 21. Slow 1200mV 0C Model Removal Summary
+ 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 23. Slow 1200mV 0C Model Setup: 'relogio'
+ 24. Slow 1200mV 0C Model Setup: 'estado'
+ 25. Slow 1200mV 0C Model Hold: 'relogio'
+ 26. Slow 1200mV 0C Model Hold: 'estado'
+ 27. Slow 1200mV 0C Model Metastability Summary
+ 28. Fast 1200mV 0C Model Setup Summary
+ 29. Fast 1200mV 0C Model Hold Summary
+ 30. Fast 1200mV 0C Model Recovery Summary
+ 31. Fast 1200mV 0C Model Removal Summary
+ 32. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 33. Fast 1200mV 0C Model Setup: 'relogio'
+ 34. Fast 1200mV 0C Model Setup: 'estado'
+ 35. Fast 1200mV 0C Model Hold: 'relogio'
+ 36. Fast 1200mV 0C Model Hold: 'estado'
+ 37. Fast 1200mV 0C Model Metastability Summary
+ 38. Multicorner Timing Analysis Summary
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 42. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 43. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths Summary
+ 49. Clock Status Summary
+ 50. Unconstrained Output Ports
+ 51. Unconstrained Output Ports
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; mini_projeto_parte_3                                ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.3%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; estado     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { estado }  ;
+; relogio    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { relogio } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                         ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 244.98 MHz  ; 244.98 MHz      ; relogio    ;                                                               ;
+; 1265.82 MHz ; 250.0 MHz       ; estado     ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++---------+--------+------------------+
+; Clock   ; Slack  ; End Point TNS    ;
++---------+--------+------------------+
+; relogio ; -3.082 ; -64.545          ;
+; estado  ; 0.210  ; 0.000            ;
++---------+--------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++---------+-------+------------------+
+; Clock   ; Slack ; End Point TNS    ;
++---------+-------+------------------+
+; relogio ; 0.385 ; 0.000            ;
+; estado  ; 0.445 ; 0.000            ;
++---------+-------+------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------+--------+--------------------------------+
+; Clock   ; Slack  ; End Point TNS                  ;
++---------+--------+--------------------------------+
+; relogio ; -3.000 ; -44.120                        ;
+; estado  ; -3.000 ; -4.285                         ;
++---------+--------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'relogio'                                                                                                                                                             ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.082 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 4.000      ;
+; -3.075 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.992      ;
+; -3.075 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.992      ;
+; -3.074 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.991      ;
+; -3.073 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.990      ;
+; -3.007 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.924      ;
+; -3.000 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.916      ;
+; -3.000 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.916      ;
+; -2.999 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.915      ;
+; -2.998 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.914      ;
+; -2.994 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.482      ;
+; -2.994 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.482      ;
+; -2.993 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.481      ;
+; -2.993 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.481      ;
+; -2.993 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.481      ;
+; -2.992 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.480      ;
+; -2.992 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.480      ;
+; -2.991 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.479      ;
+; -2.979 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.509     ; 3.468      ;
+; -2.978 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.509     ; 3.467      ;
+; -2.939 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.855      ;
+; -2.939 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.855      ;
+; -2.938 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.854      ;
+; -2.937 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.853      ;
+; -2.924 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.841      ;
+; -2.897 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.815      ;
+; -2.890 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.807      ;
+; -2.890 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.807      ;
+; -2.889 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.806      ;
+; -2.888 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.806      ;
+; -2.888 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.805      ;
+; -2.881 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.798      ;
+; -2.881 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.798      ;
+; -2.880 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.797      ;
+; -2.880 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.509     ; 3.369      ;
+; -2.879 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.796      ;
+; -2.877 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.793      ;
+; -2.877 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.793      ;
+; -2.876 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.792      ;
+; -2.875 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.791      ;
+; -2.874 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.362      ;
+; -2.874 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.362      ;
+; -2.873 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.361      ;
+; -2.872 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.510     ; 3.360      ;
+; -2.863 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.780      ;
+; -2.828 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.746      ;
+; -2.821 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.738      ;
+; -2.821 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.738      ;
+; -2.820 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.737      ;
+; -2.820 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.737      ;
+; -2.819 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.736      ;
+; -2.813 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.729      ;
+; -2.813 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.729      ;
+; -2.812 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.728      ;
+; -2.811 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.727      ;
+; -2.810 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.727      ;
+; -2.803 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.719      ;
+; -2.803 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.719      ;
+; -2.802 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.718      ;
+; -2.801 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.717      ;
+; -2.779 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.697      ;
+; -2.772 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.689      ;
+; -2.772 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.689      ;
+; -2.771 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.688      ;
+; -2.770 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.687      ;
+; -2.733 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.649      ;
+; -2.727 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.645      ;
+; -2.727 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.645      ;
+; -2.726 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.644      ;
+; -2.725 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.643      ;
+; -2.716 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.634      ;
+; -2.712 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.630      ;
+; -2.712 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.630      ;
+; -2.712 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.079     ; 3.631      ;
+; -2.711 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.629      ;
+; -2.710 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.628      ;
+; -2.705 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.623      ;
+; -2.704 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.620      ;
+; -2.697 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.615      ;
+; -2.697 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.079     ; 3.616      ;
+; -2.693 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.609      ;
+; -2.692 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.608      ;
+; -2.692 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.608      ;
+; -2.691 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.607      ;
+; -2.690 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.606      ;
+; -2.686 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.602      ;
+; -2.685 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.601      ;
+; -2.683 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.600      ;
+; -2.677 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.594      ;
+; -2.676 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.592      ;
+; -2.676 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.592      ;
+; -2.675 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.591      ;
+; -2.674 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.590      ;
+; -2.663 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 1.000        ; 0.332      ; 3.993      ;
+; -2.661 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 1.000        ; 0.332      ; 3.991      ;
+; -2.660 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; relogio      ; relogio     ; 1.000        ; 0.332      ; 3.990      ;
+; -2.640 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.080     ; 3.558      ;
+; -2.628 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.544      ;
+; -2.604 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.081     ; 3.521      ;
+; -2.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.082     ; 3.518      ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'estado'                                                             ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 0.210 ; sinal     ; sinal   ; estado       ; estado      ; 1.000        ; -0.043     ; 0.765      ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'relogio'                                                                                                                                                             ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.385 ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; relogio      ; relogio     ; 0.000        ; 0.098      ; 0.669      ;
+; 0.644 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.098      ; 0.928      ;
+; 0.654 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.921      ;
+; 0.656 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.923      ;
+; 0.656 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.923      ;
+; 0.656 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.923      ;
+; 0.657 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.924      ;
+; 0.657 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.924      ;
+; 0.657 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.924      ;
+; 0.657 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.924      ;
+; 0.657 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.924      ;
+; 0.657 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.924      ;
+; 0.658 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.925      ;
+; 0.658 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.925      ;
+; 0.658 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.925      ;
+; 0.659 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.926      ;
+; 0.659 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.926      ;
+; 0.660 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.927      ;
+; 0.660 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.927      ;
+; 0.681 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 0.948      ;
+; 0.811 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.508      ;
+; 0.835 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.532      ;
+; 0.845 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.542      ;
+; 0.939 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.636      ;
+; 0.971 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.668      ;
+; 0.972 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.239      ;
+; 0.973 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.240      ;
+; 0.974 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.241      ;
+; 0.974 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.241      ;
+; 0.975 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.242      ;
+; 0.975 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.242      ;
+; 0.983 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.250      ;
+; 0.983 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.250      ;
+; 0.984 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.251      ;
+; 0.984 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.251      ;
+; 0.985 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.252      ;
+; 0.985 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.252      ;
+; 0.987 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.254      ;
+; 0.988 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.255      ;
+; 0.988 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.255      ;
+; 0.989 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.256      ;
+; 0.990 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.257      ;
+; 0.990 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.257      ;
+; 0.991 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.258      ;
+; 0.992 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.259      ;
+; 0.992 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.259      ;
+; 1.029 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.726      ;
+; 1.030 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.727      ;
+; 1.031 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.728      ;
+; 1.094 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.361      ;
+; 1.095 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.362      ;
+; 1.095 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.362      ;
+; 1.096 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.363      ;
+; 1.098 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.365      ;
+; 1.099 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.366      ;
+; 1.100 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.367      ;
+; 1.101 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.368      ;
+; 1.109 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.376      ;
+; 1.111 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.378      ;
+; 1.111 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.378      ;
+; 1.113 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.380      ;
+; 1.113 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.380      ;
+; 1.114 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.381      ;
+; 1.114 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.381      ;
+; 1.116 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.383      ;
+; 1.116 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.383      ;
+; 1.118 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.385      ;
+; 1.122 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.080      ; 1.388      ;
+; 1.136 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.098      ; 1.420      ;
+; 1.137 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.404      ;
+; 1.172 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.097      ; 1.455      ;
+; 1.182 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; relogio      ; relogio     ; 0.000        ; 0.512      ; 1.880      ;
+; 1.194 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; relogio      ; relogio     ; 0.000        ; 0.512      ; 1.892      ;
+; 1.196 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.510      ; 1.892      ;
+; 1.196 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.512      ; 1.894      ;
+; 1.219 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.486      ;
+; 1.220 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.487      ;
+; 1.224 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.491      ;
+; 1.225 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.492      ;
+; 1.226 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.493      ;
+; 1.227 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.080      ; 1.493      ;
+; 1.228 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 0.000        ; 0.510      ; 1.924      ;
+; 1.235 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.502      ;
+; 1.237 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.504      ;
+; 1.239 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.506      ;
+; 1.240 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.507      ;
+; 1.240 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.507      ;
+; 1.242 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.509      ;
+; 1.242 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.080      ; 1.508      ;
+; 1.248 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.080      ; 1.514      ;
+; 1.266 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 1.963      ;
+; 1.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.510      ; 1.997      ;
+; 1.316 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.510      ; 2.012      ;
+; 1.329 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; relogio      ; relogio     ; 0.000        ; 0.098      ; 1.613      ;
+; 1.340 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.511      ; 2.037      ;
+; 1.345 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.612      ;
+; 1.347 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.614      ;
+; 1.351 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.618      ;
+; 1.352 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.081      ; 1.619      ;
+; 1.353 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 0.000        ; 0.510      ; 2.049      ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'estado'                                                              ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; sinal     ; sinal   ; estado       ; estado      ; 0.000        ; 0.043      ; 0.674      ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 267.38 MHz  ; 250.0 MHz       ; relogio    ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1422.48 MHz ; 250.0 MHz       ; estado     ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; relogio ; -2.740 ; -55.172         ;
+; estado  ; 0.297  ; 0.000           ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; relogio ; 0.338 ; 0.000           ;
+; estado  ; 0.398 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; relogio ; -3.000 ; -44.120                       ;
+; estado  ; -3.000 ; -4.285                        ;
++---------+--------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'relogio'                                                                                                                                                              ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.740 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.668      ;
+; -2.740 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.667      ;
+; -2.740 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.667      ;
+; -2.739 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.666      ;
+; -2.738 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.665      ;
+; -2.674 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.601      ;
+; -2.674 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.600      ;
+; -2.674 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.600      ;
+; -2.673 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.599      ;
+; -2.672 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.598      ;
+; -2.647 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.574      ;
+; -2.647 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.573      ;
+; -2.647 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.573      ;
+; -2.646 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.572      ;
+; -2.645 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.571      ;
+; -2.638 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.466     ; 3.171      ;
+; -2.638 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.170      ;
+; -2.638 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.170      ;
+; -2.637 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.169      ;
+; -2.636 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.168      ;
+; -2.636 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.466     ; 3.169      ;
+; -2.636 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.168      ;
+; -2.636 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.168      ;
+; -2.635 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.167      ;
+; -2.634 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.166      ;
+; -2.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.466     ; 3.135      ;
+; -2.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.134      ;
+; -2.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.134      ;
+; -2.601 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.133      ;
+; -2.600 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.467     ; 3.132      ;
+; -2.593 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.520      ;
+; -2.593 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.519      ;
+; -2.593 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.519      ;
+; -2.592 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.518      ;
+; -2.591 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.517      ;
+; -2.584 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.512      ;
+; -2.584 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.511      ;
+; -2.584 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.511      ;
+; -2.583 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.510      ;
+; -2.582 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.509      ;
+; -2.569 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.497      ;
+; -2.569 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.496      ;
+; -2.569 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.496      ;
+; -2.568 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.495      ;
+; -2.567 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.494      ;
+; -2.557 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.484      ;
+; -2.557 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.483      ;
+; -2.557 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.483      ;
+; -2.556 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.482      ;
+; -2.555 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.481      ;
+; -2.513 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.441      ;
+; -2.513 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.440      ;
+; -2.513 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.440      ;
+; -2.512 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.439      ;
+; -2.511 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.438      ;
+; -2.504 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.431      ;
+; -2.504 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.430      ;
+; -2.504 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.430      ;
+; -2.503 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.429      ;
+; -2.502 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.428      ;
+; -2.471 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.399      ;
+; -2.471 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.398      ;
+; -2.471 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.398      ;
+; -2.470 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.397      ;
+; -2.469 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.396      ;
+; -2.404 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.331      ;
+; -2.404 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.330      ;
+; -2.404 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.330      ;
+; -2.403 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.329      ;
+; -2.402 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.328      ;
+; -2.386 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.313      ;
+; -2.386 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.312      ;
+; -2.386 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.312      ;
+; -2.385 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.311      ;
+; -2.384 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.310      ;
+; -2.367 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.072     ; 3.294      ;
+; -2.367 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.293      ;
+; -2.367 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.293      ;
+; -2.366 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.292      ;
+; -2.366 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.292      ;
+; -2.365 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.291      ;
+; -2.361 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 1.000        ; 0.308      ; 3.668      ;
+; -2.361 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.070     ; 3.290      ;
+; -2.361 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.289      ;
+; -2.361 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.289      ;
+; -2.360 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.288      ;
+; -2.359 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 1.000        ; 0.308      ; 3.666      ;
+; -2.359 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.287      ;
+; -2.358 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; relogio      ; relogio     ; 1.000        ; 0.308      ; 3.665      ;
+; -2.357 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.070     ; 3.286      ;
+; -2.357 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.285      ;
+; -2.357 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.285      ;
+; -2.356 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.284      ;
+; -2.355 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.283      ;
+; -2.354 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.073     ; 3.280      ;
+; -2.326 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.254      ;
+; -2.325 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.253      ;
+; -2.313 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.071     ; 3.241      ;
+; -2.295 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 1.000        ; 0.307      ; 3.601      ;
+; -2.293 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 1.000        ; 0.307      ; 3.599      ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'estado'                                                              ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 0.297 ; sinal     ; sinal   ; estado       ; estado      ; 1.000        ; -0.039     ; 0.683      ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'relogio'                                                                                                                                                              ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.338 ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; relogio      ; relogio     ; 0.000        ; 0.088      ; 0.597      ;
+; 0.589 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.088      ; 0.848      ;
+; 0.599 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.842      ;
+; 0.599 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.842      ;
+; 0.599 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.842      ;
+; 0.600 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.843      ;
+; 0.601 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 0.843      ;
+; 0.601 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 0.843      ;
+; 0.601 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.844      ;
+; 0.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.845      ;
+; 0.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 0.844      ;
+; 0.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 0.844      ;
+; 0.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.845      ;
+; 0.602 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.845      ;
+; 0.603 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 0.845      ;
+; 0.604 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 0.846      ;
+; 0.604 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 0.846      ;
+; 0.604 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.847      ;
+; 0.604 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.847      ;
+; 0.624 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 0.867      ;
+; 0.724 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.467      ; 1.362      ;
+; 0.762 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.401      ;
+; 0.771 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.410      ;
+; 0.837 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.467      ; 1.475      ;
+; 0.885 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.128      ;
+; 0.887 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.130      ;
+; 0.887 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.130      ;
+; 0.888 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.131      ;
+; 0.888 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.131      ;
+; 0.889 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.132      ;
+; 0.889 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.132      ;
+; 0.889 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.131      ;
+; 0.890 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.529      ;
+; 0.890 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.132      ;
+; 0.890 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.132      ;
+; 0.891 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.133      ;
+; 0.891 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.134      ;
+; 0.892 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.135      ;
+; 0.898 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.141      ;
+; 0.898 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.141      ;
+; 0.900 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.142      ;
+; 0.901 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.143      ;
+; 0.902 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.145      ;
+; 0.903 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.145      ;
+; 0.903 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.146      ;
+; 0.903 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.146      ;
+; 0.952 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.591      ;
+; 0.953 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.592      ;
+; 0.954 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.593      ;
+; 0.987 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.230      ;
+; 0.988 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.231      ;
+; 0.988 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.231      ;
+; 0.990 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.232      ;
+; 0.995 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.238      ;
+; 0.997 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.240      ;
+; 0.998 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.241      ;
+; 0.999 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.242      ;
+; 1.000 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.242      ;
+; 1.001 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.243      ;
+; 1.001 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.244      ;
+; 1.002 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.245      ;
+; 1.002 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.245      ;
+; 1.008 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.251      ;
+; 1.008 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.251      ;
+; 1.011 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.253      ;
+; 1.012 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.255      ;
+; 1.013 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.256      ;
+; 1.017 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.259      ;
+; 1.043 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.286      ;
+; 1.045 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.088      ; 1.304      ;
+; 1.057 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.696      ;
+; 1.061 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.467      ; 1.699      ;
+; 1.075 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.714      ;
+; 1.077 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.716      ;
+; 1.081 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.087      ; 1.339      ;
+; 1.094 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 0.000        ; 0.466      ; 1.731      ;
+; 1.094 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.337      ;
+; 1.097 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.340      ;
+; 1.105 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.348      ;
+; 1.107 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.350      ;
+; 1.108 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.351      ;
+; 1.109 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.352      ;
+; 1.110 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.352      ;
+; 1.111 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.354      ;
+; 1.112 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.355      ;
+; 1.118 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.361      ;
+; 1.118 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.361      ;
+; 1.120 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.362      ;
+; 1.122 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.365      ;
+; 1.127 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.071      ; 1.369      ;
+; 1.154 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.467      ; 1.792      ;
+; 1.164 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.467      ; 1.802      ;
+; 1.170 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.809      ;
+; 1.194 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.468      ; 1.833      ;
+; 1.204 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.447      ;
+; 1.207 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 0.000        ; 0.466      ; 1.844      ;
+; 1.208 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.451      ;
+; 1.216 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; relogio      ; relogio     ; 0.000        ; 0.088      ; 1.475      ;
+; 1.217 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.460      ;
+; 1.217 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.072      ; 1.460      ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'estado'                                                               ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 0.398 ; sinal     ; sinal   ; estado       ; estado      ; 0.000        ; 0.039      ; 0.608      ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; relogio ; -0.985 ; -16.370         ;
+; estado  ; 0.626  ; 0.000           ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; relogio ; 0.174 ; 0.000           ;
+; estado  ; 0.208 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; relogio ; -3.000 ; -37.175                       ;
+; estado  ; -3.000 ; -4.092                        ;
++---------+--------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'relogio'                                                                                                                                                              ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.985 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.930      ;
+; -0.984 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.929      ;
+; -0.983 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.928      ;
+; -0.982 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.927      ;
+; -0.981 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.925      ;
+; -0.980 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.924      ;
+; -0.979 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.923      ;
+; -0.978 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.922      ;
+; -0.978 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.722      ;
+; -0.977 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.721      ;
+; -0.976 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.720      ;
+; -0.976 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.720      ;
+; -0.975 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.922      ;
+; -0.975 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.719      ;
+; -0.975 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.719      ;
+; -0.974 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.718      ;
+; -0.973 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.717      ;
+; -0.971 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.917      ;
+; -0.969 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.913      ;
+; -0.968 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.912      ;
+; -0.968 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.241     ; 1.714      ;
+; -0.967 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.911      ;
+; -0.966 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.910      ;
+; -0.966 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.241     ; 1.712      ;
+; -0.959 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.905      ;
+; -0.932 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.876      ;
+; -0.931 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.875      ;
+; -0.930 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.874      ;
+; -0.929 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.873      ;
+; -0.922 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.666      ;
+; -0.922 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.868      ;
+; -0.921 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.665      ;
+; -0.920 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.664      ;
+; -0.919 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.243     ; 1.663      ;
+; -0.912 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.241     ; 1.658      ;
+; -0.909 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.853      ;
+; -0.908 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.852      ;
+; -0.907 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.851      ;
+; -0.906 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.850      ;
+; -0.900 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.845      ;
+; -0.899 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.844      ;
+; -0.899 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.845      ;
+; -0.898 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.843      ;
+; -0.897 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.842      ;
+; -0.890 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.837      ;
+; -0.888 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.833      ;
+; -0.887 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.832      ;
+; -0.886 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.831      ;
+; -0.885 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.830      ;
+; -0.878 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.825      ;
+; -0.871 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.815      ;
+; -0.870 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.814      ;
+; -0.869 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.813      ;
+; -0.868 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.812      ;
+; -0.867 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.813      ;
+; -0.861 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.807      ;
+; -0.858 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.805      ;
+; -0.857 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.803      ;
+; -0.856 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.802      ;
+; -0.855 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.801      ;
+; -0.854 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.800      ;
+; -0.854 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.800      ;
+; -0.853 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.799      ;
+; -0.852 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.797      ;
+; -0.852 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.798      ;
+; -0.851 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.796      ;
+; -0.851 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.797      ;
+; -0.851 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.797      ;
+; -0.851 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.795      ;
+; -0.850 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.795      ;
+; -0.849 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.794      ;
+; -0.847 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.039     ; 1.795      ;
+; -0.844 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.039     ; 1.792      ;
+; -0.844 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.790      ;
+; -0.842 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.789      ;
+; -0.842 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.787      ;
+; -0.840 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.784      ;
+; -0.840 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.785      ;
+; -0.839 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.784      ;
+; -0.838 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.782      ;
+; -0.838 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.783      ;
+; -0.837 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.781      ;
+; -0.837 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.782      ;
+; -0.836 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.780      ;
+; -0.830 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.776      ;
+; -0.830 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.777      ;
+; -0.822 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.766      ;
+; -0.821 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.765      ;
+; -0.820 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.764      ;
+; -0.819 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.763      ;
+; -0.813 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[13] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.757      ;
+; -0.812 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 1.000        ; -0.041     ; 1.758      ;
+; -0.794 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.741      ;
+; -0.793 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 1.000        ; -0.042     ; 1.738      ;
+; -0.792 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 1.000        ; 0.152      ; 1.931      ;
+; -0.790 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[7]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 1.000        ; -0.040     ; 1.737      ;
+; -0.789 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 1.000        ; 0.152      ; 1.928      ;
+; -0.788 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[14] ; relogio      ; relogio     ; 1.000        ; 0.152      ; 1.927      ;
+; -0.788 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 1.000        ; 0.151      ; 1.926      ;
+; -0.786 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; relogio      ; relogio     ; 1.000        ; -0.043     ; 1.730      ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'estado'                                                              ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 0.626 ; sinal     ; sinal   ; estado       ; estado      ; 1.000        ; -0.022     ; 0.359      ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'relogio'                                                                                                                                                              ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.174 ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; relogio      ; relogio     ; 0.000        ; 0.049      ; 0.307      ;
+; 0.294 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.049      ; 0.427      ;
+; 0.299 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.424      ;
+; 0.300 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.425      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.426      ;
+; 0.302 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.427      ;
+; 0.312 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.437      ;
+; 0.380 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.244      ; 0.708      ;
+; 0.392 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.244      ; 0.720      ;
+; 0.392 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.719      ;
+; 0.448 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.775      ;
+; 0.448 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.573      ;
+; 0.449 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.574      ;
+; 0.450 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.575      ;
+; 0.450 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.575      ;
+; 0.450 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.575      ;
+; 0.451 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.576      ;
+; 0.458 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.583      ;
+; 0.458 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.583      ;
+; 0.458 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.785      ;
+; 0.459 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.584      ;
+; 0.459 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.584      ;
+; 0.459 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.584      ;
+; 0.459 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.584      ;
+; 0.460 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.585      ;
+; 0.461 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.586      ;
+; 0.461 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.586      ;
+; 0.462 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.587      ;
+; 0.462 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.587      ;
+; 0.462 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.587      ;
+; 0.462 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.587      ;
+; 0.462 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[28] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.587      ;
+; 0.463 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.588      ;
+; 0.470 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.797      ;
+; 0.471 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.798      ;
+; 0.472 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.799      ;
+; 0.512 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.637      ;
+; 0.513 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.638      ;
+; 0.513 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.638      ;
+; 0.514 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.639      ;
+; 0.514 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.639      ;
+; 0.515 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.640      ;
+; 0.516 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.641      ;
+; 0.517 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[27] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.642      ;
+; 0.519 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.644      ;
+; 0.520 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.050      ; 0.654      ;
+; 0.524 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.649      ;
+; 0.525 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.650      ;
+; 0.525 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.650      ;
+; 0.525 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[29] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.650      ;
+; 0.526 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.651      ;
+; 0.527 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.652      ;
+; 0.527 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.652      ;
+; 0.528 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.653      ;
+; 0.528 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.653      ;
+; 0.528 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[26] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[30] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.653      ;
+; 0.529 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.048      ; 0.661      ;
+; 0.533 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; relogio      ; relogio     ; 0.000        ; 0.244      ; 0.861      ;
+; 0.533 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.040      ; 0.657      ;
+; 0.552 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 0.000        ; 0.242      ; 0.878      ;
+; 0.564 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[23] ; relogio      ; relogio     ; 0.000        ; 0.244      ; 0.892      ;
+; 0.566 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.244      ; 0.894      ;
+; 0.576 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.903      ;
+; 0.577 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.702      ;
+; 0.578 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.703      ;
+; 0.580 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.705      ;
+; 0.581 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[1]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.706      ;
+; 0.582 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[3]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.707      ;
+; 0.583 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.040      ; 0.707      ;
+; 0.590 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[9]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.715      ;
+; 0.591 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[25] ; relogio      ; relogio     ; 0.000        ; 0.049      ; 0.724      ;
+; 0.591 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[11] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.716      ;
+; 0.591 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[5]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.716      ;
+; 0.593 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[4]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.718      ;
+; 0.593 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[2]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[8]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.718      ;
+; 0.594 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[0]  ; divisor_relogio:divisor_relogio_1hz|divisor_contador[6]  ; relogio      ; relogio     ; 0.000        ; 0.041      ; 0.719      ;
+; 0.595 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.242      ; 0.921      ;
+; 0.595 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[10] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; relogio      ; relogio     ; 0.000        ; 0.040      ; 0.719      ;
+; 0.599 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; relogio      ; relogio     ; 0.000        ; 0.040      ; 0.723      ;
+; 0.607 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[21] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.934      ;
+; 0.617 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[12] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[15] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.944      ;
+; 0.618 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; relogio      ; relogio     ; 0.000        ; 0.242      ; 0.944      ;
+; 0.619 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[16] ; divisor_relogio:divisor_relogio_1hz|relogio_out          ; relogio      ; relogio     ; 0.000        ; 0.244      ; 0.947      ;
+; 0.619 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[20] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 0.000        ; 0.243      ; 0.946      ;
+; 0.619 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[18] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[22] ; relogio      ; relogio     ; 0.000        ; 0.242      ; 0.945      ;
+; 0.638 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[19] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[24] ; relogio      ; relogio     ; 0.000        ; 0.050      ; 0.772      ;
+; 0.638 ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; divisor_relogio:divisor_relogio_1hz|divisor_contador[17] ; relogio      ; relogio     ; 0.000        ; 0.049      ; 0.771      ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'estado'                                                               ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+; 0.208 ; sinal     ; sinal   ; estado       ; estado      ; 0.000        ; 0.022      ; 0.314      ;
++-------+-----------+---------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.082  ; 0.174 ; N/A      ; N/A     ; -3.000              ;
+;  estado          ; 0.210   ; 0.208 ; N/A      ; N/A     ; -3.000              ;
+;  relogio         ; -3.082  ; 0.174 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -64.545 ; 0.0   ; 0.0      ; 0.0     ; -48.405             ;
+;  estado          ; 0.000   ; 0.000 ; N/A      ; N/A     ; -4.285              ;
+;  relogio         ; -64.545 ; 0.000 ; N/A      ; N/A     ; -44.120             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; saida_t       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; saida_l       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; estado                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; relogio                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; saida_t       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; saida_l       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; saida_t       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; saida_l       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; saida_t       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; saida_l       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; estado     ; estado   ; 1        ; 0        ; 0        ; 0        ;
+; relogio    ; relogio  ; 931      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; estado     ; estado   ; 1        ; 0        ; 0        ; 0        ;
+; relogio    ; relogio  ; 931      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------+
+; Clock Status Summary                   ;
++---------+---------+------+-------------+
+; Target  ; Clock   ; Type ; Status      ;
++---------+---------+------+-------------+
+; estado  ; estado  ; Base ; Constrained ;
+; relogio ; relogio ; Base ; Constrained ;
++---------+---------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; saida_l     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; saida_t     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; saida_l     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; saida_t     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Apr 12 19:54:02 2018
+Info: Command: quartus_sta mini_projeto_parte_3 -c mini_projeto_parte_3
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'mini_projeto_parte_3.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name relogio relogio
+    Info (332105): create_clock -period 1.000 -name estado estado
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.082
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.082             -64.545 relogio 
+    Info (332119):     0.210               0.000 estado 
+Info (332146): Worst-case hold slack is 0.385
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.385               0.000 relogio 
+    Info (332119):     0.445               0.000 estado 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -44.120 relogio 
+    Info (332119):    -3.000              -4.285 estado 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.740
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.740             -55.172 relogio 
+    Info (332119):     0.297               0.000 estado 
+Info (332146): Worst-case hold slack is 0.338
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.338               0.000 relogio 
+    Info (332119):     0.398               0.000 estado 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -44.120 relogio 
+    Info (332119):    -3.000              -4.285 estado 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.985
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.985             -16.370 relogio 
+    Info (332119):     0.626               0.000 estado 
+Info (332146): Worst-case hold slack is 0.174
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.174               0.000 relogio 
+    Info (332119):     0.208               0.000 estado 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -37.175 relogio 
+    Info (332119):    -3.000              -4.092 estado 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 746 megabytes
+    Info: Processing ended: Thu Apr 12 19:54:04 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

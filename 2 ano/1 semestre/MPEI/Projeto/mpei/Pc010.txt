@@ -1,0 +1,5 @@
+CPU: AMD threadripper 2990WX
+MotherBoard: MSI B450M
+Ram: 4Gb
+GPU: nvidia RTX2080
+Armazenamento: SSD 1TB

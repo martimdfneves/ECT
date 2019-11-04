@@ -1,0 +1,5 @@
+CPU: ryzen 2700x
+MotherBoard: Gigabyte Aorus X470
+Ram: 32Gb
+GPU: nvidia GTX1070ti
+Armazenamento: HDD 1TB

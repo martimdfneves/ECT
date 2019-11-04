@@ -1,0 +1,7 @@
+#
+# LSD.TOS, April 2018 (DO NOT REMOVE THIS LINE)
+#
+# Remove non-essential files from a project.
+#
+
+rm -rf db incremental_db output_files simulation .qsys_edit *.ipinfo *.qws *.dpf *.bak *.qdf PLL*.txt

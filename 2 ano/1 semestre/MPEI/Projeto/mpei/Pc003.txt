@@ -1,0 +1,5 @@
+CPU: ryzen 3 2200
+MotherBoard: Asus Prime b350 plus
+Ram: 32Gb
+GPU: radeon 580
+Armazenamento: SSD 256GB

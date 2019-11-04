@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -4.271
+TNS   : -64.413
+
+Type  : Slow 1200mV 85C Model Setup 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : -3.845
+TNS   : -209.829
+
+Type  : Slow 1200mV 85C Model Setup 'KEY[0]'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'KEY[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.642
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : 1.146
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : -1.285
+TNS   : -82.240
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.870
+TNS   : -54.694
+
+Type  : Slow 1200mV 0C Model Setup 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : -3.450
+TNS   : -184.779
+
+Type  : Slow 1200mV 0C Model Setup 'KEY[0]'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.586
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : 1.015
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : -1.285
+TNS   : -82.240
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.630
+TNS   : -16.380
+
+Type  : Fast 1200mV 0C Model Setup 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : -1.424
+TNS   : -72.880
+
+Type  : Fast 1200mV 0C Model Setup 'KEY[0]'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : 0.530
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -37.016
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.105
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inicio:inst|divisor_relogio:divisor_relogio_1hz|relogio_out'
+Slack : -1.000
+TNS   : -64.000
+
+------------------------------------------------------------

@@ -1,0 +1,5 @@
+CPU: ryzen 5 2600x
+MotherBoard: Asus ROG Strix B250F
+Ram: 8Gb
+GPU: radeon vega 56
+Armazenamento: HDD 2TB

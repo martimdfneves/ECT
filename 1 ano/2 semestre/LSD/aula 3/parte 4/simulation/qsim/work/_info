@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/LSD/Aula3/Parte2/simulation/qsim
+vALU4
+!s110 1458066413
+!i10b 1
+!s100 AFY5ZznXbZQ7fFghURT2n3
+IY8R5_HgKHi=^RWg5nKhlO2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1458066411
+Z2 8ALUDemo.vo
+Z3 FALUDemo.vo
+Z4 L0 32
+Z5 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z6 !s108 1458066413.000000
+Z7 !s107 ALUDemo.vo|
+Z8 !s90 -work|work|ALUDemo.vo|
+!i113 1
+Z9 o-work work
+n@a@l@u4
+vALU4_vlg_vec_tst
+!s110 1458066414
+!i10b 1
+!s100 6zRZ:34VIgMnRlPCz83[h0
+IC7AMlMi<4P9O6=U9M;Sl_3
+R1
+R0
+w1458066407
+8ALU4.vwf.vt
+FALU4.vwf.vt
+Z10 L0 30
+R5
+r1
+!s85 0
+31
+R6
+!s107 ALU4.vwf.vt|
+!s90 -work|work|ALU4.vwf.vt|
+!i113 1
+R9
+n@a@l@u4_vlg_vec_tst
+vBin2BCD
+!s110 1458070958
+!i10b 1
+!s100 CX_YBFW[Tn[=hT5AF@XBP2
+IY<7EXi3UB8oA7QInRO3YG3
+R1
+Z11 dC:/LSD/Aula3/Parte3/simulation/qsim
+w1458070958
+R2
+R3
+R4
+R5
+r1
+!s85 0
+31
+Z12 !s108 1458070958.000000
+R7
+R8
+!i113 1
+R9
+n@bin2@b@c@d
+vBin2BCD_vlg_vec_tst
+!s110 1458070959
+!i10b 1
+!s100 Z6J46^JTC_]Mf=cN>`UUC2
+I;fK2`B?hz6O3V^GPo<QOS3
+R1
+R11
+w1458070953
+8Bin2BCD.vwf.vt
+FBin2BCD.vwf.vt
+R10
+R5
+r1
+!s85 0
+31
+R12
+!s107 Bin2BCD.vwf.vt|
+!s90 -work|work|Bin2BCD.vwf.vt|
+!i113 1
+R9
+n@bin2@b@c@d_vlg_vec_tst

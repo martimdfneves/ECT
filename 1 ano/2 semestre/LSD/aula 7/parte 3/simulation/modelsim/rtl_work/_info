@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/simulation/modelsim
+Ealu16
+Z1 w1523444063
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16.vhd
+Z6 FC:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16.vhd
+l0
+L5
+VJN33R5Da9MS>925z0=RUf2
+!s100 ]CImQFA;MjdY?Mno7aFTa0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1523444095
+!i10b 1
+Z9 !s108 1523444095.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16.vhd|
+Z11 !s107 C:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 5 alu16 0 22 JN33R5Da9MS>925z0=RUf2
+l17
+L15
+VQgVT6ViY9GLGib1;8eB=H0
+!s100 F01[i?o=2B^eJQ4SC5j@?1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu16_tb
+Z15 w1523443251
+R3
+R4
+R0
+Z16 8C:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16_Tb.vhd
+Z17 FC:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16_Tb.vhd
+l0
+L4
+VJ?SC6g<kQRUAo]eNISoTD0
+!s100 5JC]d<:9IfXOd6o[f3]8?3
+R7
+32
+!s110 1523444098
+!i10b 1
+Z18 !s108 1523444098.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16_Tb.vhd|
+Z20 !s107 C:/Users/Martim/Desktop/Uni/1 ano 2 semestre/LSD/aula 7/parte 3/ALU16_Tb.vhd|
+!i113 1
+R12
+R13
+Astimulus
+R2
+R14
+R3
+R4
+Z21 DEx4 work 8 alu16_tb 0 22 J?SC6g<kQRUAo]eNISoTD0
+l15
+L7
+Z22 ViMPG5:3?TF=^C[MiJiEb73
+Z23 !s100 0zSG6[CmZ12D@d1@:Rd_D0
+R7
+32
+!s110 1523444099
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13

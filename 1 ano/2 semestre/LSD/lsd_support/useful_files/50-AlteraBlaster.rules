@@ -1,0 +1,6 @@
+#
+# automatically change the group of the Altera Blaster USB device node to plugdev
+#
+# place this file in the /etc/udev/rules.d directory
+#
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6001", GROUP="plugdev"

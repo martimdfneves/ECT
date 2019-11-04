@@ -1,0 +1,5 @@
+CPU: i3-5200
+MotherBoard: Gigabyte b360m
+Ram: 2Gb
+GPU: GTX 1030
+Armazenamento: HDD 1TB

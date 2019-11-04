@@ -1,0 +1,5 @@
+CPU: i7-7700
+MotherBoard: Asus ROG Strix B350F
+Ram: 4Gb
+GPU: nvidia GTX1080
+Armazenamento: HDD 1TB

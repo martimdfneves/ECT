@@ -1,0 +1,40 @@
+library ieee ;
+use ieee.std_logic_1164.all ;
+use ieee.std_logic_unsigned.all ;
+
+entity Bin2BCD is
+    port ( bin_in  : in  std_logic_vector (5 downto 0) ;
+           dez : out std_logic_vector (3 downto 0) ;
+           uni : out std_logic_vector (3 downto 0) ) ;
+end Bin2BCD ;
+
+architecture hardware of Bin2BCD is
+begin
+   process ( bin_in )
+   variable src     : std_logic_vector (4 downto 0) ;
+   variable bcd     : std_logic_vector (7 downto 0) ;
+	begin
+	bcd             := (others => '0') ;
+	bcd(0) 			 := bin_in(5) ;
+	src             := bin_in(4 downto 0) ;
+
+	for i in src'range loop
+		 
+	  if bcd(3 downto 0) > "0100" then
+			bcd(3 downto 0) := bcd(3 downto 0) + "0011" ;
+	  end if ;
+	  
+	  if bcd(7 downto 4) > "0100" then
+			bcd(7 downto 4) := bcd(7 downto 4) + "0011" ;
+	  end if ;
+
+	  bcd := bcd(6 downto 0) & src(src'left) ; -- shift bcd + 1 new entry
+	  src := src(src'left - 1 downto src'right) & '0' ; -- shift src + pad with 0
+			  
+	 end loop ;
+	 
+    dez <= bcd(7  downto 4) ;
+    uni <= bcd(3  downto 0) ;
+	 
+	end process ;
+end hardware ;

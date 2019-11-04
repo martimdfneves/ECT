@@ -1,0 +1,50 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+use ieee.std_logic_unsigned.all;
+
+entity Timer_Clock is
+	port( clk 		: in std_logic;
+			rst		: in std_logic;
+			seg		: out std_logic_vector(5 downto 0);
+			min		: out std_logic_vector(5 downto 0);
+			clk_out 	: out std_logic);
+
+end Timer_Clock;
+
+architecture hardware of Timer_clock is
+signal mm    : integer:=59;
+signal ss    : integer:=59;
+
+begin	
+	process(rst,clk)
+	begin	
+	
+	if (rising_edge(clk)) then		
+		if(ss = 0) then						
+			if (mm>0) then
+				mm <= mm - 1;
+				ss <= 59;
+			end if;
+		else
+			ss <= ss-1;
+		end if;	
+		if (rst='0') then
+			
+				mm <= 59;
+				ss <= 59;
+
+		end if;
+	end if;
+	
+	if(mm=0 and ss=0)then
+		clk_out<=clk;
+	else
+		clk_out<='0';
+	end if;
+	
+	seg <= std_logic_vector(to_unsigned(ss,6));
+	min <= std_logic_vector(to_unsigned(mm,6));	
+	end process;
+
+end hardware;

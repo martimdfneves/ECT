@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Apr 12 19:15:55 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : mini_projeto_parte_2
+Top-level Entity Name : esquematico
+Family : Cyclone IV E
+Total logic elements : 258
+    Total combinational functions : 258
+    Dedicated logic registers : 97
+Total registers : 97
+Total pins : 33
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

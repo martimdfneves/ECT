@@ -1,0 +1,24 @@
+#! /bin/bash
+#
+# LSD.TOS, April 2018 (DO NOT REMOVE THIS LINE)
+#
+# Program DE2-115 board using a pof file.
+#
+
+if [ $# != 1 ]; then
+  echo "Usage: program_pof pof_file"
+  exit 1
+fi
+
+if [ ! -e $1 ]; then
+  echo "$1 does not exist"
+  exit 1
+fi
+
+if [ `head -c 3 $1` != "POF" ]; then
+  echo "$1 must be a pof file"
+  exit 1
+fi
+
+set -e
+quartus_pgm -m as -c "USB-Blaster" -o "pv;$1"

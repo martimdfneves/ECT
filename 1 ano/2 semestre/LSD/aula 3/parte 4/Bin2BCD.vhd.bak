@@ -1,0 +1,37 @@
+--------------------------------------------
+-- Paulo Gil
+-- paulogil@ua.pt
+-- LSD-2016
+--------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Bin2BCD is
+	port(input	 : in  std_logic_vector(3 downto 0);
+		  output0 : out std_logic_vector(3 downto 0);
+		  output1 : out std_logic_vector(3 downto 0));
+end Bin2BCD;
+
+architecture Behavioral of Bin2BCD is
+	
+	signal s_input, s_output0, s_output1: std_logic_vector(3 downto 0);
+	
+begin
+
+	s_input <= unsigned(input);
+	
+	if(s_input < "1010") then
+		s_output1 <= "0000";
+		s_output0 <= s_input;
+	else
+		s_output1 <= "0001";
+		s_output0 <= s_input;
+	end if;
+	
+	output0 <= std_logic_vector(unsigned(s_output0));
+	output1 <= std_logic_vector(unsigned(s_output1));
+	
+end Behavioral;
+	
+	

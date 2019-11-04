@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'relogio'
+Slack : -3.082
+TNS   : -64.545
+
+Type  : Slow 1200mV 85C Model Setup 'estado'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'relogio'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'estado'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'relogio'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'estado'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Setup 'relogio'
+Slack : -2.740
+TNS   : -55.172
+
+Type  : Slow 1200mV 0C Model Setup 'estado'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'relogio'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'estado'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'relogio'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'estado'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Fast 1200mV 0C Model Setup 'relogio'
+Slack : -0.985
+TNS   : -16.370
+
+Type  : Fast 1200mV 0C Model Setup 'estado'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'relogio'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'estado'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'relogio'
+Slack : -3.000
+TNS   : -37.175
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'estado'
+Slack : -3.000
+TNS   : -4.092
+
+------------------------------------------------------------

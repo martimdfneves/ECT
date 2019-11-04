@@ -1,0 +1,5 @@
+CPU: i9-8700
+MotherBoard: MSI Z370
+Ram: 16Gb
+GPU: nvidia GTX1080
+Armazenamento: HDD 1TB

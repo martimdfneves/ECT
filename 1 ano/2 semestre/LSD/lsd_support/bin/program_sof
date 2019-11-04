@@ -1,0 +1,24 @@
+#! /bin/bash
+#
+# LSD.TOS, April 2018 (DO NOT REMOVE THIS LINE)
+#
+# Program DE2-115 board using a sof file.
+#
+
+if [ $# != 1 ]; then
+  echo "Usage: program_sof sof_file"
+  exit 1
+fi
+
+if [ ! -e $1 ]; then
+  echo "$1 does not exist"
+  exit 1
+fi
+
+if [ `head -c 3 $1` != "SOF" ]; then
+  echo "$1 must be a sof file"
+  exit 1
+fi
+
+set -e
+quartus_pgm -m jtag -c "USB-Blaster" -o "p;$1"

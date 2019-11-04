@@ -1,0 +1,5 @@
+CPU: pentium 4
+MotherBoard: Asrock AB350M
+Ram: 1Gb
+GPU: nvidia GTX1030
+Armazenamento: HDD 512GB

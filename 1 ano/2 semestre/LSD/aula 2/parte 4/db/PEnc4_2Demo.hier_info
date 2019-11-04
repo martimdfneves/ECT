@@ -1,0 +1,14 @@
+|PEnc4_2
+datain[0] => dataout[1].IN0
+datain[1] => dataout[1].IN1
+datain[1] => dataout[0].DATAA
+datain[2] => dataout[0].OUTPUTSELECT
+datain[2] => dataout[1].IN1
+datain[2] => dataout[1].DATAA
+datain[3] => dataout[0].OUTPUTSELECT
+datain[3] => dataout[1].IN1
+datain[3] => dataout[1].OUTPUTSELECT
+dataout[0] << dataout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+dataout[1] << dataout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
