@@ -1,0 +1,56 @@
+\select@language {portuguese}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
+\contentsline {paragraph}{}{1}{section*.3}
+\contentsline {paragraph}{}{1}{section*.8}
+\contentsline {paragraph}{}{1}{section*.10}
+\contentsline {paragraph}{}{1}{section*.11}
+\contentsline {chapter}{\numberline {2}Explica\IeC {\c c}\IeC {\~a}o dos v\IeC {\'a}rios blocos de c\IeC {\'o}digo (fun\IeC {\c c}\IeC {\~o}es)}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}\textit {start()}}{2}{section.2.1}
+\contentsline {paragraph}{}{3}{section*.12}
+\contentsline {paragraph}{}{3}{section*.13}
+\contentsline {section}{\numberline {2.2}\textit {connect()}}{4}{section.2.2}
+\contentsline {paragraph}{}{4}{section*.14}
+\contentsline {paragraph}{}{4}{section*.15}
+\contentsline {section}{\numberline {2.3}\textit {request\_token()}}{5}{section.2.3}
+\contentsline {paragraph}{}{5}{section*.16}
+\contentsline {section}{\numberline {2.4}\textit {request\_token\_encript()}}{6}{section.2.4}
+\contentsline {paragraph}{}{6}{section*.17}
+\contentsline {paragraph}{}{6}{section*.18}
+\contentsline {section}{\numberline {2.5}\textit {read\_token()}}{7}{section.2.5}
+\contentsline {paragraph}{}{7}{section*.19}
+\contentsline {section}{\numberline {2.6}\textit {get\_key()}}{8}{section.2.6}
+\contentsline {paragraph}{}{8}{section*.20}
+\contentsline {section}{\numberline {2.7}\textit {get\_data()}}{9}{section.2.7}
+\contentsline {paragraph}{}{9}{section*.22}
+\contentsline {paragraph}{}{9}{section*.23}
+\contentsline {section}{\numberline {2.8}\textit {read\_token\_encript()}}{10}{section.2.8}
+\contentsline {paragraph}{}{10}{section*.24}
+\contentsline {paragraph}{}{10}{section*.25}
+\contentsline {section}{\numberline {2.9}\textit {confirm()}}{11}{section.2.9}
+\contentsline {paragraph}{}{11}{section*.26}
+\contentsline {paragraph}{}{11}{section*.27}
+\contentsline {section}{\numberline {2.10}\textit {write()}}{12}{section.2.10}
+\contentsline {paragraph}{}{13}{section*.28}
+\contentsline {paragraph}{}{13}{section*.29}
+\contentsline {paragraph}{}{13}{section*.30}
+\contentsline {paragraph}{}{13}{section*.31}
+\contentsline {section}{\numberline {2.11}\textit {recommendations()}}{14}{section.2.11}
+\contentsline {paragraph}{}{14}{section*.32}
+\contentsline {section}{\numberline {2.12}\textit {'main'}}{15}{section.2.12}
+\contentsline {paragraph}{}{17}{section*.33}
+\contentsline {paragraph}{}{17}{section*.34}
+\contentsline {paragraph}{}{17}{section*.35}
+\contentsline {paragraph}{}{17}{section*.36}
+\contentsline {paragraph}{}{18}{section*.37}
+\contentsline {chapter}{\numberline {3}Bugs conhecidos}{19}{chapter.3}
+\contentsline {paragraph}{}{19}{section*.38}
+\contentsline {chapter}{\numberline {4}Conclus\IeC {\~a}o}{20}{chapter.4}
+\contentsline {paragraph}{}{20}{section*.39}
+\contentsline {paragraph}{}{20}{section*.40}
+\contentsline {paragraph}{}{20}{section*.41}
+\contentsline {chapter}{\numberline {5}Contribui\IeC {\c c}\IeC {\~o}es dos autores}{21}{chapter.5}
+\contentsline {paragraph}{}{21}{section*.42}
+\contentsline {paragraph}{}{21}{section*.44}
+\contentsline {paragraph}{}{21}{section*.46}
+\contentsline {paragraph}{}{21}{section*.47}
+\contentsline {chapter}{\numberline {6}Gloss\IeC {\'a}rio}{22}{chapter.6}

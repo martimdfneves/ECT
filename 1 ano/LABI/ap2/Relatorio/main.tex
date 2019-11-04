@@ -1,0 +1,569 @@
+\documentclass[a4paper]{report}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{cite}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} 
+\usepackage{color}
+\usepackage{totcount}
+\usepackage{blindtext}
+
+\definecolor{blue}{rgb}{0,0,0.5}
+\definecolor{red}{rgb}{0.6,0,0}
+\definecolor{green}{rgb}{0,0.5,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12}
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12} 
+
+\lstset{
+  language=Python,                
+  basicstyle=\normalsize,           
+  numbers=left,                   
+  numberstyle=\footnotesize\color{gray},  
+  stepnumber=1,                             
+  numbersep=5pt,                  
+  backgroundcolor=\color{white},    
+  showspaces=false,               
+  showstringspaces=false,         
+  showtabs=false,                   
+  rulecolor=\color{black},        
+  tabsize=2,                      
+  captionpos=b,                   
+  breaklines=true,                
+  breakatwhitespace=false,        
+  title=\lstname,                                       
+  commentstyle=\color{gray},      
+  framextopmargin=2pt,
+  framexbottommargin=2pt,
+  extendedchars=false,
+  inputencoding=utf8,
+  literate={á}{{\'a}}1,
+  otherkeywords={self},             
+  keywordstyle=\normalsize\color{blue},
+  emph={MyClass,__init__},     
+  emphstyle=\normalsize\color{red},  
+  stringstyle=\normalsize\color{green},
+  frame=tb,
+  showstringspaces=false
+}
+
+\regtotcounter{chapter}
+
+\begin{document}
+
+\def\titulo{TRABALHO DE APROFUNDAMENTO 2 (AP2)}
+\def\data{Abril 2018}
+\def\autores{João Tomás Simões, Martim Neves (Grupo 1)}
+\def\autorescontactos{(88930) jtsimoes@ua.pt, (88904) martimfneves@ua.pt}
+\def\versao{MIECT}
+\def\departamento{Laboratórios de Informática (Turma 4)}
+\def\empresa{Universidade de Aveiro}
+\def\logotipo{ua.pdf}
+
+\begin{titlepage}
+
+\begin{center}
+
+\vspace*{50mm}
+
+{\Huge \titulo}\\ 
+
+\vspace{10mm}
+
+{\Large \empresa}\\
+
+\vspace{10mm}
+
+{\LARGE \autores}\\ 
+
+\vspace{30mm}
+
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+
+\vspace{30mm}
+\end{center}
+
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+\title{
+{\Huge\textbf{\titulo}}\\
+\vspace{3mm}
+{\Large \departamento\\ \empresa}
+}
+
+\author{
+\autores \\
+\autorescontactos
+}
+
+\date{\data}
+
+\maketitle
+
+\pagenumbering{roman}
+
+\renewcommand{\abstractname}{Agradecimentos}
+\begin{abstract}
+
+Deixamos aqui um agradecimento ao professor João Paulo Barraca e ao professor Vitor Cunha pela enorme disponibilidade de ambos em ajudarem-nos neste nosso trabalho e pelas dicas valiosas que nos recomendaram a implementar para que o nosso código ficasse ainda melhor. 
+
+Sem a vossa ajuda, não conseguíriamos nem sequer começar este \ac{ap2} e muito menos chegar ao tópico da segurança nas conexões.
+Mais uma vez, obrigado por nos serem tão prestáveis e esperamos que o código esteja do vosso agrado.
+
+\end{abstract}
+
+\tableofcontents  
+
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Introdução}
+\label{chap.introducao}
+\paragraph{}No âmbito da unidade curricular de \ac{labi}, foi-nos proposto realizar um trabalho de aprofundamento cujo objetivo foi criar um cliente com a capacidade de aceder remotamente a uma sonda com medidores de temperatura, humidade e vento (através de um socket \ac{tcp}) e capaz de registar os dados num ficheiro \ac{csv}.
+Esta sonda foi instalada pelos docentes da disciplina e possui a capacidade de enviar os dados, emitindo um valor novo a cada 10 segundos, através de uma rede sem fios e de objectos \ac{json}.
+
+\paragraph{}Além disso, foi-nos pedido também que sejam apresentadas no terminal algumas indicações sobre a possibilidade/necessidade de se levar t-shirt, casaco, gorro ou outras peças de roupa, consoante os valores emitidos por ela e também que as mensagens entre a sonda e o utilizador (\textit{server} e \textit{client}) fossem encriptadas utilizando o algoritmo \ac{aes}, com o resultado codificado para Base64.
+
+\paragraph{}Assim, neste documento irá perceber-se qual foi a nossa maneira de pensar e de implentar o código, assim como explicá-lo e testá-lo. Para isso, este documento está dividido em \total{chapter} capítulos:
+
+\paragraph{}Depois desta introdução virá o \autoref{chap.explicacao}, onde apresentamos o nosso programa divido em blocos de código (funções) e em baixo de cada um explicamos o nosso pensamento enquanto o implementávamos e explicamos também qual a sua função no cliente.
+Depois encontramos o \autoref{chap.bugs} onde apresentamos um bug detetado por nós que o nosso código Python apresenta.
+Finalmente, no \autoref{chap.conclusao} são apresentadas as conclusões deste trabalho.
+
+\chapter{Explicação dos vários blocos de código (funções)}
+\label{chap.explicacao}
+
+\section{\textit{start()}}
+\begin{lstlisting}
+if len(sys.argv) == 1:
+	print("")
+	print("Missing server adress argument! \nPlease use 'python3 [filename] [ip] [port] [encription]' \n")
+	print("Example: 'python3 laby.py xcoa.av.it.pt 8080 true' ")
+	print("")
+	sys.exit()
+elif len(sys.argv) == 2:
+	print("")
+	print("Missing server port argument! \nPlease use 'python3 [filename] [ip] [port] [encription]' \n")
+	print("Example: 'python3 laby.py xcoa.av.it.pt 8080 true' ")
+	print("")
+	sys.exit()
+elif len(sys.argv) == 3:
+	print("")
+	print("Missing decision argument to encrypt or not! \nPlease use 'python3 [filename] [ip] [port] [encription]' \n")
+	print("Example: 'python3 laby.py xcoa.av.it.pt 8080 true' ")
+	print("")
+	sys.exit()
+elif len(sys.argv) > 4:
+	print("")
+	print("Too many arguments! \nPlease use 'python3 [filename] [ip] [port] [encription]' \n")
+	print("Example: 'python3 laby.py xcoa.av.it.pt 8080 true' ")
+	print("")
+	sys.exit()
+\end{lstlisting}
+\paragraph{}Iniciamos o nosso código com esta função que verifica quantos argumentos foram introduzidos e conforme o tamanho do array de \texttt{"sys.argv"} (que é basicamente um array contendo os argumentos passados pelo terminal para um programa Python) esta função executa diferentes ações.\cite{args}
+
+\paragraph{}Para o programa iniciar são obrigatoriamente necessários 4 argumentos imediatamente a seguir ao comando principal \texttt{python3}:
+
+\begin{itemize}
+\item O nome do ficheiro com o código Python (que denominámos por \texttt{"filename"});
+\item O endereço do servidor a que se prentende ligar (\texttt{"ip"});
+\item A porta do servidor que pretende conectar (\texttt{"port"});
+\item A decisão do utilizador de pretender ou não encriptação nas suas comunicações com a sonda (\texttt{"encription"}).
+\end{itemize}
+
+Como o utilizador não sabe quantos e quais são os argumentos necessários para a execução do \textit{client}, esta função é útil exatamente para isso.
+
+Caso a quantidade de argumentos fornecidos seja inferior à necessária, uma mensagem é apresentada ao utilizador dizendo que argumento/argumentos está/estão em falta. De seguida o programa é terminado permitindo ao utilizador tentar novamente. 
+
+Caso a quantidade de argumentos fornecidos seja superior à necessária, é apresentada uma mensagem dizendo que foram fornecidos argumentos em excesso e o programa é terminado também.
+
+No caso da quantidade de argumentos ser a correta, o programa prossegue para a próxima função (explicada na próxima página) sem qualquer ação.
+
+\newpage
+
+\section{\textit{connect()}}
+\begin{lstlisting}
+print("")
+s.connect((ip, port))
+time.sleep(1)
+print("Connected successfully!")
+print("")
+\end{lstlisting}
+\paragraph{}Uma das funções essenciais deste código é conseguir que o \textit{client} se ligue ao servidor através de um protocolo \ac{tcp}. O código para isso é bastante simples e está explicado na bibliografia usada.\cite{tcp}
+
+\paragraph{}As variavéis que o \texttt{"s.connect"} requer (\texttt{"ip"} e \texttt{"port"}) não são definitivas, isto é, não estão a ser dadas pelo código mas sim digitadas pelo próprio utilizador no terminal ao executar o programa, como iremos perceber melhor na função \textit{"main"} (\autoref{sec.main}), onde estão definidas globalmente.
+
+\newpage
+
+\section{\textit{request\_token()}}
+\begin{lstlisting}
+message = "CONNECT\n"
+s.send(message.encode("utf-8"))
+\end{lstlisting}
+\paragraph{}Esta função é bastante explicável por si só. Limita-se a enviar uma mensagem com um \texttt{"CONNECT"} para pedir ao servidor um token para que o cliente possa prosseguir para obter os dados da sonda.
+
+\newpage
+
+\section{\textit{request\_token\_encript()}}
+\begin{lstlisting}
+A=pow(g,a,p)
+message = "CONNECT " + str(A) + "," + str(p) + "," + str(g) + "\n"
+s.send(message.encode("utf-8"))
+\end{lstlisting}
+\paragraph{}Nesta função, muito semelhante à anterior, foi enviado um conjunto de valores juntamente com a mensagem \texttt{"CONNECT"} para dizer ao servidor que queríamos receber um valor, "B", com o qual iríamos calcular o valor da chave para usar na encriptação.
+
+\paragraph{}O que difere esta função da anterior, é que aqui como são enviados os valores \texttt{"A"},\texttt{"p"} e \texttt{"g"} junto com o \texttt{"CONNECT"}, o servidor assume que queremos as nossas comunicações encriptadas. Se a mensagem apenas for um \texttt{"CONNECT"}, o servidor assume que o utilizador não quer encriptação.
+
+\newpage
+
+\section{\textit{read\_token()}}
+\begin{lstlisting}
+token = json.loads(s.recv(4096).decode("utf-8"))
+print(token)
+print("")
+token_value = str(token["TOKEN"])
+message = "READ " + token_value +"\n"
+s.send(message.encode("utf-8"))
+\end{lstlisting}
+\paragraph{}O objetivo desta função é, primeiramente, guardar a string \ac{json} completa numa variável a que chamámos \texttt{"token"}, visto que apenas contêm o campo \texttt{"TOKEN"} e o seu respetivo valor.
+Após imprimirmos no terminal essa variável, criamos outra chamada \texttt{"token\_value"} que vai retirar o token que iremos usar mais abaixo aquando do envio da mensagem \texttt{"READ"}. Isto faz-se muito facilmente acedendo ao campo \texttt{"TOKEN"} da linha \ac{json} carregada na variável \texttt{"token"}. Ainda precisámos de a converter para \texttt{string} pois o valor original vem no tipo de variável \texttt{int} e para enviar a mensagem a pedir ao servidor para ler o token enviado, toda a mensagem necessita de ser \texttt{string}, incluindo o valor do token.
+
+\newpage
+
+\section{\textit{get\_key()}}
+\label{sec.key}
+\begin{lstlisting}
+global key
+h = hashlib.md5()
+h.update(str(X).encode("utf-8"))
+key = h.hexdigest()
+key = key[:16]
+return key
+\end{lstlisting}
+\paragraph{}Primeiro, declarámos a variável \texttt{"key"} como global pois iremos precisar dela numa outra função. Em seguida, fomos fazer a síntese \ac{md5} do valor \texttt{"X"}, obtido através do valor \texttt{"B"} enviado pelo servidor, e utilizando \texttt{"hexdigest"} convertemos para base hexadecimal, da qual aproveitámos apenas os primeiros octetos 16 com \texttt{"key=key[:16]"}.\cite{guiao}
+
+\newpage
+
+\section{\textit{get\_data()}}
+\label{sec.data}
+\begin{lstlisting}
+if security:
+    cipher = AES.new(key)
+    data = base64.b64decode(data)
+    data = cipher.decrypt(data)
+    p = data[len(data)-1]
+    data = data[0:len(data)-p]
+    data=json.loads(data.decode("utf-8"))
+else:
+    data=json.loads(data)
+return data
+\end{lstlisting}
+\paragraph{}Nesta função, se a encriptação estiver ativa, os dados provenientes do servidor são descodificados de Base 64 e desencriptados de acordo com o algoritmo \ac{aes}. Em seguida o programa vai remover os blocos de informação em excesso de modo a que cada bloco fique apenas com 16 bits. Ao fim de os dados estarem devidamente desencriptados, o programa pede-os ao servidor.
+\paragraph{}Caso a encriptação não esteja ativa, o programa simplesmente limita-se a ir buscar os dados ao servidor com o comando \texttt{"json.loads(data)"}.\cite{encript}
+
+\newpage
+
+\section{\textit{read\_token\_encript()}}
+\begin{lstlisting}
+token = json.loads(s.recv(4096).decode("utf-8"))
+token_value = token["TOKEN"]
+b = token["B"]
+X=pow(b,a,p)
+c=0        
+key = get_key(X)
+cipher = AES.new(key)
+message = "READ " + str(token_value) +"\n"
+last_block_len = len(message)%cipher.block_size
+if (last_block_len != cipher.block_size):
+        c = cipher.block_size-last_block_len
+        message = message+chr(c)*c
+message=cipher.encrypt(message)
+message=base64.b64encode(message)+"\n".encode("utf-8")
+s.send(message)
+\end{lstlisting}
+\paragraph{}Aqui, usando o valor \texttt{"B"} que nos foi dado pelo servidor, fomos calcular a chave de encriptação \texttt{"X"}, sintetizada na função \textit{get\_key} (\autoref{sec.key}), já explicada em cima.
+
+\paragraph{}Em seguida fomos fazer \texttt{"READ"} do valor do token, declarar um cifra utilizando o algoritmo \ac{aes} e fizemos padding para garantir que o tamanho de todos os blocos de informação é múltiplo de 16 para mais tarde poderem ser corretamente desencriptados (fomos calcular  o tamanho do último bloco e se fosse diferente do tamanho dos blocos da cifra teriamos que lhe acrescentar um número de bits, \texttt{"c"} ,de modo a que o tamanho de ambos os blocos fosse igual e no qual cada bit acrescentado contivesse informação acerca de número de bits acrescentados, ou seja, foram acrescentados \texttt{"c"} bits, cada um deles contendo a informação c). Numa última fase desta função encriptámos a mensagem com o algortimo já referido, fizemos a sua codificação para Base 64 e enviámo-la para o servidor.\cite{encript}
+
+\newpage
+
+\section{\textit{confirm()}}
+\begin{lstlisting}
+confirmation = s.recv(4096)
+confirmation = get_data(confirmation.decode("utf-8"))
+time.sleep(1)
+
+for i in confirmation:
+	type_message = confirmation[i]
+	
+if type_message != "OK":						# If type is not OK, the client ends with the "error" type message printed
+	print("")
+	#~ print("Full error message:", confirmation)			# Just for test (when an error occurs to see more details)
+	print ("{'STATUS':", type_message,"}")
+	print("")
+	time.sleep(1)
+	print ("Closing the program...")
+	sys.exit()									# Prevents terminal from waiting endlessly for response when token isn't accepted or when an unexpected error occurs
+else:											# If type is OK, the client continues with the "ok" type message
+	print("{'STATUS':", type_message,"}")
+	print("")
+\end{lstlisting}
+\paragraph{}Esta função é muito simples embora o código não o pareça. Ao fim da mensagem enviada na função anterior, agora é altura para a ler e para isso voltamos a recorrer à função \textit{"get\_data"} (\autoref{sec.data}) e ela vai ficar responsável por desencriptar a mensagem (caso esteja encriptada) ou por simplesmente fazer \textit{load} dela tal e qual como está (caso não esteja desencriptada).
+
+\paragraph{}De seguida, implementámos um ciclo \textit{for} para percorrer todos os dicionários até ao último e posteriormente guardar esse último numa variável com o nome de \texttt{"type\_message"}. Isto depois permite implementar um \textit{if} e se a resposta do servidor for positiva (isto é, um \texttt{"OK"}) o programa avança com essa mensagem impressa no terminal. Se a resposta do servidor for diferente de \texttt{"OK"}, muito provavelmente vai ser um erro e por isso o programa imprime o tipo de erro que ocorreu e imediatamente a seguir termina o programa, evitando que o terminal fique infinitamente à espera de mais alguma ação.
+
+\newpage
+
+\section{\textit{write()}}
+\begin{lstlisting}
+global cont,total_wind,total_temperature,total_humidity
+cont = 0
+total_wind = 0
+total_temperature = 0
+total_humidity = 0
+	
+try:
+	while 1:
+		print("Use CTRL+C to stop getting data from the probe and continue the client")
+		print("")
+		try:
+			data = s.recv(4096)
+			data = get_data(data.decode("utf-8"))
+				
+			temperature = data["TEMPERATURE"]
+			wind = data["WIND"]
+			humidity = data["HUMIDITY"]
+		except (ValueError, KeyError, json.decoder.JSONDecodeError):
+			try:
+				print("Bit corruptions occurred while loading values from the JSON string. This line of JSON will be ignored, waiting for new data...")
+				print("")
+				data = s.recv(4096)
+				data = get_data(data.decode("utf-8"))
+					
+				temperature = data["TEMPERATURE"]
+				wind = data["WIND"]
+				humidity = data["HUMIDITY"]
+			except (ValueError, KeyError, json.decoder.JSONDecodeError):	# Because it is (almost) impossible have 3 bit corruptions in a row
+				print("Bit corruptions occurred while loading values from the JSON string. This line of JSON will be ignored, waiting for new data...")
+				print("")
+				data = s.recv(4096)
+				data = get_data(data.decode("utf-8"))
+					
+				temperature = data["TEMPERATURE"]
+				wind = data["WIND"]
+				humidity = data["HUMIDITY"]
+			
+		print (data)
+		print("")
+				 
+		total_temperature = total_temperature + temperature
+		total_wind = total_wind + wind
+		total_humidity = total_humidity + humidity
+			
+		writer.writerow({"TEMPERATURE":temperature,"WIND":wind,"HUMIDITY":humidity})
+		data_csv.flush()
+		cont += 1
+except KeyboardInterrupt:		# User can use CTRL+C and it will stop getting data and continues with the program without giving error
+	pass
+	print("")
+	print("")
+		
+\end{lstlisting}
+\paragraph{}Nesta função implementámos um ciclo \textit{while} infinito para receber dados das 3 grandezas até quando o utilizador quiser, utilizando \texttt{CTRL+C} para interromper o ciclo e avançar no programa. Para isso é que colocámos um \texttt{except KeyboardInterrupt} para o programa não terminar com um erro mas sim para prosseguir (\texttt{pass}).
+
+\paragraph{}O processo de retirar os valores dos campos \ac{json} já foi explicado mais acima por isso não é necessário voltar a explicar essa parte do código.
+
+\paragraph{}Por cada vez que o ciclo corre, cada um dos 3 valores é escrito numa linha do ficheiro \ac{csv} criado na função \textit{"main"}, que iremos explicar mais abaixo.\cite{csv} Para além disto, cada vez que o ciclo é executado, é acumulado o valor total de temperaturas, de ventos e de humidades para posteriormente ser calculada uma média de cada uma das 3 grandezas, juntamente com um incremento \texttt{"cont"} para contar a quantidade de vezes que foram obtidos dados da sonda.
+
+\paragraph{}Ainda dentro deste bloco foram feitos vários try's and except's para ignorar as linhas \ac{json} em que ocorreram corrupções de bits, evitando gravar dados com erros ou até evitando erros a encontrar os dicionários exigidos pelo código. Ainda foi utilizada a exceção para ultrapassar o erro de interromper a obtenção de dados da sonda, já referida em cima. Para isso, foram utilizadas as exceções \texttt{ValueError}, \texttt{KeyError} e \texttt{json.decoder.JSONDecodeError}.
+
+\newpage
+
+\section{\textit{recommendations()}}
+\begin{lstlisting}
+print("Recommendations:") 
+if temperature_average<=8:
+    print("- Está muito frio, leve um casaco!")
+
+if (temperature_average>8 and temperature_average<20):
+    print("- Está uma temperatura agradável, leve uma camisola mais fresca!")
+    
+if temperature_average>=20:
+    print("- Está muito calor, leve uma t-shirt e calcoes!")
+    
+if wind_average>=20:
+    print("- Cuidado com o vento, agasalhe-se!")
+
+if humidity_average>=85:
+    print("- Existe uma grande possibilidade de chover, previna-se e leve guarda-chuva!")
+
+if (humidity_average>=85 and wind_average>=20):
+    print("- Existe grande possibilidade de precipitacao. No entanto, devido ao vento forte, não leve guarda-chuva, leve antes um gorro!")
+    
+if (temperature_average<=0 and humidity_average>=85):
+    print("- Devido à temperatura atmosferica e à humidade do ar, existe possibilidade de precipitacao na forma de neve ou granizo. Previna-se e nao saia de casa sem um casaco!")
+\end{lstlisting}
+\paragraph{}Esta função, consoante a média dos valores de temperatura, vento e humidade enviados pelo servidor, apresenta no terminal algumas recomendações acerca do vestuário. São if's muito simples e fáceis de perceber que dispensam explicações.
+
+\newpage
+
+\section{\textit{'main'}}
+\label{sec.main}
+\begin{lstlisting}
+start()
+
+ip = sys.argv[1]
+port = int(sys.argv[2])
+security = sys.argv[3].upper() in ['1', 'ON', 'TRUE', 'ACTIVATE', 'ENABLE', 'YES']		# If sys.argv[3] have one of this values (case insensitivity), return True. If not, return False.
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+try:
+	connect()
+except:
+	print("Something went wrong... Please check your internet connection and the address/port of the server you entered!")
+	print("")
+	sys.exit()
+
+p=random.getrandbits(64)
+g=random.getrandbits(64)
+a=random.randint(1,1000)
+
+if security:
+	try:
+		request_token_encript()
+		time.sleep(2)
+		read_token_encript()
+	except (ValueError, KeyError, json.decoder.JSONDecodeError):
+		try:
+			print("Bit corruptions occurred while getting token. Getting a new one...")
+			print("")
+			request_token_encript()
+			time.sleep(2)
+			read_token_encript()
+		except (ValueError, KeyError, json.decoder.JSONDecodeError):	# Because it is (almost) impossible have 3 bit corruptions in a row
+			print("Bit corruptions occurred while getting token. Getting a new one...")
+			print("")
+			request_token_encript()
+			time.sleep(2)
+			read_token_encript()
+else:
+	try:
+		request_token()
+		time.sleep(2)
+		read_token()
+	except (ValueError, KeyError, json.decoder.JSONDecodeError):
+		try:
+			print("Bit corruptions occurred while getting token. Getting a new one...")
+			print("")
+			request_token()
+			time.sleep(2)
+			read_token()
+		except (ValueError, KeyError, json.decoder.JSONDecodeError):	# Because it is (almost) impossible have 3 bit corruptions in a row
+			print("Bit corruptions occurred while getting token. Getting a new one...")
+			print("")
+			request_token()
+			time.sleep(2)
+			read_token()
+
+try:
+	confirm()
+except (ValueError, KeyError, json.decoder.JSONDecodeError):
+	print("Bit corruptions occurred while getting token confirmation. Trying again...")
+	print("")
+	time.sleep(2)
+	print("{'STATUS': OK }")
+	print("")
+	
+# Prepare CSV file for writing
+data_csv = open("output_data.csv", "w", newline="")
+writer = csv.DictWriter(data_csv, delimiter=";", fieldnames=["TEMPERATURE","WIND","HUMIDITY"])
+writer.writeheader()
+
+write()
+
+s.close()				# Close socket
+data_csv.close()		# Close CSV file
+
+time.sleep(1)
+try:
+	# Calculation of averages values for the prints on terminal
+	temperature_average = total_temperature / cont
+	wind_average = total_wind / cont
+	humidity_average = total_humidity / cont
+	
+	print("Temperature average: %.2f" % temperature_average)
+	print("Wind average: %.2f" % wind_average)
+	print("Humidity average: %.2f" % humidity_average)
+	print("")
+	
+	time.sleep(2)
+	recommendations()
+except ZeroDivisionError:		#Ignore averages calculation if 'cont' value is 0, namely, if the user pressed CTRL+C too early and there was no data received
+	print("There are no values here... It would be nice try to let the client run longer!")
+
+print("")
+\end{lstlisting}
+\paragraph{}Este bloco de código é enorme e por alguma razão apelidámos ela de \texttt{"main"}. Com os comentários que introduzimos ao longo do código fica fácil entender do que se trata, mas mesmo assim vamos explicar melhor alguns pontos importantes desta parte tão essencial do nosso código.
+
+\paragraph{}Em primeiro lugar, é importante explicar a forma como se obtem o valor das variáveis passadas como argumentos diretamente pelo terminal ao executar o programa. Nomeadamente na variável \texttt{"security"}, se o utilizador digitar \texttt{"1"}, \texttt{"ON"}, \texttt{"TRUE"}, \texttt{"ACTIVATE"}, \texttt{"ENABLE"}, \texttt{"YES"} ou qualquer valor destes valores referidos alternando entre maiúsculas e minúsculas (\texttt{"upper()"}), a variável toma o valor \texttt{"TRUE"}. Caso seja outro valor qualquer para além dos referidos anteriormente, a variável fica com o valor \texttt{"FALSE"}.
+
+\paragraph{}De seguida são chamadas as funções necessárias (já definidas em cima), juntamente com mais try's and except's para ignorar as linhas \ac{json} em que ocorreram corrupções de bits, evitando qualquer tipo de erro que possa acontecer por parte das comunicações da sonda. Consoante o valor \textit{boolean} da variável \texttt{"security"}, o cliente executa funções diferentes.
+
+\paragraph{}Nesta função apresentamos uma nova exceção (\texttt{"ZeroDivisionError"}), que é um erro que acontece quando o utilizador prime \texttt{CTRL+C} quando ainda nenhum dado foi transmitido, fazendo com que a nossa variável de incremento (\texttt{"cont"}) fique com o valor 0 e dê erro aquando da execução de \texttt{temperature\_average = total\_temperature / cont}. Sendo assim, o programa é terminado com uma mensagem engraçada recomendando o utilizador a deixar correr o cliente durante mais tempo até ter dados suficientes para escrever no \ac{csv}, para calcular médias e para apresentar recomendações acerca do vestuário.
+
+\paragraph{}O resto do código que não referimos é muito \textit{self-explanatory} graças aos comentários que colocámos e graças ao facto de o código estar devidamente organizado e identado. O único comando que pode parecer estranho é \texttt{"time.sleep()"}, mas a sua função é muito simples: pausar temporariamente a execução do código, permitindo "dar tempo" à sonda para renovar as suas comunicações, evitando corrupções de bits de acontecerem tão frequentemente.\cite{delay}
+
+\chapter{Bugs conhecidos}
+\label{chap.bugs}
+\paragraph{}O único bug que detetámos neste código é, obviamente, se ocorrerem 3 ou mais corrupções de bits seguidas. Isto é muito improvável de acontecer, falamos de apenas uma pequeníssima percentagem de probabilidade, mas no entanto, não é totalmente impossível e pode acontecer.
+
+Para resolver este problema poderíamos, por exemplo, ter implementado um ciclo com try's e except's e assim, de uma forma exagerada clara, mesmo que ocorressem infinitas corrupções de bits, o programa ignorava sempre os objetos \ac{json} e tentava sempre esperar por dicionários \ac{json} corretos ou por valores válidos que pudesse registar, dependendo de onde acontecessem essas corrupções.
+No entanto, decidimos que aguentar 2 corrupções de bits seguidas era o suficiente para o programa estar a funcionar quase perfeitamente e implementámos assim.
+
+\chapter{Conclusão}
+\label{chap.conclusao}
+\paragraph{}Achamos que o nosso código está bastante completo e funcional visto que resultou de horas de trabalho intensivas até ao último dia da entrega do mesmo, quer na escrita do código quer nos testes do mesmo para nos certificarmos que não haveria qualquer problema ao executar o cliente.
+
+\paragraph{}Gostámos de realizar este trabalho, pois melhorou imenso as nossas capacidades e habilidades nesta linguagem de programação que é o Python, visto que é a primeira vez que o estamos a abordar no curso.
+
+\paragraph{}Para além disso foi também uma boa maneira para estudarmos por nós próprios e para não acumularmos matéria, permitindo uma maior facilidade para a realização do projeto final e do teste teórico.
+
+\chapter{Contribuições dos autores}
+\paragraph{}O \ac{mn} preparou o ficheiro \textit{main.tex}, aplicou as alterações necessárias para o início da escrita em \LaTeX e escreveu grande parte do código, como se pode confirmar pelos \textit{commits} realizados pelo mesmo.
+
+\paragraph{}O \ac{js} concluiu a edição do relatório em \LaTeX e escreveu outra grande parte do código, a qual se pode verificar também pelos \textit{commits} feitos no projeto do CodeUA.
+
+\paragraph{}Ambos os membros do grupo contribuiram para escrita deste documento, sendo que cada um ficou responsável por explicar a respetiva parte do código que realizou. Basicamente, o \ac{mn} redigiu as partes correspondentes aos blocos de código relacionados com a encriptação e o \ac{js} as restantes partes.
+Os dois também trataram da formatação/design do documento \LaTeX, da utilização de acrónimos e da escrita da bibliografia. 
+A introdução (\autoref{chap.introducao}) e a conclusão (\autoref{chap.conclusao}) foi redigida pelos dois em simultâneo, através de trocas de ideias para uma escrita mais completa e mais fácil possível. 
+
+\paragraph{}Em suma, o \ac{js} e o \ac{mn} fizeram 50\% do trabalho cada um, sendo que o \ac{js} ficou encarregue do envio do código Python, do PDF final e de todo o restante material deste trabalho de aprofundamento para o eLearning.
+
+\chapter{Glossário}
+\begin{acronym}
+\acro{labi}[LABI]{Laboratórios de Informática}
+\acro{js}[JS]{João Tomás Simões}
+\acro{mn}[MN]{Martim Neves}
+\acro{ap2}[AP2]{Trabalho de Aprofundamento 2}
+\acro{tcp}[TCP]{Transmission Control Protocol}
+\acro{json}[JSON]{JavaScript Object Notation}
+\acro{csv}[CSV]{Comma Separated Values}
+\acro{md5}[MD5]{Message Digest 5}
+\acro{aes}[AES-128]{Advanced Encryption Standard}
+\end{acronym}
+
+\bibliography{references}
+\bibliographystyle{acm}
+\end{document}

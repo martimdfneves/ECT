@@ -1,0 +1,230 @@
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.title {
+    text-decoration: underline;
+    font-size: 35px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-variant: small-caps;
+    word-spacing: 7px;
+    font-family: Arial;
+}
+
+.p {
+    font-size: 18px;
+	text-indent: 50px;
+	text-align: justify;
+    text-justify: inter-word;
+	font-family: Arial;
+	font-weight: normal;
+	
+}
+
+.p-about {
+    font-size: 18px;
+	text-align: center;
+	font-family: Arial;
+}
+    
+.body {
+    background-image: url("https://virtry.net/images/gradient_bg.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: Arial;
+}
+
+.body-about {
+    background-image: url("http://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg");
+    background-position: top center;
+    background-repeat: repeat;
+    color: white;
+    font-family: Arial;
+}
+
+.back-to-top-about {
+	background: none;
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 70px;
+	height: 70px;
+	z-index: 100;
+	display: none;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.back-to-top-about i {
+	font-size: 60px;
+}
+
+.back-to-top {
+	background: none;
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 70px;
+	height: 70px;
+	z-index: 100;
+	display: none;
+	text-decoration: none;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.back-to-top i {
+	font-size: 60px;
+}
+
+.creditos {
+	color: white;
+    border-radius: 15px 15px 0px 0px;
+    padding: 9px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.fundopreto {
+	background-color: black;
+	color: white;
+	font-size: 18px;
+}
+
+.teste {
+	position: fixed;
+}
+
+ul.classificacao {
+	list-style-type: decimal;
+	font-family: Arial;
+	font-size: 24px;
+	font-weight: bold;
+	list-style-position: inside;
+}
+
+ul.exemplos {
+	list-style-type: disc;
+	font-family: Arial;
+	font-size: 24px;
+	font-weight: bold;
+	list-style-position: inside;
+}
+
+ol.carateristicas {
+	list-style-type: none;
+    font-family: "Lucida Console", Monaco, monospace;
+	font-size: 20px;
+	font-weight: lighter;
+	list-style-position: inside;
+}
+
+ul.tipos {
+	list-style-type: circle;
+	font-family: Arial;
+	font-size: 22px;
+	font-weight: bold;
+	list-style-position: inside;
+}
+	
+ul.vantagens{
+	list-style-type: square;
+	font-family: Sans-Serif;
+	font-size: 20px;
+	font-weight: bold;
+	list-style-position: inside;
+}
+
+img.imagem {
+	box-shadow: 10px 10px 10px #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-weight: normal;
+}
+
+th {
+    background-color: #696969;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+	background-color:#f5f5f5;
+}
+
+dl.spoiler {
+	background-color: #eee;
+	border-radius: 20px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+dl.spoiler dt {
+	display: block;
+	font-size: 24px;
+	font-weight: bold;
+	color: black;
+	font-variant: small-caps;
+	text-align: center;
+	border-bottom: 2px dotted #0f0f0f;
+}
+
+dl.spoiler:hover {
+	background-color: #d9d9d9;
+	
+}
+
+dt.click:hover {
+	text-decoration: underline;
+}

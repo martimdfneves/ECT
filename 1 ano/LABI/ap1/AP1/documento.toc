@@ -1,0 +1,79 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Defini\IeC {\c c}\IeC {\~a}o}{2}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Classifica\IeC {\c c}\IeC {\~a}o}{3}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Mem\IeC {\'o}ria principal ou secund\IeC {\'a}ria}{3}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Mem\IeC {\'o}ria vol\IeC {\'a}til ou n\IeC {\~a}o vol\IeC {\'a}til}{3}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Dispositivo magn\IeC {\'e}tico, \IeC {\'o}tico ou eletr\IeC {\'o}nico}{4}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Dispositivo remov\IeC {\'\i }vel ou n\IeC {\~a}o remov\IeC {\'\i }vel}{4}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Exemplos}{5}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Disquete}{6}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}CD}{7}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Tipos de CD}{8}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{CD-ROM}{8}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{CD-R}{8}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{CD-RW}{8}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}DVD}{9}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Tipos de DVD}{10}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{DVD-ROM}{10}{section*.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{DVD-R}{10}{section*.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{DVD-RW}{11}{section*.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{DVD-RAM}{11}{section*.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Disco Blu-ray}{12}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Cart\IeC {\~a}o de Mem\IeC {\'o}ria}{13}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}Tipos de cart\IeC {\~o}es de mem\IeC {\'o}ria}{13}{subsection.4.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}PEN Drive}{14}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.7}Disco HDD}{15}{section.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.8}Disco SSD}{16}{section.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.8.1}Diferen\IeC {\c c}as entre disco \ac {hdd} e \ac {ssd}}{17}{subsection.4.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.9}Disco Externo}{19}{section.4.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{19}{section*.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{19}{section*.71}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{19}{figure.4.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.10}Mem\IeC {\'o}ria RAM}{20}{section.4.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Como funciona:}{20}{section*.73}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.11}Mem\IeC {\'o}ria ROM}{21}{section.4.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.12}Mem\IeC {\'o}ria Cache}{22}{section.4.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Evolu\IeC {\c c}\IeC {\~a}o}{23}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{23}{section*.76}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~a}o}{24}{chapter.6}

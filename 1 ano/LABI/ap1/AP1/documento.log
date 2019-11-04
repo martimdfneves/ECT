@@ -1,0 +1,1859 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.14)  18 NOV 2017 15:09
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**documento.tex
+(./documento.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+01E02 (decimal 7682)
+   defining Unicode char U+01E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2016/03/03 v3.3 programmable bibliographies (PK/JW/AB)
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex_.sty
+Package: biblatex_ 2016/03/03 v3.3 programmable bibliographies (biber) (PK/JW/A
+B)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count88
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count89
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count90
+\c@listtotal=\count91
+\c@listcount=\count92
+\c@liststart=\count93
+\c@liststop=\count94
+\c@citecount=\count95
+\c@citetotal=\count96
+\c@multicitecount=\count97
+\c@multicitetotal=\count98
+\c@instcount=\count99
+\c@maxnames=\count100
+\c@minnames=\count101
+\c@maxitems=\count102
+\c@minitems=\count103
+\c@citecounter=\count104
+\c@savedcitecounter=\count105
+\c@uniquelist=\count106
+\c@uniquename=\count107
+\c@refsection=\count108
+\c@refsegment=\count109
+\c@maxextratitle=\count110
+\c@maxextratitleyear=\count111
+\c@maxextrayear=\count112
+\c@maxextraalpha=\count113
+\c@abbrvpenalty=\count114
+\c@highnamepenalty=\count115
+\c@lownamepenalty=\count116
+\c@maxparens=\count117
+\c@parenlevel=\count118
+\blx@tempcnta=\count119
+\blx@tempcntb=\count120
+\blx@tempcntc=\count121
+\blx@maxsection=\count122
+\blx@maxsegment@0=\count123
+\blx@notetype=\count124
+\blx@parenlevel@text=\count125
+\blx@parenlevel@foot=\count126
+\blx@sectionciteorder@0=\count127
+\labelnumberwidth=\skip43
+\labelalphawidth=\skip44
+\biblabelsep=\skip45
+\bibitemsep=\skip46
+\bibnamesep=\skip47
+\bibinitsep=\skip48
+\bibparsep=\skip49
+\bibhang=\skip50
+\blx@bcfin=\read1
+\blx@bcfout=\write3
+\c@mincomprange=\count128
+\c@maxcomprange=\count129
+\c@mincompwidth=\count130
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric-comp.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count131
+\c@savedafterword=\count132
+\c@annotator=\count133
+\c@savedannotator=\count134
+\c@author=\count135
+\c@savedauthor=\count136
+\c@bookauthor=\count137
+\c@savedbookauthor=\count138
+\c@commentator=\count139
+\c@savedcommentator=\count140
+\c@editor=\count141
+\c@savededitor=\count142
+\c@editora=\count143
+\c@savededitora=\count144
+\c@editorb=\count145
+\c@savededitorb=\count146
+\c@editorc=\count147
+\c@savededitorc=\count148
+\c@foreword=\count149
+\c@savedforeword=\count150
+\c@holder=\count151
+\c@savedholder=\count152
+\c@introduction=\count153
+\c@savedintroduction=\count154
+\c@namea=\count155
+\c@savednamea=\count156
+\c@nameb=\count157
+\c@savednameb=\count158
+\c@namec=\count159
+\c@savednamec=\count160
+\c@translator=\count161
+\c@savedtranslator=\count162
+\c@shortauthor=\count163
+\c@savedshortauthor=\count164
+\c@shorteditor=\count165
+\c@savedshorteditor=\count166
+\c@labelname=\count167
+\c@savedlabelname=\count168
+\c@institution=\count169
+\c@savedinstitution=\count170
+\c@lista=\count171
+\c@savedlista=\count172
+\c@listb=\count173
+\c@savedlistb=\count174
+\c@listc=\count175
+\c@savedlistc=\count176
+\c@listd=\count177
+\c@savedlistd=\count178
+\c@liste=\count179
+\c@savedliste=\count180
+\c@listf=\count181
+\c@savedlistf=\count182
+\c@location=\count183
+\c@savedlocation=\count184
+\c@organization=\count185
+\c@savedorganization=\count186
+\c@origlocation=\count187
+\c@savedoriglocation=\count188
+\c@origpublisher=\count189
+\c@savedorigpublisher=\count190
+\c@publisher=\count191
+\c@savedpublisher=\count192
+\c@language=\count193
+\c@savedlanguage=\count194
+\c@pageref=\count195
+\c@savedpageref=\count196
+\shorthandwidth=\skip51
+\shortjournalwidth=\skip52
+\shortserieswidth=\skip53
+\shorttitlewidth=\skip54
+\shortauthorwidth=\skip55
+\shorteditorwidth=\skip56
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2016/03/03 v3.3 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex_.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex_.def
+File: biblatex_.def 
+\c@textcitecount=\count197
+\c@textcitetotal=\count198
+\c@textcitemaxnames=\count199
+\c@biburlnumpenalty=\count266
+\c@biburlucpenalty=\count267
+\c@biburllcpenalty=\count268
+\c@smartand=\count269
+)
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count270
+\c@bbx:relatedtotal=\count271
+)))
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2016/03/03 v3.3 biblatex citation style (PK/JW/AB)
+\c@cbx@tempcnta=\count272
+\c@cbx@tempcntb=\count273
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2016/01/31 v5.1g context-sensitive quotations (JAW)
+\csq@reset=\count274
+\csq@gtype=\count275
+\csq@glevel=\count276
+\csq@qlevel=\count277
+\csq@maxlvl=\count278
+\csq@tshold=\count279
+\csq@ltx@everypar=\toks17
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2016/01/31 v5.1g csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
+\babel@savecnt=\count280
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 145.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count281
+\c@Blindtext=\count282
+\c@blind@countparstart=\count283
+\blind@countxx=\count284
+\blindtext@numBlindtext=\count285
+\blind@countyy=\count286
+\c@blindlist=\count287
+\c@blindlistlevel=\count288
+\c@blindlist@level=\count289
+\blind@listitem=\count290
+\c@blind@listcount=\count291
+\c@blind@levelcount=\count292
+\blind@mathformula=\count293
+\blind@Mathformula=\count294
+\c@blind@randomcount=\count295
+\c@blind@randommax=\count296
+\c@blind@pangramcount=\count297
+\c@blind@pangrammax=\count298
+)
+(/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
+
+(/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write4
+\integerpart=\count299
+\decimalpart=\count300
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen104
+\Hy@linkcounter=\count301
+\Hy@pagecounter=\count302
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count303
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count304
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen105
+\Fld@menulength=\count305
+\Field@Width=\dimen106
+\Fld@charsize=\dimen107
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count306
+\c@Item=\count307
+\c@Hfootnote=\count308
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count309
+\c@bookmark@seq@number=\count310
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen108
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen109
+\subfiglabelskip=\skip61
+\c@subfigure=\count311
+\c@lofdepth=\count312
+\c@subtable=\count313
+\c@lotdepth=\count314
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip62
+\subfig@bottom=\skip63
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 143.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count315
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+)
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count316
+\float@exts=\toks19
+\float@box=\box26
+\@float@everytoks=\toks20
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+\c@tracingmulticols=\count317
+\mult@box=\box28
+\multicol@leftmargin=\dimen112
+\c@unbalance=\count318
+\c@collectmore=\count319
+\doublecol@number=\count320
+\multicoltolerance=\count321
+\multicolpretolerance=\count322
+\full@width=\dimen113
+\page@free=\dimen114
+\premulticols=\dimen115
+\postmulticols=\dimen116
+\multicolsep=\skip64
+\multicolbaselineskip=\skip65
+\partial@page=\box29
+\last@line=\box30
+\maxbalancingoverflow=\dimen117
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count323
+\c@finalcolumnbadness=\count324
+\last@try=\dimen118
+\multicolovershoot=\dimen119
+\multicolundershoot=\dimen120
+\mult@nat@firstbox=\box52
+\colbreak@box=\box53
+\mc@col@check@num=\count325
+)
+Package biblatex Info: Trying to load language 'portuguese'...
+Package biblatex Info: ... file 'portuguese.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/portuguese.lbx
+File: portuguese.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'portuguese'.
+
+(./documento.aux)
+\openout1 = `documento.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `documento.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'documento.bbl' not found.
+
+No file documento.bbl.
+Package biblatex Info: Reference section=0 on input line 16.
+Package biblatex Info: Reference segment=0 on input line 16.
+\AtBeginShipoutBox=\box54
+Package hyperref Info: Link coloring OFF on input line 16.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count326
+)
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
+
+(./documento.out) (./documento.out)
+\@outlinefile=\write5
+\openout5 = `documento.out'.
+
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count327
+\scratchdimen=\dimen121
+\scratchbox=\box55
+\nofMPsegments=\count328
+\nofMParguments=\count329
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count330
+\MPscratchDim=\dimen122
+\MPnumerator=\count331
+\makeMPintoPDFobject=\count332
+\everyMPtoPDFconversion=\toks22
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<ua.pdf, id=108, 52.195pt x 55.20625pt>
+File: ua.pdf Graphic file (type pdf)
+ <use ua.pdf>
+Package pdftex.def Info: ua.pdf used on input line 47.
+(pdftex.def)             Requested size: 52.19487pt x 55.2061pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 56.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 56.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ua.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 73.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 73.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 73.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 73.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 73.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 
+      [1]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 82.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 82.
+
+Underfull \hbox (badness 2351) in paragraph at lines 82--82
+[][][]\T1/cmr/m/n/8 Fonte: http://cio.com.br/noticias/2015/10/27/tome-nota-2-5-
+quintilhoes-de-bytes-sao-
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 88.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 88.
+[1] (./documento.toc
+Package acronym Info: Label `acro:hdd' newly defined as it shall be overridden
+although it is yet undefined on input line 57.
+Package acronym Info: Label `acro:ssd' newly defined as it shall be overridden
+although it is yet undefined on input line 57.
+)
+\tf@toc=\write6
+\openout6 = `documento.toc'.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 91.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 91.
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.91 \listoffigures
+                    [1
+
+] (./documento.lof
+Package acronym Info: Label `acro:cd' newly defined as it shall be overridden
+although it is yet undefined on input line 19.
+Package acronym Info: Label `acro:dvd' newly defined as it shall be overridden
+although it is yet undefined on input line 29.
+Package acronym Info: Label `acro:usb' newly defined as it shall be overridden
+although it is yet undefined on input line 47.
+Package acronym Info: Label `acro:hd' newly defined as it shall be overridden
+although it is yet undefined on input line 53.
+Package acronym Info: Label `acro:ram' newly defined as it shall be overridden
+although it is yet undefined on input line 55.
+Package acronym Info: Label `acro:rom' newly defined as it shall be overridden
+although it is yet undefined on input line 57.
+)
+\tf@lof=\write7
+\openout7 = `documento.lof'.
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 93.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 93.
+ [2
+
+]
+Cap\'{\i }tulo 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 96.
+Package acronym Info: Label `acro:labi' newly defined as it shall be overridden
+
+although it is yet undefined on input line 99.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 107.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 107.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.107 \chapter
+              {Defini√ß√£o} [1
+
+
+]
+Cap\'{\i }tulo 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 107.
+<Imagens/zolpm4P.jpg, id=271, 851.18pt x 594.22pt>
+File: Imagens/zolpm4P.jpg Graphic file (type jpg)
+ <use Imagens/zolpm4P.jpg>
+Package pdftex.def Info: Imagens/zolpm4P.jpg used on input line 118.
+(pdftex.def)             Requested size: 369.88582pt x 258.22067pt.
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 118--119
+ [] 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 122.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 122.
+[2
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.122 \chapter
+              {Classifica√ß√£o} <./Imagens/zolpm4P.jpg>]
+Cap\'{\i }tulo 3.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 122.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 127.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 134.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 141.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 141.
+[3
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 143.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 152.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 159.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 159.
+ [4]
+Cap\'{\i }tulo 4.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 159.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 163.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 163.
+[5
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 165.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 169.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 169.
+
+<Imagens/disquetes.jpg, id=312, 325.215pt x 168.63pt>
+File: Imagens/disquetes.jpg Graphic file (type jpg)
+
+<use Imagens/disquetes.jpg>
+Package pdftex.def Info: Imagens/disquetes.jpg used on input line 179.
+(pdftex.def)             Requested size: 142.26378pt x 73.76772pt.
+Package acronym Info: Label `acro:kb' newly defined as it shall be overridden
+although it is yet undefined on input line 183.
+Package acronym Info: Label `acro:mb' newly defined as it shall be overridden
+although it is yet undefined on input line 183.
+
+<Imagens/leitor_disquete.jpg, id=315, 642.4pt x 481.8pt>
+File: Imagens/leitor_disquete.jpg Graphic file (type jpg)
+
+<use Imagens/leitor_disquete.jpg>
+Package pdftex.def Info: Imagens/leitor_disquete.jpg used on input line 189.
+(pdftex.def)             Requested size: 142.26378pt x 106.69473pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 193.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 193.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.193 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.193 \newpage
+               <./Imagens/disquetes.jpg> <./Imagens/leitor_disquete.jpg>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 195.
+
+<Imagens/cd_logo.png, id=329, 411.5375pt x 203.76125pt>
+File: Imagens/cd_logo.png Graphic file (type png)
+
+<use Imagens/cd_logo.png>
+Package pdftex.def Info: Imagens/cd_logo.png used on input line 209.
+(pdftex.def)             Requested size: 28.45274pt x 14.08751pt.
+ <Imagens/cd.png, id=331, 256.96pt x 256.96pt>
+File: Imagens/cd.png Graphic file (type png)
+
+<use Imagens/cd.png>
+Package pdftex.def Info: Imagens/cd.png used on input line 214.
+(pdftex.def)             Requested size: 156.49014pt x 156.49051pt.
+
+<Imagens/leitor_cd.jpeg, id=335, 451.6875pt x 286.06876pt>
+File: Imagens/leitor_cd.jpeg Graphic file (type jpg)
+
+<use Imagens/leitor_cd.jpeg>
+Package pdftex.def Info: Imagens/leitor_cd.jpeg used on input line 222.
+(pdftex.def)             Requested size: 156.49014pt x 99.11287pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 226.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 232.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 232.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 
+       <./Imagens/cd_logo.png> <./Imagens/cd.png> <./Imagens/leitor_cd.jpeg>]
+<Imagens/cd-rom.jpg, id=344, 239.89626pt x 247.92625pt>
+File: Imagens/cd-rom.jpg Graphic file (type jpg)
+
+<use Imagens/cd-rom.jpg>
+Package pdftex.def Info: Imagens/cd-rom.jpg used on input line 235.
+(pdftex.def)             Requested size: 42.67912pt x 44.10652pt.
+ <Imagens/cd-r.jpg, id=347, 239.89626pt x 247.92625pt>
+File: Imagens/cd-r.jpg Graphic file (type jpg)
+
+<use Imagens/cd-r.jpg>
+Package pdftex.def Info: Imagens/cd-r.jpg used on input line 244.
+(pdftex.def)             Requested size: 42.67912pt x 44.10652pt.
+ <Imagens/cd-r-ex.jpeg, id=348, 433.62pt x 433.62pt>
+File: Imagens/cd-r-ex.jpeg Graphic file (type jpg)
+
+<use Imagens/cd-r-ex.jpeg>
+Package pdftex.def Info: Imagens/cd-r-ex.jpeg used on input line 245.
+(pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
+
+<Imagens/cd-rw.jpg, id=350, 239.89626pt x 247.92625pt>
+File: Imagens/cd-rw.jpg Graphic file (type jpg)
+ <use Imagens/cd-rw.jpg>
+Package pdftex.def Info: Imagens/cd-rw.jpg used on input line 254.
+(pdftex.def)             Requested size: 42.67912pt x 44.10652pt.
+
+<Imagens/cd-rw-ex.jpg, id=351, 1003.75pt x 1003.75pt>
+File: Imagens/cd-rw-ex.jpg Graphic file (type jpg)
+
+<use Imagens/cd-rw-ex.jpg>
+Package pdftex.def Info: Imagens/cd-rw-ex.jpg used on input line 255.
+(pdftex.def)             Requested size: 85.35826pt x 85.35591pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 259.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 259.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.259 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.259 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.259 \newpage
+               <./Imagens/cd-rom.jpg> <./Imagens/cd-r.jpg> <./Imagens/cd-r-ex.j
+peg> <./Imagens/cd-rw.jpg> <./Imagens/cd-rw-ex.jpg>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 261.
+
+<Imagens/dvd_logo.png, id=367, 1204.5pt x 614.295pt>
+File: Imagens/dvd_logo.png Graphic file (type png)
+
+<use Imagens/dvd_logo.png>
+Package pdftex.def Info: Imagens/dvd_logo.png used on input line 276.
+(pdftex.def)             Requested size: 99.58464pt x 50.78494pt.
+ <Imagens/dvd.png, id=368, 256.96pt x 256.96pt>
+File: Imagens/dvd.png Graphic file (type png)
+
+<use Imagens/dvd.png>
+Package pdftex.def Info: Imagens/dvd.png used on input line 281.
+(pdftex.def)             Requested size: 142.26378pt x 142.26552pt.
+Package acronym Info: Label `acro:gb' newly defined as it shall be overridden
+although it is yet undefined on input line 285.
+ <Imagens/leitor_dvd.jpg, id=374, 458.71375pt x 104.39pt>
+File: Imagens/leitor_dvd.jpg Graphic file (type jpg)
+
+<use Imagens/leitor_dvd.jpg>
+Package pdftex.def Info: Imagens/leitor_dvd.jpg used on input line 289.
+(pdftex.def)             Requested size: 199.16928pt x 45.32484pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 295.
+
+Overfull \hbox (1.43393pt too wide) in paragraph at lines 300--301
+\T1/cmr/m/n/10 Á„o de da-dos. Esta j· vem feita de f·-brica e È im-pos-sÌ-vel g
+ra-var/modificar/apagar
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 301.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 301.
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.301 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.301 
+       <./Imagens/dvd_logo.png> <./Imagens/dvd.png> <./Imagens/leitor_dvd.jpg>]
+<Imagens/dvd-rom.png, id=387, 256.96pt x 256.96pt>
+File: Imagens/dvd-rom.png Graphic file (type png)
+ <use Imagens/dvd-rom.png>
+Package pdftex.def Info: Imagens/dvd-rom.png used on input line 304.
+(pdftex.def)             Requested size: 56.9055pt x 56.90385pt.
+
+<Imagens/dvd-r.jpg, id=388, 239.89626pt x 247.92625pt>
+File: Imagens/dvd-r.jpg Graphic file (type jpg)
+ <use Imagens/dvd-r.jpg>
+Package pdftex.def Info: Imagens/dvd-r.jpg used on input line 313.
+(pdftex.def)             Requested size: 56.9055pt x 58.80743pt.
+
+<Imagens/dvd-r-ex.jpeg, id=389, 433.62pt x 433.62pt>
+File: Imagens/dvd-r-ex.jpeg Graphic file (type jpg)
+
+<use Imagens/dvd-r-ex.jpeg>
+Package pdftex.def Info: Imagens/dvd-r-ex.jpeg used on input line 314.
+(pdftex.def)             Requested size: 170.71652pt x 170.71892pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 318.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 318.
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.318 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.318 \newpage
+               <./Imagens/dvd-rom.png> <./Imagens/dvd-r.jpg> <./Imagens/dvd-r-e
+x.jpeg>] <Imagens/dvd-rw.jpg, id=399, 239.89626pt x 247.92625pt>
+File: Imagens/dvd-rw.jpg Graphic file (type jpg)
+
+<use Imagens/dvd-rw.jpg>
+Package pdftex.def Info: Imagens/dvd-rw.jpg used on input line 325.
+(pdftex.def)             Requested size: 56.9055pt x 58.80743pt.
+
+<Imagens/dvd-rw-ex.jpg, id=400, 1003.75pt x 1003.75pt>
+File: Imagens/dvd-rw-ex.jpg Graphic file (type jpg)
+
+<use Imagens/dvd-rw-ex.jpg>
+Package pdftex.def Info: Imagens/dvd-rw-ex.jpg used on input line 326.
+(pdftex.def)             Requested size: 170.71652pt x 170.71182pt.
+
+<Imagens/dvd-ram.jpg, id=401, 255.95625pt x 244.915pt>
+File: Imagens/dvd-ram.jpg Graphic file (type jpg)
+
+<use Imagens/dvd-ram.jpg>
+Package pdftex.def Info: Imagens/dvd-ram.jpg used on input line 335.
+(pdftex.def)             Requested size: 56.9055pt x 54.4495pt.
+
+<Imagens/dvd-ram-ex.jpg, id=402, 1003.75pt x 1003.75pt>
+File: Imagens/dvd-ram-ex.jpg Graphic file (type jpg)
+
+<use Imagens/dvd-ram-ex.jpg>
+Package pdftex.def Info: Imagens/dvd-ram-ex.jpg used on input line 336.
+(pdftex.def)             Requested size: 170.71652pt x 170.71182pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 340.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 340.
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 \newpage
+               <./Imagens/dvd-rw.jpg> <./Imagens/dvd-rw-ex.jpg> <./Imagens/dvd-
+ram.jpg> <./Imagens/dvd-ram-ex.jpg>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 342.
+
+<Imagens/bluray_logo.png, id=412, 1204.5pt x 646.415pt>
+File: Imagens/bluray_logo.png Graphic file (type png)
+
+<use Imagens/bluray_logo.png>
+Package pdftex.def Info: Imagens/bluray_logo.png used on input line 356.
+(pdftex.def)             Requested size: 113.81102pt x 61.07469pt.
+
+<Imagens/bluray.png, id=413, 220.825pt x 220.825pt>
+File: Imagens/bluray.png Graphic file (type png)
+ <use Imagens/bluray.png>
+Package pdftex.def Info: Imagens/bluray.png used on input line 361.
+(pdftex.def)             Requested size: 142.26378pt x 142.27097pt.
+
+<Imagens/leitor_bluray.jpg, id=416, 449.68pt x 165.61874pt>
+File: Imagens/leitor_bluray.jpg Graphic file (type jpg)
+
+<use Imagens/leitor_bluray.jpg>
+Package pdftex.def Info: Imagens/leitor_bluray.jpg used on input line 369.
+(pdftex.def)             Requested size: 227.62204pt x 83.83517pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 373.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 373.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.373 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.373 \newpage
+               <./Imagens/bluray_logo.png> <./Imagens/bluray.png> <./Imagens/le
+itor_bluray.jpg>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 375.
+Package acronym Info: Label `acro:tb' newly defined as it shall be overridden
+although it is yet undefined on input line 387.
+Package acronym Info: Label `acro:sd' newly defined as it shall be overridden
+although it is yet undefined on input line 387.
+Package acronym Info: Label `acro:sdhc' newly defined as it shall be overridden
+
+although it is yet undefined on input line 387.
+Package acronym Info: Label `acro:sdxc' newly defined as it shall be overridden
+
+although it is yet undefined on input line 387.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 389.
+ <Imagens/4-5-1.png, id=430, 311.1625pt x 311.1625pt>
+File: Imagens/4-5-1.png Graphic file (type png)
+
+<use Imagens/4-5-1.png>
+Package pdftex.def Info: Imagens/4-5-1.png used on input line 398.
+(pdftex.def)             Requested size: 62.23138pt x 62.23138pt.
+ <Imagens/4-5-2.png, id=433, 501.875pt x 501.875pt>
+File: Imagens/4-5-2.png Graphic file (type png)
+
+<use Imagens/4-5-2.png>
+Package pdftex.def Info: Imagens/4-5-2.png used on input line 399.
+(pdftex.def)             Requested size: 50.19043pt x 50.19043pt.
+ <Imagens/4-5-3-1.png, id=437, 803.0pt x 803.0pt>
+File: Imagens/4-5-3-1.png Graphic file (type png)
+
+<use Imagens/4-5-3-1.png>
+Package pdftex.def Info: Imagens/4-5-3-1.png used on input line 400.
+(pdftex.def)             Requested size: 56.21574pt x 56.21574pt.
+ <Imagens/4-5-4.png, id=443, 240.9pt x 180.675pt>
+File: Imagens/4-5-4.png Graphic file (type png)
+
+<use Imagens/4-5-4.png>
+Package pdftex.def Info: Imagens/4-5-4.png used on input line 401.
+(pdftex.def)             Requested size: 72.27055pt x 54.20291pt.
+
+Overfull \hbox (112.21971pt too wide) in paragraph at lines 395--403
+[][] 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 404.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 404.
+[13 <./Imagens/4-5-1.png> <./Imagens/4-5-2.png> <./Imagens/4-5-3-1.png> <./Imag
+ens/4-5-4.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 406.
+ <Imagens/pen.jpg, id=467, 219.82124pt x 219.82124pt>
+File: Imagens/pen.jpg Graphic file (type jpg)
+
+<use Imagens/pen.jpg>
+Package pdftex.def Info: Imagens/pen.jpg used on input line 420.
+(pdftex.def)             Requested size: 128.0374pt x 128.03978pt.
+ <Imagens/pen2.png, id=468, 803.0pt x 602.25pt>
+File: Imagens/pen2.png Graphic file (type png)
+
+<use Imagens/pen2.png>
+Package pdftex.def Info: Imagens/pen2.png used on input line 421.
+(pdftex.def)             Requested size: 170.71652pt x 128.03845pt.
+
+<Imagens/porta_usb.jpg, id=471, 501.875pt x 334.24875pt>
+File: Imagens/porta_usb.jpg Graphic file (type jpg)
+
+<use Imagens/porta_usb.jpg>
+Package pdftex.def Info: Imagens/porta_usb.jpg used on input line 429.
+(pdftex.def)             Requested size: 256.0748pt x 170.5513pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 433.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 438.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 438.
+ [14pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.438 \item M
+             em√≥ria n√£o vol√°til (permanente);pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.4.17}) has been already used, duplica
+te ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.438 \item M
+             em√≥ria n√£o vol√°til (permanente); <./Imagens/pen.jpg> <./Imagens
+/pen2.png> <./Imagens/porta_usb.jpg>]
+<Imagens/imagemdehdd.png, id=484, 1810.765pt x 1564.84625pt>
+File: Imagens/imagemdehdd.png Graphic file (type png)
+
+<use Imagens/imagemdehdd.png>
+Package pdftex.def Info: Imagens/imagemdehdd.png used on input line 447.
+(pdftex.def)             Requested size: 256.0748pt x 221.29759pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 451.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 451.
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.451 \newpage
+               <./Imagens/imagemdehdd.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 453.
+
+<Imagens/imagemssd.png, id=496, 401.5pt x 268.00125pt>
+File: Imagens/imagemssd.png Graphic file (type png)
+
+<use Imagens/imagemssd.png>
+Package pdftex.def Info: Imagens/imagemssd.png used on input line 467.
+(pdftex.def)             Requested size: 170.71652pt x 113.95422pt.
+
+<Imagens/discossd.png, id=497, 722.7pt x 789.95125pt>
+File: Imagens/discossd.png Graphic file (type png)
+
+<use Imagens/discossd.png>
+Package pdftex.def Info: Imagens/discossd.png used on input line 468.
+(pdftex.def)             Requested size: 142.26378pt x 155.5044pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 472.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 472.
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+19}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.472 \newpage
+               <./Imagens/imagemssd.png> <./Imagens/discossd.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 476.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 491.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 491.
+ [17]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 503.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 503.
+
+[18]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 505.
+ <Imagens/discoexterno.png, id=549, 873.2625pt x 341.275pt>
+File: Imagens/discoexterno.png Graphic file (type png)
+
+<use Imagens/discoexterno.png>
+Package pdftex.def Info: Imagens/discoexterno.png used on input line 526.
+(pdftex.def)             Requested size: 199.16928pt x 77.83545pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 530.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 530.
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.530 \newpage
+               <./Imagens/discoexterno.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 532.
+
+<Imagens/ram.png, id=572, 553.06625pt x 290.08376pt>
+File: Imagens/ram.png Graphic file (type png)
+ <use Imagens/ram.png>
+Package pdftex.def Info: Imagens/ram.png used on input line 551.
+(pdftex.def)             Requested size: 199.16928pt x 104.46104pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 555.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 555.
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.555 \newpage
+               <./Imagens/ram.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 557.
+Package acronym Info: Label `acro:bios' newly defined as it shall be overridden
+
+although it is yet undefined on input line 570.
+
+<Imagens/rom.png, id=590, 242.40562pt x 203.25937pt>
+File: Imagens/rom.png Graphic file (type png)
+ <use Imagens/rom.png>
+Package pdftex.def Info: Imagens/rom.png used on input line 575.
+(pdftex.def)             Requested size: 142.26378pt x 119.29547pt.
+
+<Imagens/rom1.png, id=591, 642.4pt x 470.75874pt>
+File: Imagens/rom1.png Graphic file (type png)
+ <use Imagens/rom1.png>
+Package pdftex.def Info: Imagens/rom1.png used on input line 576.
+(pdftex.def)             Requested size: 142.26378pt x 104.24965pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 580.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 580.
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.580 \newpage
+               <./Imagens/rom.png> <./Imagens/rom1.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 582.
+
+<Imagens/cache.JPG, id=603, 401.5pt x 403.5075pt>
+File: Imagens/cache.JPG Graphic file (type jpg)
+ <use Imagens/cache.JPG>
+Package pdftex.def Info: Imagens/cache.JPG used on input line 601.
+(pdftex.def)             Requested size: 142.26378pt x 142.97833pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 605.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 605.
+
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.605 \newpage
+               <./Imagens/cache.JPG>]
+Cap\'{\i }tulo 5.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 607.
+<Imagens/grafico1.png, id=611, 728.7225pt x 432.86719pt>
+File: Imagens/grafico1.png Graphic file (type png)
+
+<use Imagens/grafico1.png>
+Package pdftex.def Info: Imagens/grafico1.png used on input line 616.
+(pdftex.def)             Requested size: 287.39189pt x 170.71652pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 620.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 620.
+ [23
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.620 \chapter
+              {Conclus√£o} <./Imagens/grafico1.png>]
+Cap\'{\i }tulo 6.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 620.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 624.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 624.
+[24
+
+]
+Package acronym Info: Label `acro:js' newly defined as it shall be overridden
+although it is yet undefined on input line 625.
+Package acronym Info: Label `acro:mn' newly defined as it shall be overridden
+although it is yet undefined on input line 627.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 635.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 635.
+ [25
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 658.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 658.
+ [26
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 663.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 661--664
+[]$\T1/cmtt/m/n/10 https : / / pt . slideshare . net / ViniciusBuffolo /
+ []
+
+
+Overfull \hbox (40.96326pt too wide) in paragraph at lines 661--664
+\T1/cmtt/m/n/10 dispositivos-[]de-[]armazenamento ? qid = 502c9ebe-[]86b4-[]4b2
+7-[]9e7e-[]1c507f3c6f7e$[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 666--669
+[]$\T1/cmtt/m/n/10 https : / / pt . slideshare . net / fagnerlima91 /
+ []
+
+
+Overfull \hbox (31.46582pt too wide) in paragraph at lines 666--669
+\T1/cmtt/m/n/10 introduo-[]informtica-[]mdulo-[]4-[]memrias-[]e-[]dispositivos-
+[]de-[]armazenamento ?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--674
+[]$\T1/cmtt/m/n/10 https : / / pt . slideshare . net / NunoPereira5 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--674
+\T1/cmtt/m/n/10 a-[]evoluo-[]dos-[]dispositivos-[]de-[]armazenamento-[]9642312 
+? qid =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--679
+[]$\T1/cmtt/m/n/10 https : / / pt . slideshare . net / felipefaleiro /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--679
+\T1/cmtt/m/n/10 dispositivos-[]de-[]armazenamento-[]53759407 ? qid =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--684
+[]$\T1/cmtt/m/n/10 https : / / pt . slideshare . net / julyanaborges / multimei
+os ? qid =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--704
+[]$\T1/cmtt/m/n/10 https : / / edukavita . blogspot . pt / 2013 / 01 /
+ []
+
+
+Overfull \hbox (95.45044pt too wide) in paragraph at lines 706--709
+[]$\T1/cmtt/m/n/10 http : / / pcmanias . com / ssd-[]vs-[]hdd-[]diferencas-[]e-
+[]vantagens-[]e-[]desvantagens-[]de-[]cada-[]um/$[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--714
+[]$\T1/cmtt/m/n/10 http : / / dan-[]scientia . blogspot . pt / 2010 / 07 /
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 714.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 714.
+[27
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 721--724
+[]$\T1/cmtt/m/n/10 http : / / www . techtudo . com . br / artigos / noticia / 2
+012 / 02 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--734
+[]$\T1/cmtt/m/n/10 https : / / www . tecmundo . com . br / memoria / 9346-[]o-[
+]que-[]e-[]memoria-[]rom-[] .
+ []
+
+
+Overfull \hbox (41.96326pt too wide) in paragraph at lines 736--739
+[]$\T1/cmtt/m/n/10 http : / / www . noteplace . com . br / artigo / o-[]que-[]e
+-[]hd-[]externo-[]e-[]para-[]que-[]serve$[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--744
+[]$\T1/cmtt/m/n/10 http : / / www . techtudo . com . br / noticias / noticia / 
+2016 / 10 /
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 747.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 747.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 747.
+[28]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 747.
+ (./documento.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 747.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 747.
+Package rerunfilecheck Info: File `documento.out' has not changed.
+(rerunfilecheck)             Checksum: 704CC6917430835CC4163AA4CAD21F53;1663.
+Package logreq Info: Writing requests to 'documento.run.xml'.
+\openout1 = `documento.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 13415 strings out of 493029
+ 212332 string characters out of 6136233
+ 648301 words of memory out of 5000000
+ 16521 multiletter control sequences out of 15000+600000
+ 18860 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,11n,34p,1053b,1416s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfbi1000.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+frm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on documento.pdf (33 pages, 5961581 bytes).
+PDF statistics:
+ 825 PDF objects out of 1000 (max. 8388607)
+ 704 compressed objects within 8 object streams
+ 206 named destinations out of 1000 (max. 500000)
+ 414 words of extra memory for PDF output out of 10000 (max. 10000000)
+

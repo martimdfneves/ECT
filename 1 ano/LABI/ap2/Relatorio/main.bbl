@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+
+\bibitem{tcp}
+{\sc {dhcp-069093}}.
+\newblock {\textbf{\textit{TCP Communication}}}.
+\newblock \url{https://wiki.python.org/moin/TcpCommunication}.
+\newblock Última vez acedido: 19/04/2018.
+
+\bibitem{encript}
+{\sc {dokenzy}}.
+\newblock {\textbf{\textit{AES Encrytion Example in Python}}}.
+\newblock \url{https://gist.github.com/dokenzy/7b64238424175742a8a1}.
+\newblock Última vez acedido: 19/04/2018.
+
+\bibitem{delay}
+{\sc {Evan Fosmark \& leo}}.
+\newblock {\textbf{\textit{How can I make a time delay in Python?}}}
+\newblock
+  \url{https://stackoverflow.com/questions/510348/how-can-i-make-a-time-delay-in-python}.
+\newblock Última vez acedido: 19/04/2018.
+
+\bibitem{csv}
+{\sc {Glacier \& Blab}}.
+\newblock {\textbf{\textit{How to save Python Json output as a CSV file using
+  modules}}}.
+\newblock
+  \url{https://stackoverflow.com/questions/48736801/how-to-save-python-json-output-as-a-csv-file-using-modules}.
+\newblock Última vez acedido: 19/04/2018.
+
+\bibitem{guiao}
+{\sc {João Paulo Barraca \& Diogo Gomes, André Zúquete, João Manuel
+  Rodrigues, António Adrego da Rocha, Tomás Oliveira e Silva, Sílvia
+  Rodrigues, Óscar Pereira, António Neves, Pétia Georgieva, Vitor Cunha,
+  José Duarte}}.
+\newblock {\textbf{\textit{Guiões Práticos da disciplina}}}.
+\newblock Disponíveis em: \url{http://elearning.ua.pt/}.
+\newblock Última vez acedido: 19/04/2018.
+
+\bibitem{args}
+{\sc {Pythonforbeginners.com}}.
+\newblock {\textbf{\textit{How to use sys.argv in Python}}}.
+\newblock \url{http://www.pythonforbeginners.com/system/python-sys-argv}.
+\newblock Última vez acedido: 20/04/2018.
+
+\end{thebibliography}
