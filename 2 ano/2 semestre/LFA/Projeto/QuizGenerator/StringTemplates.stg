@@ -1,0 +1,189 @@
+typeValue ::= [
+	"int" : "int", 
+	"double" : "double",
+	"String" : "String", 
+	default: "null"
+]
+
+module (name, stat) ::= <<
+import java.util.*;
+import java.io.*;
+
+public class <name> {
+static Scanner sc = new Scanner(System.in);
+
+	public static void main (String [] args) throws IOException{
+		<stats (stat)>
+	}
+}
+>>
+
+stats (stat) ::= <<
+<if (stat)> <stat; separator = "\n"> <endif>
+>>
+
+forBlock (elemType, elem, list, stat) ::= <<
+	for (<elemType> <elem> : <list>) {
+		<stats (stat)>
+	}
+>>
+
+ifBlock (condition, stat, elseStat) ::= <<
+	if (<condition>) {
+		<stats (stat)>
+	}
+	<if (elseStat)>
+	else{
+		<stats (elseStat)>
+	}
+	<endif>
+>>
+
+condCorrectAnswer(choice, question) ::= <<
+	<choice>.equalsIgnoreCase(<question>.getCorrectLetter())
+>>
+
+equalsCond(elem1, elem2) ::= <<
+	<elem1> == <elem2>
+>>
+
+bigEqCond(elem1, elem2) ::= <<
+	<elem1> >= <elem2>
+>>
+
+lowEqCond(elem1, elem2) ::= <<
+	<elem1> \<= <elem2>
+>>
+
+bigCond(elem1, elem2) ::= <<
+	<elem1> > <elem2>
+>>
+
+lowCond(elem1, elem2) ::= <<
+	<elem1> \< <elem2>
+>>
+
+newQuestion(name) ::= <<
+	Question <name> = new Question();
+>>
+
+questionText(name, text) ::= <<
+	<newQuestion (name)>
+	<name>.setTitle(<text>);
+>>
+
+questionDifficulty(name, dif) ::= <<
+	<name>.setDifficulty(<dif>);
+>>
+
+questionAnswer(name, text, points, question) ::= <<
+	Answer <name> = new Answer(<text>, <points>);
+	<question>.addAnswer(<name>);
+>>
+
+declarVar(type, name) ::= <<
+	<type> <name>;
+>>
+
+declarArr(type, name) ::= <<
+	<type>[] <name>;
+>>
+
+attribVar(type, name, value) ::= <<
+	<if (type)> <type> <endif> <name> = <value>;
+>>
+
+attribArr(type, name, value) ::= <<
+	<if (type)> <type>[] <endif> <name> = {<value; separator = ", ">};
+>>
+
+newQuestionArr(name) ::= <<
+	ArrayList\<Question> <name> = new ArrayList\<>();
+>>
+
+newDB(name, file) ::= <<
+	DB <name> = new DB(<file>);
+>>
+
+getOneQuestion(question, data, difficulty, theme) ::= <<
+	Question <question> = <data>.get(<difficulty>, <theme>);
+>>
+
+getArrQuestion(list, data, num, difficulty, theme) ::= <<
+	ArrayList\<Question> <list> = <data>.get(<num>, <difficulty>, <theme>);
+>>
+
+answerMode(value) ::= <<
+	String answerMode = <value>;
+>>
+
+dbAddQuestion(DB, theme, name, question) ::= <<
+	<DB>.add(<theme>, <name>, <question>);
+>>
+
+arrayAddArray(arrayList, list) ::= <<
+	for(Question q : <arrayList>){
+		<list>.add(q);
+	}
+>>
+
+addQuestion(list, question) ::= <<
+	<list>.add(<question>);
+>>
+
+numAnswers(question, num) ::= <<
+	<question>.numAnswers(<num>);
+>>
+
+print(var) ::= <<
+	System.out.println(<var>);
+>>
+
+printQuestion(question) ::= <<
+	System.out.println(<question>.toString());
+>>
+
+printScore(score) ::= <<
+	System.out.println("Score: "+<score>);	
+>>
+
+operation(elem1, op, elem2) ::= <<
+	<elem1> <op> <elem2>
+>>
+
+parenth(value) ::= <<
+	( <value> )
+>>
+
+randQuestions(name) ::= <<
+	Collections.shuffle(<name>);
+>>
+
+randAnswers(name) ::= <<
+	<name>.shuffleAnswers();
+>>
+
+atom(value) ::= <<
+	<value>
+>>
+
+userAnswer(id) ::= <<
+	System.out.print("A: ");
+	<id> = sc.nextLine();
+	System.out.println("----------------------------------------------------------");
+>>
+
+trueOrFalse(question) ::= <<
+	<question>.loadTrueOrFalse();
+	<printQuestTF (question)>
+>>
+
+printQuestTF(question) ::= <<
+	String str1 = <question>.getTitle().replaceAll("[\".]", "");
+	String str2 = <question>.getAnswerTF().getText().replaceAll("\"", "");
+	System.out.println("\""+str1+" "+str2+"\"");
+>>
+
+correctAnswerTF(choice, question) ::= <<
+	<choice>.equalsIgnoreCase(<question>.trueOrFalse())
+>>

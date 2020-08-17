@@ -1,0 +1,14 @@
+Begin create quest1												// cria o questionário chamado 'quest1'			 
+	String x;
+	int y;
+	int w;
+	String h;
+	int i;
+
+if(y +w == i):
+	double zed;
+endif
+	
+
+
+endcreate	

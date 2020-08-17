@@ -1,0 +1,19 @@
+// Ficheiro com demonstração de erros na análise semantica
+// Descomentar '//' para testar
+// Ex 3: erros de incompatibilidade de tipos das variáveis
+
+Begin create quest1			 
+	int y;
+	int []w;
+	String s;
+	String st;
+	double a;
+	double b;
+	Question q;
+
+	//if(st > y): 						// comparações >=,<=, <,> só fazem sentido com tipos númericos,se for string dá erro
+	//if(a == s): 						// não faz sentido comparar double com string
+	if(2.5 == b.correctAnswer()): 		// .correctAnswer só se aplica às variávies do tipo Question
+		double test;
+	endif
+endcreate

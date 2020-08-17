@@ -1,0 +1,509 @@
+# Maths:
+maths.P1.easy("O resultado de 13 + 4 é...") {
+  "7":0;
+  "17":100;
+  "14":0;
+  "12":0;
+}
+
+maths.P2.easy("O resultado de 22 / 2 é...") {
+  "7.5":0;
+  "10":0;
+  "11":100;
+  "9":0;
+}
+
+maths.P3.medium("O valor de x na expressão: x = 2x + 20 - 6x, é...") {
+  "4":100;
+  "5":0;
+  "-20/3":0;
+  "-9":0;
+}
+
+maths.P4.medium("O resultado de 4! / 2! é...") {
+  "2":0;
+  "6":0;
+  "12":100;
+  "4":0;
+}
+
+maths.P5.hard("O resultado da derivada de: x² + 3x + 40, é...") {
+  "x² + 3x":0;
+  "2x":0;
+  "x² + 3":0;
+  "2x + 3":100;
+}
+
+maths.P6.hard("O valor de x em: x² - x - 6 = 0, é...") {
+  "x = 6; x = -2":0;
+  "x = 4; x = 2":0;
+  "x = 3; x = -2":100;
+  "x = -3; x = 2":0;
+}
+
+maths.P7.easy("O resultado de 20 + 5 é...") {
+  "12":0;
+  "25":100;
+  "19":0;
+  "17":0;
+}
+
+maths.P8.easy("O resultado de 30 / 6 é...") {
+  "9.5":0;
+  "6":0;
+  "5":100;
+  "7":0;
+}
+
+maths.P9.medium("O valor de x na expressão: x = 5x + 30 - 10x, é...") {
+  "5":100;
+  "4":0;
+  "-15/3":0;
+  "-7":0;
+}
+
+maths.P10.medium("O resultado de 6! / 4! é...") {
+  "3/2":0;
+  "8":0;
+  "30":100;
+  "4":0;
+}
+
+maths.P11.hard("O resultado da derivada de: x² + 7x + 100, é...") {
+  "x² + 7x":0;
+  "2x":0;
+  "x² + 7":0;
+  "2x + 7":100;
+}
+
+maths.P12.hard("O valor de x em: 2x² - 4x - 8 = 0, é...") {
+  "x = 8; x = 0":0;
+  "x = 4.2; x = 2.2":0;
+  "x = 3.2; x = -1.2":100;
+  "x = -3.1; x = 2.5":0;
+}
+
+# Portugal's History
+history.P1.easy("O primeiro rei de Portugal foi..."){
+  "D. João I":0;
+  "D. Sancho I":0;
+  "D. Afonso Henriques":100;
+  "D. Afonso I":0;
+}
+
+history.P2.easy("O número de dinastias no reinado Português foi..."){
+  "3":0;
+  "4":100;
+  "5":0;
+  "6":0;
+}
+
+history.P3.medium("O número de rainhas a governar como monarcas foi..."){
+  "1":0;
+  "2":100;
+  "3":0;
+  "4":0;
+}
+
+history.P4.medium("O número de reis espanhóis a governar Portugal foi..."){
+  "2":0;
+  "3":100;
+  "4":0;
+  "1":0;
+}
+
+history.P5.hard("Quem mandou plantar o Pinhal de Leiria foi..."){
+  "D. Sancho I":0;
+  "D. Sancho II":0;
+  "D. Dinis I":0;
+  "D. Afonso III":100;
+}
+
+history.P6.hard("O cognome do rei D. Fernando I foi..."){
+  "O Conquistador":0;
+  "O Venturoso":0;
+  "O Africano":0;
+  "O Formoso":100;
+}
+
+history.P7.easy("A declaração da independência de Portugal ocorreu em..."){
+  "1383":0;
+  "1910":0;
+  "1143":100;
+  "1906":0;
+}
+
+history.P8.easy("A descoberta do Brasil ocorreu em..."){
+  "1300":0;
+  "1500":100;
+  "1400":0;
+  "1600":0;
+}
+
+history.P9.medium("O caminho marítimo para a Índia foi descoberto por..."){
+  "D. Manuel":0;
+  "Vasco da Gama":100;
+  "Bartolomeu Dias":0;
+  "Pedro Álvares Cabral":0;
+}
+
+history.P10.medium("O marido de Dona Isabel de Aragão foi..."){
+  "D. Pedro":0;
+  "D. Manuel":100;
+  "D. Afonso II":0;
+  "D. Joao II":0;
+}
+
+history.P11.hard("O sucessor de D. Afonso II foi..."){
+  "D. Sancho I":0;
+  "D. Sancho II":100;
+  "D. Dinis I":0;
+  "D. Afonso III":0;
+}
+
+history.P12.hard("Em 1388 ocorreu..."){
+  "Tréguas com Castela":0;
+  "Epidemia Peste Negra":0;
+  "Descoberta dos Açores":0;
+  "Construção do Mosteiro da Batalha":100;
+}
+
+# Languages:
+languages.P1.easy("A língua que deriva diretamente do latim é..."){
+  "Grego":0;
+  "Italiano":100;
+  "Inglês":0;
+  "Russo":0;
+}
+
+languages.P2.easy("'Bom dia' em espanhol diz-se..."){
+  "God morgon":0;
+  "Buongiorno":0;
+  "Good morning":0;
+  "Buenos dias":100;
+}
+
+languages.P3.medium("A língua oficial do Nepal é..."){
+  "Nepali":100;
+  "Indiano":0;
+  "Coreano":0;
+  "Chinês":0;
+}
+
+languages.P4.medium("O número de línguas faladas na Suiça é..."){
+  "3":0;
+  "2":0;
+  "4":100;
+  "5":0;
+}
+
+languages.P5.hard("'Cão' em alemão diz-se..."){
+  "Katze":0;
+  "Hund":100;
+  "Ente":0;
+  "Schlampe":0;
+}
+
+languages.P6.hard("'Olá' em dinamarquês diz-se..."){
+  "bord":0;
+  "farvel":0;
+  "stol":0;
+  "hej":100;
+}
+
+languages.P7.easy("O país onde não se fala português é..."){
+  "Guiné Bissau":0;
+  "Guiné Conacri":100;
+  "Brasil":0;
+  "Cabo Verde":0;
+}
+
+languages.P8.easy("'Bom dia' em inglês diz-se..."){
+  "God morgon":0;
+  "Buongiorno":0;
+  "Good morning":100;
+  "Buenos dias":0;
+}
+
+languages.P9.medium("A língua falada na Coreia do Sul é..."){
+  "Nepali":0;
+  "Indiano":0;
+  "Coreano":100;
+  "Chinês":0;
+}
+
+languages.P10.medium("O número de línguas faladas na Bielorrusia é..."){
+  "3":0;
+  "2":100;
+  "4":0;
+  "5":0;
+}
+
+languages.P11.hard("'Gato' em alemão diz-se..."){
+  "Katze":100;
+  "Hund":0;
+  "Ente":0;
+  "Schlampe":0;
+}
+
+languages.P12.hard("'Adeus' em dinamarquês diz-se..."){
+  "bord":0;
+  "farvel":100;
+  "stol":0;
+  "hej":0;
+}
+
+# Soccer:
+soccer.P1.easy("O acrónimo pelo qual Cristiano Ronaldo é conhecido é..."){
+  "CR17" : 0;
+  "CR28" : 0;
+  "CR7" : 100;
+  "R9" : 0;
+}
+
+soccer.P2.easy("A última equipa portuguesa a ganhar uma competição europeia foi..."){
+  "Sporting" : 0;
+  "Porto" : 100;
+  "Benfica" : 0;
+  "Braga" : 0;
+}
+
+soccer.P3.medium("O número de clubes treinado por José Mourinho é..."){
+  "5" : 0;
+  "8" : 100;
+  "7" : 0;
+  "6" : 0;
+}
+
+soccer.P4.medium("O clube com mais títulos em Inglaterra é..."){
+  "Manchester United" : 100;
+  "Chelsea" : 0;
+  "Liverpool" : 0;
+  "Arsenal" : 0;
+}
+
+soccer.P5.hard("A época em que foi jogada a primeira liga dos campeões no formato atual foi..."){
+  "89/90" : 0;
+  "90/91" : 0;
+  "91/92" : 0;
+  "92/93" : 100;
+}
+
+soccer.P6.hard("O estádio em que se jogou a final da liga dos campeões em 2009/2010 foi..."){
+  "Wembley Stadium" : 0;
+  "Santiago Bernabéu" : 100;
+  "Giuseppe Meazza" : 0;
+  "Allianz Arena" : 0;
+}
+
+soccer.P7.easy("O primeiro nome de Casillas é..."){
+  "Jose" : 0;
+  "Antonio" : 0;
+  "Iker" : 100;
+  "Sergio" : 0;
+}
+
+soccer.P8.easy("O unico país representado pelos dois clubes presentes na final da Liga Europa de 2010/2011 foi..."){
+  "Espanha" : 0;
+  "Portugal" : 100;
+  "França" : 0;
+  "Inglaterra" : 0;
+}
+
+soccer.P9.medium("O número de países em que José Mourinho treinou é..."){
+  "3" : 0;
+  "4" : 100;
+  "1" : 0;
+  "2" : 0;
+}
+
+soccer.P10.medium("O clube com mais títulos em Espanha é..."){
+  "Real Madrid" : 100;
+  "Barcelona" : 0;
+  "Sevilha" : 0;
+  "Dep. Corunha" : 0;
+}
+
+soccer.P11.hard("A época em que foi jogada a primeira liga europa no formato atual foi..."){
+  "00/01" : 0;
+  "98/99" : 0;
+  "04/05" : 0;
+  "09/10" : 100;
+}
+
+soccer.P12.hard("O estádio em que se jogou a final da liga dos campeões em 2000/2001 foi..."){
+  "Wembley Stadium" : 0;
+  "San Siro" : 100;
+  "Giuseppe Meazza" : 0;
+  "Allianz Arena" : 0;
+}
+
+# Geography
+geography.P1.easy("O distrito no qual o concelho de Tondela está localizado é..."){
+  "Guarda" : 0;
+  "Porto" : 0;
+  "Lisboa" : 0;
+  "Viseu" : 100;
+}
+
+geography.P2.easy("A capital da Turquia é..."){
+  "Istambul" : 0;
+  "Ancara" : 100;
+  "Adana" : 0;
+  "Antália" : 0;
+}
+
+geography.P3.medium("O número de países existentes no continente Europeu é..."){
+  "30" : 0;
+  "28" : 0;
+  "50" : 100;
+  "51" : 0;
+}
+
+geography.P4.medium("O número de países que compõe a península balcã é..."){
+  "10" : 0;
+  "12" : 100;
+  "11" : 0;
+  "9" : 0;
+}
+
+geography.P5.hard("O país onde se situa o Monte Tahat é..."){
+  "Marrocos" : 0;
+  "Índia" : 0;
+  "Tailândia" : 0;
+  "Argélia" : 100;
+}
+
+geography.P6.hard("O país que é atravessado pela linha do Equador é..."){
+  "Somália" : 0;
+  "Zimbabwé" : 0;
+  "Venezuela" : 0;
+  "Madagáscar" : 100;
+}
+
+geography.P7.easy("O distrito no qual está localizado o concelho de Loures é..."){
+  "Guarda" : 0;
+  "Porto" : 0;
+  "Lisboa" : 100;
+  "Viseu" : 0;
+}
+
+geography.P8.easy("A capital da Noruega é..."){
+  "Oslo" : 100;
+  "Tromso" : 0;
+  "Trondheim" : 0;
+  "Bergen" : 0;
+}
+
+geography.P9.medium("O número de países que compõe o continente Africano é..."){
+  "30" : 0;
+  "28" : 0;
+  "54" : 100;
+  "55" : 0;
+}
+
+geography.P10.medium("O número de países que constitui a península escandinava é..."){
+  "4" : 0;
+  "3" : 100;
+  "2" : 0;
+  "5" : 0;
+}
+
+geography.P11.hard("O país onde se situa o Mana Peak é..."){
+  "Marrocos" : 0;
+  "Índia" : 100;
+  "Tailândia" : 0;
+  "Argélia" : 0;
+}
+
+geography.P12.hard("A capital de Madagáscar é..."){
+  "Fianarantsoa" : 0;
+  "Antsirabe" : 0;
+  "Toamasina" : 0;
+  "Antananarivo" : 100;
+}
+
+# Animals:
+animals.P1.easy("A classe de animais que pertence o golfinho é..."){
+  "répteis" : 0;
+  "mamíferos" : 100;
+  "aves" : 0;
+  "peixes" : 0;
+}
+
+animals.P2.easy("A classe de animais a que pertence o porco é..."){
+  "Herbívoro" : 0;
+  "Carnívoro" : 0;
+  "Nenhum" : 0;
+  "Omnívoro" : 100;
+}
+
+animals.P3.medium("O tubarão que vive nos recifes de coral é..."){
+  "Tubarão de Pontas Negras" : 100;
+  "Tubarão Baleia " : 0;
+  "Tubarão Branco" : 0;
+  "Tubarão Anjo" : 0;
+}
+
+animals.P4.medium("A espécie que se encontra extinta é..."){
+  "Lince Ibérico" : 0;
+  "Condor da Califórnia" : 0;
+  "Peixe Espátula" : 100;
+  "Urechis unicinctus" : 0;
+}
+
+animals.P5.hard("Os animais dos quais descende o ocapi são..."){
+  "Leão e Tigre" : 0;
+  "Girafa e Zebra" : 0;
+  "Coelho e Lebre" : 100;
+  "Pavão e Galinha" : 0;
+}
+
+animals.P6.hard("O mamífero mais pequeno do mundo é..."){
+  "Esquilo da Sibéria" : 0;
+  "Morcego de Nariz de Porco" : 0;
+  "Rato Comum" : 0;
+  "Musaranho Anão" : 100;
+}
+
+animals.P7.easy("A classe de animais a que pertence a baleia azul é..."){
+  "répteis" : 0;
+  "mamíferos" : 100;
+  "aves" : 0;
+  "peixes" : 0;
+}
+
+animals.P8.easy("A classe do reino animal a que pertence o ser humano é..."){
+  "Herbívoro" : 0;
+  "Carnívoro" : 0;
+  "Nenhum" : 0;
+  "Omnívoro" : 100;
+}
+
+animals.P9.medium("O peixe que vive nos recifes de coral é..."){
+  "Peixe Papagaio" : 100;
+  "Sargo" : 0;
+  "Sardinha" : 0;
+  "Tubarão Anjo" : 0;
+}
+
+animals.P10.medium("A espécie que está em vias de extinção é..."){
+  "Lince Ibérico" : 0;
+  "Tigre" : 0;
+  "Leão" : 0;
+  "Todas" : 100;
+}
+
+animals.P11.hard("O número de kilos com que uma morsa nasce é..."){
+  "90" : 0;
+  "150" : 0;
+  "50" : 100;
+  "15" : 0;
+}
+
+animals.P12.hard("O maior réptil do mundo é..."){
+  "Tartagura de Couro" : 0;
+  "Crocodilo do Nilo" : 0;
+  "Anaconda Gigante" : 0;
+  "Crocodilo de agua salgada" : 100;
+}

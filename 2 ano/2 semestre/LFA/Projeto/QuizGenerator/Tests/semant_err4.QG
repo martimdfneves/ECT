@@ -1,0 +1,13 @@
+// Ficheiro com demonstração de erros na análise semantica
+// Descomentar '//' para testar
+// Ex 4: erros de incompatibilidade de tipos das variáveis
+
+Begin create quest1			 
+	int y;
+	double b;
+	Question q;
+
+	//b.theme = "tema";					//.theme só se aplica ao tipo Question
+	//y.name = "name";					//.name só se aplica ao tipo Question
+	y.answer ("resposta", 100);			//.answer só se aplica ao tipo Question	
+endcreate

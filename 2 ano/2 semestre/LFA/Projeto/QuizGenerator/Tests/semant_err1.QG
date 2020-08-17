@@ -1,0 +1,15 @@
+// Ficheiro com demonstração de erros na análise semantica
+// Ex 1: for dentro de outro for
+
+Begin create quest1			 
+	int y;
+	int []w;
+	String s;
+	double a;
+
+	for y in w :
+		for a in w:		// não é permitido criar for dentro de outro for
+			int q;
+		endfor
+	endfor
+endcreate

@@ -1,0 +1,51 @@
+// Ficheiro de teste que cria um quiz com 2 perguntas do tema animais, 2 perguntas de história, 2 perguntas de matemática e 1 sobre línguas. 
+// Todas estas perguntas são obtidas através de um 'get' de uma base de dados.
+// Existe ainda uma pergunta suplementar inserida pelo próprio programador.  
+// O teste é do tipo verdadeiro ou falso.
+
+Begin create testQuestTF	
+																															
+	Question[] questions;
+	String choice;												
+	double score = 0;
+	String[] themes = ["animals", "history", "maths"];
+
+	Question newQuest.text = "O número de patas que um gato possui é...";
+	newQuest.theme = "animals";									
+	newQuest.name = "P13";										
+	newQuest.difficulty = easy;									
+	newQuest.answer("4 patas", 100);
+	newQuest.answer("2 patas", 0);
+	newQuest.answer("3 patas", 0);
+	newQuest.answer("1 patas", 0);
+
+	questions.add(newQuest);
+
+	answersMode = trueOrFalse;								
+
+	DB data = load("bd1.question");								
+	data.add(newQuest);											
+
+	for theme in themes:										
+		Question[] quest = data.get(2, medium, theme);			
+		questions.add(quest);									
+																
+	endfor														
+
+	Question simpleQuest = data.get(easy, "languages");				
+	questions.add(simpleQuest);									
+	rand questions;												
+
+	for question in questions:						
+		print question;											
+		choice = userAnswer;									
+																							
+		if (choice == question.correctAnswer()):				
+			score = score + 100;								
+		else:													
+			score = score - (score * 0.1);						
+		endif													
+	endfor														
+	print score;
+
+endcreate

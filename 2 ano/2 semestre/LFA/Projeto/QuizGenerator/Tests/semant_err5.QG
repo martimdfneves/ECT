@@ -1,0 +1,24 @@
+// Ficheiro com demonstração de erros na análise semantica
+// Ex 5: atribuições inadequadas
+
+Begin create quest1			 
+	int i = "text";							// é errado declarar inteiro como texto
+
+	String str = 5.3;						// apenas pode ser atribuido texto a uma variável do tipo string
+
+	int a;
+	double b;
+	String c = "string";
+	Question d;
+
+	b = c;									// variáveis de tipos diferentes
+
+	int [] arrayint = ["1","2"];			// erros de tipo na declaração de arrays
+	String [] txt = [1,"2"];			
+
+	DB b = load("ficheiro.bd");				// erro de variável já declarada anteriormente
+
+	Question x = a.get(easy, "tema");		// erro, a variával 'a' não é uma base de dados
+
+	d.add(c);								// 'c' não é do tipo Question, não se pode adicionar
+endcreate
