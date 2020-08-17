@@ -1,0 +1,241 @@
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\bin\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\bin\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\bin\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Code\ProjetoBD\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+C:\Users\Tiago\Desktop\Template\ProjetoBD\bin\Debug\ProjetoBD.exe
+C:\Users\Tiago\Desktop\Template\ProjetoBD\bin\Debug\ProjetoBD.pdb
+C:\Users\Tiago\Desktop\Template\ProjetoBD\bin\Debug\ProjetoBD.xml
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.exe
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.xml
+C:\Users\Tiago\Desktop\Template\ProjetoBD\obj\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\bin\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\bin\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\bin\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.pdb
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.exe
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.pdb
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.xml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.exe
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.xml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\bin\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\bin\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\bin\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.pdb
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWorker.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.AddReturn.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.AddSales.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template_Martim\ProjetoBD\obj\Debug\ProjetoBD.AddWorker.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWorker.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\bin\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\bin\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\bin\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.AddReturn.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.AddSales.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.AddWorker.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template Martim\ProjetoBD\obj\Debug\ProjetoBD.addToStore.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.addToStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Template\ProjetoBD\obj\Debug\ProjetoBD.addToStore.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.exe
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.pdb
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\bin\Debug\ProjetoBD.xml
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.addToStore.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWorker.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.exe
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.xml
+C:\Users\Tiago\Documents\GitHub\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\bin\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\bin\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\bin\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.addToStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWorker.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.pdb
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.StoreSelect.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.StoreSelect.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.addWarehouseProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\M&T's - Sports Line\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveWarehouseProduct.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.addWarehouseProduct.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\BD\Projeto\MTsSportsLine\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveWarehouseProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\bin\Debug\ProjetoBD.exe.config
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\bin\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\bin\Debug\ProjetoBD.pdb
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\bin\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.vbprojAssemblyReference.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.AddProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.AddStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.addToStore.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWarehouse.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.addWarehouseProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.AddWorker.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.BuyProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.Clients.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.Deliveries.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.EditClient.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.EditProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.MainForm.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.Resources.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.RemoveWarehouseProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.ReturnProduct.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.Stores.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.StoreSelect.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.Workers.resources
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.GenerateResource.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.vbproj.CoreCompileInputs.cache
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.exe
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.xml
+D:\Universidade\MIECT\3º Ano\2º Semestre\Cadeiras\Base de Dados\Projeto\Old one\Template\ProjetoBD\obj\Debug\ProjetoBD.pdb

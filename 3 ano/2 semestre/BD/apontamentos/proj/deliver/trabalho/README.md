@@ -1,1 +1,0 @@
-Para alterar as credenciais de acesso à base de dados, altere o ficheiro DatabaseHandler.cs
