@@ -1,0 +1,13 @@
+cygwin warning:
+  MS-DOS style path detected: C:\Users\Martim\GNS3\projects\untitled\project-files\dynamips
+  Preferred POSIX equivalent is: /cygdrive/c/Users/Martim/GNS3/projects/untitled/project-files/dynamips
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+vm_mmap_open_file: unable to open file 'c7200_i1_nvram' (No such file or directory)
+netio_desc_create_udp: unable to connect to 127.0.0.1:10011
+memzone_create_file: open: No such file or directory
+dev_create_ram: mmap: No such file or directory
+RAM: unable to create device.
+C7200 'Ghost': incomplete initialization (no memory?)
+C7200 'Ghost': unable to initialize the platform hardware.

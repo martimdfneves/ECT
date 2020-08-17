@@ -1,0 +1,81 @@
+1 -> 
+	a) F
+		Têm a mesma default gateway e conectividade direta com a mesma
+	b) F
+		Não tem conectividade com nenhum (não há RIP)
+	c) F
+		F2/0 -> 192.12.81.0/24
+	d) F
+		A rede que consta na tabela do R4 e do R3 é a 192.30.0.0/24
+	
+2 ->
+	a) T
+		Ver rotas estáticas do R4
+	b) F
+		R3 não tem rota para 220.41.78.0/24
+	c) F
+		Vai ter, pois ambos têm a mesma gateway e conectividade direta à mesma
+	d) F
+		O next hop não está na rede do PCA
+	
+3 ->
+	a) T
+	b) F
+		Custos diferentes
+	c) F
+		Custo deveria ser 1
+	d) F
+		Endereço IP errado
+	
+4 ->
+	a) T
+	b) T
+	c) T
+	d) T
+	
+5 ->
+	a) F
+		As entradas têm custos diferentes
+	b) F
+		Não há F0/1 no Router 2
+	c) F
+	d) T
+
+6 ->
+	a) T
+	b) T
+		5 Inside Locals distintos
+	c) F
+		192.96.32.8 é o seu endereço fora da rede
+	d) T
+	
+7 ->
+	a) F
+		DHCP ACK, logo foi o servidor que enviou
+	b) F 
+		Antes do ACK ocorre o Request
+	c) F 
+		Foi o 10.41.39.6
+	d) T
+	
+8 ->
+	a) T
+	b) F
+		Mesmos IPs, mesmos portos, e seq e ack numbers não disprovam
+	c) T
+	d) T
+	
+9 ->
+	a) F
+		DNS Response, logo foi o servidor que enviou
+	b) T
+	c) T
+	d) T
+	
+10 ->
+	a) T
+	b) T
+	c) T
+	d) F
+		Microsoft-IIS
+	

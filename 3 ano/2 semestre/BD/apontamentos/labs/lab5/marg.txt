@@ -1,0 +1,129 @@
+Exercicio 5.1
+
+-----a)
+π Essn,Pname,Fname (((π Essn,Pno (works_on)) ⨝ Pno=Pnumber (π Pname,Pnumber (project))) ⨝ Essn=Ssn (π Fname,Ssn (employee)))
+
+-----b)
+π Fname (
+employee ⨝ Super_ssn=SSsn
+π Ssn->SSsn (
+σ Fname='Carlos' ∧ Minit='D' ∧ Lname='Gomes' (employee)
+)
+)
+
+-----c)
+γ Pname; sum(Hours)->TotalHoras (
+project ⨝ Pnumber=Pno 
+works_on)
+
+
+-----d)
+π Fname, Hours
+(
+	π Fname, Lname, Ssn (σ Dno=3 employee)
+	⨝ Ssn=Essn
+	σ Hours>20 works_on
+	⨝
+	σ Pname='Aveiro Digital' (project)
+)
+
+-----e)
+π Fname
+σ Essn=null (
+employee ⟕ Ssn=Essn works_on
+)
+
+-----f)
+γ Dname; avg(Salary)->avg_salary
+(
+	department
+		⨝ Dnumber = Dno
+	σ Sex='F' employee
+)
+
+-----g)
+σ Count>1
+(
+γ Fname, Lname; count(Essn)->Count
+	(
+	π Fname, Lname, Ssn (employee)
+	⨝ Ssn=Essn
+	dependent
+	)
+)
+
+-----h)
+π Ssn
+σ Dependent_name=null
+(dependent⟖ Essn=Ssn
+(department⨝Mgr_ssn=Ssn
+employee))
+
+-----i)
+π Fname, Lname, Address (
+	(
+		employee
+			⨝ Ssn=Essn
+		works_on
+			⨝ Pno=Pnumber
+		(σ Plocation = 'Aveiro' project))
+			⨝ Dno=Dnumber
+		(σ Dlocation ≠ 'Aveiro' (department ⟕ dept_location)
+	)
+)
+
+Exercicio 5.2
+
+-----a)
+σ fornecedor=null (fornecedor ⟕ nif=fornecedor encomenda)
+
+-----b)
+π nome, Media (
+	produto ⨝	codigo=codProd (
+		γ codProd; avg(unidades)->Media item
+	)
+)
+
+-----c)
+γ avg(Num)->Average (γ numEnc; count(numEnc)->Num item)
+
+-----d)
+π fornecedor.nome, produto.nome, item.unidades (
+	(fornecedor ⨝ nif=fornecedor encomenda) 
+		⨝ numero=numEnc 
+	(produto ⨝ codigo=codProd item)
+)
+
+Exercicio 5.3
+
+-----a)
+π numUtente
+σ numPresc=null (
+paciente⟕prescricao)
+
+-----b)
+γ especialidade; count(especialidade)->Nprescricao (
+prescricao⨝numMedico=numSNS medico)
+
+-----c)
+γ farmacia; count(farmacia)->cnt (
+prescricao⟖farmacia=nome 
+farmacia)
+
+-----d)
+π nome
+σ numPresc=null (
+farmaco⟕nome=nomeFarmaco
+presc_farmaco)
+
+-----e)
+σ farmacia ≠ null
+γ farmacia,numRegFarm; count(numRegFarm)-> CountFarmacos
+(presc_farmaco⨝prescricao)
+
+-----f)
+π nu1 -> numPaciente
+σ nu1=nu2 ∧ nm1!=nm2
+(π numUtente->nu1, numMedico-> nm1 prescricao
+⨯
+π numUtente->nu2, numMedico-> nm2 prescricao)

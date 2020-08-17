@@ -1,0 +1,25 @@
+
+
+#################
+## Visual Studio
+#################
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+*.vs
+Motoshop/Motoshop/obj/Debug/Motoshop\.pdb
+
+Motoshop/Motoshop/obj/Debug/Motoshop\.exe
+Motoshop/Motoshop/obj/Debug\.pdb
+Motoshop/Motoshop/obj/Debug\.exe
+
+Motoshop/Motoshop/obj/Debug/Motoshop\.csproj\.GenerateResource\.cache
+
+Motoshop/Motoshop/bin/Debug/Motoshop\.exe
+Motoshop/Motoshop/bin/Debug/Motoshop\.pdb
+Motoshop/Motoshop/obj/Debug/Motoshop.exe
+Motoshop/Motoshop/obj/Debug/Motoshop.csproj.GenerateResource.cache
+Motoshop/Motoshop/obj/Debug/Motoshop.pdb

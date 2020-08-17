@@ -1,0 +1,21 @@
+entity PCupdate is
+	port( clk : in std_logic;
+			reset : in std_logic;
+			pc : out std_logic_vector(31 downto 0));
+end PCupdate;
+
+architecture Behavioral of PCupdate is
+	signal s_pc : unsigned(31 downto 0);
+begin
+	process(clk)
+	begin
+		if(rising_edge(clk)) then
+			if(reset = '1') then
+				s_pc <= (others => '0');
+			else
+				s_pc <= s_pc + 4;
+			end if;
+		end if;
+	end process;
+	pc <= std_logic_vector(s_pc);
+end Behavioral;

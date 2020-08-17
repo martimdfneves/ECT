@@ -1,0 +1,12 @@
+-- a) Lista dos fornecedores que nunca tiveram encomendas;
+-- π nome (σ nr_encomendas = 0 (γ fornecedor.nome; count(numero)->nr_encomendas (fornecedor ⟕ nif = fornecedor encomenda)))
+
+-- b) Número médio de unidades encomendadas para cada produto;
+-- γ codigo, nome; avg(item.unidades)->un_media (produto ⟕ codigo = codProd item)
+
+-- c) Número médio de produtos por encomenda; (nota: não interessa o número de unidades);
+-- γ avg(Num)->Average (γ numEnc; count(numEnc)->Num item)
+
+-- d) Lista de produtos (e quantidades) fornecidas por cada fornecedor;
+-- π fornecedor.nome, produto.nome, produto.unidades (((produto ⟕ codigo=codProd item) ⟕ numEnc=numero encomenda) ⟕ fornecedor = nif fornecedor)
+ 

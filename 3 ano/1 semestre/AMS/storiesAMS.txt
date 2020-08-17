@@ -1,0 +1,41 @@
+Story 1:
+
+Enquanto fornecedor (restaurante), quero que os pedidos que contenham pratos por mim confecionados sejam enviados para a minha conta de utilizador para que os possa começar a preparar o mais rápido possível.
+
+Cenário 1:
+
+Quando um pedido para o meu restaurante é efetuado, este deve ser encaminhado para a minha conta e deve conter informações como a data do pedido e a data de quando tem que estar pronto, bem como quantidades e pratos a preparar.
+
+Cenário 2:
+
+Quando um pedido para o meu restaurante é efetuado, este só deve ser aceite no site depois de eu confirmar que tenho os recursos e disponibilidade necessários para o realizar no tempo pedido. 
+
+Cenário 3:
+
+Se qualquer detalhe do pedido for alterado eu devo ser notificado para confirmar se ainda tenho capacidade de o realizar. Se não tiver, o pedido deve ser cancelado.
+
+--------------------------------------------------------------------------------------------
+Story 2:
+
+Enquanto fornecedor (restaurante), quero ser avisado com pelo menos 24h de antecedência de quais os pratos e quantidades que tenho que preparar para ter a certeza que o pedido é satisfeito. Se isto acontecer, deve ser dada uma opção ao cliente para remarcar.
+
+Cenário 1:
+
+Quando um pedido para o meu restaurante é efetuado, se for para ser entregue em menos de 24h, deve ser dado um erro ao cliente e o pedido não deve ser encaminhado para a minha conta. 
+
+Cenário 2:
+
+Caso um pedido cuja data de entrega fosse aceitável seja alterado para uma data muito próxima, este deve ser cancelado e dada uma opção ao cliente para remarcar.
+
+--------------------------------------------------------------------------------------------
+Story 3:
+
+Enquanto fornecedor (restaurante), quero que exista a possibilidade os utilizadores avaliarem o meu restaurante após a conclusão do evento para eu saber a qualidade da comida e o que posso melhorar.
+
+Cenário 1:
+
+Após o evento, o utilizador entra na sua conta e é-lhe apresentada uma opção para avaliar o restaurante ou restaurantes escolhidos quantitativamente (de 1 a 10 ou com estrelas, por exemplo).
+
+Cenário 2:
+
+Caso o utilizador esteja interessado, pode também, em seguida, fazer uma avaliação qualitativa (escrever um pequeno comentário, por exemplo).

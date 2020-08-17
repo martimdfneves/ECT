@@ -1,0 +1,11 @@
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\bin\Debug\ex3.exe.config
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\bin\Debug\ex3.exe
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\bin\Debug\ex3.pdb
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\bin\Debug\ex3.xml
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\obj\Debug\ex3.Form1.resources
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\obj\Debug\ex3.Resources.resources
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\obj\Debug\ex3.vbproj.GenerateResource.cache
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\obj\Debug\ex3.vbproj.CoreCompileInputs.cache
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\obj\Debug\ex3.exe
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\obj\Debug\ex3.xml
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex3\ex3\obj\Debug\ex3.pdb

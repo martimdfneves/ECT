@@ -1,0 +1,47 @@
+1 - V)
+    Clustered index - Um por relação
+    Non-clustered index - Pode ter vários numa relação
+2 - V)
+    Tabela nos appoint
+3 - V)
+    ?
+4 - F)
+    Filtered só dá para non-clustered index
+5 - V)
+    Uma UDF escalar pode ser utilizada dentro de qualquer expressão
+6 - F)
+    UDF inline-table-valued não pode ter várias instruções SQL. Funfa como views
+    mas com parametros de entrada
+7 - V)
+    Um SP premite retornar um int que podemos atribuir a uma variável
+8 - F)
+    Dirty-read - T1 atualiza um elemento A e, posteriormente, outras transações leem A
+9 - V)
+    A 2FN pode ter dependencias transitivas, a 3FN é que não
+10 - V)
+    Tá na net. Heap -> tabela sem clustered index
+11 - F)
+    Locking e etiquetagem é do tipo preventido
+12 - F)
+    Consulta de dados, apenas lê dados, não ha conflito
+13 - F)
+    Um checkpoint é o momento em que registamos no transaction log que os buffers são escritos para disco
+14 - V)
+    Situações recomendadas para a escolha de um index. O atributo indexado tem poucos valores repetidos
+15 - F)
+    Utilizar fill factor próximo de 100% se temos inserções ordenadas
+    65-85% se tivermos mais inserções no meio da B-Tree
+16 - V)
+    Check Option - Utiliza-se no final da definição da View se quisermos garantir que as 
+    condições da cláusula WHERE são verificadas na atualização
+17 - F)
+    O Deny é que se sobrepoe ao garant
+18 - F)
+    Page split ocorre quando se efetuam inderts e a pagina esta cheia
+19 - V)
+    Cursor - Ferramenta que permite percorrer sequencialmente os tuplos retornados por 
+    determinada consulta (SELECT)
+20 - F)
+    Devemos utilizar este tipo de trigger quando sabemos que a ação (instrução DML) tem um elevada 
+    probabilidade de ser rolled back e pretendemos que outra lógica seja executada em vez 
+    (instead of) dela.

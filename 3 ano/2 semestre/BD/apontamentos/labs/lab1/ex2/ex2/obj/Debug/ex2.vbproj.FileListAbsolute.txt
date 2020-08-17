@@ -1,0 +1,12 @@
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\bin\Debug\ex2.exe.config
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\bin\Debug\ex2.exe
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\bin\Debug\ex2.pdb
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\bin\Debug\ex2.xml
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.vbprojAssemblyReference.cache
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.Resources.resources
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.vbproj.GenerateResource.cache
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.vbproj.CoreCompileInputs.cache
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.exe
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.xml
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.pdb
+C:\Drive\Universidade\3Ano\BD\labs\lab1\ex2\ex2\obj\Debug\ex2.Form1.resources
