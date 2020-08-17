@@ -1,0 +1,88 @@
+﻿<Page x:Class="Shopping_Agent.Purchase"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Shopping_Agent"
+      mc:Ignorable="d" 
+      d:DesignHeight="600"
+      Title="Purchase" Width="800">
+
+
+    <Grid Background="#FFA6B1D6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <local:ListProductsCart x:Key="lstprod"/>
+        </Grid.Resources>
+
+
+        <Grid HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="166" Background="#FF3E5BD6" OpacityMask="#FF0E2CAC" Grid.RowSpan="2">
+
+            <Image HorizontalAlignment="Left" Height="66" Margin="44,31,0,0" VerticalAlignment="Top" Width="69" Source="cart.png" RenderTransformOrigin="0.484,1.367"/>
+        </Grid>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="29"  Click="btnHome_Click" Margin="10,32,0,0" Background="{x:Null}" FontSize="18" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}" OpacityMask="#FFD11717" Grid.Row="1"/>
+        <Button x:Name="btnPurchase" Content="Purchase" VerticalAlignment="Top" Height="30" Background="{x:Null}" Click="btnPurchase_Click" RenderTransformOrigin="0.539,6.382" Margin="10,91,632,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Century Gothic" FontSize="18" Grid.Row="1" />
+        <Button x:Name="btnStorage" Content="Storage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="30" Click="btnStorage_Click" Margin="10,155,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Century Gothic" FontSize="18" Grid.Row="1" />
+        <Button x:Name="btnOrders" Content="Orders" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="30"  Click="btnOrders_Click" Margin="10,218,0,0" Background="{x:Null}" FontSize="18" BorderBrush="{x:Null}" Foreground="White" FontFamily="Century Gothic" Grid.Row="1" RenderTransformOrigin="0.481,1.5" />
+        <Button x:Name="btnAccount" Content="Account" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="29" Click="btnAccount_Click" Width="156" Margin="10,278,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFFDFAFA" FontSize="18" FontFamily="Century Gothic" Grid.Row="1" RenderTransformOrigin="0.506,0.414" />
+        <Image HorizontalAlignment="Left" Height="30" Margin="10,32,0,0" Grid.Row="1" VerticalAlignment="Top" Width="31" Source="home1_icon.png"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="10,155,0,0" Grid.Row="1" VerticalAlignment="Top" Width="31" Source="warehouse.png" RenderTransformOrigin="0.484,1.633"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="10,218,0,0" Grid.Row="1" VerticalAlignment="Top" Width="31" Source="order.png"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="10,278,0,0" Grid.Row="1" VerticalAlignment="Top" Width="31" Source="account.png" RenderTransformOrigin="0.548,1.133"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="10,91,0,0" VerticalAlignment="Top" Width="36" Source="cart.png" Grid.Row="1" RenderTransformOrigin="0.484,1.367"/>
+        <Grid HorizontalAlignment="Left" Height="476" Margin="166,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="632" Background="#FF8A97D3">
+            <Label Content="Link" HorizontalAlignment="Left" Margin="16,135,0,0" VerticalAlignment="Top" Width="44" FontFamily="Century Gothic" Height="26" FontSize="14" RenderTransformOrigin="-0.191,0.477"/>
+            <TextBox Name="LinkBox" HorizontalAlignment="Left" Height="23" Margin="90,138,0,0" TextWrapping="Wrap" Text="Buy Link" VerticalAlignment="Top" Width="360" BorderBrush="{x:Null}" />
+            <Label Content="Quantity" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" Width="77" FontFamily="Century Gothic" Height="26" FontSize="14" RenderTransformOrigin="0.442,1.154"/>
+            <TextBox Name="QuantityBox" HorizontalAlignment="Left" Height="23" Margin="90,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.512,1.478"/>
+
+            <Button x:Name="btnAdd" Content="Add to Cart" HorizontalAlignment="Left" Margin="338,256,0,0" VerticalAlignment="Top" Width="94" Height="27" Background="White" FontFamily="Century Gothic" Click="btnAdd_Click"/>
+            <Image HorizontalAlignment="Left" Height="46" Margin="506,105,0,0" VerticalAlignment="Top" Width="56"/>
+            <Label Content="" HorizontalAlignment="Left" Margin="494,43,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.5,0.154"/>
+            <Grid x:Name="gridPop" HorizontalAlignment="Left" Height="45" Margin="338,247,0,0" VerticalAlignment="Top" Width="269" Background="White"/>
+            <Button x:Name="btnRemove" Content="Remove Item" HorizontalAlignment="Left" Margin="353,247,0,0" VerticalAlignment="Top" Width="106" Background="White" BorderBrush="{x:Null}" Height="45" FontSize="14" FontFamily="Century Gothic" Click="btnRemove_Click"/>
+            <Button x:Name="btnBuy" Content="Submit" HorizontalAlignment="Left" Margin="506,247,0,0" VerticalAlignment="Top" Width="83" Background="White" BorderBrush="{x:Null}" Height="45" FontSize="14" FontFamily="Century Gothic" Click="btnBuy_Click"/>
+            <TextBox Name="PriceBox" HorizontalAlignment="Left" Height="23" Margin="90,278,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Price" HorizontalAlignment="Left" Margin="24,274,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.63,1.59" FontSize="14" FontFamily="Century Gothic"/>
+            <TextBox Name="ProductNameBox" HorizontalAlignment="Left" Height="23" Margin="90,91,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Name" HorizontalAlignment="Left" Margin="16,91,0,0" VerticalAlignment="Top"/>
+            <Label Content="Weight" HorizontalAlignment="Left" Margin="16,237,0,0" VerticalAlignment="Top" Width="66" FontFamily="Century Gothic" Height="27" FontSize="14" RenderTransformOrigin="0.442,1.154"/>
+            <TextBox x:Name="WeightBox" HorizontalAlignment="Left" Height="23" Margin="90,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.512,1.478"/>
+            <Label Content="KG" HorizontalAlignment="Left" Margin="185,234,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+            <Label Content="$" HorizontalAlignment="Left" Margin="193,276,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" RenderTransformOrigin="0.745,0.533"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="215,92,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" Foreground="Red" RenderTransformOrigin="0.467,0.547"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="215,278,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" Foreground="Red"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="215,192,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" Foreground="Red"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="215,239,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" Foreground="Red" RenderTransformOrigin="0.222,0.467"/>
+            <Label Content="*" HorizontalAlignment="Left" Margin="455,138,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" Foreground="Red" RenderTransformOrigin="0.467,0.547"/>
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="31" Margin="666,29,0,0" VerticalAlignment="Top" Width="36" Source="cart.png" Grid.Row="1" RenderTransformOrigin="0.484,1.367"/>
+        <Label Content="Fill the Information about your product:" HorizontalAlignment="Left" Margin="203,67,0,0" VerticalAlignment="Top" Width="462" Height="52" FontSize="24" FontFamily="Century Gothic" FontWeight="Bold"/>
+        <ListView x:Name="listCart" ItemsSource="{Binding Source={StaticResource lstprod}}" Grid.IsSharedSizeScope="True" HorizontalAlignment="Left" Height="183" Margin="503,65,0,0" Grid.Row="1" VerticalAlignment="Top" Width="271" SelectionChanged="listCart_SelectionChanged" BorderBrush="{x:Null}" Background="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" SharedSizeGroup="Column1"/>
+                            <ColumnDefinition Width="100" SharedSizeGroup="Column2"/>
+                            <ColumnDefinition Width="28" SharedSizeGroup="Column3"/>
+                            <ColumnDefinition Width="60" SharedSizeGroup="Column4"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="{Binding ImageSource}" Grid.Column="0"  Width = "50" Height ="50"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Text="{Binding Nome}"/>
+                        <TextBlock VerticalAlignment="Center" TextAlignment="Left"  Grid.Column="2" Text="{Binding Price,StringFormat= {}{0}$  }"/>
+
+                        <TextBlock VerticalAlignment="Center" TextAlignment="Center"  Grid.Column="3" Text="{Binding Quantity, StringFormat= {}{0}x}"/>
+                        
+                        
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnCart" Content="Cart&#xD;&#xA; " VerticalAlignment="Top" Height="30" Background="{x:Null}" Click="btnCart_Click" RenderTransformOrigin="0.539,6.382" Margin="666,31,35,0" BorderBrush="{x:Null}" Foreground="White" FontFamily="Century Gothic" FontSize="18" Grid.Row="1" />
+    </Grid>
+</Page>

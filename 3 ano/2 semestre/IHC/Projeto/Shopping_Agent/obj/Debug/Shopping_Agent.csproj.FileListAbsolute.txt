@@ -1,0 +1,240 @@
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\bin\Debug\Shopping_Agent.exe.config
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\bin\Debug\Shopping_Agent.exe
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\bin\Debug\Shopping_Agent.pdb
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.csprojAssemblyReference.cache
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Home-Agent.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\MainWindow.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\SignUp.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\App.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.cache
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.lref
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Home-Agent.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\MainWindow.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\SignUp.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.g.resources
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.Properties.Resources.resources
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.csproj.GenerateResource.cache
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.exe
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.pdb
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Login.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Login.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\bin\Debug\Shopping_Agent.exe.config
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\bin\Debug\Shopping_Agent.exe
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\bin\Debug\Shopping_Agent.pdb
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.csprojAssemblyReference.cache
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Home-Agent.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Login.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\MainWindow.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\SignUp.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\App.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.cache
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.lref
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Home-Agent.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Login.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\MainWindow.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\SignUp.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.g.resources
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.Properties.Resources.resources
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.csproj.GenerateResource.cache
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.exe
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shopping_Agent.pdb
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Client_Home.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Client_Home.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Account.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Orders.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Purchase.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Storage.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Account.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Orders.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Purchase.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Storage.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.exe.config
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.exe
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.pdb
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.csprojAssemblyReference.cache
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Account.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Client_Home.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Home-Agent.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Login.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\MainWindow.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Orders.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\SignUp.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Storage.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\App.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.cache
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.lref
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Account.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Client_Home.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Home-Agent.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Login.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\MainWindow.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Orders.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\SignUp.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Storage.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.g.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.Properties.Resources.resources
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.csproj.GenerateResource.cache
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.exe
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.pdb
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.exe.config
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.exe
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.pdb
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.csprojAssemblyReference.cache
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Account.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Client_Home.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Home-Agent.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Login.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\MainWindow.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Orders.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\SignUp.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Storage.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\App.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.cache
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.lref
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Account.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Client_Home.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Home-Agent.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Login.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\MainWindow.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Orders.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\SignUp.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Storage.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.g.resources
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.Properties.Resources.resources
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.csproj.GenerateResource.cache
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.exe
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.pdb
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shipping_Sending.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shipping_Sending.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase_Orders.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shipped_Orders.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase_Orders.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\Shipped_Orders.baml
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\OrderInfo.g.cs
+C:\Users\pedro\Desktop\Projeto_IHC\Shopping_Agent\obj\Debug\OrderInfo.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.exe.config
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.exe
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\bin\Debug\Shopping_Agent.pdb
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.csprojAssemblyReference.cache
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Account.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Client_Home.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Home-Agent.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Login.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\MainWindow.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\OrderInfo.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Orders.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase_Orders.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shipped_Orders.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shipping_Sending.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\SignUp.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Storage.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\App.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.cache
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.lref
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Account.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Client_Home.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Home-Agent.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Login.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\MainWindow.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\OrderInfo.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Orders.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase_Orders.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shipped_Orders.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shipping_Sending.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\SignUp.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Storage.baml
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.g.resources
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.Properties.Resources.resources
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.csproj.GenerateResource.cache
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.exe
+C:\Users\tabua\Documents\IHC\Projeto_IHC\Shopping_Agent\obj\Debug\Shopping_Agent.pdb
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\OrderInfo.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase_Orders.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shipped_Orders.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shipping_Sending.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\OrderInfo.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Purchase_Orders.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shipped_Orders.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\Shipping_Sending.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\bin\Debug\Shopping_Agent.exe.config
+C:\Users\tabua\Documents\Agente\Shopping_Agent\bin\Debug\Shopping_Agent.exe
+C:\Users\tabua\Documents\Agente\Shopping_Agent\bin\Debug\Shopping_Agent.pdb
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent.csprojAssemblyReference.cache
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Account.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Client_Home.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Home-Agent.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Login.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\MainWindow.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\OrderInfo.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Orders.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Purchase.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Purchase_Orders.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shipped_Orders.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shipping_Sending.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\SignUp.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Storage.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\App.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.cache
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent_MarkupCompile.lref
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Account.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Client_Home.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Home-Agent.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Login.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\MainWindow.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\OrderInfo.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Orders.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Purchase.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Purchase_Orders.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shipped_Orders.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shipping_Sending.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\SignUp.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Storage.baml
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent.g.resources
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent.Properties.Resources.resources
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent.csproj.GenerateResource.cache
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent.exe
+C:\Users\tabua\Documents\Agente\Shopping_Agent\obj\Debug\Shopping_Agent.pdb
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Account.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Client_Home.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\OrderInfo.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Orders.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Purchase.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Purchase_Orders.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shipped_Orders.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shipping_Sending.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Storage.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Account.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Client_Home.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\OrderInfo.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Orders.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Purchase.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Purchase_Orders.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shipped_Orders.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Shipping_Sending.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\Storage.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\OrderInfo.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Purchase_Orders.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shipped_Orders.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shipping_Sending.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\OrderInfo.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Purchase_Orders.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shipped_Orders.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\Shipping_Sending.baml
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\SetOrderInformation.g.cs
+C:\Users\pedro\Desktop\BD\BD_Proj\Shopping_Agent\obj\Debug\SetOrderInformation.baml
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\SetOrderInformation.g.cs
+C:\Users\tabua\Documents\Base de Dados\BD_Proj\Shopping_Agent\obj\Debug\SetOrderInformation.baml
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\SetOrderInformation.g.cs
+C:\Users\Martim\Desktop\Uni\3 ano 2 semestre\IHC\Projeto\Projeto_IHC\Shopping_Agent\obj\Debug\SetOrderInformation.baml
