@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<!--
+
+WebGL_example_02.html
+
+Simple WebGL example: changing the background color using buttons!
+
+J. Madeira - May 2015
+
+-->
+	
+<title>WebGL example 02 &mdash; Changing the background color</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<script type="text/javascript">
+
+    var gl = null; // WebGL context
+    
+    function initWebGL(canvas) {
+        try {
+			// Create the WebGL context
+			// Some browsers still need "experimental-webgl"
+			
+            gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+			
+			// DEFAULT: The viewport occupies the whole canvas
+						
+			// The viewport (R,G,B,A) background color: BLACK
+		
+			gl.clearColor(0.0, 0.0, 0.0, 1.0);  
+			
+			// Button events
+			
+			document.getElementById("red-button").onclick = function(){
+				// RED is the new background color
+				gl.clearColor(1.0, 0.0, 0.0, 1.0);
+				
+				// Render the viewport
+				render();  
+			};
+      
+			document.getElementById("green-button").onclick = function(){
+				// GREEN is the new background color
+				gl.clearColor(0.0, 1.0, 0.0, 1.0);
+				
+				// Render the viewport
+				render();  
+			};
+      
+			document.getElementById("blue-button").onclick = function(){
+				// BLUE is the new background color
+				gl.clearColor(0.0, 0.0, 1.0, 1.0);
+				
+				// Render the viewport
+				render();  
+			};
+      
+			document.getElementById("white-button").onclick = function(){
+				// WHITE is the new background color
+				gl.clearColor(1.0, 1.0, 1.0, 1.0);
+				
+				// Render the viewport
+				render();  
+			};
+      
+			document.getElementById("black-button").onclick = function(){
+				// BLACK is the new background color
+				gl.clearColor(0.0, 0.0, 0.0, 1.0);
+				
+				// Render the viewport
+				render();  
+			};
+
+			document.getElementById("yellow-button").onclick = function(){
+				// YELLOW is the new background color
+				gl.clearColor(1.0, 1.0, 0.0, 1.0);
+				
+				// Render the viewport
+				render(); 
+			};
+      
+        } catch (e) {
+        }
+        if (!gl) {
+            alert("Could not initialise WebGL, sorry! :-(");
+        }
+    }
+
+    function render() {
+		
+		// Clearing with the background color
+		
+        gl.clear(gl.COLOR_BUFFER_BIT);
+    }
+
+    function runWebGL() {
+        var canvas = document.getElementById("example02-canvas");
+        
+        initWebGL(canvas);
+
+        render();
+    }
+
+</script>
+
+</head>
+
+<body onload="runWebGL();">
+
+	<div style="text-align: center">
+		
+		<p>A 250 x 500 viewport!</p>
+		
+		<canvas id="example02-canvas" style="border: none" width="500" height="250"></canvas>
+		
+		<p>Set the background color using the buttons:</p>
+		
+		<button id="red-button">Red</button>
+
+		<button id="green-button">Green</button>
+
+		<button id="blue-button">Blue</button>
+
+		<button id="white-button">White</button>
+
+		<button id="black-button">Black</button>
+
+		<button id="yellow-button">Yellow</button>
+
+	</div>
+
+</body>
+
+</html>

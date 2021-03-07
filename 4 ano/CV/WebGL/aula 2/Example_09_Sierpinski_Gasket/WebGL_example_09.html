@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<!--
+
+example_09.html
+
+The Sierpinski Gasket
+
+J. Madeira - May 2015
+
+Adapted from the Angel and Shreiner example
+
+CHANGE: Background is WHITE - September 2016 - J. Madeira
+
+-->
+	
+<title>WebGL example 09 &mdash; The Sierpinski Gasket</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--
+
+The simple vertex and fragment shaders.
+
+The shader code is written using the OpeGL ES shader language (GLSL ES)
+
+-->
+
+<script id="shader-vs" type="x-shader/x-vertex">
+	
+    attribute vec3 aVertexPosition;
+
+    void main(void) {
+		
+		// Just converting the (x,y,z) vertices to Homogeneous Coord.
+		
+        gl_Position = vec4(aVertexPosition, 1.0);
+    }
+</script>
+
+<script id="shader-fs" type="x-shader/x-fragment">
+    
+    void main(void) {
+		
+		// Using RED as the constant drawing color (RGBA)
+		
+        gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+    }
+</script>
+
+<!--
+
+The JavaScript code for WebGL.
+
+-->
+
+<script type="text/javascript">
+
+	////////////////////////////////////////////////////////////////////
+	//
+	// Global Variables
+	//
+	
+    var gl = null; // WebGL context
+
+    var shaderProgram = null; 
+
+    var triangleVertexPositionBuffer = null;
+    
+	// The height of the recursion tree
+	
+	var numLevels = 6;
+	
+    // For storing the triangle vertices from the recursion
+    
+    var vertices = [];
+
+	////////////////////////////////////////////////////////////////////
+	//
+	// Handling the shaders
+	//
+	
+	// Getting and compiling a shader
+	
+    function getShader(gl, id) {
+        var shaderScript = document.getElementById(id);
+        if (!shaderScript) {
+            return null;
+        }
+
+        var str = "";
+        var k = shaderScript.firstChild;
+        while (k) {
+            if (k.nodeType == 3) {
+                str += k.textContent;
+            }
+            k = k.nextSibling;
+        }
+
+        var shader;
+        if (shaderScript.type == "x-shader/x-fragment") {
+            shader = gl.createShader(gl.FRAGMENT_SHADER);
+        } else if (shaderScript.type == "x-shader/x-vertex") {
+            shader = gl.createShader(gl.VERTEX_SHADER);
+        } else {
+            return null;
+        }
+
+        gl.shaderSource(shader, str);
+        gl.compileShader(shader);
+
+        if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+            alert(gl.getShaderInfoLog(shader));
+            return null;
+        }
+
+        return shader;
+    }
+
+	// Initializing the shader program
+	
+    function initShaders() {
+        var fragmentShader = getShader(gl, "shader-fs");
+        var vertexShader = getShader(gl, "shader-vs");
+
+        shaderProgram = gl.createProgram();
+        gl.attachShader(shaderProgram, vertexShader);
+        gl.attachShader(shaderProgram, fragmentShader);
+        gl.linkProgram(shaderProgram);
+
+        if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+            alert("Could not initialise shaders");
+        }
+
+        gl.useProgram(shaderProgram);
+
+        shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+        gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+    }
+ 
+    ////////////////////////////////////////////////////////////////////
+    //
+	// Computing the Sierpinski Gasket --- Adapted from Angel / Shreiner
+	//
+	
+	// Auxiliary function for point interpolation --- Angel / Shreiner
+	
+	function interpolate( u, v, s )
+	{
+		// No imput checking!!
+		
+		var result = [];
+		for ( var i = 0; i < u.length; ++i ) {
+			result.push( (1.0 - s) * u[i] +  s * v[i] );
+		}
+
+		return result;
+	}
+	
+	// Auxiliary function for flattening a 2D array --- Angel /Shreiner
+	
+	function flatten( v )
+	{	
+		var n = v.length;
+		var elemsAreArrays = false;
+
+		if ( Array.isArray(v[0]) ) {
+			elemsAreArrays = true;
+			n *= v[0].length;
+		}
+
+		var floats = new Float32Array( n );
+
+		if ( elemsAreArrays ) {
+			var idx = 0;
+			for ( var i = 0; i < v.length; ++i ) {
+				for ( var j = 0; j < v[i].length; ++j ) {
+					floats[idx++] = v[i][j];
+				}
+			}
+		}
+		else {
+			for ( var i = 0; i < v.length; ++i ) {
+				floats[i] = v[i];
+			}
+		}
+
+		return floats;
+	}
+
+	// Adding the next triangle to the triangle points array
+	
+	function triangle( a, b, c )
+	{
+		vertices.push( a, b, c );
+	}
+
+	// Recursive subdivision --- Angel / Shreiner
+	
+	function divideTriangle( a, b, c, n )
+	{
+
+		// check for end of recursion
+    
+		if ( n === 0 ) {
+			triangle( a, b, c );
+		}
+		else {
+    
+			// bisect the sides
+        
+			var ab = interpolate( a, b, 0.5 );
+			var ac = interpolate( a, c, 0.5 );
+			var bc = interpolate( b, c, 0.5 );
+
+			--n;
+
+			// three new triangles
+        
+			divideTriangle( a, ab, ac, n );
+			divideTriangle( c, ac, bc, n );
+			divideTriangle( b, bc, ab, n );
+		}
+	}
+
+	// Higher-level calling function
+	
+	function computeSierpinskiGasket() {
+		
+		// CCW vertices for initial triangle
+		
+		var v1 = [ -1.0, -1.0, 0.0 ];
+			
+		var v2 = [  1.0, -1.0, 0.0 ];
+
+		var v3 = [  0.0,  1.0, 0.0 ];
+		
+		// Clearing the vertices array;
+		
+		vertices = [];
+		
+		divideTriangle( v1, v2, v3, numLevels );
+		
+		vertices = flatten( vertices );
+	}
+
+	////////////////////////////////////////////////////////////////////
+	//
+	// The WebGL code
+	//
+	
+	// Handling the Vertex Buffer
+	
+    function initVertexBuffer() {	
+			
+		triangleVertexPositionBuffer = gl.createBuffer();
+		gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+		triangleVertexPositionBuffer.itemSize = 3;
+		triangleVertexPositionBuffer.numItems = vertices.length / 3;			
+
+		// Associating to the vertex shader
+		
+        gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 
+				triangleVertexPositionBuffer.itemSize, 
+				gl.FLOAT, false, 0, 0);
+    }
+
+    function updateVertexBuffer() {		
+		
+		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+		triangleVertexPositionBuffer.itemSize = 3;
+		triangleVertexPositionBuffer.numItems = vertices.length / 3;						
+    }
+
+	// Drawing the Sierpinski Gasket
+	
+    function drawScene() {
+		
+		// Clearing with the background color
+		
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        
+        // Drawing the contents of the vertex buffer
+        
+		// Drawing the set of triangles
+				
+        gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);        
+    }
+
+	// User Interation - Information Output
+	
+	function outputInfos(){
+		
+		var treeHeight = document.getElementById("tree-height");
+		
+		treeHeight.innerHTML = numLevels.toString();
+		
+		var numTriang = document.getElementById("num-triang");
+		
+		// There are 9 coordinate values for each triangle
+		
+		numTriang.innerHTML = (vertices.length / 9).toString();				
+	}
+	
+    // User Interation - Event Listeners
+	
+	function setEventListeners(){
+        
+        // Event listener to increase / decrease recursion depth
+        
+		document.addEventListener("keypress", function(event){
+				
+					// Getting the pressed key 
+					
+					// Updating rec. depth and drawing again
+				
+					var key = event.keyCode; // ASCII
+				
+					switch(key){
+						case 43 : // +
+						
+							// QUESTION: when does it start to slow your computer?
+							
+							numLevels++;
+							
+							computeSierpinskiGasket();
+							
+							outputInfos();
+							
+							updateVertexBuffer();
+							
+							drawScene();
+						break;
+						case 45 : // -
+							if( numLevels > 0 ){
+								
+								numLevels--;
+								
+								computeSierpinskiGasket();
+								
+								outputInfos();
+							
+								updateVertexBuffer();
+							
+								drawScene();
+							}
+						break;
+					}
+				});		
+	}
+	
+	// Initialization
+	
+    function initWebGL(canvas) {
+        try {
+			// Create the WebGL context
+			// Some browsers still need "experimental-webgl"
+			
+            gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+			
+			// DEFAULT: The viewport occupies the whole canvas 
+			
+			// The viewport (R,G,B,A) background color: WHITE
+		
+			gl.clearColor(1.0, 1.0, 1.0, 1.0);     
+        } catch (e) {
+        }
+        if (!gl) {
+            alert("Could not initialise WebGL, sorry! :-(");
+        }
+    }
+
+    function runWebGL() {
+		
+        var canvas = document.getElementById("my-canvas");
+        
+        initWebGL(canvas);
+
+        initShaders();
+        
+        setEventListeners();
+        
+        computeSierpinskiGasket();
+        
+        outputInfos();
+
+        initVertexBuffer();
+
+        drawScene();
+    }
+
+</script>
+
+</head>
+
+<body onload="runWebGL();">
+
+	<div style="text-align: center">
+		
+		<p>Drawing the Sierpinski Gasket</p>
+		
+		<p>Use the <b>+ and - keys</b> to change <b>recursion depth</b>.</p>
+		
+		<canvas id="my-canvas" style="border: none" width="400" height="400"></canvas>
+
+		<p>The <b>height</b> of the recursion tree is <b id="tree-height">0</b>.</p>
+		
+		<p>The <b>number</b> of triangles drawn is <b id="num-triang">1</b>.</p>
+		
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<!--
+
+WebGL_example_01.html
+
+First WebGL example: just creating an empty viewport!
+
+J. Madeira - April 2015
+
+Adapted from learningwebgl.com lesson 01
+
+-->
+	
+<title>WebGL example 01 &mdash; Creating an empty viewport</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<script type="text/javascript">
+
+    var gl = null; // WebGL context
+    
+    function initWebGL(canvas) {
+        try {
+			// Create the WebGL context
+			// Some browsers still need "experimental-webgl"
+			
+            gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+			
+			// DEFAULT: The viewport occupies the whole canvas 
+			
+			// The viewport (R,G,B,A) background color: BLACK
+		
+			gl.clearColor(1.0, 0.0, 0.0, 1.0);  
+			
+			// QUESTION: what is the default background color?     
+        } catch (e) {
+        }
+        if (!gl) {
+            alert("Could not initialise WebGL, sorry! :-(");
+        }
+    }
+
+    function render() {
+		
+		// Clearing with the background color
+		
+        gl.clear(gl.COLOR_BUFFER_BIT);
+    }
+
+    function runWebGL() {
+        var canvas = document.getElementById("example01-canvas");
+        
+        initWebGL(canvas);
+
+        render();
+    }
+
+</script>
+
+</head>
+
+<body onload="runWebGL();">
+
+	<div style="text-align: center">
+		
+		<p>A 200 x 200 viewport!</p>
+		
+        <canvas id="example01-canvas" style="border: none" width="200" height="200" ></canvas>
+	</div>
+
+</body>
+
+</html>

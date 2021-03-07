@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<!--
+
+WebGL_example_16.html
+
+Reading a 3D model from a file.
+
+Triangle visualization modes.
+
+Modular code organization.
+
+J. Madeira - October 2015
+
+-->
+	
+<title>WebGL example 16 &mdash; 3D Models</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--
+
+The simple vertex and fragment shaders.
+
+Using a vertex coordinate buffer and a vertex colour buffer.
+
+Passing the Model-View Matrix.
+
+-->
+
+<script id="shader-vs" type="x-shader/x-vertex">
+	
+    attribute vec3 aVertexPosition;
+
+    attribute vec3 aVertexColor;
+    
+    uniform mat4 uMVMatrix;
+
+    varying vec4 vertexColor;
+    
+    void main(void) {
+		
+		// To allow seeing the points drawn
+		
+		gl_PointSize = 5.0;
+		
+		// Just converting the (x,y,z) vertices to Homogeneous Coord.
+		
+		// And multiplying by the Model-View matrix
+		
+        gl_Position = uMVMatrix * vec4(aVertexPosition, 1.0);
+        
+        // Converting the RGB color value to RGBA
+        
+        vertexColor = vec4(aVertexColor, 1.0);
+    }
+</script>
+
+<script id="shader-fs" type="x-shader/x-fragment">
+
+	precision mediump float;
+	
+	varying vec4 vertexColor;
+	
+	void main(void) {
+		
+		// Using the passed vertex color
+		
+		gl_FragColor = vertexColor;
+	}
+
+</script>
+
+<!-- The JS files -->
+
+<!-- Handling vectors and matrices -->
+
+<script type="text/javascript" src="maths.js"></script>
+
+<!-- WebGL code -->
+
+<script type="text/javascript" src="initShaders.js"></script>
+
+<script type="text/javascript" src="WebGL_example_16.js"></script>
+
+</head>
+
+<body onload="runWebGL();">
+
+	<div style="text-align: center">
+		
+		<p>Applying 3D transformations</p>
+		
+		<canvas id="my-canvas" style="border:1px solid #000000;" width="350" height="350"></canvas>
+
+		<p>Read a 3D model from a file:
+		
+		<input type="file" id="file" name="file">
+		
+		</p>
+		
+		<p>Set the rendering mode using the dropdown list:
+		
+        <select id="rendering-mode-selection">
+			<option value="0">Filled Triangles</option>
+			<option value="1">Wireframe</option>
+			<option value="2">Vertices</option>
+        </select>
+        
+        </p>
+        
+        <p> <button id="move-up-button">Move Up</button> </p>
+
+		<p> 
+			
+		<button id="move-left-button">Move Left</button>
+
+	    <button id="move-right-button">Move Right</button>
+
+		</p>
+
+		<button id="move-down-button">Move Down</button>
+		
+        <p>
+			
+		<button id="XX-rotate-CW-button">XX Rotate CW</button>
+
+		<button id="XX-rotate-CCW-button">XX Rotate CCW</button>
+
+		<button id="YY-rotate-CW-button">YY Rotate CW</button>
+
+		<button id="YY-rotate-CCW-button">YY Rotate CCW</button>
+
+		<button id="ZZ-rotate-CW-button">ZZ Rotate CW</button>
+
+		<button id="ZZ-rotate-CCW-button">ZZ Rotate CCW</button>
+
+		</p>
+		
+		<p>
+		
+		<button id="scale-up-button">Scale Up</button>
+
+		<button id="scale-down-button">Scale Down</button>
+		
+		</p>
+
+		<p>
+		
+		<button id="reset-button">Reset</button>
+		
+		<button id="face-culling-button">Back-Face-Culling ON/OFF</button>
+		
+		</p>
+		
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<!--
+
+WebGL_example_23_GPU_per_fragment.html
+
+Phong Illumination Model on the GPU -Per fragment shading
+
+J. Madeira - October 2015 + October 2017 + October 2018
+
+-->
+	
+<title>WebGL example 23 &mdash; Phong Illumination Model - Per Vertex Shading</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--
+
+The vertex and fragment shaders.
+
+NEW VERTEX SHADER!
+
+NEW FRAGMENT SHADER!
+
+-->
+
+<script id="shader-vs" type="x-shader/x-vertex">
+	
+	// Vertex and vertex normal vector
+	
+    attribute vec3 vPosition;
+    
+	attribute vec3 vNormal;
+
+	// Model view and projection matrices
+	
+	uniform mat4 uMVMatrix;
+
+    uniform mat4 uPMatrix;
+    
+    // Light position and viewer position
+    
+    uniform vec4 lightPosition;
+    
+    uniform vec4 viewerPosition;
+    
+    // Output values that will be interpolated per fragment
+    
+    varying vec3 fN;
+    
+    varying vec3 fE;
+    
+    varying vec3 fL;
+    
+    void main(void) {
+		
+		// To allow seeing the points drawn
+		
+		gl_PointSize = 5.0;
+		
+		// Vertex position after applying the global transformation
+			
+		vec4 pos = uMVMatrix * vec4(vPosition, 1.0);
+		
+        // Output values to be interpolated per fragment
+        
+        // Vertex normal vector after applying the global transformation
+        
+        fN = (uMVMatrix * vec4(vNormal, 0.0)).xyz;
+        
+        // The viewer/eye  vector
+        
+		// The viewer is at the origin or at an indefinite distance
+		// on the ZZ axis
+		
+		if(viewerPosition.w == 1.0) 
+        
+			// At the origin
+			
+			fE = - pos.xyz;
+        
+        else 
+        
+			// On the ZZ axis
+			
+			fE = vec3(0,0,1);
+			
+		// The Light vector
+		
+		fL = lightPosition.xyz;
+		
+		if(lightPosition.w != 0.0) 
+        
+			fL = fL - pos.xyz;
+        	
+		// The vertex projection
+		
+		gl_Position = uPMatrix * pos;        
+	}
+    
+</script>
+
+<script id="shader-fs" type="x-shader/x-fragment">
+
+	precision mediump float;
+	
+    // The light intensity multiplied by the material reflection coefficients
+
+	uniform vec3 ambientProduct;
+	
+	uniform vec3 diffuseProduct;
+	
+	uniform vec3 specularProduct;
+
+	// The shininess coefficient
+	
+    uniform float shininess;
+        	
+    // Per fragment interpolated values from the vertex shader
+    
+    varying vec3 fN;
+    
+    varying vec3 fE;
+    
+    varying vec3 fL;
+    
+	void main(void) {
+		
+		// Normalize the input vectors
+		
+		vec3 N = normalize( fN );
+		
+		vec3 E = normalize( fE );
+		
+		vec3 L = normalize( fL );
+		
+		// The halfway vector
+    
+        vec3 H = normalize( L + E );
+
+		// Phong Illumination Model
+		
+		// Ambient illumination
+		
+		vec4 ambient = vec4( ambientProduct, 1.0 );
+		
+		// Diffuse component
+		
+		float dotProductLN = dot(L,N); 
+		
+		float cosNL = max( dotProductLN, 0.0 );
+    
+        vec4  diffuse = vec4( diffuseProduct * cosNL, 1.0 );
+        
+		// Specular component
+
+        float dotProductNH = dot(N,H); 
+		
+		float cosNH = pow( max( dotProductNH, 0.0 ), shininess );
+    
+        vec4  specular = vec4( specularProduct * cosNH, 1.0 );
+    
+        if( dotProductLN < 0.0 ) {
+	
+			specular = vec4(0.0, 0.0, 0.0, 1.0);
+        } 
+
+		float s = shininess;
+		
+		// Adding the illumination components
+		
+		gl_FragColor = ambient + diffuse + specular;
+		
+		gl_FragColor.a = 1.0;
+	}
+
+</script>
+
+<!-- The JS files -->
+
+<!-- Some useful functions for browser compatibility -->
+
+<script type="text/javascript" src="webgl-utils.js"></script>
+
+<!-- Handling vectors and matrices -->
+
+<script type="text/javascript" src="maths.js"></script>
+
+<!-- Processing triangle mesh models -->
+
+<script type="text/javascript" src="models.js"></script>
+
+<!-- WebGL code -->
+
+<script type="text/javascript" src="initShaders.js"></script>
+
+<script type="text/javascript" src="WebGL_example_23_GPU_per_fragment.js"></script>
+
+</head>
+
+<body onload="runWebGL();">
+
+	<div style="text-align: center">
+		
+		<p>Phong Illumination Model - Per Fragment Shading on the GPU</p>
+		
+		<canvas id="my-canvas" style="border:1px solid #000000;" width="350" height="350"></canvas>
+		
+		<!-- NEW --- To show the number of frames per second -->
+		
+		<p id="fps"> fps: </p>
+
+		<p>XX rotation: 
+			
+		<button id="XX-on-off-button">On / Off</button>
+
+	    <button id="XX-direction-button">Change Direction</button>
+
+	    <button id="XX-slower-button">Slower</button>
+
+	    <button id="XX-faster-button">Faster</button>
+
+		</p>
+		
+		<p>YY rotation: 
+			
+		<button id="YY-on-off-button">On / Off</button>
+
+	    <button id="YY-direction-button">Change Direction</button>
+
+	    <button id="YY-slower-button">Slower</button>
+
+	    <button id="YY-faster-button">Faster</button>
+
+		</p>
+		
+		<p>ZZ rotation: 
+			
+		<button id="ZZ-on-off-button">On / Off</button>
+
+	    <button id="ZZ-direction-button">Change Direction</button>
+
+	    <button id="ZZ-slower-button">Slower</button>
+
+	    <button id="ZZ-faster-button">Faster</button>
+
+		</p>
+		
+		<p>Choose the <b>projection type</b>:
+		
+        <select id="projection-selection">
+			<option value="0">Orthogonal Projection</option>
+			<option value="1">Perspective Projection</option>
+        </select>
+        
+        </p>
+        
+        <p>Choose the <b>rendering mode</b>:
+		
+        <select id="rendering-mode-selection">
+			<option value="0">Filled Triangles</option>
+			<option value="1">Wireframe</option>
+			<option value="2">Vertices</option>
+        </select>
+        
+        <p>Read a 3D model from a text file:
+		
+		<input type="file" id="file" name="file">
+		
+		</p>
+		
+        <p>
+		
+		<button id="reset-button">Reset</button>
+		
+		</p>
+				
+	</div>
+
+</body>
+
+</html>

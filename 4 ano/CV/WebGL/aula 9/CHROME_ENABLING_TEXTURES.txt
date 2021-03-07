@@ -1,0 +1,7 @@
+
+chrome://flags
+
+Enable --- Out of blink CORS
+
+Disable afterwards
+

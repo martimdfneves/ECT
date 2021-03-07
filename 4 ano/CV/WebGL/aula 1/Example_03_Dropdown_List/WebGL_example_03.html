@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<!--
+
+WebGL_example_03.html
+
+Simple WebGL example: selecting the background color
+
+J. Madeira - May 2015
+
+-->
+	
+<title>WebGL example 03 &mdash; Changing the background color</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<script type="text/javascript">
+
+    var gl = null; // WebGL context
+    
+    function initWebGL(canvas) {
+        try {
+			// Create the WebGL context
+			// Some browsers still need "experimental-webgl"
+			
+            gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+			
+			// DEFAULT: The viewport occupies the whole canvas
+						
+			// The viewport (R,G,B,A) background color: BLACK
+		
+			gl.clearColor(0.0, 0.0, 0.0, 1.0);  
+			
+			// Background color from the selection list
+			
+			var s = document.getElementById("bg-selection");
+			
+			s.addEventListener("click", function(){
+				// Getting the selection
+				var color = s.selectedIndex;
+				
+				switch(color){
+					case 0 : gl.clearColor(1.0, 0.0, 0.0, 1.0);
+						break;
+					case 1 : gl.clearColor(0.0, 1.0, 0.0, 1.0);
+						break;
+					case 2 : gl.clearColor(0.0, 0.0, 1.0, 1.0);
+						break;
+					case 3 : gl.clearColor(1.0, 1.0, 1.0, 1.0);
+						break;
+					case 4 : gl.clearColor(0.0, 0.0, 0.0, 1.0);
+						break;
+					case 5 : gl.clearColor(1.0, 0.0, 1.0, 1.0);
+						break;
+				}
+				// Render the viewport
+				render();  
+			});      
+        } catch (e) {
+        }
+        if (!gl) {
+            alert("Could not initialise WebGL, sorry! :-(");
+        }
+    }
+
+    function render() {
+		
+		// Clearing with the background color
+		
+        gl.clear(gl.COLOR_BUFFER_BIT);
+    }
+
+    function runWebGL() {
+        var canvas = document.getElementById("example03-canvas");
+        
+        initWebGL(canvas);
+
+        render();
+    }
+
+</script>
+
+</head>
+
+<body onload="runWebGL();">
+
+	<div style="text-align: center">
+		
+		<p>A 250 x 500 viewport!</p>
+		
+		<canvas id="example03-canvas" style="border: none" width="500" height="250"></canvas>
+		
+		<p>Set the background color using the dropdown list:</p>
+		
+        <select id="bg-selection">
+			<option value="0">Red</option>
+			<option value="1">Green</option>
+			<option value="2">Blue</option>
+			<option value="3">White</option>
+			<option value="4">Black</option>
+			<option value="5">Purple</option>
+        </select>
+
+	</div>
+
+</body>
+
+</html>

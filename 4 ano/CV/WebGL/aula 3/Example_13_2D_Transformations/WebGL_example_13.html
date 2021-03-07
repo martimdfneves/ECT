@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<!--
+
+WebGL_example_13.html
+
+2D Transformations
+
+COMPLETE THE MISSING CODE !!
+
+J. Madeira - June 2015, September 2015
+
+-->
+	
+<title>WebGL example 13 &mdash; 2D Transformations</title>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<!--
+
+The simple vertex and fragment shaders.
+
+Using a vertex coordinate buffer and a vertex colour buffer.
+
+Passing the Model-View Matrix.
+
+-->
+
+<script id="shader-vs" type="x-shader/x-vertex">
+	
+    attribute vec3 aVertexPosition;
+
+    attribute vec3 aVertexColor;
+    
+    uniform mat4 uMVMatrix;
+
+    varying vec4 vertexColor;
+    
+    void main(void) {
+		
+		// Just converting the (x,y,z) vertices to Homogeneous Coord.
+		
+		// And multiplying by the Model-View matrix
+		
+        gl_Position = uMVMatrix * vec4(aVertexPosition, 1.0);
+        
+        // Converting the RGB color value to RGBA
+        
+        vertexColor = vec4(aVertexColor, 1.0);
+    }
+</script>
+
+<script id="shader-fs" type="x-shader/x-fragment">
+	
+	precision mediump float;
+	
+	varying vec4 vertexColor;
+    
+    void main(void) {
+		
+		// Using the passed vertex color
+		
+        gl_FragColor = vertexColor;
+    }
+</script>
+
+<!--
+
+The JavaScript code for WebGL.
+
+-->
+
+<script type="text/javascript">
+
+	////////////////////////////////////////////////////////////////////
+	//
+	// Global Variables
+	//
+	
+    var gl = null; // WebGL context
+
+    var shaderProgram = null; 
+
+    var triangleVertexPositionBuffer = null;
+    	
+    var triangleVertexColorBuffer = null;
+    
+	// Working with 4 x 4 transformation matrices
+	// Although it is a 2D example !!
+	
+	var IDENTITY_MATRIX = mat4();
+	
+    // Model-View Matrix is initially the IDENTITY MATRIX
+    
+    var mvMatrix = mat4();
+    
+    // The transformation matrices associated with the buttons
+    
+    var moveLeftMatrix = mat4();
+        	
+    var moveRightMatrix = mat4();
+        	
+    var moveUpMatrix = mat4();
+        	
+    var moveDownMatrix = mat4();
+        	
+    var rotateCWMatrix = mat4();
+    
+    var rotateCCWMatrix = mat4();
+    
+    var scaleDownMatrix = mat4();
+    
+    var scaleUpMatrix = mat4();
+    
+    // For storing the vertices defining the triangle
+    
+    var vertices = [
+    
+			 0.00,  0.25,  0.00,
+			 
+			-0.25, -0.25,  0.00,
+			 
+			 0.25, -0.25,  0.00,
+			 
+    ];
+    
+    // And their colour
+    
+    var colors = [
+    
+			 1.00,  0.00,  0.00,
+			 
+			 0.00,  1.00,  0.00,
+			 
+			 0.00,  0.00,  1.00,
+			 
+    ];
+
+	////////////////////////////////////////////////////////////////////
+	//
+	// Handling the shaders
+	//
+	
+	// Getting and compiling a shader
+	
+    function getShader(gl, id) {
+        var shaderScript = document.getElementById(id);
+        if (!shaderScript) {
+            return null;
+        }
+
+        var str = "";
+        var k = shaderScript.firstChild;
+        while (k) {
+            if (k.nodeType == 3) {
+                str += k.textContent;
+            }
+            k = k.nextSibling;
+        }
+
+        var shader;
+        if (shaderScript.type == "x-shader/x-fragment") {
+            shader = gl.createShader(gl.FRAGMENT_SHADER);
+        } else if (shaderScript.type == "x-shader/x-vertex") {
+            shader = gl.createShader(gl.VERTEX_SHADER);
+        } else {
+            return null;
+        }
+
+        gl.shaderSource(shader, str);
+        gl.compileShader(shader);
+
+        if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+            alert(gl.getShaderInfoLog(shader));
+            return null;
+        }
+
+        return shader;
+    }
+
+	// Initializing the shader program
+	
+    function initShaders() {
+        var fragmentShader = getShader(gl, "shader-fs");
+        var vertexShader = getShader(gl, "shader-vs");
+
+        shaderProgram = gl.createProgram();
+        gl.attachShader(shaderProgram, vertexShader);
+        gl.attachShader(shaderProgram, fragmentShader);
+        gl.linkProgram(shaderProgram);
+
+        if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+            alert("Could not initialise shaders");
+        }
+
+        gl.useProgram(shaderProgram);
+
+		// Coordinates 
+		
+        shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+        gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+
+		// Colors 
+		
+        shaderProgram.vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
+        gl.enableVertexAttribArray(shaderProgram.vertexColorAttribute);
+        
+        // Model View Matrix to apply the current transformation
+        
+        var mvUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
+        
+        gl.uniformMatrix4fv(mvUniform, false, new Float32Array(flatten(mvMatrix)));
+    }
+ 
+	////////////////////////////////////////////////////////////////////
+	//
+	// Mathematical functions 
+	//
+	// Ref. Original code from the Angel / Shreiner examples
+	//
+	
+	//  Helper functions
+
+	function _argumentsToArray( args )
+	{
+		return [].concat.apply( [], Array.prototype.slice.apply(args) );
+	}
+
+	function radians( degrees ) {
+		return degrees * Math.PI / 180.0;
+	}
+
+	function transpose( m )
+	{
+		if ( !m.matrix ) {
+			return "transpose(): trying to transpose a non-matrix";
+		}
+
+		var result = [];
+		for ( var i = 0; i < m.length; ++i ) {
+			result.push( [] );
+			for ( var j = 0; j < m[i].length; ++j ) {
+				result[i].push( m[j][i] );
+			}
+		}
+
+		result.matrix = true;
+    
+		return result;
+	}
+
+	// Column-major 1D representation
+	
+	function flatten( v )
+	{
+		if ( v.matrix === true ) {
+			v = transpose( v );
+		}
+
+		var n = v.length;
+		var elemsAreArrays = false;
+
+		if ( Array.isArray(v[0]) ) {
+			elemsAreArrays = true;
+			n *= v[0].length;
+		}
+
+		var floats = new Float32Array( n );
+
+		if ( elemsAreArrays ) {
+			var idx = 0;
+			for ( var i = 0; i < v.length; ++i ) {
+				for ( var j = 0; j < v[i].length; ++j ) {
+					floats[idx++] = v[i][j];
+				}
+			}
+		}
+		else {
+			for ( var i = 0; i < v.length; ++i ) {
+				floats[i] = v[i];
+			}
+		}
+
+		return floats;
+	}
+
+	//  Vector Constructor
+
+	function vec4()
+	{
+		var result = _argumentsToArray( arguments );
+
+		switch ( result.length ) {
+		case 0: result.push( 0.0 );
+		case 1: result.push( 0.0 );
+		case 2: result.push( 0.0 );
+		case 3: result.push( 1.0 );
+		}
+
+		return result.splice( 0, 4 );
+	}
+
+	// 4 x 4 matrix - Constructor
+	
+	function mat4()
+	{
+		var v = _argumentsToArray( arguments );
+
+		var m = [];
+		
+		switch ( v.length ) {
+			
+			case 0:
+				v[0] = 1;
+				
+			case 1:
+				m = [
+						vec4( v[0], 0.0,  0.0,   0.0 ),
+						vec4( 0.0,  v[0], 0.0,   0.0 ),
+						vec4( 0.0,  0.0,  v[0],  0.0 ),
+						vec4( 0.0,  0.0,  0.0,  v[0] )
+					];
+			break;
+
+			default:
+				m.push( vec4(v) );  v.splice( 0, 4 );
+				m.push( vec4(v) );  v.splice( 0, 4 );
+				m.push( vec4(v) );  v.splice( 0, 4 );
+				m.push( vec4(v) );
+			break;
+		}
+
+		m.matrix = true;
+
+		return m;
+	}
+
+	// Matrix Multiplication 
+	
+	function mult( u, v )
+	{
+		var result = [];
+
+		if ( u.matrix && v.matrix ) {
+			if ( u.length != v.length ) {
+				throw "mult(): trying to add matrices of different dimensions";
+			}
+
+			for ( var i = 0; i < u.length; ++i ) {
+				if ( u[i].length != v[i].length ) {
+					throw "mult(): trying to add matrices of different dimensions";
+				}
+			}
+
+			for ( var i = 0; i < u.length; ++i ) {
+				result.push( [] );
+
+				for ( var j = 0; j < v.length; ++j ) {
+					var sum = 0.0;
+					for ( var k = 0; k < u.length; ++k ) {
+						sum += u[i][k] * v[k][j];
+					}
+					result[i].push( sum );
+				}
+			}
+
+			result.matrix = true;
+
+			return result;
+		}
+		else {
+			if ( u.length != v.length ) {
+				throw "mult(): vectors are not the same dimension";
+			}
+
+			for ( var i = 0; i < u.length; ++i ) {
+				result.push( u[i] * v[i] );
+			}
+
+			return result;
+		}	
+	}
+
+
+	////////////////////////////////////////////////////////////////////
+	//
+	// The WebGL code
+	//
+	
+	// Handling the Vertex and the Color Buffers
+	
+    function initBuffers() {	
+		
+		// Coordinates
+			
+		triangleVertexPositionBuffer = gl.createBuffer();
+		gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+		triangleVertexPositionBuffer.itemSize = 3;
+		triangleVertexPositionBuffer.numItems = vertices.length / 3;			
+
+		// Associating to the vertex shader
+		
+        gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 
+				triangleVertexPositionBuffer.itemSize, 
+				gl.FLOAT, false, 0, 0);
+		
+		// Colors
+			
+		triangleVertexColorBuffer = gl.createBuffer();
+		gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer);
+		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+		triangleVertexColorBuffer.itemSize = 3;
+		triangleVertexColorBuffer.numItems = colors.length / 3;			
+
+		// Associating to the vertex shader
+		
+        gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, 
+				triangleVertexColorBuffer.itemSize, 
+				gl.FLOAT, false, 0, 0);
+    }
+
+	// Setting up the transformation matrices 
+	
+    function setUpTransformations() {
+		
+		moveLeftMatrix[0][3] = -0.25;
+
+		moveRightMatrix[0][3] = 0.25;
+
+		moveDownMatrix[1][3] = -0.25;
+
+		moveUpMatrix[1][3] = 0.25;
+
+		scaleDownMatrix[0][0] = 0.9;
+		scaleDownMatrix[1][1] = 0.9;
+		scaleDownMatrix[2][2] = 0.9;
+
+		scaleUpMatrix[0][0] = 1.1;
+		scaleUpMatrix[1][1] = 1.1;
+		scaleUpMatrix[2][2] = 1.1;
+
+		rotateCWMatrix[0][0] = Math.cos(radians(-30));
+		rotateCWMatrix[0][1] = -Math.sin(radians(-30));
+		rotateCWMatrix[1][0] = Math.sin(radians(-30));
+		rotateCWMatrix[1][1] = Math.cos(radians(-30));
+
+		rotateCCWMatrix[0][0] = Math.cos(radians(30));
+		rotateCCWMatrix[0][1] = -Math.sin(radians(30));
+		rotateCCWMatrix[1][0] = Math.sin(radians(30));
+		rotateCCWMatrix[1][1] = Math.cos(radians(30));
+
+    }
+
+	// Drawing 
+	
+    function drawScene() {
+		
+		// Clearing with the background color
+		
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        
+        // NEW !!
+        
+        //Passing the Model View Matrix to apply the current transformation
+        
+        var mvUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
+        
+        gl.uniformMatrix4fv(mvUniform, false, new Float32Array(flatten(mvMatrix)));
+        
+        // Drawing the contents of the vertex buffer
+				
+        gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);        
+    }
+
+	// User Interation - Information Output
+	
+	function outputInfos(){
+			
+	}
+	
+    // User Interation - Event Listeners
+	
+	function setEventListeners(){
+		
+			// Button events
+			
+			document.getElementById("move-left-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( moveLeftMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+
+		    document.getElementById("move-right-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( moveRightMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+
+			document.getElementById("move-up-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( moveUpMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+
+			document.getElementById("move-down-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( moveDownMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+
+			document.getElementById("rotate-cw-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( rotateCWMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+
+			document.getElementById("rotate-ccw-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( rotateCCWMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+
+			document.getElementById("scale-down-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( scaleDownMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+
+			document.getElementById("scale-up-button").onclick = function(){
+				
+				// Apply the transformation by updating the MV matrix
+				
+				mvMatrix = mult( scaleUpMatrix, mvMatrix );
+				
+				// Render the viewport
+				
+				drawScene();  
+			};
+      
+			document.getElementById("reset-button").onclick = function(){
+				
+				// Set the MV matrix to the IDENTITY_MATRIX
+				
+				mvMatrix = IDENTITY_MATRIX; 
+				
+				// Render the viewport
+				
+				drawScene();  
+			};      
+	}
+
+	// Initialization
+	
+    function initWebGL(canvas) {
+        try {
+			// Create the WebGL context
+			// Some browsers still need "experimental-webgl"
+			
+            gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+			
+			// DEFAULT: The viewport occupies the whole canvas 
+			
+			// DEFAULT: The viewport background color is WHITE
+		
+        } catch (e) {
+        }
+        if (!gl) {
+            alert("Could not initialise WebGL, sorry! :-(");
+        }        
+    }
+
+    function runWebGL() {
+		
+        var canvas = document.getElementById("my-canvas");
+        
+        initWebGL(canvas);
+ 
+        initShaders();
+        
+        setEventListeners();
+        
+        initBuffers();
+        
+        setUpTransformations();
+         				
+        drawScene();    
+ 
+        outputInfos();
+    }
+
+</script>
+
+</head>
+
+<body onload="runWebGL();">
+
+	<div style="text-align: center">
+		
+		<p>Applying 2D transformations to the triangle</p>
+		        		
+		<canvas id="my-canvas" style="border:1px solid #000000;" width="350" height="350"></canvas>
+
+		<p>
+			
+		<button id="move-left-button">Move Left</button>
+
+		<button id="move-right-button">Move Right</button>
+
+		<button id="move-up-button">Move Up</button>
+
+		<button id="move-down-button">Move Down</button>
+
+		<button id="rotate-cw-button">Rotate CW</button>
+
+		<button id="rotate-ccw-button">Rotate CCW</button>
+
+		<button id="scale-down-button">Scale Down</button>
+
+		<button id="scale-up-button">Scale Up</button>
+		
+		<button id="reset-button">Reset</button>
+
+		</p>
+	</div>
+
+</body>
+
+</html>
