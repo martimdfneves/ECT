@@ -1,0 +1,296 @@
+|CRC_ENCODER_STD
+dIN[0] => CRC_ENCODER:crc_16to8.dIN_8
+dIN[1] => CRC_ENCODER:crc_16to8.dIN_9
+dIN[2] => CRC_ENCODER:crc_16to8.dIN_10
+dIN[3] => CRC_ENCODER:crc_16to8.dIN_11
+dIN[4] => CRC_ENCODER:crc_16to8.dIN_12
+dIN[5] => CRC_ENCODER:crc_16to8.dIN_13
+dIN[6] => CRC_ENCODER:crc_16to8.dIN_14
+dIN[7] => CRC_ENCODER:crc_16to8.dIN_15
+dIN[8] => CRC_ENCODER:crc_16to8.dIN_16
+dIN[9] => CRC_ENCODER:crc_16to8.dIN_17
+dIN[10] => CRC_ENCODER:crc_16to8.dIN_18
+dIN[11] => CRC_ENCODER:crc_16to8.dIN_19
+dIN[12] => CRC_ENCODER:crc_16to8.dIN_20
+dIN[13] => CRC_ENCODER:crc_16to8.dIN_21
+dIN[14] => CRC_ENCODER:crc_16to8.dIN_22
+dIN[15] => CRC_ENCODER:crc_16to8.dIN_23
+CRC[0] << CRC_ENCODER:crc_16to8.CRC_0
+CRC[1] << CRC_ENCODER:crc_16to8.CRC_1
+CRC[2] << CRC_ENCODER:crc_16to8.CRC_2
+CRC[3] << CRC_ENCODER:crc_16to8.CRC_3
+CRC[4] << CRC_ENCODER:crc_16to8.CRC_4
+CRC[5] << CRC_ENCODER:crc_16to8.CRC_5
+CRC[6] << CRC_ENCODER:crc_16to8.CRC_6
+CRC[7] << CRC_ENCODER:crc_16to8.CRC_7
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8
+dIN_8 => exor:d_8_12.x0
+dIN_8 => exor:d_15_8.x1
+dIN_9 => exor:d_9_21.x0
+dIN_9 => exor:x_41.x1
+dIN_10 => exor:d_10_22.x0
+dIN_10 => exor:d_10_20.x0
+dIN_10 => exor:x_31.x1
+dIN_11 => exor:d_11_13.x0
+dIN_12 => exor:d_8_12.x1
+dIN_12 => exor:x_71.x1
+dIN_13 => exor:d_11_13.x1
+dIN_13 => exor:x_51.x1
+dIN_14 => exor:d_14_15.x0
+dIN_14 => exor:d_14_17.x0
+dIN_15 => exor:d_14_15.x1
+dIN_15 => exor:d_15_8.x0
+dIN_16 => exor:d_16_17.x0
+dIN_17 => exor:d_16_17.x1
+dIN_17 => exor:d_14_17.x1
+dIN_17 => exor:d_17_18.x0
+dIN_18 => exor:d_18_19.x0
+dIN_18 => exor:d_17_18.x1
+dIN_18 => exor:x6.x1
+dIN_19 => exor:d_18_19.x1
+dIN_20 => exor:d_20_23.x0
+dIN_20 => exor:d_10_20.x1
+dIN_21 => exor:d_9_21.x1
+dIN_22 => exor:d_10_22.x1
+dIN_23 => exor:d_20_23.x1
+dIN_23 => exor:x_10.x1
+CRC_0 <= exor:x0.y
+CRC_1 <= exor:x1.y
+CRC_2 <= exor:x2.y
+CRC_3 <= exor:x3.y
+CRC_4 <= exor:x4.y
+CRC_5 <= exor:x5.y
+CRC_6 <= exor:x6.y
+CRC_7 <= exor:x7.y
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_16_17
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_8_12
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_11_13
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_10_22
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_18_19
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_20_23
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_9_21
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_14_15
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_15_8
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_14_17
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_10_20
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:d_17_18
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:compos1617_1415
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:compos1819_2023
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:compos1113_921
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_00
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_01
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x0
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_10
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_11
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_20
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_21
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_30
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_31
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x3
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_40
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_41
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x4
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_50
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_51
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x5
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_60
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x6
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_70
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x_71
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC_ENCODER_STD|CRC_ENCODER:crc_16to8|exor:x7
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

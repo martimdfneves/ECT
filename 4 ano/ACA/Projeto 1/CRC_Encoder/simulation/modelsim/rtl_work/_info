@@ -1,0 +1,49 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Martim/Desktop/Uni/4_ano_1_semestre/ACA/Projeto 1/CRC_Encoder/simulation/modelsim
+Ecrc_encoder
+Z1 w1607456235
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/Martim/Desktop/Uni/4_ano_1_semestre/ACA/Projeto 1/CRC_Encoder/CRC_Encoder.vhd
+Z5 FC:/Users/Martim/Desktop/Uni/4_ano_1_semestre/ACA/Projeto 1/CRC_Encoder/CRC_Encoder.vhd
+l0
+L6
+Vz7i<X>7CXNkRlAb`4YGz=1
+!s100 o^Cck6WB7@g8cT6SCzfkm0
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1608052098
+!i10b 1
+Z8 !s108 1608052098.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Martim/Desktop/Uni/4_ano_1_semestre/ACA/Projeto 1/CRC_Encoder/CRC_Encoder.vhd|
+Z10 !s107 C:/Users/Martim/Desktop/Uni/4_ano_1_semestre/ACA/Projeto 1/CRC_Encoder/CRC_Encoder.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+DEx4 work 11 crc_encoder 0 22 z7i<X>7CXNkRlAb`4YGz=1
+l30
+L16
+VOnUL]j1m=fJ4Fm82FCES81
+!s100 FPB]bakmcSj7^FFVHH^Rc3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

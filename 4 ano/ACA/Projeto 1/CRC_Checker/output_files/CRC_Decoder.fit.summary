@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Dec 09 01:23:40 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : CRC_Decoder
+Top-level Entity Name : CRC_Checker_STD
+Family : Cyclone IV GX
+Device : EP4CGX15BF14C6
+Timing Models : Final
+Total logic elements : 22 / 14,400 ( < 1 % )
+    Total combinational functions : 22 / 14,400 ( < 1 % )
+    Dedicated logic registers : 0 / 14,400 ( 0 % )
+Total registers : 0
+Total pins : 33 / 81 ( 41 % )
+Total virtual pins : 0
+Total memory bits : 0 / 552,960 ( 0 % )
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 2 ( 0 % )
+Total PLLs : 0 / 3 ( 0 % )

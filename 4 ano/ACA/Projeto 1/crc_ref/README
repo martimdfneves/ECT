@@ -1,0 +1,11 @@
+Compilation
+
+         gcc -Wall -o crc_reference crc_reference.c
+
+Remainder generation
+
+         ./crc_reference  -e <16 bit word>
+
+Remainder check
+
+         ./crc_reference  -c <24 bit word>

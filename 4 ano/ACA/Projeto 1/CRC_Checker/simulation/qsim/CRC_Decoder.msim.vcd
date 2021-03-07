@@ -1,0 +1,284 @@
+$comment
+	File created using the following command:
+		vcd file CRC_Decoder.msim.vcd -direction
+$end
+$date
+	Tue Dec 15 17:15:52 2020
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module crc_checker_std_vhd_vec_tst $end
+$var wire 1 ! Check $end
+$var wire 1 " CRC_err [7] $end
+$var wire 1 # CRC_err [6] $end
+$var wire 1 $ CRC_err [5] $end
+$var wire 1 % CRC_err [4] $end
+$var wire 1 & CRC_err [3] $end
+$var wire 1 ' CRC_err [2] $end
+$var wire 1 ( CRC_err [1] $end
+$var wire 1 ) CRC_err [0] $end
+$var wire 1 * dIN [23] $end
+$var wire 1 + dIN [22] $end
+$var wire 1 , dIN [21] $end
+$var wire 1 - dIN [20] $end
+$var wire 1 . dIN [19] $end
+$var wire 1 / dIN [18] $end
+$var wire 1 0 dIN [17] $end
+$var wire 1 1 dIN [16] $end
+$var wire 1 2 dIN [15] $end
+$var wire 1 3 dIN [14] $end
+$var wire 1 4 dIN [13] $end
+$var wire 1 5 dIN [12] $end
+$var wire 1 6 dIN [11] $end
+$var wire 1 7 dIN [10] $end
+$var wire 1 8 dIN [9] $end
+$var wire 1 9 dIN [8] $end
+$var wire 1 : dIN [7] $end
+$var wire 1 ; dIN [6] $end
+$var wire 1 < dIN [5] $end
+$var wire 1 = dIN [4] $end
+$var wire 1 > dIN [3] $end
+$var wire 1 ? dIN [2] $end
+$var wire 1 @ dIN [1] $end
+$var wire 1 A dIN [0] $end
+
+$scope module i1 $end
+$var wire 1 B gnd $end
+$var wire 1 C vcc $end
+$var wire 1 D unknown $end
+$var wire 1 E devoe $end
+$var wire 1 F devclrn $end
+$var wire 1 G devpor $end
+$var wire 1 H ww_devoe $end
+$var wire 1 I ww_devclrn $end
+$var wire 1 J ww_devpor $end
+$var wire 1 K ww_dIN [23] $end
+$var wire 1 L ww_dIN [22] $end
+$var wire 1 M ww_dIN [21] $end
+$var wire 1 N ww_dIN [20] $end
+$var wire 1 O ww_dIN [19] $end
+$var wire 1 P ww_dIN [18] $end
+$var wire 1 Q ww_dIN [17] $end
+$var wire 1 R ww_dIN [16] $end
+$var wire 1 S ww_dIN [15] $end
+$var wire 1 T ww_dIN [14] $end
+$var wire 1 U ww_dIN [13] $end
+$var wire 1 V ww_dIN [12] $end
+$var wire 1 W ww_dIN [11] $end
+$var wire 1 X ww_dIN [10] $end
+$var wire 1 Y ww_dIN [9] $end
+$var wire 1 Z ww_dIN [8] $end
+$var wire 1 [ ww_dIN [7] $end
+$var wire 1 \ ww_dIN [6] $end
+$var wire 1 ] ww_dIN [5] $end
+$var wire 1 ^ ww_dIN [4] $end
+$var wire 1 _ ww_dIN [3] $end
+$var wire 1 ` ww_dIN [2] $end
+$var wire 1 a ww_dIN [1] $end
+$var wire 1 b ww_dIN [0] $end
+$var wire 1 c ww_CRC_err [7] $end
+$var wire 1 d ww_CRC_err [6] $end
+$var wire 1 e ww_CRC_err [5] $end
+$var wire 1 f ww_CRC_err [4] $end
+$var wire 1 g ww_CRC_err [3] $end
+$var wire 1 h ww_CRC_err [2] $end
+$var wire 1 i ww_CRC_err [1] $end
+$var wire 1 j ww_CRC_err [0] $end
+$var wire 1 k ww_Check $end
+$var wire 1 l \dIN[7]~input_o\ $end
+$var wire 1 m \CRC_err[0]~output_o\ $end
+$var wire 1 n \CRC_err[1]~output_o\ $end
+$var wire 1 o \CRC_err[2]~output_o\ $end
+$var wire 1 p \CRC_err[3]~output_o\ $end
+$var wire 1 q \CRC_err[4]~output_o\ $end
+$var wire 1 r \CRC_err[5]~output_o\ $end
+$var wire 1 s \CRC_err[6]~output_o\ $end
+$var wire 1 t \CRC_err[7]~output_o\ $end
+$var wire 1 u \Check~output_o\ $end
+$var wire 1 v \dIN[8]~input_o\ $end
+$var wire 1 w \dIN[0]~input_o\ $end
+$var wire 1 x \dIN[15]~input_o\ $end
+$var wire 1 y \crc_e|crc_error_0|y~0_combout\ $end
+$var wire 1 z \dIN[13]~input_o\ $end
+$var wire 1 { \dIN[11]~input_o\ $end
+$var wire 1 | \crc_e|crc_16to8|d_11_13|y~combout\ $end
+$var wire 1 } \dIN[17]~input_o\ $end
+$var wire 1 ~ \dIN[16]~input_o\ $end
+$var wire 1 !! \crc_e|crc_16to8|d_16_17|y~0_combout\ $end
+$var wire 1 "! \dIN[19]~input_o\ $end
+$var wire 1 #! \dIN[23]~input_o\ $end
+$var wire 1 $! \dIN[18]~input_o\ $end
+$var wire 1 %! \dIN[20]~input_o\ $end
+$var wire 1 &! \crc_e|crc_16to8|compos1819_2023|y~combout\ $end
+$var wire 1 '! \crc_e|crc_error_0|y~1_combout\ $end
+$var wire 1 (! \dIN[1]~input_o\ $end
+$var wire 1 )! \dIN[12]~input_o\ $end
+$var wire 1 *! \crc_e|crc_error_1|y~0_combout\ $end
+$var wire 1 +! \dIN[21]~input_o\ $end
+$var wire 1 ,! \dIN[14]~input_o\ $end
+$var wire 1 -! \dIN[9]~input_o\ $end
+$var wire 1 .! \crc_e|crc_error_1|y~1_combout\ $end
+$var wire 1 /! \crc_e|crc_error_1|y~2_combout\ $end
+$var wire 1 0! \crc_e|crc_16to8|d_8_12|y~combout\ $end
+$var wire 1 1! \dIN[10]~input_o\ $end
+$var wire 1 2! \dIN[2]~input_o\ $end
+$var wire 1 3! \dIN[22]~input_o\ $end
+$var wire 1 4! \crc_e|crc_error_2|y~0_combout\ $end
+$var wire 1 5! \crc_e|crc_error_2|y~1_combout\ $end
+$var wire 1 6! \crc_e|crc_error_5|y~0_combout\ $end
+$var wire 1 7! \dIN[3]~input_o\ $end
+$var wire 1 8! \crc_e|crc_error_3|y~0_combout\ $end
+$var wire 1 9! \crc_e|crc_error_3|y~combout\ $end
+$var wire 1 :! \dIN[4]~input_o\ $end
+$var wire 1 ;! \crc_e|crc_error_4|y~0_combout\ $end
+$var wire 1 <! \crc_e|crc_error_4|y~combout\ $end
+$var wire 1 =! \dIN[5]~input_o\ $end
+$var wire 1 >! \crc_e|crc_error_5|y~1_combout\ $end
+$var wire 1 ?! \crc_e|crc_error_5|y~2_combout\ $end
+$var wire 1 @! \dIN[6]~input_o\ $end
+$var wire 1 A! \crc_e|crc_error_6|y~0_combout\ $end
+$var wire 1 B! \crc_e|crc_error_6|y~1_combout\ $end
+$var wire 1 C! \crc_e|CHECK~0_combout\ $end
+$var wire 1 D! \crc_e|CHECK~combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0B
+1C
+xD
+1E
+1F
+1G
+1H
+1I
+1J
+1k
+0l
+0m
+0n
+1o
+0p
+0q
+0r
+1s
+0t
+1u
+1v
+1w
+0x
+0y
+0z
+0{
+0|
+1}
+0~
+1!!
+1"!
+1#!
+0$!
+1%!
+1&!
+0'!
+1(!
+1)!
+0*!
+1+!
+0,!
+1-!
+0.!
+0/!
+00!
+11!
+02!
+03!
+04!
+15!
+16!
+07!
+08!
+09!
+1:!
+1;!
+0<!
+1=!
+1>!
+0?!
+1@!
+0A!
+1B!
+1C!
+1D!
+1*
+0+
+1,
+1-
+1.
+0/
+10
+01
+02
+03
+04
+15
+06
+17
+18
+19
+0:
+1;
+1<
+1=
+0>
+0?
+1@
+1A
+1K
+0L
+1M
+1N
+1O
+0P
+1Q
+0R
+0S
+0T
+0U
+1V
+0W
+1X
+1Y
+1Z
+0[
+1\
+1]
+1^
+0_
+0`
+1a
+1b
+0c
+1d
+0e
+0f
+0g
+1h
+0i
+0j
+0"
+1#
+0$
+0%
+0&
+1'
+0(
+0)
+$end
+#1000000
