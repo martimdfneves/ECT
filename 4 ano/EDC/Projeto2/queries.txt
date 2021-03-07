@@ -1,0 +1,96 @@
+---paises grandes(população e area)
+
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?c ?n ?p ?a WHERE {
+    ?c rdf:type mon:Country .
+    ?c mon:name ?n .
+    ?c mon:population ?p .
+    ?c mon:area ?a .
+    filter(?p > 50000000)
+    filter(?a > 1000000)
+}ORDER BY DESC(?p)
+
+--- Countries where the majority of people speak english
+
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?country ?cname ?percent WHERE {
+	?L rdf:type mon:SpokenBy . 
+    ?L mon:onLanguage ?language .
+    ?language mon:name ?name .  
+    ?L mon:percent ?percent . 
+    ?L mon:languageInfo- ?country .
+    ?country rdf:type mon:Country .
+    ?country mon:name ?cname .
+	filter(?name = "English")
+    filter(?percent > 50)
+}ORDER BY DESC(?percent) 
+
+---high density provinces
+
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?n ?cname ?density WHERE {
+    ?country mon:hasProvince ?prov .
+    ?country mon:name ?cname .
+    ?prov rdf:type mon:Province .
+    ?prov mon:name ?n .
+    ?prov mon:population ?p .
+    ?prov mon:area ?a .
+    BIND(?p / ?a AS ?density)
+    filter(?density > 8000)
+}ORDER BY DESC(?density)
+
+---rivers that flow north (at least 5 degrees in latitude, ordered by latitude difference between source and estuary)
+
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?r ?name WHERE {
+    ?r mon:name ?name . 
+	?r rdf:type mon:River .
+    ?s rdf:type mon:Source .
+    ?r mon:length ?l .
+	?r mon:hasSource ?s .
+	?r mon:hasEstuary ?e .
+    ?s mon:latitude ?source_lat .
+    ?e rdf:type mon:Estuary .
+    ?e mon:latitude ?estuary_lat .
+    filter(?source_lat < ?estuary_lat)
+    bind(if(?estuary_lat < 0 , -?estuary_lat, ?estuary_lat) as ?mod_estuary)
+    bind(if(?source_lat < 0 , -?source_lat, ?source_lat) as ?mod_source)
+    bind(?mod_estuary -?mod_source as ?diff)
+    filter(?diff > 6 )
+}ORDER BY DESC(?diff)
+
+--- High mountains(every peak above 8000 meters)
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?M ?name ?elevation WHERE {
+    ?M mon:name ?name . 
+	?M rdf:type mon:Mountain . 
+    ?M mon:elevation ?elevation .
+    filter(?elevation > 8000)
+}ORDER BY DESC(?elevation)
+
+--- Good countries to live in (high gdp per capita, low unemployment, low inflation, low infant mortality) 
+					ordered by gdp per capita
+
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?c ?n WHERE {
+    ?c mon:name ?n . 
+	?c rdf:type mon:Country . 
+    ?c mon:gdpTotal ?gdp .
+    ?c mon:population ?p .
+    ?c mon:unemployment ?u .
+    ?c mon:inflation ?i .
+    ?c mon:infantMortality ?im .
+    BIND(?gdp * 1000000 AS ?gdpm)
+    BIND(?gdpm / ?p AS ?gdppercapita)
+    FILTER(?gdppercapita > 40000)
+    FILTER(?u < 8 )
+    FILTER(?i < 10)
+    FILTER(?im < 5 )
+}ORDER BY DESC(?gdppercapita)
+

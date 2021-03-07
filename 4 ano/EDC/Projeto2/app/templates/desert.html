@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h3 style="color: black ">Desert: {{ name }}</h3></th>
+    <br/>
+    <p><b>Area: </b> {{ area }} km &#178</p>
+    <p><b>Latitude: </b> {{ lat }}º</p>
+    <p><b>Longitude: </b> {{ long }}º</p>
+    {% if type|length > 0 %}
+        <p><b>Type: </b> {{ type }}</p>
+    {% endif %}
+    <p><b>Country(ies) covered by {{ name }}: </b></p>
+    <table>
+        <tbody>
+            {% for name in countries %}
+                <tr>
+                    <td><a style="color: black; padding-left: 20px">{{ name }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

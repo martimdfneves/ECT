@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h3 style="color: black "> Mountain: {{ mount_name }}</h3></th>
+    <br/>
+    {% if mount_range is not null %}
+        <p><b>Mountain Range: </b> {{ mount_range }}</p>
+    {% endif %}
+    <p><b>Latitude: </b> {{ mount_lat }}</p>
+    <p><b>longitude: </b> {{ mount_longe }}</p>
+    <p><b>Elevation: </b> {{ mount_elev }}</p>
+    <p><b>Located in: </b></p>
+    {% if mount_countries|length > 0 %}
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Countries: </b></p>
+    <table>
+        <tbody>
+            {% for code,name in mount_countries.items %}
+                <tr>
+                    <td><a style="color: black; padding-left: 40px">{{ name }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    {% if mount_island|length > 0 %}
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Island: </b></p>
+        {% for id,name in mount_island.items %}
+            <p><a style="color: black; padding-left: 40px">{{ name }}</a></p>
+        {% endfor %}
+    {% endif %}
+    {% if mount_provinces|length > 0 %}
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Provinces: </b></p>
+        <table>
+            <tbody>
+            {% for i,n in mount_provinces.items %}
+                <tr>
+                    <td><a style="color: black; padding-left: 40px">{{ n }}</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

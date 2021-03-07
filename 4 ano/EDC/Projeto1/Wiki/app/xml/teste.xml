@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<country xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="countries.xsd" car_code="GL" area="2175600" capital="cty-Greenland-Nuuk" memberships="org-NC org-UPU">
+  <name>Greenland</name>
+  <localname>Kalaallit Nunaat</localname>
+  <population measured="census" year="1951">24118</population>
+  <population measured="census" year="1955">26933</population>
+  <population measured="census" year="1960">33140</population>
+  <population measured="census" year="1965">39600</population>
+  <population measured="census" year="1970">46531</population>
+  <population measured="census" year="1976">49630</population>
+  <population year="1997" measured="admin.">55971</population>
+  <population measured="census" year="2000">56124</population>
+  <population year="2005" measured="admin.">56969</population>
+  <population year="2013" measured="admin.">56370</population>
+  <population_growth>0.02</population_growth>
+  <infant_mortality>9.42</infant_mortality>
+  <gdp_total>2160</gdp_total>
+  <gdp_agri>4</gdp_agri>
+  <gdp_ind>29</gdp_ind>
+  <gdp_serv>67</gdp_serv>
+  <inflation>2.8</inflation>
+  <unemployment>9.4</unemployment>
+  <dependent country="DK"/>
+  <government>parliamentary democracy within a constitutional monarchy</government>
+  <encompassed continent="northamerica" percentage="100"/>
+  <ethnicgroup percentage="88">Inuit</ethnicgroup>
+  <ethnicgroup percentage="12">Danish</ethnicgroup>
+  <religion percentage="95.5">Protestant</religion>
+  <religion percentage="0.2">Catholic</religion>
+  <religion percentage="0.8">Inuit spiritism</religion>
+  <language percentage="80">Kalaallisut</language>
+  <language percentage="8">Tunumiit</language>
+  <language percentage="12">Danish</language>
+  <city id="cty-Greenland-Nuuk" country="GL">
+     <name>Nuuk</name>
+     <latitude>64.18</latitude>
+     <longitude>-51.74</longitude>
+     <elevation>5</elevation>
+     <located_at watertype="sea" sea="sea-LabradorSea"/>
+     <located_on island="island-Greenland"/>
+  </city>
+</country>

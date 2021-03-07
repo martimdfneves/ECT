@@ -1,0 +1,365 @@
+1) paises por continente
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?C ?N WHERE {
+    	?X mon:name ?N . 
+	?X rdf:type mon:Country . 
+    	?X mon:encompassed ?C .
+    	?C mon:name "Europe" .
+}
+
+2)pais por codigo
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?area ?capital_name ?localname ?popul ?popul_growth ?gdp_total ?inflation ?unemployment ?indep_date ?dependent_name ?government WHERE {
+    ?X mon:name ?name . 
+    ?X mon:area ?area .
+    ?X mon:capital ?capital .
+    ?capital mon:name ?capital_name .
+    OPTIONAL{?X mon:localname ?localname .}
+    ?X mon:population ?popul .
+    OPTIONAL{?X mon:populationGrowth ?popul_growth .}
+    OPTIONAL{?X mon:gdpTotal ?gdp_total .}
+    OPTIONAL{?X mon:inflation ?inflation .}
+    OPTIONAL{?X mon:unemployment ?unemployment .}
+    OPTIONAL {?X mon:independenceDate ?indep_date .}
+    OPTIONAL {?X mon:dependentOf ?dependent . ?dependent mon:name ?dependent_name}
+    OPTIONAL {?X mon:government ?government .}
+	?X rdf:type mon:Country . 
+    FILTER ( strends(str(?X), "countries/R/") )
+}
+
+historial de população de um pais dado o código
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?year ?value WHERE {
+    ?X mon:name ?name . 
+    ?X mon:hadPopulation ?hadPopul .
+    ?hadPopul mon:year ?year .
+    ?hadPopul mon:value ?value .
+	?X rdf:type mon:Country . 
+    FILTER ( strends(str(?X), "countries/GBM/") )
+}ORDER BY ?year
+
+percentagens de etnias
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?name ?percent WHERE {
+	?E rdf:type mon:EthnicProportion . 
+    	?E mon:onEthnicGroup ?ethnicgroup .
+    	?ethnicgroup mon:name ?name .  
+    	?E mon:percent ?percent . 
+    	?E mon:ethnicInfo- ?country .
+    	FILTER ( strends(str(?country), "countries/AL/") )
+}ORDER BY DESC(?percent)
+
+religioes por pais
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?name ?percent WHERE {
+	?R rdf:type mon:BelievedBy . 
+    ?R mon:onReligion ?religion .
+    ?religion mon:name ?name .  
+    ?R mon:percent ?percent . 
+    ?R mon:religionInfo- ?country .
+    FILTER ( strends(str(?country), "countries/AL/") )
+}ORDER BY DESC(?percent)
+
+lingua faladas em cada pais
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?name ?percent WHERE {
+	?L rdf:type mon:SpokenBy . 
+    ?L mon:onLanguage ?language .
+    ?language mon:name ?name .  
+    ?L mon:percent ?percent . 
+    ?L mon:languageInfo- ?country .
+    FILTER ( strends(str(?country), "countries/AL/") )
+}ORDER BY DESC(?percent)
+
+fronteiras dado código país
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?length ?name WHERE {
+	?B rdf:type mon:Border . 
+    ?B mon:length ?length .
+    ?B mon:isBorderOf ?countries .
+    FILTER ( strends(str(?countries), "countries/AL/") )
+    ?B mon:isBorderOf ?country .
+    ?B mon:length ?length . 
+    ?country mon:name ?name .
+    FILTER(!strends(str(?country), "countries/AL/"))
+}ORDER BY DESC(?length)
+
+provincias de cada pais
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?P ?name WHERE {
+	?X rdf:type mon:Country .
+    ?X mon:hasProvince ?P . 
+    ?P mon:name ?name .       
+    FILTER ( strends(str(?X), "countries/GR/") )
+}
+
+cidades de cada país
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?C ?name WHERE {
+	?X rdf:type mon:Country .
+    ?X mon:hasCity ?C . 
+    ?C mon:name ?name .   
+    FILTER ( strends(str(?X), "countries/GR/") )
+}
+
+encompassed 
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?percent ?cont WHERE {
+	?E rdf:type mon:Encompassed .
+    ?E mon:percent ?percent .
+    ?E mon:encompassedArea ?country .
+    ?E mon:encompassedBy ?cont . 
+    ?cont mon:name ?cont_name .
+    FILTER ( strends(str(?country), "countries/GBM/") )
+}ORDER BY DESC(?percent)
+
+
+3) todos os mares
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?C ?N WHERE {
+    	?X mon:name ?N . 
+	?X rdf:type mon:Sea . 
+}
+
+4)obter mar por "código"
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?area ?depth WHERE {
+    	?X mon:name ?name . 
+	?X rdf:type mon:Sea . 
+	?X mon:area ?area .
+	?X mon:depth ?depth . 
+    	FILTER ( strends(str(?X), "seas/Atlantic+Ocean/") )
+}
+
+obter paises banhados por um mar
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?name WHERE {
+    ?O mon:locatedIn ?country . 
+    ?country mon:name ?name .
+	?O rdf:type mon:Sea . 
+	
+    FILTER ( strends(str(?O), "seas/Atlantic+Ocean/") )
+}ORDER BY (?name)
+
+5)todos os rios
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?N WHERE {
+    	?X mon:name ?N . 
+	?X rdf:type mon:River . 
+}
+
+6)rio por código
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?area ?length ?flows_to ?source_long ?source_lat ?estuary_long ?estuary_lat WHERE {
+    ?X mon:name ?name . 
+	?X rdf:type mon:River . 
+    OPTIONAL{ ?X mon:area ?area}
+    OPTIONAL{ ?X mon:length ?length}
+    OPTIONAL{ ?X mon:flowsInto ?f . ?f mon:name ?flows_to}
+    ?S rdf:type mon:Source
+    OPTIONAL{ ?S mon:longitude ?source_long}
+    OPTIONAL{ ?S mon:latitude ?source_lat}
+    ?E rdf:type mon:Estuary
+    OPTIONAL{ ?E mon:longitude ?estuary_long}
+    OPTIONAL{ ?E mon:latitude ?estuary_lat}
+    FILTER ( strends(str(?S), "sources/Thjorsa/") )
+    FILTER ( strends(str(?E), "estuarys/Thjorsa/") )
+    FILTER ( strends(str(?X), "rivers/Thjorsa/") )
+}
+
+paises por onde passa
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?name {
+    ?C mon:name ?name .
+    ?C rdf:type mon:Country .
+    ?R mon:locatedIn ?C.
+	?R rdf:type mon:River .
+    FILTER ( strends(str(?R), "rivers/Nile/") )
+}
+
+7)todos os lagos
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?L ?name WHERE {
+    	?L mon:name ?name . 
+	?L rdf:type mon:Lake . 
+}ORDER BY ?name
+
+8)lago por código
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?long ?lat ?elev ?area ?depth ?type WHERE {
+    ?X mon:name ?name . 
+	?X rdf:type mon:Lake . 
+    ?X mon:longitude ?long .
+    ?X mon:latitude ?lat .
+    OPTIONAL{?X mon:elevation ?elev .}
+    OPTIONAL{?X mon:area ?area .}
+    OPTIONAL{?X mon:depth ?depth .}
+    OPTIONAL{?X mon:type ?type .}
+    FILTER ( strends(str(?X), "lakes/Inarijärvi/") )
+}
+
+9)todas as montanhas
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?M ?name WHERE {
+    	?M mon:name ?name . 
+	?M rdf:type mon:Mountain . 
+}ORDER BY ?name
+
+10)montanhas por codigo
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?name ?long ?lat ?elev ?type ?range ?last_erupt ?island_name WHERE {
+    ?X mon:name ?name . 
+	?X rdf:type mon:Mountain . 
+    ?X mon:longitude ?long .
+    ?X mon:latitude ?lat .
+    ?X mon:elevation ?elev .
+    OPTIONAL{?X mon:type ?type.}
+    OPTIONAL{?X mon:lastEruption ?last_erupt.}
+    OPTIONAL{?X mon:locatedOnIsland ?I . ?I mon:name ?island_name}
+    FILTER ( strends(str(?X), "mountains/Pico+Ruivo/") )
+}
+
+paises da montanha
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?country WHERE { 
+	?X rdf:type mon:Mountain . 
+    ?X mon:locatedIn ?C .
+	?C rdf:type mon:Country .
+	?C mon:name ?country .
+    FILTER ( strends(str(?X), "mountains/Brocken/") )
+}
+
+provincias da montanha
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?country WHERE { 
+	?X rdf:type mon:Mountain . 
+    ?X mon:locatedIn ?C .
+	?C rdf:type mon:Province .
+	?C mon:name ?country .
+    FILTER ( strends(str(?X), "mountains/Brocken/") )
+}
+
+11)todas as ilhas
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name WHERE {
+    	?X mon:name ?name . 
+	?X rdf:type mon:Island . 
+}ORDER BY ?name
+
+12)ilha por código
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?name ?long ?lat ?elev ?area ?type ?archipelago WHERE {
+    ?X mon:name ?name . 
+	?X rdf:type mon:Island . 
+    ?X mon:longitude ?long .
+    ?X mon:latitude ?lat .
+    ?X mon:elevation ?elev .
+    ?X mon:area ?area .
+    OPTIONAL{?X mon:type ?type.}
+    OPTIONAL{?X mon:belongsToArchipelago ?A . ?A mon:name ?archipelago}
+    FILTER ( strends(str(?X), "islands/Svalbard/") )
+}
+
+paises na ilha
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?country WHERE {
+	?X rdf:type mon:Island . 
+    ?X mon:locatedIn ?C .
+    ?C rdf:type mon:Country .
+    ?C mon:name ?country .
+    FILTER ( strends(str(?X), "islands/Borneo/") )
+}ORDER BY ?country
+
+provincias na ilha 
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?province WHERE {
+	?X rdf:type mon:Island . 
+    ?X mon:locatedIn ?C .
+    ?C rdf:type mon:Province .
+    ?C mon:name ?province .
+    FILTER ( strends(str(?X), "islands/Borneo/") )
+}ORDER BY ?province
+
+13)todos os desertos
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name WHERE {
+    	?X mon:name ?name . 
+	?X rdf:type mon:Desert .
+}ORDER BY ?name
+
+14)deserto por código
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?long ?lat ?elev ?area ?type ?local WHERE {
+    ?X mon:name ?name . 
+	?X rdf:type mon:Desert . 
+    ?X mon:longitude ?long .
+    ?X mon:latitude ?lat .
+    ?X mon:area ?area .
+    OPTIONAL{?X mon:type ?type.}
+    FILTER ( strends(str(?X), "deserts/Nubian+Desert/") )
+}
+
+15)provincia por código
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?localname ?area ?population WHERE {
+    ?X mon:name ?name . 
+	?X rdf:type mon:Province .
+    OPTIONAL{?X mon:localname ?localname .}
+    OPTIONAL{?X mon:area ?area .}
+    OPTIONAL{?X mon:population ?population .}
+    FILTER ( strends(str(?X), "provinces/Attikis/") )
+}
+
+cidades na provincia
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?C ?city WHERE { 
+	?X rdf:type mon:Province .
+    ?X mon:hasCity ?C .
+    ?C mon:name ?city
+    FILTER ( strends(str(?X), "provinces/Attikis/") )
+}
+
+16)cidade por código
+prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?X ?name ?lat ?long ?elev ?popul WHERE {
+   	?X mon:name ?name . 
+	?X rdf:type mon:City .
+    ?X mon:latitude ?lat .
+    ?X mon:longitude ?long .
+    ?X mon:elevation ?elev .
+    OPTIONAL{?X mon:population ?popul .}
+    FILTER ( strends(str(?X), "cities/Tirana/") )
+}
+
+

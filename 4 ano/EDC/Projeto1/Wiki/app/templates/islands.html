@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <h2 style="color: #28a745"> Islands</h2>
+    <table>
+        <tbody>
+            {% for name,id in islands.items %}
+                <tr>
+                    <td><a style="color: black" href="/islands/{{ id }}">{{ name }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

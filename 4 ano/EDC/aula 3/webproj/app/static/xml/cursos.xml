@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cursos>
+
+	<curso>
+		<guid>54</guid>
+		<codigo>0300/9002</codigo>
+		<nome>Administração Pública</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Ciências Sociais, Políticas e do Território</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências Sociais</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas:<br />
+17 Matemática Aplicada às Ciências Sociais<br />
+16 Matemática<br />
+18 Português<br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:25:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>14</guid>
+		<codigo>0300/9011</codigo>
+		<nome>Biologia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Biologia</departamento></departamentos>
+		<areascientificas><areacientifica>Biologia</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas:<br />
+02 Biologia e Geologia <br />
+07 Física e Química <br />
+16 Matemática
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:25:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>15</guid>
+		<codigo>0300/9012</codigo>
+		<nome>Biologia e Geologia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Biologia</departamento><departamento>Departamento de Geociências</departamento></departamentos>
+		<areascientificas><areacientifica>Biologia</areacientifica><areacientifica>Geociências</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+02 Biologia e Geologia <br />
+      ou <br />
+02 Biologia e Geologia<br />
+07 Física e Química <br />
+      ou<br />
+02 Biologia e Geologia<br />
+16 Matemática
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:25:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>16</guid>
+		<codigo>0300/9015</codigo>
+		<nome>Bioquímica</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Química</departamento></departamentos>
+		<areascientificas><areacientifica>Bioquímica</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />
+02 Biologia e Geologia<br />
+07 Física e Química<br />
+16 Matemática<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:25:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>17</guid>
+		<codigo>0300/9016</codigo>
+		<nome>Biotecnologia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Biologia</departamento><departamento>Departamento de Química</departamento></departamentos>
+		<areascientificas><areacientifica>Biotecnologia</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />
+02 Biologia e Geologia <br />
+07 Física e Química <br />
+16 Matemática<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:11:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>18</guid>
+		<codigo>0300/9351</codigo>
+		<nome>Ciências Biomédicas</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Ciências Médicas</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências Biomédicas</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+02 Biologia e Geologia <br />e <br /> 07 Física e Química <br />ou <br />02 Biologia e Geologia <br />e<br /> 16 Matemática<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>False</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:11:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>19</guid>
+		<codigo>0300/9041</codigo>
+		<nome>Ciências do Mar</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Ambiente e Ordenamento</departamento><departamento>Departamento de Biologia</departamento><departamento>Departamento de Física</departamento><departamento>Departamento de Geociências</departamento><departamento>Departamento de Química</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências do Mar</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />
+02 Biologia e Geologia <br />
+07 Física e Química <br />
+16 Matemática<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:26:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>48</guid>
+		<codigo>3011/9056</codigo>
+		<nome>Contabilidade</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Instituto Superior de Contabilidade e Administração da Universidade de Aveiro</departamento></departamentos>
+		<areascientificas><areacientifica>Contabilidade</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ISCA, Aveiro (junto ao Campus Universitário de Santiago)</local>
+		<provas>Uma das seguintes provas:<br /> 04 Economia <br /> 16 Matemática <br /> 18 Português <br /><strong><br /><br />O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:35:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>245</guid>
+		<codigo>3011/8449</codigo>
+		<nome>Contabilidade à Distância</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Instituto Superior de Contabilidade e Administração da Universidade de Aveiro</departamento></departamentos>
+		<areascientificas><areacientifica>Contabilidade</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>À distância</regime>
+		<local>ISCA, Aveiro (junto ao Campus Universitário de Santiago)</local>
+		<provas>Uma das seguintes provas:<br /> 04 Economia<br />16 Matemática <br />  18 Português <br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>False</m23>
+		<abrecandidaturas>False</abrecandidaturas>
+		<ultimaalteracao>10/07/2020 09:57:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>448</guid>
+		<codigo>3011/9869</codigo>
+		<nome>Contabilidade pós-laboral</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Instituto Superior de Contabilidade e Administração da Universidade de Aveiro</departamento></departamentos>
+		<areascientificas><areacientifica>Contabilidade</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Noturno / pós-laboral</regime>
+		<local>ISCA, Aveiro (junto ao Campus Universitário de Santiago)</local>
+		<provas>Uma das seguintes provas:<br /> 04 Economia <br /> 16 Matemática <br /> 18 Português <br /><strong><br /><br />O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:35:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>20</guid>
+		<codigo>0300/9069</codigo>
+		<nome>Design</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Comunicação e Arte</departamento></departamentos>
+		<areascientificas><areacientifica>Design</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />
+03 Desenho <br />
+10 Geometria Descritiva<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:27:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>46</guid>
+		<codigo>3014/L138</codigo>
+		<nome>Design de Produto e Tecnologia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior Aveiro Norte</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências da Engenharia</areacientifica><areacientifica>Design</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Escola Superior Aveiro Norte, Oliveira de Azeméis</local>
+		<provas>Uma das seguintes provas: <br />03 Desenho<br />10 Geometria Descritiva <br />16 Matemática <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:39:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>21</guid>
+		<codigo>0300/9081</codigo>
+		<nome>Economia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Economia, Gestão, Engenharia Industrial e Turismo</departamento></departamentos>
+		<areascientificas><areacientifica>Economia</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos: <br />
+19 Matemática A <br /> ou <br />
+04 Economia <br />19 Matemática A <br /> ou <br />
+09 Geografia <br />19 Matemática A <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:12:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>94</guid>
+		<codigo>0300/9853</codigo>
+		<nome>Educação Básica</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Educação e Psicologia</departamento></departamentos>
+		<areascientificas><areacientifica>Educação</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>17 Mat. Apl. Ciências Soc.<br />18 Português<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:27:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>465</guid>
+		<codigo>8912</codigo>
+		<nome>Eletrónica e Mecânica Industrial</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Tecnologia e Gestão de Águeda</departamento></departamentos>
+		<areascientificas><areacientifica>521 - Metalurgia e Metalomecânica</areacientifica><areacientifica>522 - Eletricidade e Energia</areacientifica><areacientifica>523 - Electrónica e automação</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ESTGA, Águeda</local>
+		<provas>16 – Matemática (Matemática A ou Matemática B)
+07 - Física e Química
+10 - Geometria Descritiva</provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:36:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>168</guid>
+		<codigo>3013/9500</codigo>
+		<nome>Enfermagem</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Saúde</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências da Saúde</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+02 Biologia e Geologia<br />
+      ou<br />
+02 Biologia e Geologia<br />
+07 Física e Química<br /><br /><strong><br />O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:38:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>425</guid>
+		<codigo>0300/9359</codigo>
+		<nome>Engenharia Biomédica</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Ciências Médicas</departamento><departamento>Departamento de Eletrónica, Telecomunicações e Informática</departamento><departamento>Departamento de Física</departamento></departamentos>
+		<areascientificas><areacientifica>Engenharia Biomédica</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química<br />
+19 Matemática A <br />
+<br /><strong>O cálculo da nota de acesso considera:</strong><br /><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso
+</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>28/09/2020 15:43:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>95</guid>
+		<codigo>0300/9360</codigo>
+		<nome>Engenharia Civil</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Engenharia Civil</departamento></departamentos>
+		<areascientificas><areacientifica>Engenharia Civil</areacientifica></areascientificas>
+		<areasformacao><areaformacao>Ciências da Engenharia e Tecnologias</areaformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química <br />
+19 Matemática A <br /><br />
+<strong>O cálculo da nota de acesso considera:</strong><br /><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:28:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>426</guid>
+		<codigo>0300/G009</codigo>
+		<nome>Engenharia Computacional</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Eletrónica, Telecomunicações e Informática</departamento><departamento>Departamento de Física</departamento><departamento>Departamento de Matemática</departamento></departamentos>
+		<areascientificas><areacientifica>Engenharia Computacional</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química <br />
+19 Matemática A <br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:28:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>470</guid>
+		<codigo>8312</codigo>
+		<nome>Engenharia de Automação Industrial</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Eletrónica, Telecomunicações e Informática</departamento><departamento>Departamento de Engenharia Mecânica</departamento></departamentos>
+		<areascientificas><areacientifica>Electrónica e Automação</areacientifica><areacientifica>Engenharia Mecânica</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Matemática A
+e
+Física</provas>
+		<m23>False</m23>
+		<abrecandidaturas>False</abrecandidaturas>
+		<ultimaalteracao>08/09/2020 17:28:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>23</guid>
+		<codigo>0300/9361</codigo>
+		<nome>Engenharia de Computadores e Telemática</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Eletrónica, Telecomunicações e Informática</departamento></departamentos>
+		<areascientificas><areacientifica>Informática</areacientifica></areascientificas>
+		<areasformacao><areaformacao>Ciências da Engenharia e Tecnologias</areaformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+19 Matemática A<br />
+      ou<br />
+02 Biologia e Geologia<br />
+19 Matemática A<br />
+      ou<br />
+07 Física e Química<br />
+19 Matemática A
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:29:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>428</guid>
+		<codigo>0300/9363</codigo>
+		<nome>Engenharia de Materiais</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Engenharia de Materiais e Cerâmica</departamento></departamentos>
+		<areascientificas><areacientifica>Ciência e Engenharia dos Materiais</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química <br />
+19 Matemática A <br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:29:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>385</guid>
+		<codigo>0300/9508</codigo>
+		<nome>Engenharia do Ambiente</nome>
+		<nota>4º e 5º ano lecionado em inglês</nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Ambiente e Ordenamento</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências e Engenharia do Ambiente</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+02 Biologia e Geologia<br />
+19 Matemática A <br />ou<br />
+07 Física e Química<br />
+19 Matemática A.<br /><br />
+<strong>O cálculo da nota de acesso considera:</strong><br /><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>28/09/2020 15:45:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>437</guid>
+		<codigo>0300/9509</codigo>
+		<nome>Engenharia e Gestão Industrial</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Economia, Gestão, Engenharia Industrial e Turismo</departamento></departamentos>
+		<areascientificas><areacientifica>Engenharia e Gestão Industrial</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química<br />
+19 Matemática A<br /><br />
+O cálculo da nota de acesso considera:<br />
+60% da nota do ensino secundário<br />
+40% da nota da prova de ingresso<br />
+</provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:29:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>27</guid>
+		<codigo>0300/9365</codigo>
+		<nome>Engenharia Eletrónica e Telecomunicações</nome>
+		<nota>marca EUR-ACE</nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Eletrónica, Telecomunicações e Informática</departamento></departamentos>
+		<areascientificas><areacientifica>Eletrotecnia</areacientifica></areascientificas>
+		<areasformacao><areaformacao>Ciências da Engenharia e Tecnologias</areaformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química <br />19 Matemática A
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:30:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>62</guid>
+		<codigo>3012/9109</codigo>
+		<nome>Engenharia Eletrotécnica</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Tecnologia e Gestão de Águeda</departamento></departamentos>
+		<areascientificas><areacientifica>Eletrotecnia</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ESTGA, Águeda</local>
+		<provas>07 Física e Química<br />
+16 Matemática <br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>False</abrecandidaturas>
+		<ultimaalteracao>03/06/2020 10:29:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>28</guid>
+		<codigo>0300/9368</codigo>
+		<nome>Engenharia Física</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Física</departamento></departamentos>
+		<areascientificas><areacientifica>Física</areacientifica></areascientificas>
+		<areasformacao><areaformacao>Ciências da Engenharia e Tecnologias</areaformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química <br />
+19 Matemática A <br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:30:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>383</guid>
+		<codigo>0300/9119</codigo>
+		<nome>Engenharia Informática</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Eletrónica, Telecomunicações e Informática</departamento></departamentos>
+		<areascientificas><areacientifica>Informática</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+19 Matemática A<br />
+      ou<br />
+02 Biologia e Geologia<br />
+19 Matemática A<br />
+      ou<br />
+07 Física e Química<br />
+19 Matemática A<br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:30:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>30</guid>
+		<codigo>0300/9369</codigo>
+		<nome>Engenharia Mecânica</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Engenharia Mecânica</departamento></departamentos>
+		<areascientificas><areacientifica>Engenharia Mecânica</areacientifica></areascientificas>
+		<areasformacao><areaformacao>Ciências da Engenharia e Tecnologias</areaformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química <br />
+19 Matemática A <br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:31:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>31</guid>
+		<codigo>0300/9461</codigo>
+		<nome>Engenharia Química</nome>
+		<nota></nota>
+		<grau>Mestrado Integrado</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Química</departamento></departamentos>
+		<areascientificas><areacientifica>Engenharia Química</areacientifica></areascientificas>
+		<areasformacao><areaformacao>Ciências da Engenharia e Tecnologias</areaformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química <br />
+19 Matemática A <br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:17:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>50</guid>
+		<codigo>3011/9140</codigo>
+		<nome>Finanças</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Instituto Superior de Contabilidade e Administração da Universidade de Aveiro</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ISCA, Aveiro (junto ao Campus Universitário de Santiago)</local>
+		<provas>Uma das seguintes provas:<br />
+04 Economia<br />
+16 Matemática<br />
+18 Português<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:35:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>449</guid>
+		<codigo>3011/8005</codigo>
+		<nome>Finanças pós-laboral</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Instituto Superior de Contabilidade e Administração da Universidade de Aveiro</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Noturno / pós-laboral</regime>
+		<local>ISCA, Aveiro (junto ao Campus Universitário de Santiago)</local>
+		<provas>Uma das seguintes provas:<br />
+04 Economia<br />
+16 Matemática<br />
+18 Português<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:35:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>33</guid>
+		<codigo>0300/9141</codigo>
+		<nome>Física</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Física</departamento></departamentos>
+		<areascientificas><areacientifica>Física</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>07 Física e Química<br />
+19 Matemática A<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:31:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>170</guid>
+		<codigo>3013/9504</codigo>
+		<nome>Fisioterapia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Saúde</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências da Saúde</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+02 Biologia e Geologia<br />
+      ou<br />
+02 Biologia e Geologia<br />
+07 Física e Química<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:38:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>418</guid>
+		<codigo>0300/9146</codigo>
+		<nome>Geologia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Geociências</departamento></departamentos>
+		<areascientificas><areacientifica>Geociências</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas:<br />
+02 Biologia e Geologia<br />
+07 Física e Química<br />
+16 Matemática<br />
+<strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:31:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>34</guid>
+		<codigo>0300/9147</codigo>
+		<nome>Gestão</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Economia, Gestão, Engenharia Industrial e Turismo</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos: <br />16 Matemática <br />ou <br />02 Biologia e Geologia<br /> e <br />16 Matemática<br /> ou<br /> 04 Economia <br />e<br /> 16 Matemática <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:32:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>64</guid>
+		<codigo>3012/L021</codigo>
+		<nome>Gestão Comercial</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Tecnologia e Gestão de Águeda</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ESTGA, Águeda</local>
+		<provas>Uma das seguintes provas:<br />
+04 Economia <br />16 Matemática <br /> 18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:37:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>222</guid>
+		<codigo>3012/8405</codigo>
+		<nome>Gestão da Qualidade</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Tecnologia e Gestão de Águeda</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ESTGA, Águeda</local>
+		<provas>Uma das seguintes provas: <br />04 Economia <br />16 Matemática <br /> 18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:37:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>452</guid>
+		<codigo>8310</codigo>
+		<nome>Gestão e Planeamento em Turismo</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Economia, Gestão, Engenharia Industrial e Turismo</departamento></departamentos>
+		<areascientificas><areacientifica>Turismo</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />04 Economia  <br />17 Matemática Aplicada às Ciências Sociais  <br /> 16 Matemática <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:32:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>65</guid>
+		<codigo>3012/8913</codigo>
+		<nome>Gestão Pública</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Tecnologia e Gestão de Águeda</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ESTGA, Águeda</local>
+		<provas>Uma das seguintes provas: <br />04 Economia <br /> 16 Matemática  <br />18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:37:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>406</guid>
+		<codigo>3013/L066</codigo>
+		<nome>Imagem Médica e Radioterapia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Saúde</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências da Saúde</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br /> 02 Biologia e Geologia <br />ou<br /> 02 Biologia e Geologia <br /> 07 Física e Química <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:39:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>35</guid>
+		<codigo>0300/9194</codigo>
+		<nome>Línguas e Estudos Editoriais</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Línguas e Culturas</departamento></departamentos>
+		<areascientificas><areacientifica>Línguas</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />01 Alemão <br />08 Francês <br />
+13 Inglês <br />15 Literatura Portuguesa <br /> 18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:32:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>36</guid>
+		<codigo>0300/9196</codigo>
+		<nome>Línguas e Relações Empresariais</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Línguas e Culturas</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica><areacientifica>Línguas</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos: 18 Português <br /> ou<br /> 01 Alemão e 13 Inglês  <br />ou<br /> 08 Francês e 13 Inglês <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:32:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>37</guid>
+		<codigo>0300/9204</codigo>
+		<nome>Línguas, Literaturas e Culturas</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Línguas e Culturas</departamento></departamentos>
+		<areascientificas><areacientifica>Línguas</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />15 Literatura Portuguesa <br />18 Português <br /><br /><strong><br />O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:33:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>51</guid>
+		<codigo>3011/9205</codigo>
+		<nome>Marketing</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Instituto Superior de Contabilidade e Administração da Universidade de Aveiro</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno ou noturno</regime>
+		<local>ISCA, Aveiro (junto ao Campus Universitário de Santiago)</local>
+		<provas>Uma das seguintes provas: <br />04 Economia  <br />16 Matemática  <br />18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:36:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>447</guid>
+		<codigo>3011/8005</codigo>
+		<nome>Marketing pós-laboral</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Instituto Superior de Contabilidade e Administração da Universidade de Aveiro</departamento></departamentos>
+		<areascientificas><areacientifica>Gestão</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno ou noturno</regime>
+		<local>ISCA, Aveiro (junto ao Campus Universitário de Santiago)</local>
+		<provas>Uma das seguintes provas: <br />04 Economia  <br />16 Matemática  <br />18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:36:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>38</guid>
+		<codigo>0300/9209</codigo>
+		<nome>Matemática</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Matemática</departamento></departamentos>
+		<areascientificas><areacientifica>Matemática</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos:<br />
+19 Matemática A<br />
+      ou<br />
+02 Biologia e Geologia<br />
+19 Matemática A<br />
+      ou<br />
+07 Física e Química<br />
+19 Matemática A<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:33:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>39</guid>
+		<codigo>0300/9212</codigo>
+		<nome>Meteorologia, Oceanografia e Geofísica</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Física</departamento></departamentos>
+		<areascientificas><areacientifica>Física</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos: <br />07 Física e Química <br />ou <br />16 Matemática <br />ou <br />02 Biologia e Geologia <br />16 Matemática <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:33:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>40</guid>
+		<codigo>0300/8218</codigo>
+		<nome>Música</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Comunicação e Arte</departamento></departamentos>
+		<areascientificas><areacientifica>Música</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />12 História da Cultura e Artes <br /> 13 Inglês <br /> 16 Matemática<br /> 18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>10% da nota do ensino secundário</li><li>10% da nota da prova de ingresso</li><li>80% nota da prova de aptidão</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:21:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>41</guid>
+		<codigo>0300/9215</codigo>
+		<nome>Novas Tecnologias da Comunicação</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Comunicação e Arte</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências e Tecnologias da Comunicação</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas:<br />  04 Economia <br /> 12 História da Cultura e Artes <br />18 Português <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:33:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>42</guid>
+		<codigo>0300/9219</codigo>
+		<nome>Psicologia</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Educação e Psicologia</departamento></departamentos>
+		<areascientificas><areacientifica>Psicologia</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />02 Biologia e Geologia <br /> 16 Matemática <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:34:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>43</guid>
+		<codigo>0300/9223</codigo>
+		<nome>Química</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Química</departamento></departamentos>
+		<areascientificas><areacientifica>Química</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas: <br />
+07 Física e Química<br />
+19 Matemática A<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:34:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>405</guid>
+		<codigo>0300/L094</codigo>
+		<nome>Reabilitação do Património</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Engenharia Civil</departamento></departamentos>
+		<areascientificas><areacientifica>Engenharia Civil</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Uma das seguintes provas:<br />
+03 Desenho<br />
+10 Geometria Descritiva<br />
+19 Matemática A<br />
+<br /><br /><strong><br />O cálculo da nota de acesso considera:</strong><ul><li>Média do secundário: 60%</li><li>Provas de ingresso: 40%</li></ul>
+</provas>
+		<m23>True</m23>
+		<abrecandidaturas>False</abrecandidaturas>
+		<ultimaalteracao>12/10/2020 11:48:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>66</guid>
+		<codigo>3012/9235</codigo>
+		<nome>Secretariado e Comunicação Empresarial</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Tecnologia e Gestão de Águeda</departamento></departamentos>
+		<areascientificas><areacientifica>Línguas</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ESTGA, Águeda</local>
+		<provas>Uma das seguintes provas: <br />04 Economia <br /> 13 Inglês <br /> 18 Português <br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:37:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>427</guid>
+		<codigo>3014/L135</codigo>
+		<nome>Tecnologia e Sistemas de Produção</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior Aveiro Norte</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências da Engenharia</areacientifica><areacientifica>Engenharia Mecânica</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Escola Superior Aveiro Norte, Oliveira de Azeméis</local>
+		<provas>Uma das seguintes provas:<br /> 07 Física e Química <br /> 10 Geometria Descritiva <br />16 Matemática <br />
+<strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:39:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>63</guid>
+		<codigo>3012/8016</codigo>
+		<nome>Tecnologias da Informação</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Tecnologia e Gestão de Águeda</departamento></departamentos>
+		<areascientificas><areacientifica>Informática</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>ESTGA, Águeda</local>
+		<provas>16 Matemática <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>65% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:38:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>174</guid>
+		<codigo>3013/9890</codigo>
+		<nome>Terapia da Fala</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Escola Superior de Saúde</departamento></departamentos>
+		<areascientificas><areacientifica>Ciências da Saúde</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>Um dos seguintes conjuntos: <br />02 Biologia e Geologia <br />ou<br /> 02 Biologia e Geologia<br />18 Português <br /> ou<br />02 Biologia e Geologia <br />07 Física e Química <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:39:00</ultimaalteracao>
+	</curso>
+
+	<curso>
+		<guid>44</guid>
+		<codigo>0300/9252</codigo>
+		<nome>Tradução</nome>
+		<nota></nota>
+		<grau>Licenciatura</grau>
+		<ciclo>1</ciclo>
+		<departamentos><departamento>Departamento de Línguas e Culturas</departamento></departamentos>
+		<areascientificas><areacientifica>Línguas</areacientifica><areacientifica>Tradução</areacientifica></areascientificas>
+		<areasformacao></areasformacao>
+		<regime>Diurno / laboral</regime>
+		<local>Campus Universitário de Santiago, Aveiro</local>
+		<provas>18 Português<br />
+      e<br />
+Uma das seguintes provas:<br />
+01 Alemão<br />
+05 Espanhol<br />
+08 Francês<br />
+13 Inglês <br /><br /><strong><br /><br />O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul></provas>
+		<m23>True</m23>
+		<abrecandidaturas>True</abrecandidaturas>
+		<ultimaalteracao>15/10/2020 10:34:00</ultimaalteracao>
+	</curso>
+
+</cursos>

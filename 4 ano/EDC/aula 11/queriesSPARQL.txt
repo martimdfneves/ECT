@@ -1,0 +1,104 @@
+1)
+select DISTINCT ?predicate where { 
+	?subject ?predicate ?object .
+} limit 100 
+
+2)
+PREFIX mov:<http://movies.org/pred/>
+select DISTINCT ?fname where { 
+	?real mov:name "Ridley Scott" .
+    ?film mov:directed_by ?real .
+    ?film mov:name ?fname .
+} 
+
+3)
+PREFIX pr:<http://movies.org/pred/>
+select ?fname where { 
+	?film pr:name "Three Little Pigskins" .
+    ?film pr:starring ?real .
+    ?real pr:name ?fname .
+}
+
+4)
+PREFIX pr:<http://movies.org/pred/>
+DESCRIBE ?film
+WHERE{ 
+	?film pr:name "Three Little Pigskins" .
+} 
+
+OU
+
+PREFIX pr:<http://movies.org/pred/>
+select ?o ?oname where 
+{ 
+    {
+	SELECT ?s ?p ?o
+    WHERE{
+        ?s pr:name "Blade Runner" . 
+        ?s ?p ?o .
+    }
+    }
+    ?o pr:name ?oname
+} 
+
+5) começar com contruct para testar
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX movt:<http://movies.org/types/>
+PREFIX mov:<http://movies.org/pred/>
+
+CONSTRUCT{ ?s rdf:type movt:Movie}
+WHERE
+{
+    ?s mov:directed_by ?d .
+}
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX movt:<http://movies.org/types/>
+PREFIX mov:<http://movies.org/pred/>
+
+INSERT { ?s rdf:type movt:Movie}
+WHERE
+{
+    ?s mov:directed_by ?d .
+}
+
+6)
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX movt:<http://movies.org/types/>
+PREFIX mov:<http://movies.org/pred/>
+
+CONSTRUCT { ?r rdf:type movt:Actor}
+WHERE
+{
+    ?s mov:starring ?r .
+}
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX movt:<http://movies.org/types/>
+PREFIX mov:<http://movies.org/pred/>
+
+INSERT { ?r rdf:type movt:Actor}
+WHERE
+{
+    ?s mov:starring ?r .
+}
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX movt:<http://movies.org/types/>
+PREFIX mov:<http://movies.org/pred/>
+
+CONSTRUCT { ?r rdf:type movt:Director}
+WHERE
+{
+    ?s mov:directed_by ?r .
+}
+
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX movt:<http://movies.org/types/>
+PREFIX mov:<http://movies.org/pred/>
+
+INSERT { ?r rdf:type movt:Director}
+WHERE
+{
+    ?s mov:directed_by ?r .
+}

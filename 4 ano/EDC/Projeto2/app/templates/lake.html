@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h3 style="color: black ">Lake: {{ name }}</h3></th>
+    <br/>
+    {% if located_in|length > 0 %}
+        <p><b>Located in: </b> {{ located_in }}</p>
+    {% endif %}
+    {% if area|length > 0 %}
+        <p><b>Area: </b> {{ area }} km &#178</p>
+    {% endif %}
+    {% if depth|length > 0 %}
+        <p><b>Max depth: </b> {{ depth }} m</p>
+    {% endif %}
+    {% if type|length > 0 %}
+        <p><b>Type: </b> {{ type }}</p>
+    {% endif %}
+    <p><b>Latitude: </b> {{ lat }}º</p>
+    <p><b>Longitude: </b> {{ long }}º</p>
+    {% if elev|length > 0 %}
+        <p><b>Elevation: </b> {{ elev }} m</p>
+    {% endif %}
+    {% if flows_to|length > 0 %}
+        <p><b>Flows to: </b> {{ flows_to }} </p>
+    {% endif %}
+{% endblock %}

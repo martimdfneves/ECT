@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<curso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="curso.xsd">
+	<guid>417</guid>
+	<nome><![CDATA[Engenharia Informática]]></nome>
+	<nota></nota>
+	<imagem><![CDATA[https://acesso.ua.pt/upload/imagens/c_417.png]]></imagem>
+	<codigo>9263</codigo>
+	<grau><![CDATA[Mestrado]]></grau>
+	<grauid><![CDATA[4]]></grauid>
+	<ciclo>2</ciclo>
+	<duracao>2 anos</duracao>
+	<ano_inicio>2016/2017</ano_inicio>
+	<regime><![CDATA[Diurno / laboral]]></regime>
+	<horario></horario>
+	<propinas><![CDATA[1 000,00€/ano]]></propinas>
+	<subsistema><![CDATA[Universitário]]></subsistema>
+	<areas>
+		<area><![CDATA[Informática]]></area>
+	</areas>
+	<director>
+		<titulo>Prof. Doutor</titulo>
+		<nome>José Luis Guimarães Oliveira</nome>
+		<email>jlo@ua.pt</email>
+	</director>
+	<departamentos>
+		<departamento>
+			<nome>Departamento de Eletrónica, Telecomunicações e Informática</nome>
+			<url>http://www.ua.pt/deti</url>
+		</departamento>
+	</departamentos>
+	<medias>
+		<fase1>0</fase1>
+		<fase2>0</fase2>
+		<fase3>0</fase3>
+	</medias>
+	<vagas>
+		<fase1>0</fase1>
+		<fase2>0</fase2>
+		<fase3>0</fase3>
+	</vagas>
+	<abrecandidaturas>true</abrecandidaturas>
+	<provas></provas>
+	<ano_info><![CDATA[2020/2021]]></ano_info>
+	<saidas_profissionais></saidas_profissionais>
+	<objectivos><![CDATA[<p>Os objetivos do MEI est&atilde;o alinhados com esta estrat&eacute;gia e com as necessidades do mercado, procurando-se:</p>
+<ul>
+<li>Dotar o tecido empresarial da regi&atilde;o, nacional e internacional de quadros superiores habilitados;&nbsp;</li>
+<li>Fomentar uma forma&ccedil;&atilde;o avan&ccedil;ada centrada em inova&ccedil;&atilde;o, desenvolvimento e investiga&ccedil;&atilde;o em engenharia inform&aacute;tica;</li>
+</ul>]]></objectivos>
+	<observacoes></observacoes>
+	<testemunho></testemunho>
+	<pre_requisitos></pre_requisitos>
+	<local><![CDATA[Campus Universitário de Santiago, Aveiro]]></local>
+	<urlmaisinfo></urlmaisinfo>
+	<urlcandidaturas></urlcandidaturas>
+	<urlmobilidade></urlmobilidade>
+	<m23>
+		<provas></provas>
+		<vagas></vagas>
+		<urlinfo></urlinfo>
+		<observacoes></observacoes>
+	</m23>
+	<posgraduacoes>
+		<corpo_docente></corpo_docente>
+		<destinatarios></destinatarios>
+		<vagas><![CDATA[50]]></vagas>
+		<vagas_obs></vagas_obs>
+		<urlmobilidade></urlmobilidade>
+		<ano_info><![CDATA[2020/2021]]></ano_info>
+		<fases>
+			
+			<fase>
+				<numero><![CDATA[1]]></numero>
+				<periodo><![CDATA[14/04/2020 a 24/04/2020]]></periodo>
+				<edital><![CDATA[https://acesso.ua.pt/upload/editais/e_5019.pdf]]></edital>
+				<ata><![CDATA[https://acesso.ua.pt/upload/atas/a_5019.pdf]]></ata>
+				<datainicio><![CDATA[2020-03-23]]></datainicio>
+				<datafim><![CDATA[2021-02-28]]></datafim>
+				<vagas><![CDATA[10]]></vagas>
+			</fase>
+			
+			<fase>
+				<numero><![CDATA[2]]></numero>
+				<periodo><![CDATA[20/07/2020 a 21/08/2020]]></periodo>
+				<edital><![CDATA[https://acesso.ua.pt/upload/editais/e_5173.pdf]]></edital>
+				<ata><![CDATA[https://acesso.ua.pt/upload/atas/a_5173.pdf]]></ata>
+				<datainicio><![CDATA[2020-07-02]]></datainicio>
+				<datafim><![CDATA[2021-02-28]]></datafim>
+				<vagas><![CDATA[40]]></vagas>
+			</fase>
+			
+			<fase>
+				<numero><![CDATA[3]]></numero>
+				<periodo><![CDATA[14/10/2020 a 18/10/2020]]></periodo>
+				<edital><![CDATA[https://acesso.ua.pt/upload/editais/e_5460.pdf]]></edital>
+				<ata><![CDATA[https://acesso.ua.pt/upload/atas/a_5460.pdf]]></ata>
+				<datainicio><![CDATA[2020-10-13]]></datainicio>
+				<datafim><![CDATA[2021-02-28]]></datafim>
+				<vagas><![CDATA[12]]></vagas>
+			</fase>
+			
+			<fase>
+				<numero><![CDATA[3]]></numero>
+				<periodo><![CDATA[14/10/2020 to 18/10/2020]]></periodo>
+				<edital><![CDATA[https://acesso.ua.pt/upload/editais/e_5461.pdf]]></edital>
+				<ata></ata>
+				<datainicio><![CDATA[2020-10-13]]></datainicio>
+				<datafim><![CDATA[2021-02-28]]></datafim>
+				<vagas><![CDATA[12]]></vagas>
+			</fase>
+			
+		</fases>
+	</posgraduacoes>
+	<a3es>
+		
+		<situacao><![CDATA[acreditado]]></situacao>
+		<numero><![CDATA[R/A-Cr 20/2016/AL01]]></numero>
+		<despacho><![CDATA[Aviso_nº_4782_2016]]></despacho>
+		<data><![CDATA[24/02/2016]]></data>
+		<deliberacao><![CDATA[http://a3es.pt/pt/resultados-acreditacao/engenharia-informatica-89]]></deliberacao>
+		<dr><![CDATA[Diário da República, 2.ª série — N.º 70 — 11 de abril de 2016]]></dr>
+		
+	</a3es>
+	<acreditacoes>
+	
+	</acreditacoes>
+	<ultimaalteracao><![CDATA[10/09/2020 10:51:00]]></ultimaalteracao>
+</curso>
+
