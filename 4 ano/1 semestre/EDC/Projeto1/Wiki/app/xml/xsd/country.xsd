@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element type="countryType" name="country"/>
+    <xs:complexType name="populationType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="measured" use="optional"/>
+                <xs:attribute type="xs:string" name="year" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="indep_dateType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="from" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="encompassedType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="continent" use="optional"/>
+                <xs:attribute type="xs:string" name="percentage" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="ethnicgroupType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="percentage" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="religionType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="percentage" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="languageType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="percentage" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="borderType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="country" use="optional"/>
+                <xs:attribute type="xs:string" name="length" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="cityType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="localname" minOccurs="0"/>
+            <xs:element type="xs:string" name="latitude"/>
+            <xs:element type="xs:string" name="longitude"/>
+            <xs:element type="xs:string" name="elevation" minOccurs="0"/>
+            <xs:element type="populationType" name="population" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="located_atType" name="located_at" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="located_onType" name="located_on" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+        <xs:attribute type="xs:string" name="country" use="optional"/>
+        <xs:attribute type="xs:string" name="province" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="located_atType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="watertype" use="optional"/>
+                <xs:attribute type="xs:string" name="lake" use="optional"/>
+                <xs:attribute type="xs:string" name="sea" use="optional"/>
+                <xs:attribute type="xs:string" name="river" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="countryType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="localname" minOccurs="0"/>
+            <xs:element type="populationType" name="population" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="population_growth" minOccurs="0"/>
+            <xs:element type="xs:string" name="infant_mortality" minOccurs="0"/>
+            <xs:element type="xs:string" name="gdp_total" minOccurs="0"/>
+            <xs:element type="xs:string" name="gdp_agri" minOccurs="0"/>
+            <xs:element type="xs:string" name="gdp_ind" minOccurs="0"/>
+            <xs:element type="xs:string" name="gdp_serv" minOccurs="0"/>
+            <xs:element type="xs:string" name="inflation" minOccurs="0"/>
+            <xs:element type="xs:string" name="unemployment" minOccurs="0"/>
+            <xs:element type="indep_dateType" name="indep_date" minOccurs="0"/>
+            <xs:element type="dependentType" name="dependent" minOccurs="0"/>
+            <xs:element type="xs:string" name="government" minOccurs="0"/>
+            <xs:element type="encompassedType" name="encompassed" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="ethnicgroupType" name="ethnicgroup" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="religionType" name="religion" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="languageType" name="language" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="borderType" name="border" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="cityType" name="city" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="provinceType" name="province" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="comment" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="car_code" use="optional"/>
+        <xs:attribute type="xs:string" name="area" use="optional"/>
+        <xs:attribute type="xs:string" name="capital" use="optional"/>
+        <xs:attribute type="xs:string" name="memberships" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="provinceType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="xs:string" name="localname" minOccurs="0"/>
+            <xs:element type="xs:string" name="area"/>
+            <xs:element type="populationType" name="population" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element type="cityType" name="city" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+        <xs:attribute type="xs:string" name="country" use="optional"/>
+        <xs:attribute type="xs:string" name="capital" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="located_onType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="island" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="dependentType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="country" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

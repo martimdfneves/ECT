@@ -3,57 +3,57 @@ import java.io.*;
 
 public class E905 {
 
-	public static void main(String[] args) throws IOException {
-		
-		String nomeEntrada;
+    public static void main(String[] args) throws IOException {
 
-		File aConv;
-		File conv = new File("uncom.java");
-		PrintWriter escritor;
+        String nomeEntrada;
 
-		Scanner k = new Scanner(System.in);
+        File aConv;
+        File conv = new File("uncom.java");
+        PrintWriter escritor;
 
-		do {
+        Scanner k = new Scanner(System.in);
 
-			System.out.print("Nome do ficheiro de entrada: ");
-			nomeEntrada = k.next();
-		
-			aConv = new File(nomeEntrada);
+        do {
 
-			if (!aConv.isFile() || !aConv.canRead()) {
-				
-				System.out.print("Ficheiro não aceitável, coloque outro");
-			}
-		} while (!aConv.isFile() || !aConv.canRead());
+            System.out.print("Nome do ficheiro de entrada: ");
+            nomeEntrada = k.next();
 
-		Scanner inFile = new Scanner(aConv);
-		escritor = new PrintWriter(conv);
+            aConv = new File(nomeEntrada);
 
-		while (inFile.hasNext()) {
+            if (!aConv.isFile() || !aConv.canRead()) {
 
-			String linha = inFile.nextLine();
-			String imprimi = "";
-		
-			for (int i = 0; i< linha.length(); i++) {
-				
-				if ((linha.charAt(i) == '/' && i + 1 < linha.length()) && (linha.charAt(i+1) == '/' || linha.charAt(i+1) == '*')) {
-					
-					i = linha.length() - 1;
-					
-				} else if (i - 1 > 0 && linha.charAt(i-1) == '*' && linha.charAt(i) == '/') {
-					
-					imprimi = "";
-				
-				} else {
+                System.out.print("Ficheiro não aceitável, coloque outro");
+            }
+        } while (!aConv.isFile() || !aConv.canRead());
 
-					imprimi += linha.charAt(i);
-				}
-			}
+        Scanner inFile = new Scanner(aConv);
+        escritor = new PrintWriter(conv);
 
-			escritor.println(imprimi);
-		}
+        while (inFile.hasNext()) {
 
-		escritor.close();
-		inFile.close();
-	}
+            String linha = inFile.nextLine();
+            String imprimi = "";
+
+            for (int i = 0; i < linha.length(); i++) {
+
+                if ((linha.charAt(i) == '/' && i + 1 < linha.length()) && (linha.charAt(i + 1) == '/' || linha.charAt(i + 1) == '*')) {
+
+                    i = linha.length() - 1;
+
+                } else if (i - 1 > 0 && linha.charAt(i - 1) == '*' && linha.charAt(i) == '/') {
+
+                    imprimi = "";
+
+                } else {
+
+                    imprimi += linha.charAt(i);
+                }
+            }
+
+            escritor.println(imprimi);
+        }
+
+        escritor.close();
+        inFile.close();
+    }
 }

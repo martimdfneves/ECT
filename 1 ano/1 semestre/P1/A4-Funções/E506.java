@@ -2,60 +2,60 @@ import java.util.*;
 
 public class E506 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		
-		int num;
+    public static void main(String[] args) {
 
-		System.out.println("Programa para imprimir a tabuada de um número.");
-		System.out.println("----------------------------------------------");
+        int num;
 
-		//garante que o número está entre 0 e 100
-		do {
+        System.out.println("Programa para imprimir a tabuada de um número.");
+        System.out.println("----------------------------------------------");
 
-			System.out.print("Qual é o número (0-100): ");
-			num = k.nextInt();
+        //garante que o número está entre 0 e 100
+        do {
 
-			if (num > 101 || num < 1) {
-				
-				System.out.println("Número não aceite, colque outro.\n");
-			}
+            System.out.print("Qual é o número (0-100): ");
+            num = k.nextInt();
 
-		} while (num < 1 || num > 101);
+            if (num > 101 || num < 1) {
 
-		//pra fechar o scanner, por agora caga nessa merda
-		k.close();
+                System.out.println("Número não aceite, colque outro.\n");
+            }
 
-		//imprime a tabuada até 10 do numero
-		impressor(num);
+        } while (num < 1 || num > 101);
 
-	}
+        //pra fechar o scanner, por agora caga nessa merda
+        k.close();
 
-	//calcula o valor
-	public static int tabuada (int num, int tabulador) {
+        //imprime a tabuada até 10 do numero
+        impressor(num);
 
-		int tabuada;
+    }
 
-		tabuada = num * tabulador;
+    //calcula o valor
+    public static int tabuada(int num, int tabulador) {
 
-		return tabuada;
+        int tabuada;
 
-	}
+        tabuada = num * tabulador;
 
-	//imprime a puta do valor
-	public static void impressor (int num) {
+        return tabuada;
 
-		System.out.println("\n\n|------------------------------------|");
-		System.out.printf("|           TABUADA DO %3d           |\n", num);
+    }
 
-		for (int i = 1; i <= 10; ++i) {
+    //imprime a puta do valor
+    public static void impressor(int num) {
 
-			System.out.printf("|------------------------------------|\n");
-			System.out.printf("|    %4d    x    %3d    =  %5d    |\n", num, i, tabuada(num, i));
+        System.out.println("\n\n|------------------------------------|");
+        System.out.printf("|           TABUADA DO %3d           |\n", num);
 
-		}
+        for (int i = 1; i <= 10; ++i) {
 
-		System.out.println("|------------------------------------|\n\n\n");
-	}
+            System.out.printf("|------------------------------------|\n");
+            System.out.printf("|    %4d    x    %3d    =  %5d    |\n", num, i, tabuada(num, i));
+
+        }
+
+        System.out.println("|------------------------------------|\n\n\n");
+    }
 }

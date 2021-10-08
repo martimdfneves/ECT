@@ -3,11 +3,11 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class b1_5 {
-    
+
     private static Scanner a;
     private static Map b;
     private static /* synthetic */ boolean c;
-    
+
     public static void main(final String[] array) {
         while (b1_5.a.hasNextLine()) {
             final Scanner scanner = new Scanner(b1_5.a.nextLine());
@@ -15,7 +15,7 @@ public class b1_5 {
             scanner.close();
         }
     }
-    
+
     private static double e(final Scanner scanner) {
         if (!b1_5.c && scanner == null) {
             throw new AssertionError();
@@ -25,21 +25,18 @@ public class b1_5 {
         final String next;
         if (a(next = scanner.next())) {
             if (b1_5.b.containsKey(next)) {
-                n = (double)b1_5.b.get(next);
-            }
-            else if (!scanner.hasNext()) {
+                n = (double) b1_5.b.get(next);
+            } else if (!scanner.hasNext()) {
                 System.err.printf("ERROR: variable \"" + next + "\" not defined\n", new Object[0]);
                 System.exit(1);
             }
-        }
-        else {
+        } else {
             final Scanner scanner2;
             final boolean hasNextDouble = (scanner2 = new Scanner(next)).hasNextDouble();
             scanner2.close();
             if (hasNextDouble) {
                 n = Double.parseDouble(next);
-            }
-            else {
+            } else {
                 System.err.printf("ERROR: invalid number \"%s\"\n", next);
                 System.exit(1);
             }
@@ -53,8 +50,7 @@ public class b1_5 {
                 }
 
                 b1_5.b.put(next, n);
-            }
-            else {
+            } else {
                 final double a2 = d;
                 final String s = next2;
                 switch (s) {
@@ -88,22 +84,22 @@ public class b1_5 {
                     }
                 }
             }
-        }
-        else {
+        } else {
             d = n;
         }
         return d;
     }
-    
+
     private static boolean a(final String s) {
         if (!b1_5.c && s == null) {
             throw new AssertionError();
         }
         boolean letterOrDigit = s.length() > 0 && Character.isLetter(s.charAt(0));
-        for (int index = 1; letterOrDigit && index < s.length(); letterOrDigit = Character.isLetterOrDigit(s.charAt(index)), ++index) {}
+        for (int index = 1; letterOrDigit && index < s.length(); letterOrDigit = Character.isLetterOrDigit(s.charAt(index)), ++index) {
+        }
         return letterOrDigit;
     }
-    
+
     static {
         b1_5.c = !b1_5.class.desiredAssertionStatus();
         b1_5.a = new Scanner(System.in);

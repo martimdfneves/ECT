@@ -4,29 +4,29 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class EmployeeList {
-	
-	private Set<String> employees;
 
-	public EmployeeList() {
-		
-		employees = new HashSet<>();
-	}
+    private Set<String> employees;
 
-	public void add(String employee) {
-		
-		employees.add(employee);
-	}
+    public EmployeeList() {
 
-	public void remove(String employee) {
-		
-		employees.remove(employee);
-	}
+        employees = new HashSet<>();
+    }
 
-	@Override
-	public String toString() {
-		
-		return "EmployeeList{" +
-				"employees=" + employees +
-				'}';
-	}
+    public void add(String employee) {
+
+        employees.add(employee);
+    }
+
+    public void remove(String employee) {
+
+        employees.remove(employee);
+    }
+
+    @Override
+    public String toString() {
+
+        return "EmployeeList{" +
+                "employees=" + employees +
+                '}';
+    }
 }

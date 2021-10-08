@@ -2,45 +2,45 @@ import java.util.*;
 
 public class E408 {
 
-	public static void main(String[] args) {
-		
-		Scanner k = new Scanner(System.in);
+    public static void main(String[] args) {
 
-		int minval, maxval, j;
+        Scanner k = new Scanner(System.in);
 
-		System.out.println("Programa para imprimir os números impares num dado intervalo.");
-		System.out.println();
+        int minval, maxval, j;
+
+        System.out.println("Programa para imprimir os números impares num dado intervalo.");
+        System.out.println();
 
 
-		do {
+        do {
 
-			System.out.print("Limitante menor do intervalo: ");
-			minval = k.nextInt();
+            System.out.print("Limitante menor do intervalo: ");
+            minval = k.nextInt();
 
-			System.out.print("Limitante maior do intervalo: ");
-			maxval = k.nextInt();
+            System.out.print("Limitante maior do intervalo: ");
+            maxval = k.nextInt();
 
-			if (minval >= maxval || minval <= 0) {
-				
-				System.out.println("Intervalo não aceite, coloque outro intervalo.\n");
+            if (minval >= maxval || minval <= 0) {
 
-			}
-		} while (minval >= maxval || minval <= 0);
+                System.out.println("Intervalo não aceite, coloque outro intervalo.\n");
 
-		System.out.println();
+            }
+        } while (minval >= maxval || minval <= 0);
 
-		System.out.printf("Números pertencentes ao intervalo [%3d, %3d]:\n", minval, maxval);
+        System.out.println();
 
-		j = 1;
+        System.out.printf("Números pertencentes ao intervalo [%3d, %3d]:\n", minval, maxval);
 
-		for (int i = minval; i <= maxval; i++) {
+        j = 1;
 
-			if (i % 2 != 0) {
-					
-				System.out.printf("Ímpar #%2d: %3d\n", j, i);
-				j++;
-	
-			}
-		}
-	}
+        for (int i = minval; i <= maxval; i++) {
+
+            if (i % 2 != 0) {
+
+                System.out.printf("Ímpar #%2d: %3d\n", j, i);
+                j++;
+
+            }
+        }
+    }
 }

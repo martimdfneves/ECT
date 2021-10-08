@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3 style="color: black ">Island: {{ island_name }}</h3></th>
+<br/>
+{% if area|length > 0 %}
+<p><b>Archipelago: </b> {{ archipelago }}</p>
+{% endif %}
+<p><b>Area: </b> {{ island_area }} km &#178</p>
+<p><b>Latitude: </b> {{ island_lat }}º</p>
+<p><b>Longitude: </b> {{ island_longe }}º</p>
+<p><b>Elevation: </b> {{ island_elev }} m</p>
+{% if type|length > 0 %}
+<p><b>Type: </b> {{ type }}</p>
+{% endif %}
+<p><b>Bordered by(Seas): </b></p>
+<table>
+    <tbody>
+    {% for name in island_seas %}
+    <tr>
+        <td><a style="color: black; padding-left: 20px">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br/>
+<p><b>Country(ies) covered by {{ island_name }}: </b></p>
+<table>
+    <tbody>
+    {% for name in island_countries %}
+    <tr>
+        <td><a style="color: black; padding-left: 20px">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

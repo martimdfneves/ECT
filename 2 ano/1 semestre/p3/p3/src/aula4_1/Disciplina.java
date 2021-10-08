@@ -4,116 +4,114 @@ import java.util.Arrays;
 
 import aula3_1.*;
 
-public class Disciplina{
-	
-	private String nomeD;
-	private String area;
-	private int creditos;
-	private Professor Responsavel;
-	private Estudante[] Alunos;
-	private int inscritos=0;
-	
-	public Disciplina(String nomeD, String area, int creditos,Professor responsavel, Estudante[] alunos) {
+public class Disciplina {
 
-		this.nomeD = nomeD;
-		this.area = area;
-		this.creditos = creditos;
-		Responsavel = responsavel;
-		Alunos[inscritos] = alunos[inscritos];
+    private String nomeD;
+    private String area;
+    private int creditos;
+    private Professor Responsavel;
+    private Estudante[] Alunos;
+    private int inscritos = 0;
 
-	}
-	
-	public Disciplina(String nomeD, String area, int creditos,Professor responsavel) {
+    public Disciplina(String nomeD, String area, int creditos, Professor responsavel, Estudante[] alunos) {
 
-		this.nomeD = nomeD;
-		this.area = area;
-		this.creditos = creditos;
-		Responsavel = responsavel;
+        this.nomeD = nomeD;
+        this.area = area;
+        this.creditos = creditos;
+        Responsavel = responsavel;
+        Alunos[inscritos] = alunos[inscritos];
 
-	}
+    }
 
-	public String getNomeD() {
-		
-		return nomeD;
-	}
+    public Disciplina(String nomeD, String area, int creditos, Professor responsavel) {
 
-	public String getArea() {
-		
-		return area;
-	}
+        this.nomeD = nomeD;
+        this.area = area;
+        this.creditos = creditos;
+        Responsavel = responsavel;
 
-	public int getCreditos() {
-		
-		return creditos;
-	}
+    }
 
-	public Professor getResponsavel() {
-		
-		return Responsavel;
-	}
+    public String getNomeD() {
 
-	public Estudante[] getAlunos() {
-		
-		return Alunos;
-	}
+        return nomeD;
+    }
 
-	@Override
-	public String toString() {
-		
-		return "Disciplina [Nome da Disciplina=" + nomeD + ", Área Científica =" + area + ", ECTS=" + creditos + ", Responsável da Disciplina="
-				+ Responsavel + ", Alunos=" + Arrays.toString(Alunos) + "]";
-	}
-	
-	public boolean addAluno(Estudante est) {
-		
-		for (int i=0;i<Alunos.length;i++) {
-			
-			if(Alunos[i]==est) 
-			
-			{System.out.println("Aluno já existente!");
-			return false;}
-		}
-		
-		Alunos[inscritos]=est;
-		inscritos++;
-		return true;
-	}
-	
-	public boolean delAluno(int nMec) {
-		
-		for (int i=0;i<Alunos.length;i++) {
-			
-			if(Alunos[i].getNmec()==nMec) 
-			
-			{Alunos[i+1]=Alunos[i];
-			inscritos--;
-			}
-			
-			else 
-				
-			{System.out.println("Estudante não existente!");
-			return false;
-			}
-		}
-		return true;
-	}
-	
-	public boolean alunoInscrito(int nMec) {
-		
-		for(int i=0;i<Alunos.length;i++) {
-			
-			if(Alunos[i].getNmec()==nMec) {return true;}
-		}
-		return false;
-	}
-	
-	public int numAlunos() {
-		
-		return Alunos.length;
-	}
-	
-	public Estudante[] getAlunos(String tipo) {
-		
-		
-	}
+    public String getArea() {
+
+        return area;
+    }
+
+    public int getCreditos() {
+
+        return creditos;
+    }
+
+    public Professor getResponsavel() {
+
+        return Responsavel;
+    }
+
+    public Estudante[] getAlunos() {
+
+        return Alunos;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Disciplina [Nome da Disciplina=" + nomeD + ", ï¿½rea Cientï¿½fica =" + area + ", ECTS=" + creditos + ", Responsï¿½vel da Disciplina="
+                + Responsavel + ", Alunos=" + Arrays.toString(Alunos) + "]";
+    }
+
+    public boolean addAluno(Estudante est) {
+
+        for (int i = 0; i < Alunos.length; i++) {
+
+            if (Alunos[i] == est) {
+                System.out.println("Aluno jï¿½ existente!");
+                return false;
+            }
+        }
+
+        Alunos[inscritos] = est;
+        inscritos++;
+        return true;
+    }
+
+    public boolean delAluno(int nMec) {
+
+        for (int i = 0; i < Alunos.length; i++) {
+
+            if (Alunos[i].getNmec() == nMec) {
+                Alunos[i + 1] = Alunos[i];
+                inscritos--;
+            } else {
+                System.out.println("Estudante nï¿½o existente!");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean alunoInscrito(int nMec) {
+
+        for (int i = 0; i < Alunos.length; i++) {
+
+            if (Alunos[i].getNmec() == nMec) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int numAlunos() {
+
+        return Alunos.length;
+    }
+
+    public Estudante[] getAlunos(String tipo) {
+
+
+    }
 }

@@ -1,6 +1,5 @@
 
-public class Pessoa implements Comparable<Pessoa>
-{
-  // Complete a classe.
-  //...
+public class Pessoa implements Comparable<Pessoa> {
+    // Complete a classe.
+    //...
 }

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h2 style="color: #28a745"> {{ name }}</h2>
+{% if other|length > 0 %}
+<p><b>Other name: </b> {{ other }}</p>
+{% endif %}
+<p><b>Latitude: </b> {{ lat }}º </p>
+<p><b>Longitude: </b> {{ long }}º </p>
+{% if elev|length > 0 %}
+<p><b>Elevation: </b> {{ elev }} m</p>
+{% endif %}
+{% if popul|length > 0 %}
+<p><b>Population: </b> {{ popul }}</p>
+{% endif %}
+</html>
+{% endblock %}

@@ -3,46 +3,46 @@ import java.io.*;
 
 public class E908 {
 
-	public static void main(String[] args) throws IOException {
-	
-		File trad;
-		String nome;
-		Scanner k = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-		do{
-			System.out.print("Nome do ficheiro a traduzir: ");
-			nome = k.next();
+        File trad;
+        String nome;
+        Scanner k = new Scanner(System.in);
 
-			trad = new File(nome);
+        do {
+            System.out.print("Nome do ficheiro a traduzir: ");
+            nome = k.next();
 
-			if (!trad.exists() || !trad.canRead()) {
-				
-				System.out.println("Ficheiro não existente, coloque outro.");
-			}
-		} while(!trad.exists() || !trad.canRead());
+            trad = new File(nome);
 
-		Scanner kfile = new Scanner(trad);
+            if (!trad.exists() || !trad.canRead()) {
 
-		while(kfile.hasNext()) {
+                System.out.println("Ficheiro não existente, coloque outro.");
+            }
+        } while (!trad.exists() || !trad.canRead());
 
-			String linhas = kfile.nextLine();
-			String impr = "";
+        Scanner kfile = new Scanner(trad);
 
-			impr += tradutor(linhas);	
+        while (kfile.hasNext()) {
 
-			System.out.println(impr);
-		}
+            String linhas = kfile.nextLine();
+            String impr = "";
 
-	}
+            impr += tradutor(linhas);
 
-	//modulo de tradução
-		public static String tradutor(String pre) {
+            System.out.println(impr);
+        }
 
-		pre=pre.replace('l', 'u');
-		pre=pre.replace('L', 'U');
-		pre=pre.replace('R', ' ');
-		pre=pre.replace('r', ' ');
+    }
 
-		return pre;
-	}
+    //modulo de tradução
+    public static String tradutor(String pre) {
+
+        pre = pre.replace('l', 'u');
+        pre = pre.replace('L', 'U');
+        pre = pre.replace('R', ' ');
+        pre = pre.replace('r', ' ');
+
+        return pre;
+    }
 }

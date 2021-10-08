@@ -1,68 +1,68 @@
 import java.util.*;
+
 import static java.lang.Math.*;
 
 public class E312 {
 
-	public static void main(String[] args) {
-		
-		int num, secret, tentativas;
+    public static void main(String[] args) {
 
-		char resposta;
+        int num, secret, tentativas;
 
-		boolean ng = false;
+        char resposta;
 
-		Scanner k = new Scanner(System.in);
+        boolean ng = false;
 
-		System.out.println("Jogo do adivinha o número (agora entre 0 e 100)");
-		System.out.println("-----------------------------------------------");
+        Scanner k = new Scanner(System.in);
 
-		do {
+        System.out.println("Jogo do adivinha o número (agora entre 0 e 100)");
+        System.out.println("-----------------------------------------------");
 
-			secret = (int) (random() * 100.0 + 1);
-			tentativas = 0;
+        do {
 
-			do {
+            secret = (int) (random() * 100.0 + 1);
+            tentativas = 0;
 
-				System.out.print("\nColoque um número: ");
-				num = k.nextInt();
-				System.out.println();
+            do {
 
-				if (num > secret) {
-					
-					System.out.printf("O número %d é maior do que o número escolhido.\nTenta outra vez.\n", num);
+                System.out.print("\nColoque um número: ");
+                num = k.nextInt();
+                System.out.println();
 
-				} else if (num < secret) {
-					
-					System.out.printf("O número %d é menor do que o número escolhido.\nTenta outra vez.\n", num);
-				}
+                if (num > secret) {
 
-				++tentativas;
+                    System.out.printf("O número %d é maior do que o número escolhido.\nTenta outra vez.\n", num);
 
-			} while(num != secret);
+                } else if (num < secret) {
 
-			System.out.printf("Parabéns, ao fim de %d tentativas conseguiste acertar no número.\n", tentativas);
+                    System.out.printf("O número %d é menor do que o número escolhido.\nTenta outra vez.\n", num);
+                }
 
-			System.out.print("Novo jogo (s/n)? ");
-			resposta = k.next().charAt(0);
+                ++tentativas;
 
-			
+            } while (num != secret);
 
-			if (resposta == 's') {
-				
-				ng = true;
-			
-			} else if (resposta == 'n') {
-				
-				ng = false;
+            System.out.printf("Parabéns, ao fim de %d tentativas conseguiste acertar no número.\n", tentativas);
 
-			} else {
-				
-				System.out.print("Isso não é resposta.\nNovo jogo (s/n)? ");
-				resposta = k.next().charAt(0);
-
-			}
+            System.out.print("Novo jogo (s/n)? ");
+            resposta = k.next().charAt(0);
 
 
-		} while (ng); 
-	}
+            if (resposta == 's') {
+
+                ng = true;
+
+            } else if (resposta == 'n') {
+
+                ng = false;
+
+            } else {
+
+                System.out.print("Isso não é resposta.\nNovo jogo (s/n)? ");
+                resposta = k.next().charAt(0);
+
+            }
+
+
+        } while (ng);
+    }
 }

@@ -1,5 +1,6 @@
 import static java.lang.System.*;
 import static java.lang.Math.*;
+
 import java.util.*;
 
 public class E205 {
@@ -8,7 +9,7 @@ public class E205 {
     static Scanner k = new Scanner(in);
 
     public static void main(String[] args) {
-        
+
         //declaração das variáveis
         int p1x, p1y, p2x, p2y, p3x, p3y, p4x, p4y;
         double ladA, ladB, ladC;
@@ -47,13 +48,13 @@ public class E205 {
         angle2 = ladC / ladB;
 
         if (ladA == ladB && ladA == ladC && angle2 == 1 && angle2 == 1) {
-       
-          System.out.println("Os pontos formam uma figura geométrica com a forma de um quadrado.\n");
-       
+
+            System.out.println("Os pontos formam uma figura geométrica com a forma de um quadrado.\n");
+
         } else {
-       
-          System.out.println("Os pontos não forma uma figura geométrica com a forma de um quadrado.\n");
-       
+
+            System.out.println("Os pontos não forma uma figura geométrica com a forma de um quadrado.\n");
+
         }
 
     }

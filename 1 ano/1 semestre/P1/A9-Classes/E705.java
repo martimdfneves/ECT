@@ -1,122 +1,123 @@
 import java.util.*;
+
 import static java.lang.Math.*;
 
 public class E705 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Condutor registo = new Condutor();
-		
-		registo = leitorDeInformacao();
+        Condutor registo = new Condutor();
 
-		impressor(registo);
-	}
+        registo = leitorDeInformacao();
 
-	//le os dados do condutor
-	public static Condutor leitorDeInformacao() {
+        impressor(registo);
+    }
 
-		Condutor c = new Condutor();
-		char resp;
+    //le os dados do condutor
+    public static Condutor leitorDeInformacao() {
 
-		//pede o nome
-		System.out.print("Nome: ");
-		c.nome = k.nextLine();
+        Condutor c = new Condutor();
+        char resp;
 
-		//pede o sexo
-		do {
-			System.out.print("Sexo: ");
-			c.sexo = k.next().charAt(0);
+        //pede o nome
+        System.out.print("Nome: ");
+        c.nome = k.nextLine();
 
-			if (c.sexo != 'f' && c.sexo != 'F' && c.sexo != 'm' && c.sexo != 'M') {
-				
-				System.out.print("Sexo não existente, coloque outro.\nOpções válidas: f v F (feminino) / m v M (masculino).\n");
-			}
+        //pede o sexo
+        do {
+            System.out.print("Sexo: ");
+            c.sexo = k.next().charAt(0);
 
-		} while (c.sexo != 'f' && c.sexo != 'F' && c.sexo != 'm' && c.sexo != 'M');
+            if (c.sexo != 'f' && c.sexo != 'F' && c.sexo != 'm' && c.sexo != 'M') {
 
-		//pede o peso
-		System.out.print("Peso: ");
-		c.peso = k.nextDouble();
+                System.out.print("Sexo não existente, coloque outro.\nOpções válidas: f v F (feminino) / m v M (masculino).\n");
+            }
 
-		//pede a quantidade de bebida ingerida
-		System.out.print("Bebida ingerida (ml): ");
-		c.bebIng= k.nextDouble();
+        } while (c.sexo != 'f' && c.sexo != 'F' && c.sexo != 'm' && c.sexo != 'M');
 
-		//pede o teor alcoolico medio da bebida
-		System.out.print("Teor alcoólico (médio, em %): ");
-		c.teor = k.nextDouble();
+        //pede o peso
+        System.out.print("Peso: ");
+        c.peso = k.nextDouble();
 
-		//pergunta se está em jejum
-		do {
+        //pede a quantidade de bebida ingerida
+        System.out.print("Bebida ingerida (ml): ");
+        c.bebIng = k.nextDouble();
 
-			System.out.print("Está em jejum? ");
-			resp= k.next().charAt(0);
+        //pede o teor alcoolico medio da bebida
+        System.out.print("Teor alcoólico (médio, em %): ");
+        c.teor = k.nextDouble();
 
-			if (resp != 'n' && resp != 'N' && resp != 's' && resp != 'S') {
-			  	
-				System.out.print("Resposta não aceitável, tente outra.\nOpções válidas: n v N (não) / s v S (sim)");  
-			}
+        //pergunta se está em jejum
+        do {
 
-		}while (resp != 'n' && resp != 'N' && resp != 's' && resp != 'S');
+            System.out.print("Está em jejum? ");
+            resp = k.next().charAt(0);
 
-		return c;
-	}
+            if (resp != 'n' && resp != 'N' && resp != 's' && resp != 'S') {
 
-	//calcula a taxa de alcoolemia no sangue
-	public static double tAS(Condutor c) {
+                System.out.print("Resposta não aceitável, tente outra.\nOpções válidas: n v N (não) / s v S (sim)");
+            }
 
-		double tas = ((0.8) * c.bebIng * (c.teor / 100)) / c.peso * coef(c.sexo, c.jejum);
-	
-		return tas;
-	}
+        } while (resp != 'n' && resp != 'N' && resp != 's' && resp != 'S');
 
-	//define o coeficiente de alcool no sangue
-	public static double coef(char sex, boolean com) {
+        return c;
+    }
 
-		double coef = 0;
+    //calcula a taxa de alcoolemia no sangue
+    public static double tAS(Condutor c) {
 
-		if (com) {
-			
-			if (sex == 'm' || sex == 'M') {
-				
-				coef = 0.7;
-			
-			} else if (sex == 'f' || sex == 'F') {
-				
-				coef = 0.6;
+        double tas = ((0.8) * c.bebIng * (c.teor / 100)) / c.peso * coef(c.sexo, c.jejum);
 
-			}
-		} else if (!com) {
-			
-			coef = 1.1;
-		}
+        return tas;
+    }
 
-		return coef;
-	}
+    //define o coeficiente de alcool no sangue
+    public static double coef(char sex, boolean com) {
 
-	//imprime os resultados
-	public static void impressor(Condutor c) {
+        double coef = 0;
 
-		if (c.sexo == 'm' || c.sexo == 'M') {
-		
-			System.out.printf("O condutor %s tem uma taxa de alcoolemia no sangue de %4.2f g/ml.\n", c.nome, tAS(c));	
-		
-		} else if (c.sexo == 'f' || c.sexo == 'F') {
-		
-			System.out.printf("A condutora %s tem uma taxa de alcoolemia no sangue de %4.2f g/ml.\n", c.nome, tAS(c));				
-		}
-		
-	}
+        if (com) {
+
+            if (sex == 'm' || sex == 'M') {
+
+                coef = 0.7;
+
+            } else if (sex == 'f' || sex == 'F') {
+
+                coef = 0.6;
+
+            }
+        } else if (!com) {
+
+            coef = 1.1;
+        }
+
+        return coef;
+    }
+
+    //imprime os resultados
+    public static void impressor(Condutor c) {
+
+        if (c.sexo == 'm' || c.sexo == 'M') {
+
+            System.out.printf("O condutor %s tem uma taxa de alcoolemia no sangue de %4.2f g/ml.\n", c.nome, tAS(c));
+
+        } else if (c.sexo == 'f' || c.sexo == 'F') {
+
+            System.out.printf("A condutora %s tem uma taxa de alcoolemia no sangue de %4.2f g/ml.\n", c.nome, tAS(c));
+        }
+
+    }
 }
 
 class Condutor {
 
-	String nome;
-	char sexo;
-	double peso;
-	double bebIng;
-	double teor;
-	boolean jejum;
+    String nome;
+    char sexo;
+    double peso;
+    double bebIng;
+    double teor;
+    boolean jejum;
 }

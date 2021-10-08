@@ -1,182 +1,183 @@
 import java.util.*;
+
 import static java.lang.Math.*;
 
 public class E704 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		
-		Complex n1 = new Complex();
-		Complex n2 = new Complex();
-		Complex rez = new Complex();
+    public static void main(String[] args) {
 
-		char oper;
+        Complex n1 = new Complex();
+        Complex n2 = new Complex();
+        Complex rez = new Complex();
 
-		do{
-			System.out.print("Operação: ");
-			oper = k.next().charAt(0);
+        char oper;
 
-			switch (oper) {
+        do {
+            System.out.print("Operação: ");
+            oper = k.next().charAt(0);
 
-				case '+':
+            switch (oper) {
 
-					//leitura
-					n1 = lerComplex();
-					n2 = lerComplex();
-					rez = addComp(n1, n2);
+                case '+':
 
-					//impressão
-					printComp(n1);
-					System.out.print(" + ");
-					printComp(n2);
-					System.out.print(" = ");
-					printComp(rez);
-					System.out.println();
-					break;
+                    //leitura
+                    n1 = lerComplex();
+                    n2 = lerComplex();
+                    rez = addComp(n1, n2);
 
-				case '-':
+                    //impressão
+                    printComp(n1);
+                    System.out.print(" + ");
+                    printComp(n2);
+                    System.out.print(" = ");
+                    printComp(rez);
+                    System.out.println();
+                    break;
 
-					//leitura
-					n1 = lerComplex();
-					n2 = lerComplex();
-					rez = subComp(n1, n2);
+                case '-':
 
-					//impressão
-					printComp(n1);
-					System.out.print(" - ");
-					printComp(n2);
-					System.out.print(" = ");
-					printComp(rez);
-					System.out.println();
-					break;
+                    //leitura
+                    n1 = lerComplex();
+                    n2 = lerComplex();
+                    rez = subComp(n1, n2);
 
-				case '/':
+                    //impressão
+                    printComp(n1);
+                    System.out.print(" - ");
+                    printComp(n2);
+                    System.out.print(" = ");
+                    printComp(rez);
+                    System.out.println();
+                    break;
 
-					//leitura
-					n1 = lerComplex();
-					n2 = lerComplex();
-					rez = divComp(n1, n2);
-					
-					//impressão
-					printComp(n1);
-					System.out.print(" / ");
-					printComp(n2);
-					System.out.print(" = ");
-					printComp(rez);
-					System.out.println();
-					break;
+                case '/':
 
-				case '*':
+                    //leitura
+                    n1 = lerComplex();
+                    n2 = lerComplex();
+                    rez = divComp(n1, n2);
 
-					//leitura
-					n1 = lerComplex();
-					n2 = lerComplex();
-					rez = multComp(n1, n2);
-					
-					//impressão
-					printComp(n1);
-					System.out.print(" * ");
-					printComp(n2);
-					System.out.print(" = ");
-					printComp(rez);
-					System.out.println();
-					break;
+                    //impressão
+                    printComp(n1);
+                    System.out.print(" / ");
+                    printComp(n2);
+                    System.out.print(" = ");
+                    printComp(rez);
+                    System.out.println();
+                    break;
 
-				case '=':
+                case '*':
 
-					System.out.println("O pragrama vai terminar...");
-					break;
+                    //leitura
+                    n1 = lerComplex();
+                    n2 = lerComplex();
+                    rez = multComp(n1, n2);
 
-				default:
+                    //impressão
+                    printComp(n1);
+                    System.out.print(" * ");
+                    printComp(n2);
+                    System.out.print(" = ");
+                    printComp(rez);
+                    System.out.println();
+                    break;
 
-					System.out.println("Opção não permitida!");
-					break;
-				
-			}
-		} while(oper != '=');
-	}
+                case '=':
 
-	//função para ler o complexo
-	public static Complex lerComplex() {
+                    System.out.println("O pragrama vai terminar...");
+                    break;
 
-		Complex num = new Complex();
+                default:
 
-		System.out.println("Introduza um número complexo:");
+                    System.out.println("Opção não permitida!");
+                    break;
 
-		//leitura da parte real
-		System.out.print("Parte real: ");
-		num.real = k.nextDouble();
+            }
+        } while (oper != '=');
+    }
 
-		//leitura da parte imaginária
-		System.out.print("Parte imaginária: ");
-		num.img = k.nextDouble();
+    //função para ler o complexo
+    public static Complex lerComplex() {
 
-		return num;
-	}
+        Complex num = new Complex();
 
-	//impressor do numero
-	public static void printComp(Complex num) {
+        System.out.println("Introduza um número complexo:");
 
-		if (num.img >= 0) {
-			
-			System.out.printf("%4.2f + %4.2fi", num.real, num.img);
-		
-		} else if (num.img < 0) {
-			
-			System.out.printf("%4.2f %4.2fi", num.real, num.img);
-		}
-	}
+        //leitura da parte real
+        System.out.print("Parte real: ");
+        num.real = k.nextDouble();
 
-	//modulo da adiçao
-	public static Complex addComp(Complex n1, Complex n2) {
+        //leitura da parte imaginária
+        System.out.print("Parte imaginária: ");
+        num.img = k.nextDouble();
 
-		Complex rex = new Complex();
+        return num;
+    }
 
-		rex.real = n1.real + n2.real;
-		rex.img = n1.img + n2.img;
+    //impressor do numero
+    public static void printComp(Complex num) {
 
-		return rex; 
-	}
+        if (num.img >= 0) {
 
-	//modulo da subtração
-	public static Complex subComp(Complex n1, Complex n2) {
+            System.out.printf("%4.2f + %4.2fi", num.real, num.img);
 
-		Complex rex = new Complex();
+        } else if (num.img < 0) {
 
-		rex.real = n1.real - n2.real;
-		rex.img = n1.img - n2.img;
+            System.out.printf("%4.2f %4.2fi", num.real, num.img);
+        }
+    }
 
-		return rex;
-	}
+    //modulo da adiçao
+    public static Complex addComp(Complex n1, Complex n2) {
 
-	//modulo da divisao
-	public static Complex divComp(Complex n1, Complex n2) {
+        Complex rex = new Complex();
 
-		Complex rex = new Complex();
+        rex.real = n1.real + n2.real;
+        rex.img = n1.img + n2.img;
 
-		rex.real = ((n1.real * n2.real) + (n1.img * n2.img)) / (pow(n2.real, 2) + pow(n2.img, 2));
-		rex.img = ((n1.img * n2.real) - (n1.real * n2.img)) / (pow(n2.real, 2) + pow(n2.img, 2));
+        return rex;
+    }
 
-		return rex;
-	}
+    //modulo da subtração
+    public static Complex subComp(Complex n1, Complex n2) {
 
-	//modulo da multiplicação
-	public static Complex multComp(Complex n1, Complex n2) {
+        Complex rex = new Complex();
 
-		Complex rex = new Complex();
+        rex.real = n1.real - n2.real;
+        rex.img = n1.img - n2.img;
 
-		rex.real = (n1.real * n2.real) - (n1.img * n2.img);
-		rex.img = (n1.img * n2.real) + (n1.real * n2.img);
+        return rex;
+    }
 
-		return rex;
-	}
+    //modulo da divisao
+    public static Complex divComp(Complex n1, Complex n2) {
+
+        Complex rex = new Complex();
+
+        rex.real = ((n1.real * n2.real) + (n1.img * n2.img)) / (pow(n2.real, 2) + pow(n2.img, 2));
+        rex.img = ((n1.img * n2.real) - (n1.real * n2.img)) / (pow(n2.real, 2) + pow(n2.img, 2));
+
+        return rex;
+    }
+
+    //modulo da multiplicação
+    public static Complex multComp(Complex n1, Complex n2) {
+
+        Complex rex = new Complex();
+
+        rex.real = (n1.real * n2.real) - (n1.img * n2.img);
+        rex.img = (n1.img * n2.real) + (n1.real * n2.img);
+
+        return rex;
+    }
 
 
 }
 
 class Complex {
 
-	double real;
-	double img;
+    double real;
+    double img;
 }

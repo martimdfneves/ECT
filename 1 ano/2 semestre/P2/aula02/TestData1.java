@@ -1,38 +1,39 @@
 import static java.lang.System.*;
+
 import java.util.Scanner;
 
 public class TestData1 {
-  static final Scanner in = new Scanner(System.in);
+    static final Scanner in = new Scanner(System.in);
 
-  public static void main(String[] args) {
-    
-    out.printf("Data.bissexto(2018) = %b\n", Data.bissexto(2018));
+    public static void main(String[] args) {
 
-    Data d1 = new Data();
-    out.printf("d1.toString() = %s\n", d1.toString());
-    out.printf("d1 = %s\n", d1);  // toString() is called implicitly!
+        out.printf("Data.bissexto(2018) = %b\n", Data.bissexto(2018));
 
-    out.printf("d1.ano() = %d\n", d1.val_ano());
-    out.printf("d1.mes() = %d\n", d1.val_mes());
-    out.printf("d1.dia() = %d\n", d1.val_dia());
+        Data d1 = new Data();
+        out.printf("d1.toString() = %s\n", d1.toString());
+        out.printf("d1 = %s\n", d1);  // toString() is called implicitly!
 
-    for (int ano = 2015; ano < 2020; ano++)
-      out.printf("Data.diasDoMes(2, %d) = %d\n", ano, Data.diasDoMes(2, ano));
+        out.printf("d1.ano() = %d\n", d1.val_ano());
+        out.printf("d1.mes() = %d\n", d1.val_mes());
+        out.printf("d1.dia() = %d\n", d1.val_dia());
 
-    out.printf("d1.mesExtenso() = %s\n", d1.mesExtenso());
+        for (int ano = 2015; ano < 2020; ano++)
+            out.printf("Data.diasDoMes(2, %d) = %d\n", ano, Data.diasDoMes(2, ano));
 
-    out.printf("Data.dataValida(29, 2, 2016) = %b\n", Data.dataValida(29, 2, 2016));
-    out.printf("Data.dataValida(31, 4, 2018) = %b\n", Data.dataValida(31, 4, 2018));
+        out.printf("d1.mesExtenso() = %s\n", d1.mesExtenso());
 
-    Data d2 = new Data(29, 2, 2016);
-    out.printf("d2 = %s = %s\n", d2, d2.extenso());
-    
-    d2.seguinte();
-    out.printf("d2 = %s = %s\n", d2, d2.extenso());
-    d2.seguinte();
-    out.printf("d2 = %s = %s\n", d2, d2.extenso());
+        out.printf("Data.dataValida(29, 2, 2016) = %b\n", Data.dataValida(29, 2, 2016));
+        out.printf("Data.dataValida(31, 4, 2018) = %b\n", Data.dataValida(31, 4, 2018));
 
-  }
+        Data d2 = new Data(29, 2, 2016);
+        out.printf("d2 = %s = %s\n", d2, d2.extenso());
+
+        d2.seguinte();
+        out.printf("d2 = %s = %s\n", d2, d2.extenso());
+        d2.seguinte();
+        out.printf("d2 = %s = %s\n", d2, d2.extenso());
+
+    }
 
 }
 

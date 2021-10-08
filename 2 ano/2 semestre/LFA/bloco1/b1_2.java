@@ -5,14 +5,13 @@ public class b1_2 {
 
     private static Scanner a;
     private static /* synthetic */ boolean b;
-    
+
     public static void main(final String[] array) {
         final Stack<Double> obj = new Stack<Double>();
         while (b1_2.a.hasNext()) {
             if (b1_2.a.hasNextDouble()) {
                 obj.push(b1_2.a.nextDouble());
-            }
-            else {
+            } else {
                 double d = 0.0;
                 final String next;
                 final String s;
@@ -34,14 +33,11 @@ public class b1_2 {
                 obj.pop();
                 if (next.equals("+")) {
                     d = doubleValue2 + doubleValue;
-                }
-                else if (next.equals("-")) {
+                } else if (next.equals("-")) {
                     d = doubleValue2 - doubleValue;
-                }
-                else if (next.equals("*")) {
+                } else if (next.equals("*")) {
                     d = doubleValue2 * doubleValue;
-                }
-                else if (next.equals("/")) {
+                } else if (next.equals("/")) {
                     if (doubleValue == 0.0) {
                         System.err.println("ERROR: divide by zero!");
                         System.exit(4);
@@ -57,7 +53,7 @@ public class b1_2 {
             System.out.println();
         }
     }
-    
+
     static {
         b1_2.b = !b1_2.class.desiredAssertionStatus();
         b1_2.a = new Scanner(System.in);

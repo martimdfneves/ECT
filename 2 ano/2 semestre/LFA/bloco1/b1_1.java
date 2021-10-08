@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
-public class b1_1
-{
+public class b1_1 {
     private static Scanner a;
-    
+
     public static void main(final String[] array) {
         double d = 0.0;
         System.out.printf("Operation (number op number): ", new Object[0]);
@@ -44,7 +43,7 @@ public class b1_1
         }
         System.out.printf("%g %s %g = %g\n", a, next, a2, d);
     }
-    
+
     private static double a() {
         if (!b1_1.a.hasNextDouble()) {
             System.err.printf("ERROR: read number failure\n", new Object[0]);
@@ -52,7 +51,7 @@ public class b1_1
         }
         return b1_1.a.nextDouble();
     }
-    
+
     static {
         b1_1.a = new Scanner(System.in);
     }

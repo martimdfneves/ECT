@@ -1,7 +1,7 @@
 
 public class HistoryNode {
-  String type;
-  int numops;
-  HistoryNode next;
+    String type;
+    int numops;
+    HistoryNode next;
 }
 

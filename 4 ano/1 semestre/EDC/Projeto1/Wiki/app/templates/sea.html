@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3 style="color: black ">Sea: {{ sea_name }}</h3></th>
+<br/>
+<p><b>Depth: </b> {{ sea_depth }}</p>
+<p><b>Country(ies) covered by {{ sea_name }}: </b></p>
+<table>
+    <tbody>
+    {% for name,code in sea_contries.items %}
+    <tr>
+        <td><a style="color: black; padding-left: 20px">{{ code }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,194 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Titulo -->
-		<title>Songwriter</title>
-		
-        <!-- Meta's -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		
-        <!-- CSS's -->
-		<link rel="shortcut icon" href="../img/music-fontawesome.png" type="image/png">
-		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"></link>
-		<link rel="stylesheet" type="text/css" href="../css/style.css"></link>
-		<link rel="stylesheet" type="text/css" href="../css/fontawesome-all.css"></link>
+<head>
+    <!-- Titulo -->
+    <title>Songwriter</title>
 
-		<!-- Script's -->
-		<script src="../js/jquery.min.js"></script>
-		<script type="application/javascript" src="../js/code.js"></script>
-		<script type="application/javascript" src="../js/bootstrap.js"></script>
-	</head>
-	
-	<!-- Body -->
-	<body>
-		<h2>Song Creator:</h2>
+    <!-- Meta's -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-		<br>
-		
-		<table id="SongTable" align=center class="myTable">
-				<tr>
-					<th>AUDIO</th>
-					<th>1</th>
-					<th>2</th>
-					<th>3</th>
-					<th>4</th>
-					<th>5</th>
-					<th>6</th>
-					<th>7</th>							
-					<th>8</th>
-					<th>9</th>
-					<th>10</th>
-					<th>11</th>
-					<th>12</th>
-					<th>13</th>
-					<th>14</th>
-					<th>15</th>
-					<th>16</th>
-					<th>17</th>
-					<th>18</th>
-					<th>19</th>
-					<th>20</th>
-					<th>EFFECTS</th>
-				</tr>
-				<tr>
-					<th><select id="mySelect1"><option value="none">Choose audio</option></select></th>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.1"  onclick="playAudio('myCheck1.1', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.2"  onclick="playAudio('myCheck1.2', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.3"  onclick="playAudio('myCheck1.3', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.4"  onclick="playAudio('myCheck1.4', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.5"  onclick="playAudio('myCheck1.5', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.6"  onclick="playAudio('myCheck1.6', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.7"  onclick="playAudio('myCheck1.7', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.8"  onclick="playAudio('myCheck1.8', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.9"  onclick="playAudio('myCheck1.9', 'mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.10" onclick="playAudio('myCheck1.10','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.11" onclick="playAudio('myCheck1.11','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.12" onclick="playAudio('myCheck1.12','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.13" onclick="playAudio('myCheck1.13','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.14" onclick="playAudio('myCheck1.14','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.15" onclick="playAudio('myCheck1.15','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.16" onclick="playAudio('myCheck1.16','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.17" onclick="playAudio('myCheck1.17','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.18" onclick="playAudio('myCheck1.18','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.19" onclick="playAudio('myCheck1.19','mySelect1')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.20" onclick="playAudio('myCheck1.20','mySelect1')"><label></label></td>
-					<td><select id="myEffect1"><option value="none">Choose effect</option></select></td>
-				</tr>
-				<tr>
-					<th><select id="mySelect2"><option value="none">Choose audio</option></select></th>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.1"  onclick="playAudio('myCheck2.1', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.2"  onclick="playAudio('myCheck2.2', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.3"  onclick="playAudio('myCheck2.3', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.4"  onclick="playAudio('myCheck2.4', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.5"  onclick="playAudio('myCheck2.5', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.6"  onclick="playAudio('myCheck2.6', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.7"  onclick="playAudio('myCheck2.7', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.8"  onclick="playAudio('myCheck2.8', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.9"  onclick="playAudio('myCheck2.9', 'mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.10" onclick="playAudio('myCheck2.10','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.11" onclick="playAudio('myCheck2.11','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.12" onclick="playAudio('myCheck2.12','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.13" onclick="playAudio('myCheck2.13','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.14" onclick="playAudio('myCheck2.14','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.15" onclick="playAudio('myCheck2.15','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.16" onclick="playAudio('myCheck2.16','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.17" onclick="playAudio('myCheck2.17','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.18" onclick="playAudio('myCheck2.18','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.19" onclick="playAudio('myCheck2.19','mySelect2')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.20" onclick="playAudio('myCheck2.20','mySelect2')"><label></label></td>
-					<td><select id="myEffect2"><option value="none">Choose effect</option></select></td>
-				</tr>
-				<tr>
-					<th><select id="mySelect3"><option value="none">Choose audio</option></select></th>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.1"  onclick="playAudio('myCheck3.1', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.2"  onclick="playAudio('myCheck3.2', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.3"  onclick="playAudio('myCheck3.3', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.4"  onclick="playAudio('myCheck3.4', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.5"  onclick="playAudio('myCheck3.5', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.6"  onclick="playAudio('myCheck3.6', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.7"  onclick="playAudio('myCheck3.7', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.8"  onclick="playAudio('myCheck3.8', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.9"  onclick="playAudio('myCheck3.9', 'mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.10" onclick="playAudio('myCheck3.10','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.11" onclick="playAudio('myCheck3.11','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.12" onclick="playAudio('myCheck3.12','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.13" onclick="playAudio('myCheck3.13','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.14" onclick="playAudio('myCheck3.14','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.15" onclick="playAudio('myCheck3.15','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.16" onclick="playAudio('myCheck3.16','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.17" onclick="playAudio('myCheck3.17','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.18" onclick="playAudio('myCheck3.18','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.19" onclick="playAudio('myCheck3.19','mySelect3')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.20" onclick="playAudio('myCheck3.20','mySelect3')"><label></label></td>
-					<td><select id="myEffect3"><option value="none">Choose effect</option></select></td>
-				</tr>
-				<tr>
-					<th><select id="mySelect4"><option value="none">Choose audio</option></select></th>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.1"  onclick="playAudio('myCheck4.1', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.2"  onclick="playAudio('myCheck4.2', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.3"  onclick="playAudio('myCheck4.3', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.4"  onclick="playAudio('myCheck4.4', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.5"  onclick="playAudio('myCheck4.5', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.6"  onclick="playAudio('myCheck4.6', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.7"  onclick="playAudio('myCheck4.7', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.8"  onclick="playAudio('myCheck4.8', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.9"  onclick="playAudio('myCheck4.9', 'mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.10" onclick="playAudio('myCheck4.10','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.11" onclick="playAudio('myCheck4.11','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.12" onclick="playAudio('myCheck4.12','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.13" onclick="playAudio('myCheck4.13','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.14" onclick="playAudio('myCheck4.14','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.15" onclick="playAudio('myCheck4.15','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.16" onclick="playAudio('myCheck4.16','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.17" onclick="playAudio('myCheck4.17','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.18" onclick="playAudio('myCheck4.18','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.19" onclick="playAudio('myCheck4.19','mySelect4')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.20" onclick="playAudio('myCheck4.20','mySelect4')"><label></label></td>
-					<td><select id="myEffect4"><option value="none">Choose effect</option></select></td>
-				</tr>
-				<tr>
-					<th><select id="mySelect5"><option value="none">Choose audio</option></select></th>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.1"  onclick="playAudio('myCheck5.1', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.2"  onclick="playAudio('myCheck5.2', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.3"  onclick="playAudio('myCheck5.3', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.4"  onclick="playAudio('myCheck5.4', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.5"  onclick="playAudio('myCheck5.5', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.6"  onclick="playAudio('myCheck5.6', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.7"  onclick="playAudio('myCheck5.7', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.8"  onclick="playAudio('myCheck5.8', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.9"  onclick="playAudio('myCheck5.9', 'mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.10" onclick="playAudio('myCheck5.10','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.11" onclick="playAudio('myCheck5.11','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.12" onclick="playAudio('myCheck5.12','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.13" onclick="playAudio('myCheck5.13','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.14" onclick="playAudio('myCheck5.14','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.15" onclick="playAudio('myCheck5.15','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.16" onclick="playAudio('myCheck5.16','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.17" onclick="playAudio('myCheck5.17','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.18" onclick="playAudio('myCheck5.18','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.19" onclick="playAudio('myCheck5.19','mySelect5')"><label></label></td>
-					<td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.20" onclick="playAudio('myCheck5.20','mySelect5')"><label></label></td>
-					<td><select id="myEffect5"><option value="none">Choose effect</option></select></td>
-				</tr>
-		</table>
+    <!-- CSS's -->
+    <link rel="shortcut icon" href="../img/music-fontawesome.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome-all.css"></link>
 
-		<br>
+    <!-- Script's -->
+    <script src="../js/jquery.min.js"></script>
+    <script type="application/javascript" src="../js/code.js"></script>
+    <script type="application/javascript" src="../js/bootstrap.js"></script>
+</head>
 
-		<center>
-			<button type="button" id ="addanother"  >Add another Line</button>
-		</center>
+<!-- Body -->
+<body>
+<h2>Song Creator:</h2>
 
-		<br>
+<br>
 
-		<form class="text-center">
-			<button type="button" id="clear">Clear</button>
-			<input class="animation" style="width: 13%;" autocomplete="off" type="text" id="inName" placeholder="Song Name" required />
-			<input type="submit" id="recButton" value="Create Now" />
-		</form>
+<table id="SongTable" align=center class="myTable">
+    <tr>
+        <th>AUDIO</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+        <th>14</th>
+        <th>15</th>
+        <th>16</th>
+        <th>17</th>
+        <th>18</th>
+        <th>19</th>
+        <th>20</th>
+        <th>EFFECTS</th>
+    </tr>
+    <tr>
+        <th><select id="mySelect1">
+            <option value="none">Choose audio</option>
+        </select></th>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.1"
+                                            onclick="playAudio('myCheck1.1', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.2"
+                                            onclick="playAudio('myCheck1.2', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.3"
+                                            onclick="playAudio('myCheck1.3', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.4"
+                                            onclick="playAudio('myCheck1.4', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.5"
+                                            onclick="playAudio('myCheck1.5', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.6"
+                                            onclick="playAudio('myCheck1.6', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.7"
+                                            onclick="playAudio('myCheck1.7', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.8"
+                                            onclick="playAudio('myCheck1.8', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.9"
+                                            onclick="playAudio('myCheck1.9', 'mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.10"
+                                            onclick="playAudio('myCheck1.10','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.11"
+                                            onclick="playAudio('myCheck1.11','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.12"
+                                            onclick="playAudio('myCheck1.12','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.13"
+                                            onclick="playAudio('myCheck1.13','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.14"
+                                            onclick="playAudio('myCheck1.14','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.15"
+                                            onclick="playAudio('myCheck1.15','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.16"
+                                            onclick="playAudio('myCheck1.16','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.17"
+                                            onclick="playAudio('myCheck1.17','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.18"
+                                            onclick="playAudio('myCheck1.18','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.19"
+                                            onclick="playAudio('myCheck1.19','mySelect1')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck1.20"
+                                            onclick="playAudio('myCheck1.20','mySelect1')"><label></label></td>
+        <td><select id="myEffect1">
+            <option value="none">Choose effect</option>
+        </select></td>
+    </tr>
+    <tr>
+        <th><select id="mySelect2">
+            <option value="none">Choose audio</option>
+        </select></th>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.1"
+                                            onclick="playAudio('myCheck2.1', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.2"
+                                            onclick="playAudio('myCheck2.2', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.3"
+                                            onclick="playAudio('myCheck2.3', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.4"
+                                            onclick="playAudio('myCheck2.4', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.5"
+                                            onclick="playAudio('myCheck2.5', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.6"
+                                            onclick="playAudio('myCheck2.6', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.7"
+                                            onclick="playAudio('myCheck2.7', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.8"
+                                            onclick="playAudio('myCheck2.8', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.9"
+                                            onclick="playAudio('myCheck2.9', 'mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.10"
+                                            onclick="playAudio('myCheck2.10','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.11"
+                                            onclick="playAudio('myCheck2.11','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.12"
+                                            onclick="playAudio('myCheck2.12','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.13"
+                                            onclick="playAudio('myCheck2.13','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.14"
+                                            onclick="playAudio('myCheck2.14','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.15"
+                                            onclick="playAudio('myCheck2.15','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.16"
+                                            onclick="playAudio('myCheck2.16','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.17"
+                                            onclick="playAudio('myCheck2.17','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.18"
+                                            onclick="playAudio('myCheck2.18','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.19"
+                                            onclick="playAudio('myCheck2.19','mySelect2')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck2.20"
+                                            onclick="playAudio('myCheck2.20','mySelect2')"><label></label></td>
+        <td><select id="myEffect2">
+            <option value="none">Choose effect</option>
+        </select></td>
+    </tr>
+    <tr>
+        <th><select id="mySelect3">
+            <option value="none">Choose audio</option>
+        </select></th>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.1"
+                                            onclick="playAudio('myCheck3.1', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.2"
+                                            onclick="playAudio('myCheck3.2', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.3"
+                                            onclick="playAudio('myCheck3.3', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.4"
+                                            onclick="playAudio('myCheck3.4', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.5"
+                                            onclick="playAudio('myCheck3.5', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.6"
+                                            onclick="playAudio('myCheck3.6', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.7"
+                                            onclick="playAudio('myCheck3.7', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.8"
+                                            onclick="playAudio('myCheck3.8', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.9"
+                                            onclick="playAudio('myCheck3.9', 'mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.10"
+                                            onclick="playAudio('myCheck3.10','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.11"
+                                            onclick="playAudio('myCheck3.11','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.12"
+                                            onclick="playAudio('myCheck3.12','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.13"
+                                            onclick="playAudio('myCheck3.13','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.14"
+                                            onclick="playAudio('myCheck3.14','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.15"
+                                            onclick="playAudio('myCheck3.15','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.16"
+                                            onclick="playAudio('myCheck3.16','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.17"
+                                            onclick="playAudio('myCheck3.17','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.18"
+                                            onclick="playAudio('myCheck3.18','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.19"
+                                            onclick="playAudio('myCheck3.19','mySelect3')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck3.20"
+                                            onclick="playAudio('myCheck3.20','mySelect3')"><label></label></td>
+        <td><select id="myEffect3">
+            <option value="none">Choose effect</option>
+        </select></td>
+    </tr>
+    <tr>
+        <th><select id="mySelect4">
+            <option value="none">Choose audio</option>
+        </select></th>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.1"
+                                            onclick="playAudio('myCheck4.1', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.2"
+                                            onclick="playAudio('myCheck4.2', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.3"
+                                            onclick="playAudio('myCheck4.3', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.4"
+                                            onclick="playAudio('myCheck4.4', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.5"
+                                            onclick="playAudio('myCheck4.5', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.6"
+                                            onclick="playAudio('myCheck4.6', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.7"
+                                            onclick="playAudio('myCheck4.7', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.8"
+                                            onclick="playAudio('myCheck4.8', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.9"
+                                            onclick="playAudio('myCheck4.9', 'mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.10"
+                                            onclick="playAudio('myCheck4.10','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.11"
+                                            onclick="playAudio('myCheck4.11','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.12"
+                                            onclick="playAudio('myCheck4.12','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.13"
+                                            onclick="playAudio('myCheck4.13','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.14"
+                                            onclick="playAudio('myCheck4.14','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.15"
+                                            onclick="playAudio('myCheck4.15','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.16"
+                                            onclick="playAudio('myCheck4.16','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.17"
+                                            onclick="playAudio('myCheck4.17','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.18"
+                                            onclick="playAudio('myCheck4.18','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.19"
+                                            onclick="playAudio('myCheck4.19','mySelect4')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck4.20"
+                                            onclick="playAudio('myCheck4.20','mySelect4')"><label></label></td>
+        <td><select id="myEffect4">
+            <option value="none">Choose effect</option>
+        </select></td>
+    </tr>
+    <tr>
+        <th><select id="mySelect5">
+            <option value="none">Choose audio</option>
+        </select></th>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.1"
+                                            onclick="playAudio('myCheck5.1', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.2"
+                                            onclick="playAudio('myCheck5.2', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.3"
+                                            onclick="playAudio('myCheck5.3', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.4"
+                                            onclick="playAudio('myCheck5.4', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.5"
+                                            onclick="playAudio('myCheck5.5', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.6"
+                                            onclick="playAudio('myCheck5.6', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.7"
+                                            onclick="playAudio('myCheck5.7', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.8"
+                                            onclick="playAudio('myCheck5.8', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.9"
+                                            onclick="playAudio('myCheck5.9', 'mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.10"
+                                            onclick="playAudio('myCheck5.10','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.11"
+                                            onclick="playAudio('myCheck5.11','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.12"
+                                            onclick="playAudio('myCheck5.12','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.13"
+                                            onclick="playAudio('myCheck5.13','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.14"
+                                            onclick="playAudio('myCheck5.14','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.15"
+                                            onclick="playAudio('myCheck5.15','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.16"
+                                            onclick="playAudio('myCheck5.16','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.17"
+                                            onclick="playAudio('myCheck5.17','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.18"
+                                            onclick="playAudio('myCheck5.18','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.19"
+                                            onclick="playAudio('myCheck5.19','mySelect5')"><label></label></td>
+        <td class="checkbox_wrapper"><input type="checkbox" id="myCheck5.20"
+                                            onclick="playAudio('myCheck5.20','mySelect5')"><label></label></td>
+        <td><select id="myEffect5">
+            <option value="none">Choose effect</option>
+        </select></td>
+    </tr>
+</table>
 
-		<p>Go back to the <a href="/labi2018-p2-g3/">main page</a>.</p>
+<br>
 
-	</body>
+<center>
+    <button type="button" id="addanother">Add another Line</button>
+</center>
+
+<br>
+
+<form class="text-center">
+    <button type="button" id="clear">Clear</button>
+    <input class="animation" style="width: 13%;" autocomplete="off" type="text" id="inName" placeholder="Song Name"
+           required/>
+    <input type="submit" id="recButton" value="Create Now"/>
+</form>
+
+<p>Go back to the <a href="/labi2018-p2-g3/">main page</a>.</p>
+
+</body>
 </html>

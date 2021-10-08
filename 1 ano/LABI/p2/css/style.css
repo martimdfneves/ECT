@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
@@ -12,14 +12,14 @@ td, th, tr {
     text-align: center;
 }
 
-.checkbox_wrapper{
+.checkbox_wrapper {
     position: relative;
     height: 50px;
     width: 50px;
 }
 
 input[type="checkbox"] {
-    opacity:0;
+    opacity: 0;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -28,11 +28,11 @@ input[type="checkbox"] {
     z-index: 2;
 }
 
-input[type="checkbox"] + label{
+input[type="checkbox"] + label {
     background-color: white;
     height: 100%;
     width: 100%;
-    display:inline-block;
+    display: inline-block;
     padding: 0 0 0 0px;
     position: absolute;
     top: 0;
@@ -40,15 +40,15 @@ input[type="checkbox"] + label{
     z-index: 1;
 }
 
-input[type="checkbox"]:checked + label{
+input[type="checkbox"]:checked + label {
     background-color: #666;
     height: 100%;
     width: 100%;
-    display:inline-block;
+    display: inline-block;
     padding: 0 0 0 0px;
 }
 
-li{
+li {
     margin: 20px 0;
     list-style-position: outside;
 }
@@ -67,11 +67,11 @@ li{
     display: inline;
 }
 
-.animation{
+.animation {
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
 }
 
-.animation:focus{
-    width:30% !important;
+.animation:focus {
+    width: 30% !important;
 }

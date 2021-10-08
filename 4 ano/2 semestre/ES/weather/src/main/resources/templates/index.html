@@ -1,0 +1,53 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>OpenWeather</title>
+</head>
+
+<body>
+<div class="container">
+    <nav class = "navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class = "navbar-brand" href = "/">OpenWeather</a>
+        <button class = "navbar-toggler" type = "button" data-toggle = "collapse"
+                data-target = "#navbarSupportedContent"
+                aria-controls = "navbarSupportedContent" aria-expanded = "false"
+                aria-label = "Toggle navigation">
+            <span class = "navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <h2  class = "mt-4">Weather</h2>
+
+    <table class="table">
+        <thead class = "thead-dark">
+        <tr>
+            <th class="text-left">City</th>
+            <th class="text-left">Temp</th>
+            <th class="text-left">Feels like</th>
+            <th class="text-left">Max</th>
+            <th class="text-left">Min</th>
+            <th class="text-left">Pressure</th>
+            <th class="text-left">Humidity</th>
+            <th class="text-left"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="City: ${OpenWeatherResult}">
+            <td><span th:text="${City.name}"></span></td>
+            <td><span th:text="${City.Main.temp} + ' ºC'"></span></td>
+            <td><span th:text="${City.Main.feels_like} + ' ºC'"></span></td>
+            <td><span th:text="${City.Main.temp_max} + ' ºC'"></span></td>
+            <td><span th:text="${City.Main.temp_min} + ' ºC'"></span></td>
+            <td><span th:text="${City.Main.pressure} + ' mbar'"></span></td>
+            <td><span th:text="${City.Main.humidity} + '%'"></span></td>
+        </tr>
+        </tbody>
+    </table>
+    <hr/>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

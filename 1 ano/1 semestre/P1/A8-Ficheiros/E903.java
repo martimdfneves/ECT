@@ -3,336 +3,336 @@ import java.io.*;
 
 public class E903 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
 
-		//array dos números
-		int numeros[] = new int[50];
-		
-		//variável da escolha
-		int escolha;
+        //array dos números
+        int numeros[] = new int[50];
 
-		//colocara lista a zero
-		for (int i = 0; i < 50; i++) {
-			
-			numeros[i] = 0;
-		}
+        //variável da escolha
+        int escolha;
 
-		System.out.println("Programa para escolher o que fazer a uma sequência.");
-		System.out.println("---------------------------------------------------");
-		
-		System.out.println("\nAnálise de uma sequência de números inteiros:");
-		System.out.println("\t 1 -> Ler a sequência, se colocar 0 termina o programa");
-		System.out.println("\t 2 -> Escrever a sequência");
-		System.out.println("\t 3 -> Calcular o máximo desta sucessão.");
-		System.out.println("\t 4 -> Calcular o mínimo desta sucessão.");
-		System.out.println("\t 5 -> Calcular a média desta sucessão.");
-		System.out.println("\t 6 -> Detetar se é uma sequência só constituída por números pares.");
-		System.out.println("\t 7 -> Ler uma sequência de números de um ficheiro de texto.");
-		System.out.println("\t 8 -> Adicionar números à sequência existente.");
-		System.out.println("\t 9 -> Gravar a sequência num ficheiro.");
-		System.out.println("\t10 -> Terminar o programa.");
-		
-		//o que acontece em cada escolha
-		do {
+        //colocara lista a zero
+        for (int i = 0; i < 50; i++) {
 
-			System.out.print("\nOpção: ");
-			escolha = k.nextInt();
+            numeros[i] = 0;
+        }
 
+        System.out.println("Programa para escolher o que fazer a uma sequência.");
+        System.out.println("---------------------------------------------------");
 
-			switch (escolha) {
+        System.out.println("\nAnálise de uma sequência de números inteiros:");
+        System.out.println("\t 1 -> Ler a sequência, se colocar 0 termina o programa");
+        System.out.println("\t 2 -> Escrever a sequência");
+        System.out.println("\t 3 -> Calcular o máximo desta sucessão.");
+        System.out.println("\t 4 -> Calcular o mínimo desta sucessão.");
+        System.out.println("\t 5 -> Calcular a média desta sucessão.");
+        System.out.println("\t 6 -> Detetar se é uma sequência só constituída por números pares.");
+        System.out.println("\t 7 -> Ler uma sequência de números de um ficheiro de texto.");
+        System.out.println("\t 8 -> Adicionar números à sequência existente.");
+        System.out.println("\t 9 -> Gravar a sequência num ficheiro.");
+        System.out.println("\t10 -> Terminar o programa.");
 
-				case 10:
+        //o que acontece em cada escolha
+        do {
 
-					break;
+            System.out.print("\nOpção: ");
+            escolha = k.nextInt();
 
-				case 1:
 
-					numeros = leitor();
-					break;
+            switch (escolha) {
 
-				case 2:
+                case 10:
 
-					escritor(numeros);
-					break;
+                    break;
 
-				case 3:
+                case 1:
 
-					maximizante(numeros);
-					break;
+                    numeros = leitor();
+                    break;
 
-				case 4:
+                case 2:
 
-					minimizante(numeros);
-					break;
+                    escritor(numeros);
+                    break;
 
-				case 5:
+                case 3:
 
-					media(numeros);
-					break;
+                    maximizante(numeros);
+                    break;
 
-				case 6:
+                case 4:
 
-					pares(numeros);
-					break;
+                    minimizante(numeros);
+                    break;
 
-				case 7:
+                case 5:
 
-					numeros = readFile();
-					break;
+                    media(numeros);
+                    break;
 
-				case 8:
+                case 6:
 
-					numeros = addNums(numeros);
-					break;
+                    pares(numeros);
+                    break;
 
-				case 9:
+                case 7:
 
-					stampFile(numeros);
-					break;
+                    numeros = readFile();
+                    break;
 
-				default:
+                case 8:
 
-					System.out.println("Escolha não aceite coloca outra.");
-					System.out.print("\nOpção: ");
-					escolha = k.nextInt();
+                    numeros = addNums(numeros);
+                    break;
 
-			}
+                case 9:
 
-		} while(escolha != 10);
+                    stampFile(numeros);
+                    break;
 
-	}
+                default:
 
-	//modulo de leitura da lista
-	public static int[] leitor() {
+                    System.out.println("Escolha não aceite coloca outra.");
+                    System.out.print("\nOpção: ");
+                    escolha = k.nextInt();
 
-		int numeros[] = new int[50];
+            }
 
-		for (int i = 0; i < 50; i++) {
+        } while (escolha != 10);
 
-			System.out.printf("valor #%2d: ", i + 1);
-			numeros[i] = k.nextInt();
+    }
 
-			if (numeros[i] == 0) {
-							
-				break;
-			
-			}
-		}
+    //modulo de leitura da lista
+    public static int[] leitor() {
 
-		return numeros;
-	}
+        int numeros[] = new int[50];
 
-	//modulo de impressao da lista
-	public static void escritor(int[] numeros) {
+        for (int i = 0; i < 50; i++) {
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+            System.out.printf("valor #%2d: ", i + 1);
+            numeros[i] = k.nextInt();
 
-			}
+            if (numeros[i] == 0) {
 
-			System.out.printf("\nValor #%2d: %3d",i + 1, numeros[i]);
-			
-		}
+                break;
 
-		System.out.println();
-	}
+            }
+        }
 
-	//modulo de calculo do maximizante
-	public static void maximizante (int[] numeros) {
-		
-		int max = 0;
+        return numeros;
+    }
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] > max) {
-				
-				max = numeros[i];
+    //modulo de impressao da lista
+    public static void escritor(int[] numeros) {
 
-			}
-		}
+        for (int i = 0; i < 50; i++) {
 
-		System.out.printf("\nO máximo desta sequência é %3d.\n",max);
-	}
+            if (numeros[i] == 0) {
 
-	//modulo de calculo do minimizante
-	public static void minimizante (int[] numeros) {
-		
-		int min = 12431234;
+                break;
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+            }
 
-			}
+            System.out.printf("\nValor #%2d: %3d", i + 1, numeros[i]);
 
-			if (numeros[i] < min) {
-				
-				min = numeros[i];
+        }
 
-			}
-		}
+        System.out.println();
+    }
 
-		System.out.printf("\nO minimo desta sequência é %3d.\n",min);
-	}
+    //modulo de calculo do maximizante
+    public static void maximizante(int[] numeros) {
 
-	//modulo de calculo da media
-	public static void media (int[] numeros) {
+        int max = 0;
 
-		double media = 0;
+        for (int i = 0; i < 50; i++) {
 
-		int i;
+            if (numeros[i] > max) {
 
-		for (i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+                max = numeros[i];
 
-			}
+            }
+        }
 
-			media += numeros[i];
+        System.out.printf("\nO máximo desta sequência é %3d.\n", max);
+    }
 
-		}
+    //modulo de calculo do minimizante
+    public static void minimizante(int[] numeros) {
 
-		media /= i;
+        int min = 12431234;
 
-		System.out.printf("\nA média da sequência é %4.2f\n", media);
-	}
+        for (int i = 0; i < 50; i++) {
 
-	//modulo pra calcular se a lista é apenas composta por números pares
-	public static void pares (int[] numeros) {
+            if (numeros[i] == 0) {
 
-		boolean pares = false;
+                break;
 
-		for (int j = 0; j < 50; j++) {
-			
-			for (int i = 1; i < numeros[j]; i++) {
-				
-				if (numeros[j] == 0) {
-				
-					break;
+            }
 
-				}	
+            if (numeros[i] < min) {
 
-				if (numeros[j] % 2 != 0) {
-					
-					pares = false;
+                min = numeros[i];
 
-				} else {
+            }
+        }
 
-					pares = true;
+        System.out.printf("\nO minimo desta sequência é %3d.\n", min);
+    }
 
-				}
-			}
-		}
+    //modulo de calculo da media
+    public static void media(int[] numeros) {
 
-		if (pares) {
-			
-			System.out.println("\n\nA lista é constituída apenas por números pares.");
+        double media = 0;
 
-		} else {
-			
-			System.out.println("\n\nA lista não é constituída apenas por números pares.");
+        int i;
 
-		}
-	}
+        for (i = 0; i < 50; i++) {
 
-	//modulo de leitura de ficheiro
-	public static int[] readFile () throws IOException {
+            if (numeros[i] == 0) {
 
-		File temp;
-		String nome;
+                break;
 
-		int numeros[] = new int[50];
+            }
 
-		int i = 0;
+            media += numeros[i];
 
-		do {
+        }
 
-			System.out.print("Nome do ficheiro a ser lido (com extensão): ");
-			nome = k.next();
+        media /= i;
 
-			temp = new File(nome);
+        System.out.printf("\nA média da sequência é %4.2f\n", media);
+    }
 
-			if (!temp.isFile() || !temp.canRead()) {
-				
-				System.out.println("Ficheiro não existente, coloque outro.");
-			}
-		} while(!temp.isFile() || !temp.canRead());
+    //modulo pra calcular se a lista é apenas composta por números pares
+    public static void pares(int[] numeros) {
 
-		Scanner infile = new Scanner(temp);
+        boolean pares = false;
 
-		while (infile.hasNext()) {
+        for (int j = 0; j < 50; j++) {
 
-			String num = infile.next();
-			System.out.printf("\n %s", num);
+            for (int i = 1; i < numeros[j]; i++) {
 
-			if (!infile.hasNext()) {
-				
-				break;
-			}
+                if (numeros[j] == 0) {
 
-			numeros[i] = Integer.parseInt(num);
+                    break;
 
-			i++;
-		}
+                }
 
-		infile.close();
+                if (numeros[j] % 2 != 0) {
 
-		return numeros;
-	}
+                    pares = false;
 
-	//modulo para adicionar à sequência existente
-	public static int[] addNums(int numeros[]) {
+                } else {
 
-		for (int i = 0;i < 50 ; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				System.out.printf("valor #%2d: ", i + 1);
-				numeros[i] = k.nextInt();
+                    pares = true;
 
-				if (numeros[i] == 0) {
-								
-					break;
-				
-				}
-			}
-		}
+                }
+            }
+        }
 
-		return numeros;
-	} 
+        if (pares) {
 
-	//modulo para gravar a sequência num ficheiro
-	public static void stampFile(int[] numeros) throws IOException {
+            System.out.println("\n\nA lista é constituída apenas por números pares.");
 
-		File rite;
-		String nome;	
-	
-		System.out.print("Qual o nome do ficheiro em que a lista vai ser guardada? ");
-		nome = k.next();
+        } else {
 
-		rite = new File(nome);
+            System.out.println("\n\nA lista não é constituída apenas por números pares.");
 
-		PrintWriter prt = new PrintWriter(rite);
+        }
+    }
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
-			}
+    //modulo de leitura de ficheiro
+    public static int[] readFile() throws IOException {
 
-			prt.println(numeros[i]);
-		}
+        File temp;
+        String nome;
 
-		prt.close();
-	} 
+        int numeros[] = new int[50];
+
+        int i = 0;
+
+        do {
+
+            System.out.print("Nome do ficheiro a ser lido (com extensão): ");
+            nome = k.next();
+
+            temp = new File(nome);
+
+            if (!temp.isFile() || !temp.canRead()) {
+
+                System.out.println("Ficheiro não existente, coloque outro.");
+            }
+        } while (!temp.isFile() || !temp.canRead());
+
+        Scanner infile = new Scanner(temp);
+
+        while (infile.hasNext()) {
+
+            String num = infile.next();
+            System.out.printf("\n %s", num);
+
+            if (!infile.hasNext()) {
+
+                break;
+            }
+
+            numeros[i] = Integer.parseInt(num);
+
+            i++;
+        }
+
+        infile.close();
+
+        return numeros;
+    }
+
+    //modulo para adicionar à sequência existente
+    public static int[] addNums(int numeros[]) {
+
+        for (int i = 0; i < 50; i++) {
+
+            if (numeros[i] == 0) {
+
+                System.out.printf("valor #%2d: ", i + 1);
+                numeros[i] = k.nextInt();
+
+                if (numeros[i] == 0) {
+
+                    break;
+
+                }
+            }
+        }
+
+        return numeros;
+    }
+
+    //modulo para gravar a sequência num ficheiro
+    public static void stampFile(int[] numeros) throws IOException {
+
+        File rite;
+        String nome;
+
+        System.out.print("Qual o nome do ficheiro em que a lista vai ser guardada? ");
+        nome = k.next();
+
+        rite = new File(nome);
+
+        PrintWriter prt = new PrintWriter(rite);
+
+        for (int i = 0; i < 50; i++) {
+
+            if (numeros[i] == 0) {
+
+                break;
+            }
+
+            prt.println(numeros[i]);
+        }
+
+        prt.close();
+    }
 }

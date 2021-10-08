@@ -2,37 +2,37 @@ import java.util.*;
 
 public class E311 {
 
-	public static void main(String[] args) {
-		
-		int nums;
+    public static void main(String[] args) {
 
-		boolean impar = true;
+        int nums;
 
-		Scanner k = new Scanner(System.in);
+        boolean impar = true;
 
-		System.out.println("Ínicio de lista: ");
+        Scanner k = new Scanner(System.in);
 
-		nums = k.nextInt();
+        System.out.println("Ínicio de lista: ");
 
-		while (nums != 0) {
-		
-			if (nums % 2 == 0) {
-				
-					impar = false;
-			
-			}
+        nums = k.nextInt();
 
-			nums = k.nextInt();
+        while (nums != 0) {
 
-		}
+            if (nums % 2 == 0) {
 
-		if (!impar) {
-			
-			System.out.println("A lista não é exclusivamente composta por números ímpares.");
-		
-		} else if (impar) {
-			
-			System.out.println("A lista é exclusivamente composta por números ímpares.");
-		}
-	}
+                impar = false;
+
+            }
+
+            nums = k.nextInt();
+
+        }
+
+        if (!impar) {
+
+            System.out.println("A lista não é exclusivamente composta por números ímpares.");
+
+        } else if (impar) {
+
+            System.out.println("A lista é exclusivamente composta por números ímpares.");
+        }
+    }
 }

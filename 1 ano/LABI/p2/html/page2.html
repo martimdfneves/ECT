@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Titulo -->
-		<title>Sample List</title>
-		
-        <!-- Meta's -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		
-        <!-- CSS's -->
-		<link rel="shortcut icon" href="../img/music-fontawesome.png" type="image/png">
-		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"></link>
-		<link rel="stylesheet" type="text/css" href="../css/style.css"></link>
-		<link rel="stylesheet" type="text/css" href="../css/fontawesome-all.css"></link>
-		
-		<!-- Script's -->
-		<script src="../js/jquery.min.js"></script>
-		<script type="application/javascript" src="../js/code.js"></script>
-		<script type="application/javascript" src="../js/bootstrap.js"></script>
-	</head>
-	
-	<!-- Body -->
-	<body>
+<head>
+    <!-- Titulo -->
+    <title>Sample List</title>
 
-		<h2>Sample Files:</h2>
-		<ul id="mySampleList">
-	
-		</ul>
+    <!-- Meta's -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-		<br>
+    <!-- CSS's -->
+    <link rel="shortcut icon" href="../img/music-fontawesome.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome-all.css"></link>
 
-		<form action="../upload" method="post" enctype="multipart/form-data">
-			<input type="file" name="myFile" accept="audio/wav"></input>
-			<input type="submit" value="Upload"></input>
-		</form>
+    <!-- Script's -->
+    <script src="../js/jquery.min.js"></script>
+    <script type="application/javascript" src="../js/code.js"></script>
+    <script type="application/javascript" src="../js/bootstrap.js"></script>
+</head>
 
-		<br>
-		
-		<p>Go back to the <a href="/labi2018-p2-g3/">main page</a>.</p>
-		
-		<audio id="myPlayer" controls>
-			<source id="myAudioSource" src=""></source>
-			Your browser does not support the audio format.
-		</audio>
-		<!-- <button type="button" class="repeat" id="myRepeat" onclick="repeatAudio()">Repeat OFF</button> -->
-		
-		<!-- Scripts -->
-		<script>
-			mySampleList.onclick = function(e) {
-				e.preventDefault();
-				
-				var elm = e.target;
-				var player = document.getElementById("myPlayer");
-				
-				var source = document.getElementById("myAudioSource");
-				source.src = elm.getAttribute("data-value");
-				
-				player.load();
-				player.play();
-			};
-		</script>
-		
-	</body>
+<!-- Body -->
+<body>
+
+<h2>Sample Files:</h2>
+<ul id="mySampleList">
+
+</ul>
+
+<br>
+
+<form action="../upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="myFile" accept="audio/wav"></input>
+    <input type="submit" value="Upload"></input>
+</form>
+
+<br>
+
+<p>Go back to the <a href="/labi2018-p2-g3/">main page</a>.</p>
+
+<audio id="myPlayer" controls>
+    <source id="myAudioSource" src=""></source>
+    Your browser does not support the audio format.
+</audio>
+<!-- <button type="button" class="repeat" id="myRepeat" onclick="repeatAudio()">Repeat OFF</button> -->
+
+<!-- Scripts -->
+<script>
+    mySampleList.onclick = function (e) {
+        e.preventDefault();
+
+        var elm = e.target;
+        var player = document.getElementById("myPlayer");
+
+        var source = document.getElementById("myAudioSource");
+        source.src = elm.getAttribute("data-value");
+
+        player.load();
+        player.play();
+    };
+</script>
+
+</body>
 </html>

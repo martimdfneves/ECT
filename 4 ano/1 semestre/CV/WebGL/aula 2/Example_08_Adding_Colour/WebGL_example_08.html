@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <!--
+
+    WebGL_example_08.html
+
+    Assigning colour to each vertex.
+
+    COMPLETE THE CODE !!
+
+    J. Madeira - September 2015
+
+    -->
+
+    <title>WebGL example 08 &mdash; Assigning colour to each vertex</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+    <!--
+
+    The simple vertex and fragment shaders.
+
+    Using a vertex coordinate buffer and a vertex colour buffer.
+
+    -->
+
+    <script id="shader-vs" type="x-shader/x-vertex">
+	
+    attribute vec3 aVertexPosition;
+
+    attribute vec3 aVertexColor;
+    
+    varying vec4 vertexColor;
+
+    void main(void) {
+		
+		// Just converting the (x,y,z) vertices to Homogeneous Coord.
+		
+        gl_Position = vec4(aVertexPosition, 1.0);
+        
+        // And the RGB color value to RGBA
+        
+        vertexColor = vec4(aVertexColor, 1.0);
+    }
+
+    </script>
+
+    <script id="shader-fs" type="x-shader/x-fragment">
+	
+	precision mediump float;
+	
+	varying vec4 vertexColor;
+    
+    void main(void) {
+		
+		// Using the passed vertex color
+		
+        gl_FragColor = vertexColor;
+    }
+
+    </script>
+
+    <!--
+
+    The JavaScript code for WebGL.
+
+    -->
+
+    <script type="text/javascript">
+
+        ////////////////////////////////////////////////////////////////////
+        //
+        // Global Variables
+        //
+
+        var gl = null; // WebGL context
+
+        var shaderProgram = null;
+
+        var triangleVertexPositionBuffer = null;
+
+        var triangleVertexColorBuffer = null;
+
+        // For storing the vertices defining the triangle
+
+        var vertices = [
+
+            0.00, 0.75, 0.00,
+
+            -0.75, -0.75, 0.00,
+
+            0.75, -0.75, 0.00,
+
+        ];
+
+        // And their colour
+
+        var colors = [
+
+            1.00, 0.00, 0.00,
+
+            1.00, 0.00, 0.00,
+
+            1.00, 0.00, 0.00,
+
+        ];
+
+        ////////////////////////////////////////////////////////////////////
+        //
+        // Handling the shaders
+        //
+
+        // Getting and compiling a shader
+
+        function getShader(gl, id) {
+            var shaderScript = document.getElementById(id);
+            if (!shaderScript) {
+                return null;
+            }
+
+            var str = "";
+            var k = shaderScript.firstChild;
+            while (k) {
+                if (k.nodeType == 3) {
+                    str += k.textContent;
+                }
+                k = k.nextSibling;
+            }
+
+            var shader;
+            if (shaderScript.type == "x-shader/x-fragment") {
+                shader = gl.createShader(gl.FRAGMENT_SHADER);
+            } else if (shaderScript.type == "x-shader/x-vertex") {
+                shader = gl.createShader(gl.VERTEX_SHADER);
+            } else {
+                return null;
+            }
+
+            gl.shaderSource(shader, str);
+            gl.compileShader(shader);
+
+            if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                alert(gl.getShaderInfoLog(shader));
+                return null;
+            }
+
+            return shader;
+        }
+
+        // Initializing the shader program
+
+        function initShaders() {
+            var fragmentShader = getShader(gl, "shader-fs");
+            var vertexShader = getShader(gl, "shader-vs");
+
+            shaderProgram = gl.createProgram();
+            gl.attachShader(shaderProgram, vertexShader);
+            gl.attachShader(shaderProgram, fragmentShader);
+            gl.linkProgram(shaderProgram);
+
+            if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+                alert("Could not initialise shaders");
+            }
+
+            gl.useProgram(shaderProgram);
+
+            // Coordinates
+
+            shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+            gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+
+            // Colors
+
+            shaderProgram.vertexColorAttribute = gl.getAttribLocation(shaderProgram, "aVertexColor");
+            gl.enableVertexAttribArray(shaderProgram.vertexColorAttribute);
+        }
+
+        ////////////////////////////////////////////////////////////////////
+        //
+        // The WebGL code
+        //
+
+        // Handling the Vertex and the Color Buffers
+
+        function initBuffers() {
+
+            // Coordinates
+
+            triangleVertexPositionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+            triangleVertexPositionBuffer.itemSize = 3;
+            triangleVertexPositionBuffer.numItems = vertices.length / 3;
+
+            // Associating to the vertex shader
+
+            gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute,
+                triangleVertexPositionBuffer.itemSize,
+                gl.FLOAT, false, 0, 0);
+
+            // Colors
+
+            triangleVertexColorBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+            triangleVertexColorBuffer.itemSize = 3;
+            triangleVertexColorBuffer.numItems = colors.length / 3;
+
+            // Associating to the vertex shader
+
+            gl.vertexAttribPointer(shaderProgram.vertexColorAttribute,
+                triangleVertexColorBuffer.itemSize,
+                gl.FLOAT, false, 0, 0);
+        }
+
+        function updateColorBuffer() {
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+            triangleVertexColorBuffer.itemSize = 3;
+            triangleVertexColorBuffer.numItems = colors.length / 3;
+        }
+
+        // Drawing
+
+        function drawScene() {
+
+            // Clearing with the background color
+
+            gl.clear(gl.COLOR_BUFFER_BIT);
+
+            // Drawing the contents of the vertex buffer
+
+            // Drawing the selected primitive
+
+            gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);
+        }
+
+        // User Interation - Information Output
+
+        function outputInfos() {
+
+        }
+
+        // User Interation - Event Listeners
+
+        function setEventListeners() {
+
+            var vertice = document.getElementById("vertices")
+
+            var color = document.getElementById("vertices-color");
+
+            vertice.addEventListener("click", function () {
+                var indexv = vertice.selectedIndex;
+                switch (indexv) {
+
+                    case 0 :
+                        color.addEventListener("click", function () {
+
+                            // Getting the selection
+
+                            var index = color.selectedIndex;
+
+                            // The same color for the 3 vertices
+                            // Update the colors array
+
+                            switch (index) {
+
+                                // COMPLETE THE CODE !!
+
+                                case 0 : // RED
+
+                                    colors = [
+
+                                        1.00, 0.00, 0.00,
+
+                                        1.00, 0.00, 0.00,
+
+                                        1.00, 0.00, 0.00,
+
+                                    ];
+                                    break;
+
+                                case 1 : // GREEN
+
+                                    colors = [
+
+                                        0.00, 1.00, 0.00,
+
+                                        0.00, 1.00, 0.00,
+
+                                        0.00, 1.00, 0.00,
+
+                                    ];
+                                    break;
+
+                                case 2 : // BLUE
+
+                                    colors = [
+
+                                        0.00, 0.00, 1.00,
+
+                                        0.00, 0.00, 1.00,
+
+                                        0.00, 0.00, 1.00,
+
+                                    ];
+                                    break;
+                                case 1 :
+                                    color.addEventListener("click", function () {
+
+                                        // Getting the selection
+
+                                        var index = color.selectedIndex;
+
+                                        // The same color for the 3 vertices
+                                        // Update the colors array
+
+                                        switch (index) {
+
+                                            // COMPLETE THE CODE !!
+
+                                            case 0 : // RED
+
+                                                colors = [
+
+                                                    1.00, 0.00, 0.00,
+
+                                                    1.00, 0.00, 0.00,
+
+                                                    1.00, 0.00, 0.00,
+
+                                                ];
+                                                break;
+
+                                            case 1 : // GREEN
+
+                                                colors = [
+
+                                                    0.00, 1.00, 0.00,
+
+                                                    0.00, 1.00, 0.00,
+
+                                                    0.00, 1.00, 0.00,
+
+                                                ];
+                                                break;
+
+                                            case 2 : // BLUE
+
+                                                colors = [
+
+                                                    0.00, 0.00, 1.00,
+
+                                                    0.00, 0.00, 1.00,
+
+                                                    0.00, 0.00, 1.00,
+
+                                                ];
+                                                break;
+                                            case 2 :
+                                                color.addEventListener("click", function () {
+
+                                                    // Getting the selection
+
+                                                    var index = color.selectedIndex;
+
+                                                    // The same color for the 3 vertices
+                                                    // Update the colors array
+
+                                                    switch (index) {
+
+                                                        // COMPLETE THE CODE !!
+
+                                                        case 0 : // RED
+
+                                                            colors = [
+
+                                                                1.00, 0.00, 0.00,
+
+                                                                1.00, 0.00, 0.00,
+
+                                                                1.00, 0.00, 0.00,
+
+                                                            ];
+                                                            break;
+
+                                                        case 1 : // GREEN
+
+                                                            colors = [
+
+                                                                0.00, 1.00, 0.00,
+
+                                                                0.00, 1.00, 0.00,
+
+                                                                0.00, 1.00, 0.00,
+
+                                                            ];
+                                                            break;
+
+                                                        case 2 : // BLUE
+
+                                                            colors = [
+
+                                                                0.00, 0.00, 1.00,
+
+                                                                0.00, 0.00, 1.00,
+
+                                                                0.00, 0.00, 1.00,
+
+                                                            ];
+                                                            break;
+
+                                                    }
+
+
+                                                    // Redrawing
+
+                                                    updateColorBuffer();
+
+                                                    drawScene();
+
+                                                    outputInfos();
+                                                });
+                                        }
+
+                                        // Initialization
+
+                                        function initWebGL(canvas) {
+                                            try {
+                                                // Create the WebGL context
+                                                // Some browsers still need "experimental-webgl"
+
+                                                gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+
+                                                // DEFAULT: The viewport occupies the whole canvas
+
+                                                // The viewport (R,G,B,A) background color: BLACK
+
+                                                gl.clearColor(0.0, 0.0, 0.0, 1.0);
+                                            } catch (e) {
+                                            }
+                                            if (!gl) {
+                                                alert("Could not initialise WebGL, sorry! :-(");
+                                            }
+                                        }
+
+                                        function runWebGL() {
+
+                                            var canvas = document.getElementById("my-canvas");
+
+                                            initWebGL(canvas);
+
+                                            initShaders();
+
+                                            setEventListeners();
+
+                                            initBuffers();
+
+                                            drawScene();
+
+                                            outputInfos();
+                                        }
+
+    </script>
+
+</head>
+
+<body onload="runWebGL();">
+
+<div style="text-align: center">
+
+    <p>Assigning a color to the triangle vertices</p>
+
+    <p>
+
+        Choose a color using the dropdown list:
+
+        <select id="vertices">
+            <option value="0">UP</option>
+            <option value="1">LEFT</option>
+            <option value="2">RIGHT</option>
+        </select>
+
+        <select id="vertices-color">
+            <option value="0">RED</option>
+            <option value="1">GREEN</option>
+            <option value="2">BLUE</option>
+            <option value="3">RAINBOW</option>
+        </select>
+
+    </p>
+
+    <canvas id="my-canvas" style="border: none" width="400" height="400"></canvas>
+
+</div>
+
+</body>
+
+</html>

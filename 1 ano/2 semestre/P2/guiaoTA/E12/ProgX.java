@@ -6,38 +6,38 @@
 import static java.lang.System.*;
 
 public class ProgX {
-  static final int N = 3;
-  public static void main(String[] args) {
-    LeakyQueue fr = new LeakyQueue(N); // cria uma fila rota com um máximo de N elementos
+    static final int N = 3;
 
-    for (int i=0; i<args.length; i++) {
-      try { // tenta converter argumento para número real
-        double num = Double.valueOf(args[i]);
-        fr.in(num); // adiciona elemento à fila (caso esteja cheia deita fora o mais antigo)
-      }
-      catch (NumberFormatException e) { // o argumento não era um número real
-        if (args[i].equals("-")) {
-          if (!fr.isEmpty()) // vê se a fila não está vazia
-            fr.out(); // retira elemento da fila
+    public static void main(String[] args) {
+        LeakyQueue fr = new LeakyQueue(N); // cria uma fila rota com um máximo de N elementos
+
+        for (int i = 0; i < args.length; i++) {
+            try { // tenta converter argumento para número real
+                double num = Double.valueOf(args[i]);
+                fr.in(num); // adiciona elemento à fila (caso esteja cheia deita fora o mais antigo)
+            } catch (NumberFormatException e) { // o argumento não era um número real
+                if (args[i].equals("-")) {
+                    if (!fr.isEmpty()) // vê se a fila não está vazia
+                        fr.out(); // retira elemento da fila
+                }
+                // ignora outro qualquer argumento
+            }
+            out.printf("i = %-3d", i);
+            fr.print(); // escreve conteúdo da fila numa única linha
+            if (!fr.isEmpty()) {
+                for (int j = fr.size(); j < N; j++)
+                    out.printf(" %4c", ' ');
+                double m = fr.minimum(); // Mínimo dos números da fila
+                out.printf("    (Min = %1.1f)", m);
+            }
+            out.println();
         }
-        // ignora outro qualquer argumento
-      }
-      out.printf("i = %-3d", i);
-      fr.print(); // escreve conteúdo da fila numa única linha
-      if (!fr.isEmpty()) {
-        for(int j = fr.size();j < N;j++)
-          out.printf(" %4c", ' ');
-        double m = fr.minimum(); // Mínimo dos números da fila
-        out.printf("    (Min = %1.1f)", m);
-      }
-      out.println();
-    }
 
-    while(!fr.isEmpty()) {
-      fr.out();
+        while (!fr.isEmpty()) {
+            fr.out();
+        }
+        assert fr.size() == 0;
     }
-    assert fr.size() == 0;
-  }
 }
 
 /* Exemplos de utilização e resultados esperados:

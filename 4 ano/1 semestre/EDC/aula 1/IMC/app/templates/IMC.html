@@ -1,0 +1,13 @@
+{% block content %}
+
+{% if error %}
+<p style="...">Erro:insira a informação pedida</p>
+{% endif %}
+<form action="." method="post">
+    {% csrf_token %}
+    <p>Peso: <input type="int" name="peso"/></p>
+    <p>Altura: <input type="int" name="altura"/></p>
+    <p><input type="submit" value="Enviar"/></p>
+</form>
+
+{% endblock %}

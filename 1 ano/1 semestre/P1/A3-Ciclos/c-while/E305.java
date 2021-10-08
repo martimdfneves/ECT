@@ -4,61 +4,61 @@ import java.util.*;
 
 public class E305 {
 
-	public static void main(String[] args) {
-		
-		int num, res, i = 2;
+    public static void main(String[] args) {
 
-		boolean primo = true;
+        int num, res, i = 2;
 
-		Scanner k = new Scanner(System.in);
+        boolean primo = true;
 
-		System.out.println("Programa para saber se o número inserido é primo.");
-		System.out.println("--------------------------------------------------");
+        Scanner k = new Scanner(System.in);
 
-		System.out.print("Insere um número inteiro positivo: ");
-		num = k.nextInt();
+        System.out.println("Programa para saber se o número inserido é primo.");
+        System.out.println("--------------------------------------------------");
 
-		if (num < 0) {
-			
-			System.out.println("Esse número é negativo.");
+        System.out.print("Insere um número inteiro positivo: ");
+        num = k.nextInt();
 
-		} else if (num == 1 || num == 0) {
-			
-			System.out.println("Esse número é impossível de saber se é primo ou não.");
+        if (num < 0) {
 
-		} else if (num >= 2) {
-			
-			//o 2 é fodido de incluir no método e ficava confuso como a merda
-			if (num == 2) {
+            System.out.println("Esse número é negativo.");
 
-				System.out.printf("2 é primo.\n");
+        } else if (num == 1 || num == 0) {
 
-			} else if (num >= 3) {
+            System.out.println("Esse número é impossível de saber se é primo ou não.");
 
-				while(i < num) {
-				
-					res = num % i;
+        } else if (num >= 2) {
 
-					i++;
+            //o 2 é fodido de incluir no método e ficava confuso como a merda
+            if (num == 2) {
 
-					if (res == 0) {
+                System.out.printf("2 é primo.\n");
 
-						primo = false;
-					}
-					
-				}
-			}
-		}
+            } else if (num >= 3) {
 
-		if (!primo) {
-			
-			System.out.printf("%d não é primo.\n", num);
+                while (i < num) {
 
-		} else if (num != 2 && primo) {
-		
-			System.out.printf("%d é primo.\n", num);
+                    res = num % i;
 
-		}
+                    i++;
 
-	}
+                    if (res == 0) {
+
+                        primo = false;
+                    }
+
+                }
+            }
+        }
+
+        if (!primo) {
+
+            System.out.printf("%d não é primo.\n", num);
+
+        } else if (num != 2 && primo) {
+
+            System.out.printf("%d é primo.\n", num);
+
+        }
+
+    }
 }

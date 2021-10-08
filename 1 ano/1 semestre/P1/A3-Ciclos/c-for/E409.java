@@ -2,37 +2,37 @@ import java.util.*;
 
 public class E409 {
 
-	public static void main(String[] args) {
-		
-		int num, par, sum, test_num, i;
+    public static void main(String[] args) {
 
-		Scanner k = new Scanner(System.in);
+        int num, par, sum, test_num, i;
 
-		System.out.println("Programa para calcular a soma dos primeiros N números pares.");
+        Scanner k = new Scanner(System.in);
 
-		do {
+        System.out.println("Programa para calcular a soma dos primeiros N números pares.");
 
-			System.out.print("Quantos números pares?(o programa só calcula até ao 1000º número par) ");
-			num = k.nextInt();
+        do {
 
-		} while (num < 0 && num >= 1000);
+            System.out.print("Quantos números pares?(o programa só calcula até ao 1000º número par) ");
+            num = k.nextInt();
 
-		System.out.println("\nNúmeros pares: ");
+        } while (num < 0 && num >= 1000);
 
-		for (i = 1, sum = 0, test_num = 1; i <= num; test_num++) {
-			
-			if (test_num % 2 == 0) {
-				
-				System.out.printf("%3d\n", test_num);
+        System.out.println("\nNúmeros pares: ");
 
-				sum += test_num;
+        for (i = 1, sum = 0, test_num = 1; i <= num; test_num++) {
 
-				i++;
+            if (test_num % 2 == 0) {
 
-			}
-		}
+                System.out.printf("%3d\n", test_num);
 
-		System.out.printf("\nA soma dos primeiros %d números pares é igual a %d.\n", num, sum);
+                sum += test_num;
 
-	}
+                i++;
+
+            }
+        }
+
+        System.out.printf("\nA soma dos primeiros %d números pares é igual a %d.\n", num, sum);
+
+    }
 }

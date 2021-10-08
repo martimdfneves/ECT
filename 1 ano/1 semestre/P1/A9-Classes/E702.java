@@ -1,98 +1,99 @@
 import java.util.*;
+
 import static java.lang.Math.*;
 
 public class E702 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		
-		//só exite pra dar valor ao array
-		int contador = 123123123;
+    public static void main(String[] args) {
 
-		//contador de pontos
-		int counter;
-		
-		//define os pontos
-		Ponto[] pont = new Ponto[contador];
-		
-		//define o ponto mais distante
-		Ponto maisDist = new Ponto();
+        //só exite pra dar valor ao array
+        int contador = 123123123;
 
-		//variaveis pra calcular a distancia
-		double distancia;
-		double maxDist = 0;
-		double distSum = 0;
+        //contador de pontos
+        int counter;
 
-		System.out.println("Quando colocar nas coordenadas (0,0) o programa acaba.");
+        //define os pontos
+        Ponto[] pont = new Ponto[contador];
 
+        //define o ponto mais distante
+        Ponto maisDist = new Ponto();
 
-		for (counter = 1; ; counter++) {
-			
-			pont[counter - 1] = lerPonto(counter);
+        //variaveis pra calcular a distancia
+        double distancia;
+        double maxDist = 0;
+        double distSum = 0;
 
-			if (pont[counter - 1].x == 0 && pont[counter - 1].y == 0) {
-				break;
-			}
-		}
-
-		for (int i = 0; i < counter; i++) {
-			
-			distancia = dist(pont[i]);
-
-			distSum += distancia;
-
-			if (distancia > maxDist) {
-				
-				maisDist = pont[i];
-				maxDist = distancia;
-
-			}
+        System.out.println("Quando colocar nas coordenadas (0,0) o programa acaba.");
 
 
-		}
+        for (counter = 1; ; counter++) {
 
-		System.out.printf("A soma das distâncias dos  %3d pontos à origem é %5.2f.\n", counter, distSum);
-		System.out.print("O ponto mais afastado da origram foi ");
-		printPont(maisDist);
-		System.out.println();
+            pont[counter - 1] = lerPonto(counter);
+
+            if (pont[counter - 1].x == 0 && pont[counter - 1].y == 0) {
+                break;
+            }
+        }
+
+        for (int i = 0; i < counter; i++) {
+
+            distancia = dist(pont[i]);
+
+            distSum += distancia;
+
+            if (distancia > maxDist) {
+
+                maisDist = pont[i];
+                maxDist = distancia;
+
+            }
 
 
-	}
+        }
 
-	//modulo de leitura do ponto
-	public static Ponto lerPonto(int n) {
+        System.out.printf("A soma das distâncias dos  %3d pontos à origem é %5.2f.\n", counter, distSum);
+        System.out.print("O ponto mais afastado da origram foi ");
+        printPont(maisDist);
+        System.out.println();
 
-		Ponto p = new Ponto();
 
-		System.out.printf("Quais as coordenadas do ponto %d?\n", n);
+    }
 
-		System.out.print("Abcissa: ");
-		p.x = k.nextDouble();
+    //modulo de leitura do ponto
+    public static Ponto lerPonto(int n) {
 
-		System.out.print("Ordenada: ");
-		p.y = k.nextDouble();
+        Ponto p = new Ponto();
 
-		return p;
-	}
+        System.out.printf("Quais as coordenadas do ponto %d?\n", n);
 
-	//modulo da escrita das coordenadas de um ponto
-	public static void printPont(Ponto n) {
+        System.out.print("Abcissa: ");
+        p.x = k.nextDouble();
 
-		System.out.printf("(%4.2f, %4.2f)", n.x, n.y);
-	}
+        System.out.print("Ordenada: ");
+        p.y = k.nextDouble();
 
-	//modulo de calculo das distancias
-	public static double dist(Ponto p) {
+        return p;
+    }
 
-		double dist = sqrt(pow(p.x, 2) + pow(p.y, 2));
+    //modulo da escrita das coordenadas de um ponto
+    public static void printPont(Ponto n) {
 
-		return dist;		
-	}
+        System.out.printf("(%4.2f, %4.2f)", n.x, n.y);
+    }
+
+    //modulo de calculo das distancias
+    public static double dist(Ponto p) {
+
+        double dist = sqrt(pow(p.x, 2) + pow(p.y, 2));
+
+        return dist;
+    }
 }
 
 class Ponto {
 
-	double x;
-	double y;
+    double x;
+    double y;
 }

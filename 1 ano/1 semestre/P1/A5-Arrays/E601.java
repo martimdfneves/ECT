@@ -2,36 +2,36 @@ import java.util.*;
 
 public class E601 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		
-		int num;
+    public static void main(String[] args) {
 
-		System.out.println("Programa para ler uma lista de valores e imprimi-la pela ordem inversa.");
-		System.out.println("-----------------------------------------------------------------------");
+        int num;
 
-		System.out.print("Quantos valores vai ter esta lista: ");
-		num = k.nextInt();
+        System.out.println("Programa para ler uma lista de valores e imprimi-la pela ordem inversa.");
+        System.out.println("-----------------------------------------------------------------------");
 
-		int valores[] = new int[num];
+        System.out.print("Quantos valores vai ter esta lista: ");
+        num = k.nextInt();
 
-		//lê os valores
-		for (int i = 0; i < num; i++) {
-		
-			System.out.printf("\nQual o valor #%3d: ", i + 1);
-			valores[i] = k.nextInt();
+        int valores[] = new int[num];
 
-		}
+        //lê os valores
+        for (int i = 0; i < num; i++) {
 
-		//imprime os valores ao contrario do que foram colocados
-		System.out.println("\nLista invertida dos valores inseridos");
+            System.out.printf("\nQual o valor #%3d: ", i + 1);
+            valores[i] = k.nextInt();
 
-		for (int i = num -1; i >= 0; i--) {
-			
-			System.out.printf("\nNúmero %3d: %3d\n", i + 1, valores[i]);
-		
-		}
+        }
 
-	}
+        //imprime os valores ao contrario do que foram colocados
+        System.out.println("\nLista invertida dos valores inseridos");
+
+        for (int i = num - 1; i >= 0; i--) {
+
+            System.out.printf("\nNúmero %3d: %3d\n", i + 1, valores[i]);
+
+        }
+
+    }
 }

@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-On Ubuntu you need the following packages installed: 
+On Ubuntu you need the following packages installed:
 _build-essential_, _cmake_, _doxygen_, _libfuse-dev_, and _git_.
 
 ```
@@ -78,7 +78,9 @@ cd XXXXX/sofs19/bin
 mkdir /tmp/mnt                  # our mount point
 ./sofsmount /tmp/dsk /tmp/mnt   # mount the disk in the mount point
 ```
-Now, everything created inside the mount point will be stored in disk (the /tmp/dsk file). You can use the **showblock** tool to check that out.
+
+Now, everything created inside the mount point will be stored in disk (the /tmp/dsk file). You can use the **showblock**
+tool to check that out.
 
 ******
 
@@ -94,6 +96,8 @@ When editing your code, take into attention the following:
 
 - Please do not change the signature of the functions, nor delete the call to soProbe.
 
-- We assume that only files with termination **.cpp** inside **src/grp_src** subfolders are editable by the groups. Thus, any changes to the other files can produce indesirable behavior during our tests, since we will use our version of them.
+- We assume that only files with termination **.cpp** inside **src/grp_src** subfolders are editable by the groups.
+  Thus, any changes to the other files can produce indesirable behavior during our tests, since we will use our version
+  of them.
 
 ******

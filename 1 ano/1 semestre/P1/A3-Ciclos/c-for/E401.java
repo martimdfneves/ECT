@@ -2,19 +2,19 @@ import java.util.*;
 
 public class E401 {
 
-	public static void main(String[] args) {
-		
-		int repets;
+    public static void main(String[] args) {
 
-		Scanner k = new Scanner(System.in);
+        int repets;
 
-		System.out.print("Quantas vezes queres repetir a frase :\"P1 é fixe!\": ");
-		repets = k.nextInt();
+        Scanner k = new Scanner(System.in);
 
-		for (int i = 1; i <= repets; ++i) {
-			
-			System.out.println("P1 é fixe!");
+        System.out.print("Quantas vezes queres repetir a frase :\"P1 é fixe!\": ");
+        repets = k.nextInt();
 
-		}
-	}
+        for (int i = 1; i <= repets; ++i) {
+
+            System.out.println("P1 é fixe!");
+
+        }
+    }
 }

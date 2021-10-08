@@ -3,432 +3,432 @@ import java.io.*;
 
 public class E1001 {
 
-	static Scanner k = new Scanner(System.in);
-	static int[] numeros = new int[50];
+    static Scanner k = new Scanner(System.in);
+    static int[] numeros = new int[50];
 
-	public static void main(String[] args) throws IOException{
-		
-		//variável da escolha
-		int escolha;
+    public static void main(String[] args) throws IOException {
 
-		//colocara lista a zero
-		for (int i = 0; i < 50; i++) {
-			
-			numeros[i] = 0;
-		}
+        //variável da escolha
+        int escolha;
 
-		System.out.println("Programa para escolher o que fazer a uma sequência.");
-		System.out.println("---------------------------------------------------");
-		
-		System.out.println("\nAnálise de uma sequência de números inteiros:");
-		System.out.println("\t 1 -> Ler a sequência, se colocar 0 termina o programa");
-		System.out.println("\t 2 -> Escrever a sequência");
-		System.out.println("\t 3 -> Calcular o máximo desta sucessão.");
-		System.out.println("\t 4 -> Calcular o mínimo desta sucessão.");
-		System.out.println("\t 5 -> Calcular a média desta sucessão.");
-		System.out.println("\t 6 -> Detetar se é uma sequência só constituída por números pares.");
-		System.out.println("\t 7 -> Ler uma sequência de números de um ficheiro de texto.");
-		System.out.println("\t 8 -> Adicionar números à sequência existente.");
-		System.out.println("\t 9 -> Gravar a sequência num ficheiro.");
-		System.out.println("\t10 -> Ordenar a sequência por ordem crescente utilizando ordenação sequencial");
-		System.out.println("\t11 -> Ordenar a sequência por ordem decrescente utilizando ordenação por flutuação");
-		System.out.println("\t12 -> Pesquisa de valor na sequência");
-		System.out.println("\t13 -> Terminar o programa");
-		
-		//o que acontece em cada escolha
-		do {
+        //colocara lista a zero
+        for (int i = 0; i < 50; i++) {
 
-			System.out.print("\nOpção: ");
-			escolha = k.nextInt();
+            numeros[i] = 0;
+        }
 
+        System.out.println("Programa para escolher o que fazer a uma sequência.");
+        System.out.println("---------------------------------------------------");
 
-			switch (escolha) {
+        System.out.println("\nAnálise de uma sequência de números inteiros:");
+        System.out.println("\t 1 -> Ler a sequência, se colocar 0 termina o programa");
+        System.out.println("\t 2 -> Escrever a sequência");
+        System.out.println("\t 3 -> Calcular o máximo desta sucessão.");
+        System.out.println("\t 4 -> Calcular o mínimo desta sucessão.");
+        System.out.println("\t 5 -> Calcular a média desta sucessão.");
+        System.out.println("\t 6 -> Detetar se é uma sequência só constituída por números pares.");
+        System.out.println("\t 7 -> Ler uma sequência de números de um ficheiro de texto.");
+        System.out.println("\t 8 -> Adicionar números à sequência existente.");
+        System.out.println("\t 9 -> Gravar a sequência num ficheiro.");
+        System.out.println("\t10 -> Ordenar a sequência por ordem crescente utilizando ordenação sequencial");
+        System.out.println("\t11 -> Ordenar a sequência por ordem decrescente utilizando ordenação por flutuação");
+        System.out.println("\t12 -> Pesquisa de valor na sequência");
+        System.out.println("\t13 -> Terminar o programa");
 
-				case 13:
+        //o que acontece em cada escolha
+        do {
 
-					break;
+            System.out.print("\nOpção: ");
+            escolha = k.nextInt();
 
-				case 1:
 
-					leitor();
-					break;
+            switch (escolha) {
 
-				case 2:
+                case 13:
 
-					escritor();
-					break;
+                    break;
 
-				case 3:
+                case 1:
 
-					maximizante();
-					break;
+                    leitor();
+                    break;
 
-				case 4:
+                case 2:
 
-					minimizante();
-					break;
+                    escritor();
+                    break;
 
-				case 5:
+                case 3:
 
-					media();
-					break;
+                    maximizante();
+                    break;
 
-				case 6:
+                case 4:
 
-					pares();
-					break;
+                    minimizante();
+                    break;
 
-				case 7:
+                case 5:
 
-					readFile();
-					break;
+                    media();
+                    break;
 
-				case 8:
+                case 6:
 
-					addNums();
-					break;
+                    pares();
+                    break;
 
-				case 9:
+                case 7:
 
-					stampFile();
-					break;
+                    readFile();
+                    break;
 
-				case 10:
+                case 8:
 
-					seqOrderCres();
-					break;
+                    addNums();
+                    break;
 
-				case 11:
+                case 9:
 
-					floatOrderDecres();
-					break;
+                    stampFile();
+                    break;
 
-				case 12:
+                case 10:
 
-					searchVal();
-					break;
+                    seqOrderCres();
+                    break;
 
-				default:
+                case 11:
 
-					System.out.println("Escolha não aceite coloca outra.");
-					System.out.print("\nOpção: ");
-					escolha = k.nextInt();
+                    floatOrderDecres();
+                    break;
 
-			}
+                case 12:
 
-		} while(escolha != 13);
+                    searchVal();
+                    break;
 
-	}
+                default:
 
-	//modulo de leitura da lista
-	public static void leitor() {
+                    System.out.println("Escolha não aceite coloca outra.");
+                    System.out.print("\nOpção: ");
+                    escolha = k.nextInt();
 
-		for (int i = 0; i < 50; i++) {
+            }
 
-			System.out.printf("valor #%2d: ", i + 1);
-			numeros[i] = k.nextInt();
+        } while (escolha != 13);
 
-			if (numeros[i] == 0) {
-							
-				break;
-			
-			}
-		}
-	}
+    }
 
-	//modulo de impressao da lista
-	public static void escritor() {
+    //modulo de leitura da lista
+    public static void leitor() {
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+        for (int i = 0; i < 50; i++) {
 
-			}
+            System.out.printf("valor #%2d: ", i + 1);
+            numeros[i] = k.nextInt();
 
-			System.out.printf("\nValor #%2d: %3d",i + 1, numeros[i]);
-			
-		}
+            if (numeros[i] == 0) {
 
-		System.out.println();
-	}
+                break;
 
-	//modulo de calculo do maximizante
-	public static void maximizante () {
-		
-		int max = 0;
+            }
+        }
+    }
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] > max) {
-				
-				max = numeros[i];
+    //modulo de impressao da lista
+    public static void escritor() {
 
-			}
-		}
+        for (int i = 0; i < 50; i++) {
 
-		System.out.printf("\nO máximo desta sequência é %3d.\n",max);
-	}
+            if (numeros[i] == 0) {
 
-	//modulo de calculo do minimizante
-	public static void minimizante () {
-		
-		int min = 12431234;
+                break;
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+            }
 
-			}
+            System.out.printf("\nValor #%2d: %3d", i + 1, numeros[i]);
 
-			if (numeros[i] < min) {
-				
-				min = numeros[i];
+        }
 
-			}
-		}
+        System.out.println();
+    }
 
-		System.out.printf("\nO minimo desta sequência é %3d.\n",min);
-	}
+    //modulo de calculo do maximizante
+    public static void maximizante() {
 
-	//modulo de calculo da media
-	public static void media () {
+        int max = 0;
 
-		double media = 0;
+        for (int i = 0; i < 50; i++) {
 
-		int i;
+            if (numeros[i] > max) {
 
-		for (i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+                max = numeros[i];
 
-			}
+            }
+        }
 
-			media += numeros[i];
+        System.out.printf("\nO máximo desta sequência é %3d.\n", max);
+    }
 
-		}
+    //modulo de calculo do minimizante
+    public static void minimizante() {
 
-		media /= i;
+        int min = 12431234;
 
-		System.out.printf("\nA média da sequência é %4.2f\n", media);
-	}
+        for (int i = 0; i < 50; i++) {
 
-	//modulo pra calcular se a lista é apenas composta por números pares
-	public static void pares () {
+            if (numeros[i] == 0) {
 
-		boolean pares = false;
+                break;
 
-		for (int j = 0; j < 50; j++) {
-			
-			for (int i = 1; i < numeros[j]; i++) {
-				
-				if (numeros[j] == 0) {
-				
-					break;
+            }
 
-				}	
+            if (numeros[i] < min) {
 
-				if (numeros[j] % 2 != 0) {
-					
-					pares = false;
+                min = numeros[i];
 
-				} else {
+            }
+        }
 
-					pares = true;
+        System.out.printf("\nO minimo desta sequência é %3d.\n", min);
+    }
 
-				}
-			}
-		}
+    //modulo de calculo da media
+    public static void media() {
 
-		if (pares) {
-			
-			System.out.println("\n\nA lista é constituída apenas por números pares.");
+        double media = 0;
 
-		} else {
-			
-			System.out.println("\n\nA lista não é constituída apenas por números pares.");
+        int i;
 
-		}
-	}
+        for (i = 0; i < 50; i++) {
 
-	//modulo de leitura de ficheiro
-	public static void readFile () throws IOException {
+            if (numeros[i] == 0) {
 
-		File temp;
-		String nome;
+                break;
 
-		int numeros[] = new int[50];
+            }
 
-		int i = 0;
+            media += numeros[i];
 
-		do {
+        }
 
-			System.out.print("Nome do ficheiro a ser lido (com extensão): ");
-			nome = k.next();
+        media /= i;
 
-			temp = new File(nome);
+        System.out.printf("\nA média da sequência é %4.2f\n", media);
+    }
 
-			if (!temp.isFile() || !temp.canRead()) {
-				
-				System.out.println("Ficheiro não existente, coloque outro.");
-			}
-		} while(!temp.isFile() || !temp.canRead());
+    //modulo pra calcular se a lista é apenas composta por números pares
+    public static void pares() {
 
-		Scanner infile = new Scanner(temp);
+        boolean pares = false;
 
-		while (infile.hasNext()) {
+        for (int j = 0; j < 50; j++) {
 
-			String num = infile.next();
-			System.out.printf("\n %s", num);
+            for (int i = 1; i < numeros[j]; i++) {
 
-			if (!infile.hasNext()) {
-				
-				break;
-			}
+                if (numeros[j] == 0) {
 
-			numeros[i] = Integer.parseInt(num);
+                    break;
 
-			i++;
-		}
+                }
 
-		infile.close();
-	}
+                if (numeros[j] % 2 != 0) {
 
-	//modulo para adicionar à sequência existente
-	public static void addNums() {
+                    pares = false;
 
-		for (int i = 0;i < 50 ; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				System.out.printf("valor #%2d: ", i + 1);
-				numeros[i] = k.nextInt();
+                } else {
 
-				if (numeros[i] == 0) {
-								
-					break;
-				
-				}
-			}
-		}
-	} 
+                    pares = true;
 
-	//modulo para gravar a sequência num ficheiro
-	public static void stampFile() throws IOException {
+                }
+            }
+        }
 
-		File rite;
-		String nome;	
-	
-		System.out.print("Qual o nome do ficheiro em que a lista vai ser guardada? ");
-		nome = k.next();
+        if (pares) {
 
-		rite = new File(nome);
+            System.out.println("\n\nA lista é constituída apenas por números pares.");
 
-		PrintWriter prt = new PrintWriter(rite);
+        } else {
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
-			}
+            System.out.println("\n\nA lista não é constituída apenas por números pares.");
 
-			prt.println(numeros[i]);
-		}
+        }
+    }
 
-		prt.close();
-	} 
+    //modulo de leitura de ficheiro
+    public static void readFile() throws IOException {
 
-	//modulo de ordenação sequencial crescente
-	public static void seqOrderCres() {
+        File temp;
+        String nome;
 
-		int temp;
-		int nums = 0;
+        int numeros[] = new int[50];
 
-		for (int i = 0; i < numeros.length; i++) {	
+        int i = 0;
 
-			if (numeros[i] == 0) {
-				break;
-			} else {
-				nums++;
-			}
-		}
+        do {
 
-		for (int i = 0; i < nums -1; i++) {
+            System.out.print("Nome do ficheiro a ser lido (com extensão): ");
+            nome = k.next();
 
-			for (int j = i+1; j < nums; j++) {
-				
-				if (numeros[i] > numeros[j]) {
-					
-					temp = numeros[i];
-					numeros[i] = numeros[j];
-					numeros [j] = temp;
-				}
-			}
-		}
-	} 
+            temp = new File(nome);
 
-	//modulo de ordenação por flutuaçõa decrescente
-	public static void floatOrderDecres() {
+            if (!temp.isFile() || !temp.canRead()) {
 
-		boolean swap;
-		int nums = 0;
+                System.out.println("Ficheiro não existente, coloque outro.");
+            }
+        } while (!temp.isFile() || !temp.canRead());
 
-		for (int i = 0; i < numeros.length; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
-			
-			} else {
-				
-				nums++;
-			}
-		}
-		do{
-			swap = false;
+        Scanner infile = new Scanner(temp);
 
-			for (int i = 0; i < nums - 1; i++) {
+        while (infile.hasNext()) {
 
-				if(numeros[i] < numeros[i + 1]) {
+            String num = infile.next();
+            System.out.printf("\n %s", num);
 
-					int tmp = numeros[i];
-					numeros[i] = numeros[i+1];
-					numeros[i+1] = tmp;
-					swap = true;
-				}
-			}
-		}while(swap);
-	}
+            if (!infile.hasNext()) {
 
-	//modulo de pesquisa na sequência
-	public static void searchVal() {
+                break;
+            }
 
-		System.out.print("Valor a procurar: ");
-		int val = k.nextInt();
+            numeros[i] = Integer.parseInt(num);
 
-		int n = 0;
-		int pos = -1;
+            i++;
+        }
 
-		do{
-			if (numeros[n++] == val) {
-				
-				pos = n - 1;
-			}
-		}while(pos == -1 && n < numeros.length);
+        infile.close();
+    }
 
-		if (pos == 0) {
-		
-			System.out.printf("O valor %d está não existe na lista.\n", val);	
-		
-			} else {
+    //modulo para adicionar à sequência existente
+    public static void addNums() {
 
-			System.out.printf("O valor %d está na posição %d.\n", val, pos+1);
-		}
-	}
+        for (int i = 0; i < 50; i++) {
+
+            if (numeros[i] == 0) {
+
+                System.out.printf("valor #%2d: ", i + 1);
+                numeros[i] = k.nextInt();
+
+                if (numeros[i] == 0) {
+
+                    break;
+
+                }
+            }
+        }
+    }
+
+    //modulo para gravar a sequência num ficheiro
+    public static void stampFile() throws IOException {
+
+        File rite;
+        String nome;
+
+        System.out.print("Qual o nome do ficheiro em que a lista vai ser guardada? ");
+        nome = k.next();
+
+        rite = new File(nome);
+
+        PrintWriter prt = new PrintWriter(rite);
+
+        for (int i = 0; i < 50; i++) {
+
+            if (numeros[i] == 0) {
+
+                break;
+            }
+
+            prt.println(numeros[i]);
+        }
+
+        prt.close();
+    }
+
+    //modulo de ordenação sequencial crescente
+    public static void seqOrderCres() {
+
+        int temp;
+        int nums = 0;
+
+        for (int i = 0; i < numeros.length; i++) {
+
+            if (numeros[i] == 0) {
+                break;
+            } else {
+                nums++;
+            }
+        }
+
+        for (int i = 0; i < nums - 1; i++) {
+
+            for (int j = i + 1; j < nums; j++) {
+
+                if (numeros[i] > numeros[j]) {
+
+                    temp = numeros[i];
+                    numeros[i] = numeros[j];
+                    numeros[j] = temp;
+                }
+            }
+        }
+    }
+
+    //modulo de ordenação por flutuaçõa decrescente
+    public static void floatOrderDecres() {
+
+        boolean swap;
+        int nums = 0;
+
+        for (int i = 0; i < numeros.length; i++) {
+
+            if (numeros[i] == 0) {
+
+                break;
+
+            } else {
+
+                nums++;
+            }
+        }
+        do {
+            swap = false;
+
+            for (int i = 0; i < nums - 1; i++) {
+
+                if (numeros[i] < numeros[i + 1]) {
+
+                    int tmp = numeros[i];
+                    numeros[i] = numeros[i + 1];
+                    numeros[i + 1] = tmp;
+                    swap = true;
+                }
+            }
+        } while (swap);
+    }
+
+    //modulo de pesquisa na sequência
+    public static void searchVal() {
+
+        System.out.print("Valor a procurar: ");
+        int val = k.nextInt();
+
+        int n = 0;
+        int pos = -1;
+
+        do {
+            if (numeros[n++] == val) {
+
+                pos = n - 1;
+            }
+        } while (pos == -1 && n < numeros.length);
+
+        if (pos == 0) {
+
+            System.out.printf("O valor %d está não existe na lista.\n", val);
+
+        } else {
+
+            System.out.printf("O valor %d está na posição %d.\n", val, pos + 1);
+        }
+    }
 }

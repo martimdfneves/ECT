@@ -2,29 +2,29 @@ import java.util.*;
 
 public class E806 {
 
-	public static void main(String[] args) {
-		
-		Scanner k = new Scanner(System.in);
+    public static void main(String[] args) {
 
-		String frase;
-		String traduzida;
+        Scanner k = new Scanner(System.in);
 
-		System.out.print("Frase a traduzir -> ");
-		frase = k.nextLine();
+        String frase;
+        String traduzida;
 
-		traduzida = tradutor(frase);
+        System.out.print("Frase a traduzir -> ");
+        frase = k.nextLine();
 
-		System.out.printf("Frase traduzida -> %s\n", traduzida);
-	}
+        traduzida = tradutor(frase);
 
-	//modulo de tradução
-	public static String tradutor(String pre) {
+        System.out.printf("Frase traduzida -> %s\n", traduzida);
+    }
 
-		pre=pre.replace('l', 'u');
-		pre=pre.replace('L', 'U');
-		pre=pre.replace('R', ' ');
-		pre=pre.replace('r', ' ');
+    //modulo de tradução
+    public static String tradutor(String pre) {
 
-		return pre;
-	}
+        pre = pre.replace('l', 'u');
+        pre = pre.replace('L', 'U');
+        pre = pre.replace('R', ' ');
+        pre = pre.replace('r', ' ');
+
+        return pre;
+    }
 }

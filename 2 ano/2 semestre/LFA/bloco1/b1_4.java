@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class b1_4 {
     private static Scanner a;
-    
+
     public static void main(final String[] array) {
         final Map a = a("numbers.txt");
         while (b1_4.a.hasNextLine()) {
@@ -22,14 +22,13 @@ public class b1_4 {
                         System.exit(1);
                     }
                     final long longValue;
-                    if ((longValue = (long)a.get(next)) <= n) {
+                    if ((longValue = (long) a.get(next)) <= n) {
                         n2 += n;
                         n = 0L;
                     }
                     if (n != 0L && longValue > n) {
                         n *= longValue;
-                    }
-                    else {
+                    } else {
                         n = longValue;
                     }
                 }
@@ -37,7 +36,7 @@ public class b1_4 {
             System.out.println(nextLine + " -> " + (n2 + n));
         }
     }
-    
+
     private static Map a(String pathname) {
         final HashMap<String, Long> hashMap = new HashMap<String, Long>();
         try {
@@ -57,22 +56,20 @@ public class b1_4 {
                     }
                     try {
                         hashMap.put(lowerCase, Long.parseLong(split[0]));
-                    }
-                    catch (NumberFormatException ex) {
+                    } catch (NumberFormatException ex) {
                         System.err.println("ERROR: invalid number \"" + split[0] + "\" in number file!");
                         System.exit(1);
                     }
                 }
             }
             pathname1.close();
-        }
-        catch (IOException ex2) {
+        } catch (IOException ex2) {
             System.err.println("ERROR: reading number file!");
             System.exit(2);
         }
         return hashMap;
     }
-    
+
     static {
         b1_4.a = new Scanner(System.in);
     }

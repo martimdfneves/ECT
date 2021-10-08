@@ -1,0 +1,101 @@
+.background-color-navbar {
+    background-color: rgb(179, 179, 179);
+}
+
+.near-text-left {
+    margin-left: 41%;
+}
+
+.near-text-right {
+    margin-right: 41%;
+}
+
+.text-changes {
+    padding-top: .71rem;
+    padding-bottom: .71rem;
+    font-size: 1.4rem;
+    font-family: "Segoe UI";
+    font-weight: bold
+}
+
+.my-footer {
+    background-color: rgb(179, 179, 179);
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+    font-size: 1.1rem;
+    font-family: "Segoe UI";
+    font-weight: inherit
+}
+
+.padding-right-side {
+    padding-top: 12.0rem;
+}
+
+.remove-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.add-padding {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 540px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.show-pointer {
+    cursor: pointer;
+}
+
+.add-padding-top {
+    padding-top: 15px;
+}

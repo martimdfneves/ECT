@@ -2,202 +2,202 @@ import java.util.*;
 
 public class E604 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	static int notas[] = new int[100];
-	static int valores[] = new int[21];
+    static int notas[] = new int[100];
+    static int valores[] = new int[21];
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		System.out.println("Programa para fazer um histograma de notas com valor entre 0 e 20;");
-		System.out.println("------------------------------------------------------------------");
+        System.out.println("Programa para fazer um histograma de notas com valor entre 0 e 20;");
+        System.out.println("------------------------------------------------------------------");
 
-		System.out.println("Coloca as notas.\n");
+        System.out.println("Coloca as notas.\n");
 
-		leitor_notas();
+        leitor_notas();
 
-		organizador_notas();
+        organizador_notas();
 
-		impressor();
+        impressor();
 
-	}
+    }
 
-	//modulo de leitura das notas
-	public static void leitor_notas () {
+    //modulo de leitura das notas
+    public static void leitor_notas() {
 
-		for (int i = 0; i < 100; i++) {
-			
-			System.out.printf("Valor da nota #%2d: ", i+1);
-			notas[i] = k.nextInt();
+        for (int i = 0; i < 100; i++) {
 
-			do {
+            System.out.printf("Valor da nota #%2d: ", i + 1);
+            notas[i] = k.nextInt();
 
-				if (notas[i] > 20) {
-				
-					System.out.printf("Essa nota é demasiado alta.\nColoca outra nota.\nValor da nota #%2d: ", i+1);
-					notas[i] = k.nextInt();
+            do {
 
-				}
-			
-			} while(notas[i] > 20); 
-			
-			if (notas[i] < 0) {
-				
-				break;
+                if (notas[i] > 20) {
 
-			}
+                    System.out.printf("Essa nota é demasiado alta.\nColoca outra nota.\nValor da nota #%2d: ", i + 1);
+                    notas[i] = k.nextInt();
 
-		}		
-	
-	}
+                }
 
-	//modulo de organização das notas
-	public static void organizador_notas () {
+            } while (notas[i] > 20);
 
-		for (int i = 0; i < 21; i++) {
-			
-			valores[i] = 0;
+            if (notas[i] < 0) {
 
-		}
+                break;
 
-		for (int i = 0; i < 100; i++) {
-			
-			if (notas[i] == 0) {
-				
-				break;
+            }
 
-			}
+        }
 
-			switch (notas[i]) {
-				
-				case 0:
+    }
 
-					valores[0] += 1;
-					break;
+    //modulo de organização das notas
+    public static void organizador_notas() {
 
-				case 1:
+        for (int i = 0; i < 21; i++) {
 
-					valores[1] += 1;
-					break;
+            valores[i] = 0;
 
-				case 2:
+        }
 
-					valores[2] += 1;
-					break;
+        for (int i = 0; i < 100; i++) {
 
-				case 3:
+            if (notas[i] == 0) {
 
-					valores[3] += 1;
-					break;
+                break;
 
-				case 4:
+            }
 
-					valores[4] += 1;
-					break;
+            switch (notas[i]) {
 
-				case 5:
+                case 0:
 
-					valores[5] += 1;
-					break;
+                    valores[0] += 1;
+                    break;
 
-				case 6:
+                case 1:
 
-					valores[6] += 1;
-					break;
+                    valores[1] += 1;
+                    break;
 
-				case 7:
+                case 2:
 
-					valores[7] += 1;
-					break;
+                    valores[2] += 1;
+                    break;
 
-				case 8:
+                case 3:
 
-					valores[8] += 1;
-					break;
+                    valores[3] += 1;
+                    break;
 
-				case 9:
+                case 4:
 
-					valores[9] += 1;
-					break;
+                    valores[4] += 1;
+                    break;
 
-				case 10:
+                case 5:
 
-					valores[10] += 1;
-					break;
+                    valores[5] += 1;
+                    break;
 
-				case 11:
+                case 6:
 
-					valores[11] += 1;
-					break;
+                    valores[6] += 1;
+                    break;
 
-				case 12:
+                case 7:
 
-					valores[12] += 1;
-					break;
+                    valores[7] += 1;
+                    break;
 
-				case 13:
+                case 8:
 
-					valores[13] += 1;
-					break;
+                    valores[8] += 1;
+                    break;
 
-				case 14:
+                case 9:
 
-					valores[14] += 1;
-					break;
+                    valores[9] += 1;
+                    break;
 
-				case 15:
+                case 10:
 
-					valores[15] += 1;
-					break;
-				case 16:
+                    valores[10] += 1;
+                    break;
 
-					valores[16] += 1;
-					break;
+                case 11:
 
-				case 17:
+                    valores[11] += 1;
+                    break;
 
-					valores[17] += 1;
-					break;
+                case 12:
 
-				case 18:
+                    valores[12] += 1;
+                    break;
 
-					valores[18] += 1;
-					break;
+                case 13:
 
-				case 19:
+                    valores[13] += 1;
+                    break;
 
-					valores[19] += 1;
-					break;
+                case 14:
 
-				case 20:
+                    valores[14] += 1;
+                    break;
 
-					valores[20] += 1;
-					break;
+                case 15:
 
-			}
-		
-		}
-	
-	}
+                    valores[15] += 1;
+                    break;
+                case 16:
 
-	//modulo de impressão do histograma
-	public static void impressor () {
+                    valores[16] += 1;
+                    break;
 
-		System.out.println("\n\nHistograma de Notas:");
-		System.out.println("----------------------------------------------------------------");
-	
-		for (int i = 20; i >= 0; i--) {
-			
-			System.out.printf("%2d | ", i);
+                case 17:
 
-			for (int j = 1; j <= valores[i] && j <= 50; j++) {
-				
-				System.out.print("*");
+                    valores[17] += 1;
+                    break;
 
-			}
+                case 18:
 
-			System.out.println();
-		}
-	}
+                    valores[18] += 1;
+                    break;
+
+                case 19:
+
+                    valores[19] += 1;
+                    break;
+
+                case 20:
+
+                    valores[20] += 1;
+                    break;
+
+            }
+
+        }
+
+    }
+
+    //modulo de impressão do histograma
+    public static void impressor() {
+
+        System.out.println("\n\nHistograma de Notas:");
+        System.out.println("----------------------------------------------------------------");
+
+        for (int i = 20; i >= 0; i--) {
+
+            System.out.printf("%2d | ", i);
+
+            for (int j = 1; j <= valores[i] && j <= 50; j++) {
+
+                System.out.print("*");
+
+            }
+
+            System.out.println();
+        }
+    }
 
 }

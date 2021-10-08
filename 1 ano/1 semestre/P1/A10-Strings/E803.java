@@ -2,37 +2,37 @@ import java.util.*;
 
 public class E803 {
 
-	public static void main(String[] args) {
-		
-		Scanner k = new Scanner(System.in);
+    public static void main(String[] args) {
 
-		String fala;
-		int palavras;
+        Scanner k = new Scanner(System.in);
 
-		System.out.print("Frase-> ");
-		fala = k.nextLine();
+        String fala;
+        int palavras;
 
-		palavras = contador(fala);
+        System.out.print("Frase-> ");
+        fala = k.nextLine();
 
-		System.out.printf("A frase tem %d palvras.\n", palavras);
-	}
+        palavras = contador(fala);
 
-	//modulo pra contar as palavras
-	public static int contador(String l) {
+        System.out.printf("A frase tem %d palvras.\n", palavras);
+    }
 
-		int pal = 1;
+    //modulo pra contar as palavras
+    public static int contador(String l) {
 
-		for (int i = 0; i < l.length(); i++) {
-			
-			if (l.charAt(i) == ' ') {
-				
-				if (l.charAt(i + 1) != ' ') {
-				
-					pal++;	
-				}
-			}
-		}
+        int pal = 1;
 
-		return pal;
-	}
+        for (int i = 0; i < l.length(); i++) {
+
+            if (l.charAt(i) == ' ') {
+
+                if (l.charAt(i + 1) != ' ') {
+
+                    pal++;
+                }
+            }
+        }
+
+        return pal;
+    }
 }

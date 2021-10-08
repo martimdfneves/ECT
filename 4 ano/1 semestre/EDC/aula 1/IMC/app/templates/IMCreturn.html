@@ -1,0 +1,20 @@
+{% load mathfilters %}
+
+{% block content %}
+
+<p>Peso: {{ peso }}</p>
+{% if peso|div:((altura|div:100)|mul:(altura|div:100)) < 18,5 %}
+<p>Abaixo do peso ideal</p>
+{% elif peso|div:((altura|div:100)|mul:(altura|div:100)) < 25 %}
+<p>Peso normal</p>
+{% elif peso|div:((altura|div:100)|mul:(altura|div:100)) < 30 %}
+<p>Excesso de peso</p>
+{% elif peso|div:((altura|div:100)|mul:(altura|div:100)) < 35 %}
+<p>Obesidade(grau 1)</p>
+{% elif peso|div:((altura|div:100)|mul:(altura|div:100)) < 40 %}
+<p>Obesidade(grau 2)</p>
+{% else %}
+<p>Obesidade(grau 3)</p>
+{% endif %}
+
+{% endblock %}

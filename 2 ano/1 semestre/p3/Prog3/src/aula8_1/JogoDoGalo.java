@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class JogoDoGalo extends JFrame {
-	
+
     public static void main(String[] args) {
         JogoDoGalo jogo = new JogoDoGalo();
         jogo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -13,7 +13,7 @@ public class JogoDoGalo extends JFrame {
     }
 
     public JogoDoGalo() {
-    	
+
         this.setSize(400, 400);
         this.setTitle("Jogo do Galo");
         Board tabuleiro = new Board(this);
@@ -21,14 +21,14 @@ public class JogoDoGalo extends JFrame {
         panel.setLayout(new GridLayout(3, 3));
 
         int i, j;
-        for(i = 1; i <= 3; i++) 
-            for(j = 1; j <= 3; j++) 
+        for (i = 1; i <= 3; i++)
+            for (j = 1; j <= 3; j++)
                 panel.add(new Button(i, j, tabuleiro));
         this.add(panel, "Center");
     }
 
     public void notificaFim(int var1) {
-    	
+
         assert var1 >= -1 && var1 <= 1;
 
         String[] var2 = new String[]{"venceu jogador O", "empate", "venceu jogador X"};

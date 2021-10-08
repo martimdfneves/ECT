@@ -4,7 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public interface InterfaceAgenda {
-	
-	public void saveAgenda(File file, Contacto[] p) throws IOException;
-	public ArrayList<Contacto> loadAgenda(Scanner file) throws IOException;
+
+    public void saveAgenda(File file, Contacto[] p) throws IOException;
+
+    public ArrayList<Contacto> loadAgenda(Scanner file) throws IOException;
 }

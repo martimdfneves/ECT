@@ -2,57 +2,57 @@ import java.util.*;
 
 public class E410 {
 
-	public static void main(String[] args) {
-		
-		int num, div_sum;
+    public static void main(String[] args) {
 
-		Scanner k = new Scanner(System.in);
+        int num, div_sum;
 
-		System.out.println("Programa para saber se um número é perfeito ou não.\n");
+        Scanner k = new Scanner(System.in);
 
-		do {
+        System.out.println("Programa para saber se um número é perfeito ou não.\n");
 
-			System.out.print("Coloca um número: ");
-			num = k.nextInt();
+        do {
 
-			if (num <= 0) {
-				
-				System.out.println("Número negativo, logo não aceitável.\n");
+            System.out.print("Coloca um número: ");
+            num = k.nextInt();
 
-			}
+            if (num <= 0) {
 
-		} while (num <= 0);
+                System.out.println("Número negativo, logo não aceitável.\n");
 
-		System.out.printf("Divisores de %d:\n", num);
+            }
 
-		div_sum = 0;
+        } while (num <= 0);
 
-		//calcula a perfeição de um número oh tanso
-		for (int i = 1; i <= num; i++) {
-			
-			if (num % i == 0) {
-				
-				if (i != num) {
+        System.out.printf("Divisores de %d:\n", num);
 
-					div_sum += i;
+        div_sum = 0;
 
-				}
+        //calcula a perfeição de um número oh tanso
+        for (int i = 1; i <= num; i++) {
 
-				System.out.printf("%10d\n", i);
+            if (num % i == 0) {
+
+                if (i != num) {
+
+                    div_sum += i;
+
+                }
+
+                System.out.printf("%10d\n", i);
 
 
-			}
-		}
+            }
+        }
 
-		if (div_sum == num) {
-			
-			System.out.printf("\nO número %d é perfeito.\n", num);
-		
-		} else {
-			
-			System.out.printf("\nO número %d não é perfeito.\n", num);
+        if (div_sum == num) {
 
-		}
+            System.out.printf("\nO número %d é perfeito.\n", num);
 
-	}
+        } else {
+
+            System.out.printf("\nO número %d não é perfeito.\n", num);
+
+        }
+
+    }
 }

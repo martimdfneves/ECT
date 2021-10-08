@@ -4,124 +4,133 @@
 
 <head>
 
-<link rel="icon" href="http://lars.mec.ua.pt/public/LAR%20Projects/RobotNavigation/2015_IvanFerreira/pptTese/logo-ua~s800x800.png">
+    <link rel="icon"
+          href="http://lars.mec.ua.pt/public/LAR%20Projects/RobotNavigation/2015_IvanFerreira/pptTese/logo-ua~s800x800.png">
 
-<title>Evolução | Dispositivos de Armazenamento</title>
+    <title>Evolução | Dispositivos de Armazenamento</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript" src="grafico-linhas.js"></script>
-<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="grafico-linhas.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
-<link rel="stylesheet" href="estilo.css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
-<body class="body" onload="desenhaGrafico()"> 
-	
+<body class="body" onload="desenhaGrafico()">
+
 <div class="container">
-<nav class="navbar navbar-default">
-<div class="navbar-header">
-<a class="navbar-brand" href="index.html">Dispositivos de Armazenamento</a>
-</div>
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Dispositivos de Armazenamento</a>
+        </div>
 
-<div class="navbar-collapse collapse">
-<ul class="nav navbar-nav">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
 
-<li><a href="introducao.html">Introdução</a></li>
+                <li><a href="introducao.html">Introdução</a></li>
 
-<li><a href="definicao.html">Definição</a></li>
-<li><a href="classificacao.html">Classificação</a></li>
+                <li><a href="definicao.html">Definição</a></li>
+                <li><a href="classificacao.html">Classificação</a></li>
 
-<li class="dropdown">
-<a href="exemplos.html" class="dropdown-toggle" data-toggle="dropdown">
-Exemplos<b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li><a href="exemplos.html#disquete">Disquete</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#cd">CD</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#dvd">DVD</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#bluray">Disco Blu-ray</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#cartaomemoria">Cartão de Memória</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#pen">PEN Drive</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#hdd">Disco HDD</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#ssd">Disco SSD</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#externo">Disco Externo</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#ram">Memória RAM</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#rom">Memória ROM</a></li>
-<li class="divider"></li>
-<li><a href="exemplos.html#cache">Memória Cache</a></li>
-</ul>
-</li>
+                <li class="dropdown">
+                    <a href="exemplos.html" class="dropdown-toggle" data-toggle="dropdown">
+                        Exemplos<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="exemplos.html#disquete">Disquete</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#cd">CD</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#dvd">DVD</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#bluray">Disco Blu-ray</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#cartaomemoria">Cartão de Memória</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#pen">PEN Drive</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#hdd">Disco HDD</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#ssd">Disco SSD</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#externo">Disco Externo</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#ram">Memória RAM</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#rom">Memória ROM</a></li>
+                        <li class="divider"></li>
+                        <li><a href="exemplos.html#cache">Memória Cache</a></li>
+                    </ul>
+                </li>
 
-<li class="active"><a href="evolucao.html"><b>Evolução</b></a></li>
-<li><a href="conclusao.html">Conclusão</a></li>
-</ul>
+                <li class="active"><a href="evolucao.html"><b>Evolução</b></a></li>
+                <li><a href="conclusao.html">Conclusão</a></li>
+            </ul>
 
-<ul class="nav navbar-nav navbar-right">
-<li><a href="about.html">Acerca</a></li>
-</ul>
-</div>
-</nav>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="about.html">Acerca</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<a href="#" class="back-to-top" style="display: none;">
-<i class="fa fa-arrow-circle-up"></i>
-</a>
+    <a href="#" class="back-to-top" style="display: none;">
+        <i class="fa fa-arrow-circle-up"></i>
+    </a>
 
-<h1> </h1>
-<h1> </h1>
+    <h1></h1>
+    <h1></h1>
 
-<h2 class="title">Evolução</h2>
+    <h2 class="title">Evolução</h2>
 
-<h1> </h1>
+    <h1></h1>
 
-<p class="p">Com a evolução tecnológica os dispositivos de armazenamento estão cada vez menores no tamanho e maiores na capacidade.</p>
-<p class="p">De facto, desde a disquete ao <abbr title="Hard Disk">HD</abbr> externo, do <abbr title="Compact Disc">CD</abbr> e <abbr title="Digital Video Disc">DVD</abbr> até à pen, o tamanho físico reduziu significativamente mas, mais que isso,
-	a capacidade de armazenamento aumentou em cerca de 2 912 711 vezes! Isto aconteceu devido à evolução da tecnologia, ao aparecimento de ficheiros, programas, dados cada vez mais complexos e detalhados.
-	Claro que este tipo de arquivos também ocupava substancialmete mais espaço e como tal foi necessário o desenvolvimento de dispositivos de armazenamento com cada vez mais memória. 
-	Aliada à questão da memória estava a mobilidade. De novo a evolução da tecnologia fez com que os dados deixassem de poder estar parados num dispositivo e em vez disso tivessem que ser movidos, partilhados com outros dispositivos.
-	Claro que toda esta evolução acarreta vários custos, não só a nível monetário, mas também ao nível de preservar esses arquivos ao longo dos anos, pois nem todas as inovações que surgem são compatíveis entre si. </p>
+    <p class="p">Com a evolução tecnológica os dispositivos de armazenamento estão cada vez menores no tamanho e maiores
+        na capacidade.</p>
+    <p class="p">De facto, desde a disquete ao <abbr title="Hard Disk">HD</abbr> externo, do <abbr title="Compact Disc">CD</abbr>
+        e <abbr title="Digital Video Disc">DVD</abbr> até à pen, o tamanho físico reduziu significativamente mas, mais
+        que isso,
+        a capacidade de armazenamento aumentou em cerca de 2 912 711 vezes! Isto aconteceu devido à evolução da
+        tecnologia, ao aparecimento de ficheiros, programas, dados cada vez mais complexos e detalhados.
+        Claro que este tipo de arquivos também ocupava substancialmete mais espaço e como tal foi necessário o
+        desenvolvimento de dispositivos de armazenamento com cada vez mais memória.
+        Aliada à questão da memória estava a mobilidade. De novo a evolução da tecnologia fez com que os dados deixassem
+        de poder estar parados num dispositivo e em vez disso tivessem que ser movidos, partilhados com outros
+        dispositivos.
+        Claro que toda esta evolução acarreta vários custos, não só a nível monetário, mas também ao nível de preservar
+        esses arquivos ao longo dos anos, pois nem todas as inovações que surgem são compatíveis entre si. </p>
 
-<center>
-	<div id="grafico-linhas" style="width: 1100px; height: 600px;"></div>
-</center>
+    <center>
+        <div id="grafico-linhas" style="width: 1100px; height: 600px;"></div>
+    </center>
 
-<br></br>
+    <br></br>
 
-<script>
-jQuery(document).ready(function() {
-var offset = 150;
-var duration = 400;
-jQuery(window).scroll(function() {
-if (jQuery(this).scrollTop() > offset) {
-jQuery('.back-to-top').fadeIn(duration);
-} else {
-jQuery('.back-to-top').fadeOut(duration);
-}
-});
-jQuery('.back-to-top').click(function(event) {
-event.preventDefault();
-jQuery('html, body').animate({scrollTop: 0}, duration);
-return false;
-})
-});
-</script>
+    <script>
+        jQuery(document).ready(function () {
+            var offset = 150;
+            var duration = 400;
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.back-to-top').fadeIn(duration);
+                } else {
+                    jQuery('.back-to-top').fadeOut(duration);
+                }
+            });
+            jQuery('.back-to-top').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({scrollTop: 0}, duration);
+                return false;
+            })
+        });
+    </script>
 
 </body>
 </html>

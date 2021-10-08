@@ -5,7 +5,6 @@
  * implica a saída do primeiro (que deixa de existir).
  */
 
-public class LeakyQueue
-{
+public class LeakyQueue {
 }
 

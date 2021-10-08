@@ -1,42 +1,43 @@
 import static java.lang.Math.*;
+
 import java.util.*;
 
 public class E304 {
 
-	public static void main(String[] args) {
-		
-		Scanner k = new Scanner(System.in);
+    public static void main(String[] args) {
 
-		int secret, num, tentativas;
+        Scanner k = new Scanner(System.in);
 
-		//como fazer para que o número esteja entre 1 e 100
-		secret = (int)(random() * 100) + 1;
+        int secret, num, tentativas;
 
-		//se levar mais do que 7 tentativas matem, é burro cafode
-		num = tentativas = 0;
+        //como fazer para que o número esteja entre 1 e 100
+        secret = (int) (random() * 100) + 1;
 
-		System.out.println("Jogo do adivinha o número (agora de 0 a 100).");
-		System.out.println("---------------------------------------------");
+        //se levar mais do que 7 tentativas matem, é burro cafode
+        num = tentativas = 0;
 
-		do {
+        System.out.println("Jogo do adivinha o número (agora de 0 a 100).");
+        System.out.println("---------------------------------------------");
 
-			System.out.print("\nColoque um número: ");
-			num = k.nextInt();
-			System.out.println();
+        do {
 
-			if (num > secret) {
-				
-				System.out.printf("O número %d é maior do que o número escolhido.\nTenta outra vez.\n", num);
+            System.out.print("\nColoque um número: ");
+            num = k.nextInt();
+            System.out.println();
 
-			} else if (num < secret) {
-				
-				System.out.printf("O número %d é menor do que o número escolhido.\nTenta outra vez.\n", num);
-			}
+            if (num > secret) {
 
-			++tentativas;
-			
-		} while(num != secret);
+                System.out.printf("O número %d é maior do que o número escolhido.\nTenta outra vez.\n", num);
 
-		System.out.printf("Parabéns, ao fim de %d tentativas conseguiste acertar no número.\número", tentativas);
-	}
+            } else if (num < secret) {
+
+                System.out.printf("O número %d é menor do que o número escolhido.\nTenta outra vez.\n", num);
+            }
+
+            ++tentativas;
+
+        } while (num != secret);
+
+        System.out.printf("Parabéns, ao fim de %d tentativas conseguiste acertar no número.\número", tentativas);
+    }
 }

@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class b1_3 {
-    
+
     private static Scanner a;
-    
+
     public static void main(final String[] array) {
         final Map b = b("numbers.txt");
         while (b1_3.a.hasNextLine()) {
@@ -28,14 +28,14 @@ public class b1_3 {
             System.out.println();
         }
     }
-    
+
     private static Map b(String pathname) {
         final HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
         try {
             Scanner pathname1 = new Scanner(new File(pathname));
-            while (((Scanner)pathname1).hasNextLine()) {
+            while (((Scanner) pathname1).hasNextLine()) {
                 final String trim;
-                if ((trim = ((Scanner)pathname1).nextLine().trim()).length() > 0) {
+                if ((trim = ((Scanner) pathname1).nextLine().trim()).length() > 0) {
                     final String[] split;
                     if ((split = trim.split(" - ")).length != 2) {
                         System.err.println("ERROR: syntax error in number file!");
@@ -48,22 +48,20 @@ public class b1_3 {
                     }
                     try {
                         hashMap.put(lowerCase, Integer.parseInt(split[0]));
-                    }
-                    catch (NumberFormatException ex) {
+                    } catch (NumberFormatException ex) {
                         System.err.println("ERROR: invalid number \"" + split[0] + "\" in number file!");
                         System.exit(1);
                     }
                 }
             }
-            ((Scanner)pathname1).close();
-        }
-        catch (IOException ex2) {
+            ((Scanner) pathname1).close();
+        } catch (IOException ex2) {
             System.err.println("ERROR: reading number file!");
             System.exit(2);
         }
         return hashMap;
     }
-    
+
     static {
         b1_3.a = new Scanner(System.in);
     }

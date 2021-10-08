@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<curso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="curso.xsd">
+    <guid>383</guid>
+    <nome><![CDATA[Engenharia Informática]]></nome>
+    <nota></nota>
+    <imagem><![CDATA[https://acesso.ua.pt/upload/imagens/c_383.png]]></imagem>
+    <codigo>0300/9119</codigo>
+    <grau><![CDATA[Licenciatura]]></grau>
+    <grauid><![CDATA[2]]></grauid>
+    <ciclo>1</ciclo>
+    <duracao>3 anos, 6 semestres</duracao>
+    <ano_inicio>2014/2015</ano_inicio>
+    <regime><![CDATA[Diurno / laboral]]></regime>
+    <horario></horario>
+    <propinas><![CDATA[697,00€/ano]]></propinas>
+    <subsistema><![CDATA[Universitário]]></subsistema>
+    <areas>
+        <area><![CDATA[Informática]]></area>
+    </areas>
+    <director>
+        <titulo>Prof. Doutor</titulo>
+        <nome>Carlos Manuel Azevedo Costa</nome>
+        <email>carlos.costa@ua.pt</email>
+    </director>
+    <departamentos>
+        <departamento>
+            <nome>Departamento de Eletrónica, Telecomunicações e Informática</nome>
+            <url>http://www.ua.pt/deti</url>
+        </departamento>
+    </departamentos>
+    <medias>
+        <fase1>177,5</fase1>
+        <fase2>0</fase2>
+        <fase3>0</fase3>
+    </medias>
+    <vagas>
+        <fase1>60</fase1>
+        <fase2>1</fase2>
+        <fase3>0</fase3>
+    </vagas>
+    <abrecandidaturas>true</abrecandidaturas>
+    <provas><![CDATA[Um dos seguintes conjuntos:<br />
+19 Matemática A<br />
+      ou<br />
+02 Biologia e Geologia<br />
+19 Matemática A<br />
+      ou<br />
+07 Física e Química<br />
+19 Matemática A<br />
+<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul>]]></provas>
+    <ano_info><![CDATA[2020/2021]]></ano_info>
+    <saidas_profissionais>
+        <![CDATA[<p>No mercado de trabalho da Inform&aacute;tica em Portugal, na Europa e no mundo ainda faltam profissionais. Este&nbsp;ciclo de estudos contribui para fazer face &agrave;s necessidades desse mercado de trabalho, que &eacute; um dos mais&nbsp;est&aacute;veis e promissores para os jovens licenciados.</p>]]></saidas_profissionais>
+    <objectivos>
+        <![CDATA[<p>A Licenciatura em Engenharia Inform&aacute;tica da Universidade de Aveiro tem por finalidade fornecer uma forma&ccedil;&atilde;o s&oacute;lida em engenharia inform&aacute;tica, &aacute;rea que se tem vindo a revelar como o principal motor de desenvolvimento nas economias avan&ccedil;adas. Diferenciando-se de outros cursos existentes na Universidade de Aveiro, esta licenciatura oferece uma forma&ccedil;&atilde;o de 1&ordm; ciclo com uma &ecirc;nfase combinada em Engenharia de Software e Sistemas de Informa&ccedil;&atilde;o.&nbsp;<br /><br />Mais concretamente, esta licenciatura pretende fornecer as seguintes compet&ecirc;ncias:&nbsp;<br /><br />Compreender e utilizar metodologias de desenvolvimento de software em projetos de pequena e larga escala.&nbsp;<br />Planear e escrever programas corretos, robustos, eficientes, bem organizados e bem documentados.&nbsp;<br />Compreender e utilizar modelos e abstra&ccedil;&otilde;es na&nbsp;conce&ccedil;&atilde;o, implementa&ccedil;&atilde;o e utiliza&ccedil;&atilde;o de sistemas computacionais e de informa&ccedil;&atilde;o.&nbsp;<br />Entender os&nbsp;aspetos&nbsp;fundamentais em arquitetura de computadores e sistemas operativos, e a sua import&acirc;ncia no desenvolvimento e execu&ccedil;&atilde;o de aplica&ccedil;&otilde;es inform&aacute;ticas.&nbsp;<br />Aplicar conhecimento nas &aacute;reas de c&aacute;lculo, probabilidades, estat&iacute;stica e matem&aacute;tica discreta em problemas da &aacute;rea da inform&aacute;tica.&nbsp;<br />Aplicar t&eacute;cnicas de avalia&ccedil;&atilde;o e gest&atilde;o de qualidade em projetos de Engenharia Inform&aacute;tica.&nbsp;<br />Comunicar eficazmente e saber trabalhar em equipas multidisciplinares.&nbsp;<br />Reconhecer a necessidade de, e ter a capacidade para, se envolver ativamente num processo cont&iacute;nuo de aprendizagem ao longo da vida.&nbsp;<br />Os&nbsp;objetivos&nbsp;gerais da Licenciatura em Engenharia Inform&aacute;tica est&atilde;o especificamente estruturados nas vertentes de conhecimento, aplica&ccedil;&atilde;o de conhecimento, an&aacute;lise cr&iacute;tica, comunica&ccedil;&atilde;o eficaz e aprendizagem aut&oacute;noma,&nbsp;aspetos&nbsp;que de uma forma ou de outra fazem parte do&nbsp;projeto&nbsp;educativo da UA.</p>]]></objectivos>
+    <observacoes></observacoes>
+    <testemunho></testemunho>
+    <pre_requisitos></pre_requisitos>
+    <local><![CDATA[Campus Universitário de Santiago, Aveiro]]></local>
+    <urlmaisinfo></urlmaisinfo>
+    <urlcandidaturas></urlcandidaturas>
+    <urlmobilidade></urlmobilidade>
+    <m23>
+        <provas><![CDATA[matemática
+<a href="https://www.ua.pt/pt/exames" target=_blank>programa</a>]]></provas>
+        <vagas></vagas>
+        <urlinfo><![CDATA[http://www.ua.pt/pt/m23]]></urlinfo>
+        <observacoes></observacoes>
+    </m23>
+    <posgraduacoes>
+        <corpo_docente></corpo_docente>
+        <destinatarios></destinatarios>
+        <vagas></vagas>
+        <vagas_obs></vagas_obs>
+        <urlmobilidade></urlmobilidade>
+        <ano_info></ano_info>
+        <fases>
+
+        </fases>
+    </posgraduacoes>
+    <a3es>
+
+        <situacao><![CDATA[acreditado]]></situacao>
+        <numero><![CDATA[R/A-Cr 5/2014]]></numero>
+        <despacho><![CDATA[Despacho n.º 5955/2014]]></despacho>
+        <data><![CDATA[24/01/2014]]></data>
+        <deliberacao><![CDATA[https://www.a3es.pt/pt/resultados-acreditacao/engenharia-informatica-102]]></deliberacao>
+        <dr><![CDATA[Diário da República, 2.ª série — N.º 87 — 7 de maio de 2014]]></dr>
+
+    </a3es>
+    <acreditacoes>
+
+    </acreditacoes>
+    <ultimaalteracao><![CDATA[15/10/2020 10:30:00]]></ultimaalteracao>
+</curso>
+

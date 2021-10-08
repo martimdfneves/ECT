@@ -1,83 +1,83 @@
 import java.util.*;
 
-public class E1005{
-	
-	static Scanner k = new Scanner(System.in);
-	static boolean[] pert = new boolean[50];
+public class E1005 {
 
-	public static void main(String[] args) {
-		
-		lerchave();
-		printKey();
+    static Scanner k = new Scanner(System.in);
+    static boolean[] pert = new boolean[50];
 
-	}
+    public static void main(String[] args) {
 
-	//modulo de leitura da chave
-	public static void lerchave() {
+        lerchave();
+        printKey();
 
-		int i = 0;
-		int a;
+    }
 
-		for (int j = 0; j < 50; j++) {
-			pert[i] = false;
-		}
+    //modulo de leitura da chave
+    public static void lerchave() {
 
-		do{
-			System.out.printf("Número %d: ", i+1);
-			a = k.nextInt();
+        int i = 0;
+        int a;
 
-			i++;
+        for (int j = 0; j < 50; j++) {
+            pert[i] = false;
+        }
 
-			if (a > 49 || a < 1 || pertenceChave(a)) {
-				System.out.println("Já existe na chave, ou excede os limites");
-				i--;
-			}
+        do {
+            System.out.printf("Número %d: ", i + 1);
+            a = k.nextInt();
 
-		}while((a > 49 || a < 1 || pertenceChave(a)) && i<6);
-	}
+            i++;
 
-	//verificação da chave
-	public static boolean pertenceChave(int a){
+            if (a > 49 || a < 1 || pertenceChave(a)) {
+                System.out.println("Já existe na chave, ou excede os limites");
+                i--;
+            }
 
-		boolean volta = false;
+        } while ((a > 49 || a < 1 || pertenceChave(a)) && i < 6);
+    }
 
-		if (pert[a-1]) {
-			
-			volta = true;
-		
-		} else if (!pert[a]) {
-		
-			volta = false;
-			pert[a-1] = true;	
-		}
+    //verificação da chave
+    public static boolean pertenceChave(int a) {
 
-		return volta;
-	}
+        boolean volta = false;
 
-	//imprime a chave
-	public static void printKey() {
+        if (pert[a - 1]) {
 
-		System.out.println();
+            volta = true;
 
-		for (int i = 0; i < 50; i++) {
-			
-			System.out.printf("|%2d", i+1);
-		}
+        } else if (!pert[a]) {
 
-		System.out.println();
+            volta = false;
+            pert[a - 1] = true;
+        }
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (pert[i]) {
-			
-				System.out.print("|T ");
-			
-			} else if (!pert[i]) {
-				
-				System.out.print("|  ");
-			} 
-		}
+        return volta;
+    }
 
-		System.out.println();
-	}
+    //imprime a chave
+    public static void printKey() {
+
+        System.out.println();
+
+        for (int i = 0; i < 50; i++) {
+
+            System.out.printf("|%2d", i + 1);
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 50; i++) {
+
+            if (pert[i]) {
+
+                System.out.print("|T ");
+
+            } else if (!pert[i]) {
+
+                System.out.print("|  ");
+            }
+        }
+
+        System.out.println();
+    }
 }

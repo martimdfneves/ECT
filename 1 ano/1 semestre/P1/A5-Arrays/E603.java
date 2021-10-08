@@ -2,216 +2,216 @@ import java.util.*;
 
 public class E603 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	//array global
-	static int numeros[] = new int[50];
+    //array global
+    static int numeros[] = new int[50];
 
-	public static void main(String[] args) {
-		
-		//variável da escolha
-		int escolha;
+    public static void main(String[] args) {
 
-		System.out.println("Programa para escolher o que fazer a uma sequência.");
-		System.out.println("---------------------------------------------------");
-		
-		System.out.println("\nAnálise de uma sequência de números inteiros:");
-		System.out.println("\t 1 -> Ler a sequência, se colocar 0 termina o programa");
-		System.out.println("\t 2 -> Escrever a sequência");
-		System.out.println("\t 3 -> Calcular o máximo desta sucessão.");
-		System.out.println("\t 4 -> Calcular o mínimo desta sucessão.");
-		System.out.println("\t 5 -> Calcular a média desta sucessão.");
-		System.out.println("\t 6 -> Detetar se é uma sequência só constituída por números pares.");
-		System.out.println("\t10 -> Terminar o programa.");
-		
-		//o que acontece em cada escolha
-		do {
+        //variável da escolha
+        int escolha;
 
-			System.out.print("\nOpção: ");
-			escolha = k.nextInt();
+        System.out.println("Programa para escolher o que fazer a uma sequência.");
+        System.out.println("---------------------------------------------------");
 
+        System.out.println("\nAnálise de uma sequência de números inteiros:");
+        System.out.println("\t 1 -> Ler a sequência, se colocar 0 termina o programa");
+        System.out.println("\t 2 -> Escrever a sequência");
+        System.out.println("\t 3 -> Calcular o máximo desta sucessão.");
+        System.out.println("\t 4 -> Calcular o mínimo desta sucessão.");
+        System.out.println("\t 5 -> Calcular a média desta sucessão.");
+        System.out.println("\t 6 -> Detetar se é uma sequência só constituída por números pares.");
+        System.out.println("\t10 -> Terminar o programa.");
 
-			switch (escolha) {
+        //o que acontece em cada escolha
+        do {
 
-				case 10:
+            System.out.print("\nOpção: ");
+            escolha = k.nextInt();
 
-					break;
 
-				case 1:
+            switch (escolha) {
 
-					leitor();
-					break;
+                case 10:
 
-				case 2:
+                    break;
 
-					escritor();
-					break;
+                case 1:
 
-				case 3:
+                    leitor();
+                    break;
 
-					maximizante();
-					break;
+                case 2:
 
-				case 4:
+                    escritor();
+                    break;
 
-					minimizante();
-					break;
+                case 3:
 
-				case 5:
+                    maximizante();
+                    break;
 
-					media();
-					break;
+                case 4:
 
-				case 6:
+                    minimizante();
+                    break;
 
-					pares();
-					break;
+                case 5:
 
-				default:
+                    media();
+                    break;
 
-					System.out.println("Escolha não aceite coloca outra.");
-					System.out.print("\nOpção: ");
-					escolha = k.nextInt();
+                case 6:
 
-			}
+                    pares();
+                    break;
 
-		} while(escolha != 10);
+                default:
 
-	}
+                    System.out.println("Escolha não aceite coloca outra.");
+                    System.out.print("\nOpção: ");
+                    escolha = k.nextInt();
 
-	//modulo de leitura da lista
-	public static void leitor() {
+            }
 
-		for (int i = 0; i < 50; i++) {
+        } while (escolha != 10);
 
-			System.out.printf("\nvalor #%2d: ", i + 1);
-			numeros[i] = k.nextInt();
+    }
 
-			if (numeros[i] == 0) {
-							
-				break;
-			
-			}
-		}
-	}
+    //modulo de leitura da lista
+    public static void leitor() {
 
-	//modulo de impressao da lista
-	public static void escritor() {
+        for (int i = 0; i < 50; i++) {
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+            System.out.printf("\nvalor #%2d: ", i + 1);
+            numeros[i] = k.nextInt();
 
-			}
+            if (numeros[i] == 0) {
 
-			System.out.printf("\nValor #%2d: %3d",i + 1, numeros[i]);
-			
-		}
+                break;
 
-		System.out.println();
-	}
+            }
+        }
+    }
 
-	//modulo de calculo do maximizante
-	public static void maximizante () {
-		
-		int max = 0;
+    //modulo de impressao da lista
+    public static void escritor() {
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] > max) {
-				
-				max = numeros[i];
+        for (int i = 0; i < 50; i++) {
 
-			}
-		}
+            if (numeros[i] == 0) {
 
-		System.out.printf("\nO máximo desta sequência é %3d.\n",max);
-	}
+                break;
 
-	//modulo de calculo do minimizante
-	public static void minimizante () {
-		
-		int min = 12431234;
+            }
 
-		for (int i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+            System.out.printf("\nValor #%2d: %3d", i + 1, numeros[i]);
 
-			}
+        }
 
-			if (numeros[i] < min) {
-				
-				min = numeros[i];
+        System.out.println();
+    }
 
-			}
-		}
+    //modulo de calculo do maximizante
+    public static void maximizante() {
 
-		System.out.printf("\nO minimo desta sequência é %3d.\n",min);
-	}
+        int max = 0;
 
-	//modulo de calculo da media
-	public static void media () {
+        for (int i = 0; i < 50; i++) {
 
-		double media = 0;
+            if (numeros[i] > max) {
 
-		int i;
+                max = numeros[i];
 
-		for (i = 0; i < 50; i++) {
-			
-			if (numeros[i] == 0) {
-				
-				break;
+            }
+        }
 
-			}
+        System.out.printf("\nO máximo desta sequência é %3d.\n", max);
+    }
 
-			media += numeros[i];
+    //modulo de calculo do minimizante
+    public static void minimizante() {
 
-		}
+        int min = 12431234;
 
-		media /= i;
+        for (int i = 0; i < 50; i++) {
 
-		System.out.printf("\nA média da sequência é %4.2f\n", media);
-	}
+            if (numeros[i] == 0) {
 
-	//modulo pra calcular se a lista é apenas composta por números pares
-	public static void pares () {
+                break;
 
-		boolean pares = false;
+            }
 
-		for (int j = 0; j < 50; j++) {
-			
-			for (int i = 1; i < numeros[j]; i++) {
-				
-				if (numeros[j] == 0) {
-				
-					break;
+            if (numeros[i] < min) {
 
-				}	
+                min = numeros[i];
 
-				if (numeros[j] % 2 != 0) {
-					
-					pares = false;
+            }
+        }
 
-				} else {
+        System.out.printf("\nO minimo desta sequência é %3d.\n", min);
+    }
 
-					pares = true;
+    //modulo de calculo da media
+    public static void media() {
 
-				}
-			}
-		}
+        double media = 0;
 
-		if (pares) {
-			
-			System.out.println("\n\nA lista é constituída apenas por números pares.");
+        int i;
 
-		} else {
-			
-			System.out.println("\n\nA lista não é constituída apenas por números pares.");
+        for (i = 0; i < 50; i++) {
 
-		}
-	}
+            if (numeros[i] == 0) {
+
+                break;
+
+            }
+
+            media += numeros[i];
+
+        }
+
+        media /= i;
+
+        System.out.printf("\nA média da sequência é %4.2f\n", media);
+    }
+
+    //modulo pra calcular se a lista é apenas composta por números pares
+    public static void pares() {
+
+        boolean pares = false;
+
+        for (int j = 0; j < 50; j++) {
+
+            for (int i = 1; i < numeros[j]; i++) {
+
+                if (numeros[j] == 0) {
+
+                    break;
+
+                }
+
+                if (numeros[j] % 2 != 0) {
+
+                    pares = false;
+
+                } else {
+
+                    pares = true;
+
+                }
+            }
+        }
+
+        if (pares) {
+
+            System.out.println("\n\nA lista é constituída apenas por números pares.");
+
+        } else {
+
+            System.out.println("\n\nA lista não é constituída apenas por números pares.");
+
+        }
+    }
 }

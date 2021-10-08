@@ -5,27 +5,27 @@ import java.util.List;
 
 public class SeasonPasses {
 
-		private int i;
-		private String employees[];
+    private int i;
+    private String employees[];
 
-		public SeasonPasses(String employees[]) {
-			
-			i = 0;
-			this.employees = employees;
-		}
+    public SeasonPasses(String employees[]) {
 
-		public List<String> give(int amount) {
-			
-			List<String> getters = new ArrayList<>();
-			for (int j = 0; j < amount; j++)
-				getters.add(give());
+        i = 0;
+        this.employees = employees;
+    }
 
-			return getters;
-		}
+    public List<String> give(int amount) {
 
-		private String give() {
-			
-			i = (i + 1) % employees.length;
-			return employees[i];
-		}
+        List<String> getters = new ArrayList<>();
+        for (int j = 0; j < amount; j++)
+            getters.add(give());
+
+        return getters;
+    }
+
+    private String give() {
+
+        i = (i + 1) % employees.length;
+        return employees[i];
+    }
 }

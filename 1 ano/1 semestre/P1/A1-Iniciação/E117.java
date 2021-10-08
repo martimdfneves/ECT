@@ -2,30 +2,30 @@ import java.util.*;
 
 public class E117 {
 
-	public static void main(String[] args) {
-		
-		//declaração do teclado
-		Scanner keyboard = new Scanner(System.in);
+    public static void main(String[] args) {
 
-		//delcaração das variáveis
-		double iva, totalliq, valorpd, disc;
+        //declaração do teclado
+        Scanner keyboard = new Scanner(System.in);
 
-		//iva
-		System.out.print("Qual o valor do iva? ");
-		iva = keyboard.nextDouble() / 100;
+        //delcaração das variáveis
+        double iva, totalliq, valorpd, disc;
 
-		//desconto
-		System.out.print("Qual o valor do desconto? ");
-		disc = keyboard.nextDouble();
+        //iva
+        System.out.print("Qual o valor do iva? ");
+        iva = keyboard.nextDouble() / 100;
 
-		//valor dos produtos
-		System.out.print("Qual o valor dos produtos? ");
-		valorpd = keyboard.nextDouble();
+        //desconto
+        System.out.print("Qual o valor do desconto? ");
+        disc = keyboard.nextDouble();
 
-		//valor da fatura
-		totalliq = valorpd + valorpd * iva - disc;
+        //valor dos produtos
+        System.out.print("Qual o valor dos produtos? ");
+        valorpd = keyboard.nextDouble();
 
-		System.out.printf("A fatura terá um valor de %4.2f €.\n", totalliq);
+        //valor da fatura
+        totalliq = valorpd + valorpd * iva - disc;
 
-	}
+        System.out.printf("A fatura terá um valor de %4.2f €.\n", totalliq);
+
+    }
 }

@@ -1,7 +1,6 @@
 import static java.lang.System.*;
 
-public class UnitaryFractionSum
-{
+public class UnitaryFractionSum {
 
 }
 

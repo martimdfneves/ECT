@@ -2,49 +2,49 @@ import java.util.*;
 
 public class E807 {
 
-	public static void main(String[] args) {
-		
-		Scanner k = new Scanner(System.in);
+    public static void main(String[] args) {
 
-		String pre;
-		String pos;
+        Scanner k = new Scanner(System.in);
 
-		System.out.print("Frase -> ");
-		pre = k.nextLine();
+        String pre;
+        String pos;
 
-		pos = capitalize(pre);
+        System.out.print("Frase -> ");
+        pre = k.nextLine();
 
-		System.out.printf("Capitalizada -> %s\n", pos);
-	}
+        pos = capitalize(pre);
 
-	//modulo para colocar a primeira letra de cada frase em maiuscula
-	public static String capitalize(String pre) {
+        System.out.printf("Capitalizada -> %s\n", pos);
+    }
 
-		String pos = "";
+    //modulo para colocar a primeira letra de cada frase em maiuscula
+    public static String capitalize(String pre) {
 
-		for (int i = 0; i < pre.length(); i++) {
+        String pos = "";
 
-			// primeira letra
-			if (i == 0) {
-				
-				pos += Character.toUpperCase(pre.charAt(0)); 
-			
-			//caso seja espaço
-			} else if (pre.charAt(i) == ' ') {
-				
-				pos += " " + Character.toUpperCase(pre.charAt(i + 1));
-			
-			//caso a anterior seja espaço
-			} else if (pre.charAt(i - 1) == ' ') {
+        for (int i = 0; i < pre.length(); i++) {
 
-				;
-				
-			} else {
+            // primeira letra
+            if (i == 0) {
 
-				pos += pre.charAt(i);
-			}
-		}
+                pos += Character.toUpperCase(pre.charAt(0));
 
-		return pos;
-	}
+                //caso seja espaço
+            } else if (pre.charAt(i) == ' ') {
+
+                pos += " " + Character.toUpperCase(pre.charAt(i + 1));
+
+                //caso a anterior seja espaço
+            } else if (pre.charAt(i - 1) == ' ') {
+
+                ;
+
+            } else {
+
+                pos += pre.charAt(i);
+            }
+        }
+
+        return pos;
+    }
 }

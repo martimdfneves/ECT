@@ -1,4 +1,5 @@
 # iia-ia-bomberman
+
 Bomberman clone for AI teaching
 
 ![Demo](https://github.com/dgomes/iia-ia-bomberman/raw/master/data/DemoBomberman.gif)
@@ -38,6 +39,7 @@ Make sure pygame is properly installed:
 python -m pygame.examples.aliens
 
 # Tested on:
+
 - Ubuntu 18.04
 - OSX 10.14.6
 - Windows 10.0.18362

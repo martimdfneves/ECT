@@ -2,39 +2,39 @@ import java.util.*;
 
 public class E310 {
 
-	public static void main(String[] args) {
-		
-		int nums, prev_num, highest, lowest;
+    public static void main(String[] args) {
 
-		Scanner k = new Scanner(System.in);
+        int nums, prev_num, highest, lowest;
 
-		System.out.println("Quando quiseres terminar o programa coloca um número e o seu dobro imediatamente a seguir.");
+        Scanner k = new Scanner(System.in);
 
-		System.out.println("Inicio:");
+        System.out.println("Quando quiseres terminar o programa coloca um número e o seu dobro imediatamente a seguir.");
 
-		nums = k.nextInt();
+        System.out.println("Inicio:");
 
-		prev_num = highest = lowest = nums;
+        nums = k.nextInt();
 
-		do {
+        prev_num = highest = lowest = nums;
 
-			prev_num = nums;
-			
-			nums = k.nextInt();
+        do {
 
-			if (nums > highest) {
-				
-				highest = nums;
+            prev_num = nums;
 
-			} else if (nums < lowest) {
-				
-				lowest = nums;
+            nums = k.nextInt();
 
-			}
+            if (nums > highest) {
 
-		} while(nums != (2 * prev_num));
+                highest = nums;
 
-		System.out.printf("O programa parou porque %d é igual ao dobro de %d, o maior número registado foi %d e o menor foi %d.\n", nums, prev_num, highest, lowest);
+            } else if (nums < lowest) {
 
-	}
+                lowest = nums;
+
+            }
+
+        } while (nums != (2 * prev_num));
+
+        System.out.printf("O programa parou porque %d é igual ao dobro de %d, o maior número registado foi %d e o menor foi %d.\n", nums, prev_num, highest, lowest);
+
+    }
 }

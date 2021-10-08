@@ -3,60 +3,60 @@ import java.io.*;
 
 public class E907 {
 
-	public static void main(String[] args) throws IOException {
-		
-		Scanner k = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-		File read;
-		String name;
+        Scanner k = new Scanner(System.in);
 
-		do {
-			System.out.print("Qual o ficheiro para ler? ");
-			name = k.next();
+        File read;
+        String name;
 
-			read = new File(name);
+        do {
+            System.out.print("Qual o ficheiro para ler? ");
+            name = k.next();
 
-			if (!read.exists()) {
-				
-				System.out.print("Ficheiro não existente, coloque outro.");
-			}
-		} while (!read.exists());
+            read = new File(name);
 
-		Scanner kfile = new Scanner(read);
+            if (!read.exists()) {
 
-		while(kfile.hasNext()) {
+                System.out.print("Ficheiro não existente, coloque outro.");
+            }
+        } while (!read.exists());
 
-			while (kfile.hasNext()) {
+        Scanner kfile = new Scanner(read);
 
-				String linha = kfile.nextLine();
-				String imprimi = "";
+        while (kfile.hasNext()) {
 
-				for (int i = 0; i < linha.length(); i++) {
-						
-					if (i >= 2) {
-						
-						if (linha.charAt(i - 2) != '.' && linha.charAt(i - 1) != '.') {
-							
-							imprimi += Character.toLowerCase(linha.charAt(i));
-						
-						} else if (linha.charAt(i - 2) == '.' || linha.charAt(i - 1) == '.') {
-							
-							imprimi += Character.toUpperCase(linha.charAt(i));	
-						}
-					} else if (i == 0) {
+            while (kfile.hasNext()) {
 
-						imprimi += Character.toUpperCase(linha.charAt(0));
-					
-					} else if (i == 1) {
+                String linha = kfile.nextLine();
+                String imprimi = "";
 
-							imprimi += Character.toLowerCase(linha.charAt(1));
-					}
-				}
+                for (int i = 0; i < linha.length(); i++) {
 
-				System.out.print(imprimi);
-			}
-		}
+                    if (i >= 2) {
 
-		System.out.println();
-	}
+                        if (linha.charAt(i - 2) != '.' && linha.charAt(i - 1) != '.') {
+
+                            imprimi += Character.toLowerCase(linha.charAt(i));
+
+                        } else if (linha.charAt(i - 2) == '.' || linha.charAt(i - 1) == '.') {
+
+                            imprimi += Character.toUpperCase(linha.charAt(i));
+                        }
+                    } else if (i == 0) {
+
+                        imprimi += Character.toUpperCase(linha.charAt(0));
+
+                    } else if (i == 1) {
+
+                        imprimi += Character.toLowerCase(linha.charAt(1));
+                    }
+                }
+
+                System.out.print(imprimi);
+            }
+        }
+
+        System.out.println();
+    }
 }

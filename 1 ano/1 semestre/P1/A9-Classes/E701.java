@@ -2,86 +2,86 @@ import java.util.*;
 
 public class E701 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		
-		Hora inicio = new Hora();
-		Hora fim = new Hora();
+    public static void main(String[] args) {
 
-		String dinit = "inicial";
-		inicio.horas = 9;
-		inicio.minutos = 0;
-		inicio.segundos = 0;
+        Hora inicio = new Hora();
+        Hora fim = new Hora();
 
-		String dfim = "final";
+        String dinit = "inicial";
+        inicio.horas = 9;
+        inicio.minutos = 0;
+        inicio.segundos = 0;
 
-		System.out.println("A que horas acaba a aula?");
-		fim = lerHora();
+        String dfim = "final";
 
-		System.out.println("Classe aula:");
-		printHora(inicio, dinit);
-		printHora(fim, dfim);
-	}
+        System.out.println("A que horas acaba a aula?");
+        fim = lerHora();
 
-	//modulo pra imprimir a hora
-	public static void printHora(Hora in, String j) {
+        System.out.println("Classe aula:");
+        printHora(inicio, dinit);
+        printHora(fim, dfim);
+    }
 
-		System.out.printf("Hora %s: %2d:%2d:%2d\n", j, in.horas, in.minutos, in.segundos);
-	}
+    //modulo pra imprimir a hora
+    public static void printHora(Hora in, String j) {
 
-	//modulo pra ler a hora
-	public static Hora lerHora() {
+        System.out.printf("Hora %s: %2d:%2d:%2d\n", j, in.horas, in.minutos, in.segundos);
+    }
 
-		Hora h = new Hora();
+    //modulo pra ler a hora
+    public static Hora lerHora() {
 
-		//ler as horas
-		do {
-			
-			System.out.print("Hora: ");
-			h.horas = k.nextInt();
+        Hora h = new Hora();
 
-			if (h.horas < 0 || h.horas >= 24) {
+        //ler as horas
+        do {
 
-				System.out.println("\nHora não aceitável, coloque a outra");
-			
-			}
-		} while(h.horas < 0 || h.horas >= 24);
+            System.out.print("Hora: ");
+            h.horas = k.nextInt();
 
-		//ler os minutos
-		do {
+            if (h.horas < 0 || h.horas >= 24) {
 
-			System.out.print("Minutos: ");
-			h.minutos = k.nextInt();
+                System.out.println("\nHora não aceitável, coloque a outra");
 
-			if (h.minutos < 0 || h.minutos >= 60) {
-				
-				System.out.println("\nHora não aceitável, coloque a outra");
-			
-			}
-		} while(h.minutos < 0 || h.minutos >= 60);
+            }
+        } while (h.horas < 0 || h.horas >= 24);
 
-		//ler os segundos
-		do {
+        //ler os minutos
+        do {
 
-			System.out.print("Segundos: ");
-			h.segundos = k.nextInt();
+            System.out.print("Minutos: ");
+            h.minutos = k.nextInt();
 
-			if (h.segundos < 0 || h.segundos >= 60) {
-				
-				System.out.println("\nHora não aceitável, coloque a outra");
-			
-			}
-		} while(h.segundos < 0 || h.segundos >= 60);
+            if (h.minutos < 0 || h.minutos >= 60) {
 
-		return h;
-	}
+                System.out.println("\nHora não aceitável, coloque a outra");
+
+            }
+        } while (h.minutos < 0 || h.minutos >= 60);
+
+        //ler os segundos
+        do {
+
+            System.out.print("Segundos: ");
+            h.segundos = k.nextInt();
+
+            if (h.segundos < 0 || h.segundos >= 60) {
+
+                System.out.println("\nHora não aceitável, coloque a outra");
+
+            }
+        } while (h.segundos < 0 || h.segundos >= 60);
+
+        return h;
+    }
 }
 
 //classe da hora
 class Hora {
 
-	int horas;
-	int minutos;
-	int segundos;
+    int horas;
+    int minutos;
+    int segundos;
 }

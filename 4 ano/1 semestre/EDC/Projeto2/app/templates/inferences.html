@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3 style="color: black ">Inferences</h3></th>
+<br/>
+<p><b>Big countries (area and population) ordered by population: </b></p>
+<table>
+    <tbody>
+    {% for code,name in ret1.items %}
+    <tr>
+        <td><a style="color: #000000; padding-left: 25px" href="/countries/{{ code }}">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<p></p>
+<p><b>Countries where the majority of people speak english ordered by percentage: </b></p>
+<table>
+    <tbody>
+    {% for code,name in ret2.items %}
+    <tr>
+        <td><a style="color: black; padding-left: 25px" href="/countries/{{ code }}">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<p></p>
+<p><b>High density provinces ordered by density: </b></p>
+<table>
+    <tbody>
+    {% for code,name in ret3.items %}
+    <tr>
+        <td><a style="color: black; padding-left: 25px" href="/province/{{ code }}">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<p></p>
+<p><b>Rivers that flow north (at least 5 degrees in latitude) ordered by latitude difference between source and
+    estuary: </b></p>
+<table>
+    <tbody>
+    {% for code,name in ret4.items %}
+    <tr>
+        <td><a style="color: black; padding-left: 25px" href="/rivers/{{ code }}">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<p></p>
+<p><b>High mountains(every peak above 8000 meters) ordered by elevation: </b></p>
+<table>
+    <tbody>
+    {% for code,name in ret5.items %}
+    <tr>
+        <td><a style="color: black; padding-left: 25px" href="/mountains/{{ code }}">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<p></p>
+<p><b>Good countries to live in (high gdp per capita, low unemployment, low inflation, low infant mortality) ordered by
+    gdp per capita: </b></p>
+<table>
+    <tbody>
+    {% for code,name in ret6.items %}
+    <tr>
+        <td><a style="color: black; padding-left: 25px" href="/countries/{{ code }}">{{ name }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

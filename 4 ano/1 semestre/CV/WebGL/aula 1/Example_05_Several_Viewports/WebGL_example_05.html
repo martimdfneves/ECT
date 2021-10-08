@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <!--
+
+    WebGL_example_05.html
+
+    Simple WebGL example: viewports in different canvases
+
+    J. Madeira - May 2015
+
+    -->
+
+    <title>WebGL example 05 &mdash; Several viewports</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+    <script type="text/javascript">
+
+        var gl_arr = [null, null]; // WebGL context
+
+        function initWebGL(idx, rgba, canvas) {
+            try {
+                // Create the WebGL context
+                // Some browsers still need "experimental-webgl"
+
+                gl_arr[idx] = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+
+                // DEFAULT: The viewport occupies the whole canvas
+
+                // The viewport (R,G,B,A) background color: BLACK
+
+                gl_arr[idx].clearColor(rgba[0], rgba[1], rgba[2], rgba[3]);
+
+                var s = document.getElementById("bg-selection");
+
+                s.addEventListener("click", function () {
+                    // Getting the selection
+                    var color = s.selectedIndex;
+
+                    switch (color) {
+                        case 0 :
+                            gl_arr[0].clearColor(1.0, 0.0, 0.0, 1.0);
+                            break;
+                        case 1 :
+                            gl_arr[0].clearColor(0.0, 1.0, 0.0, 1.0);
+                            break;
+                        case 2 :
+                            gl_arr[0].clearColor(0.0, 0.0, 1.0, 1.0);
+                            break;
+                        case 3 :
+                            gl_arr[0].clearColor(1.0, 1.0, 1.0, 1.0);
+                            break;
+                        case 4 :
+                            gl_arr[0].clearColor(0.0, 0.0, 0.0, 1.0);
+                            break;
+                        case 5 :
+                            gl_arr[0].clearColor(1.0, 0.0, 1.0, 1.0);
+                            break;
+                    }
+
+                    // Render the viewport
+                    render(idx);
+                });
+
+                var s2 = document.getElementById("bg-selection2");
+
+                s2.addEventListener("click", function () {
+                    // Getting the selection
+                    var color2 = s2.selectedIndex;
+
+                    switch (color2) {
+                        case 0 :
+                            gl_arr[1].clearColor(1.0, 0.0, 0.0, 1.0);
+                            break;
+                        case 1 :
+                            gl_arr[1].clearColor(0.0, 1.0, 0.0, 1.0);
+                            break;
+                        case 2 :
+                            gl_arr[1].clearColor(0.0, 0.0, 1.0, 1.0);
+                            break;
+                        case 3 :
+                            gl_arr[1].clearColor(1.0, 1.0, 1.0, 1.0);
+                            break;
+                        case 4 :
+                            gl_arr[1].clearColor(0.0, 0.0, 0.0, 1.0);
+                            break;
+                        case 5 :
+                            gl_arr[1].clearColor(1.0, 0.0, 1.0, 1.0);
+                            break;
+                    }
+
+                    // Render the viewport
+                    render(idx);
+                });
+
+            } catch (e) {
+            }
+            if (!gl_arr[idx]) {
+                alert("Could not initialise WebGL, sorry! :-(");
+            }
+        }
+
+        function render(idx) {
+            // Clearing with the background color
+
+            gl_arr[idx].clear(gl_arr[idx].COLOR_BUFFER_BIT);
+        }
+
+        function runWebGL() {
+            var canvas_01 = document.getElementById("canvas-01");
+            initWebGL(0, [1.0, 0.0, 0.0, 1.0], canvas_01);
+            render(0);
+
+            var canvas_02 = document.getElementById("canvas-02");
+            initWebGL(1, [1.0, 1.0, 0.0, 1.0], canvas_02);
+            render(1);
+        }
+
+    </script>
+
+</head>
+
+<body onload="runWebGL();">
+
+<div style="text-align: center">
+
+    <p>A 200 x 500 viewport!</p>
+
+    <canvas id="canvas-01" style="border: none" width="500" height="200"></canvas>
+
+    <select id="bg-selection">
+        <option value="0">Red</option>
+        <option value="1">Green</option>
+        <option value="2">Blue</option>
+        <option value="3">White</option>
+        <option value="4">Black</option>
+        <option value="5">Purple</option>
+    </select>
+
+    <p>Another 200 x 500 viewport!</p>
+
+    <canvas id="canvas-02" style="border: none" width="500" height="200"></canvas>
+
+    <select id="bg-selection2">
+        <option value="0">Red</option>
+        <option value="1">Green</option>
+        <option value="2">Blue</option>
+        <option value="3">White</option>
+        <option value="4">Black</option>
+        <option value="5">Purple</option>
+    </select>
+
+</div>
+
+</body>
+
+</html>

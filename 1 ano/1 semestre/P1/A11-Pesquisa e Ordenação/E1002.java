@@ -2,80 +2,80 @@ import java.util.*;
 
 public class E1002 {
 
-	static Scanner k = new Scanner(System.in);
+    static Scanner k = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		
-		int[] chave = new int[6];
+    public static void main(String[] args) {
 
-		chave = lerChave(chave);
+        int[] chave = new int[6];
 
-		mostraChave(chave);
-	}
+        chave = lerChave(chave);
 
-	//modulo de leitura da chave
-	public static int[] lerChave(int[] chave) {
+        mostraChave(chave);
+    }
 
-		for (int i = 0; i < chave.length; i++) {
-			
-			do{
-				System.out.printf("Elemento %d da chave: ", i + 1);
-				chave[i] = k.nextInt();
+    //modulo de leitura da chave
+    public static int[] lerChave(int[] chave) {
 
-				if ((chave[i] > 49 || chave[i] < 1) || pertenceChave(chave, i)) {
-					
-					System.out.println("Elemento não aceite, coloque outro.");
-				}
-			}while(chave[i] > 49 || chave[i] < 1 || pertenceChave(chave, i));
-		}
+        for (int i = 0; i < chave.length; i++) {
 
-		return chave;
-	}
+            do {
+                System.out.printf("Elemento %d da chave: ", i + 1);
+                chave[i] = k.nextInt();
 
-	//modulo de teste de verificação se um numero pertence ou não à chave
-	public static boolean pertenceChave (int[] chave, int fix){
+                if ((chave[i] > 49 || chave[i] < 1) || pertenceChave(chave, i)) {
 
-		boolean pertence = false;
+                    System.out.println("Elemento não aceite, coloque outro.");
+                }
+            } while (chave[i] > 49 || chave[i] < 1 || pertenceChave(chave, i));
+        }
 
-		for (int i = 0; i < fix; i++) {
-			
-			if (chave[i] == chave[fix]) {
-				
-				pertence = true;
-			}
-		}
-		return pertence;
-	}
+        return chave;
+    }
 
-	//modulo para imprimir a chave
-	public static void mostraChave(int[] chave) {
+    //modulo de teste de verificação se um numero pertence ou não à chave
+    public static boolean pertenceChave(int[] chave, int fix) {
 
-		System.out.println("\n\t\tAposta do totoloto:");
+        boolean pertence = false;
 
-		int j = 0;
-		for (int i = 0; i < 49; i++) {
-			
-			if (i % 7 == 0) {
-				
-				System.out.println();
-			}
+        for (int i = 0; i < fix; i++) {
 
-			if (j < 6) {
-				
-				if (chave[j] == i + 1) {
-					
-					System.out.print("X\t");
-					j++;
-				
-				} else {
+            if (chave[i] == chave[fix]) {
 
-					System.out.printf("%2d\t", i + 1);
-				} 
-			} else {
-				System.out.printf("%2d\t", i+1);
-			}
-		}
+                pertence = true;
+            }
+        }
+        return pertence;
+    }
 
-		System.out.println();
-	}
+    //modulo para imprimir a chave
+    public static void mostraChave(int[] chave) {
+
+        System.out.println("\n\t\tAposta do totoloto:");
+
+        int j = 0;
+        for (int i = 0; i < 49; i++) {
+
+            if (i % 7 == 0) {
+
+                System.out.println();
+            }
+
+            if (j < 6) {
+
+                if (chave[j] == i + 1) {
+
+                    System.out.print("X\t");
+                    j++;
+
+                } else {
+
+                    System.out.printf("%2d\t", i + 1);
+                }
+            } else {
+                System.out.printf("%2d\t", i + 1);
+            }
+        }
+
+        System.out.println();
+    }
 }

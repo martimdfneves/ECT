@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="curso" type="cursoType"/>
+    <xs:complexType name="areasType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="area"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="directorType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="titulo"/>
+            <xs:element type="xs:string" name="nome"/>
+            <xs:element type="xs:string" name="email"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="departamentoType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nome"/>
+            <xs:element type="xs:string" name="url"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="departamentosType">
+        <xs:sequence>
+            <xs:element type="departamentoType" name="departamento"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="mediasType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="fase1"/>
+            <xs:element type="xs:string" name="fase2"/>
+            <xs:element type="xs:string" name="fase3"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="vagasType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="fase1"/>
+            <xs:element type="xs:string" name="fase2"/>
+            <xs:element type="xs:string" name="fase3"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="m23Type">
+        <xs:sequence>
+            <xs:element type="xs:string" name="provas"/>
+            <xs:element type="xs:string" name="vagas"/>
+            <xs:element type="xs:string" name="urlinfo"/>
+            <xs:element type="xs:string" name="observacoes"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="faseType">
+        <xs:sequence>
+            <xs:element name="numero">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="1"/>
+                        <xs:enumeration value="2"/>
+                        <xs:enumeration value="3"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="periodo">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="14/04/2020 a 24/04/2020"/>
+                        <xs:enumeration value="20/07/2020 a 21/08/2020"/>
+                        <xs:enumeration value="14/10/2020 to 18/10/2020"/>
+                        <xs:enumeration value="14/10/2020 a 18/10/2020"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="edital">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5015.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5233.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5017.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5237.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5019.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5173.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5460.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/editais/e_5461.pdf"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ata">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5015.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5233.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5017.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5237.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5019.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5173.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5460.pdf"/>
+                        <xs:enumeration value="https://acesso.ua.pt/upload/atas/a_5461.pdf"/>
+                        <xs:enumeration value=""/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="datainicio">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="2020-03-23"/>
+                        <xs:enumeration value="2020-07-03"/>
+                        <xs:enumeration value="2020-07-02"/>
+                        <xs:enumeration value="2020-10-13"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:string" name="datafim"/>
+            <xs:element type="xs:string" name="vagas"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="fasesType">
+        <xs:sequence>
+            <xs:element type="faseType" name="fase" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="posgraduacoesType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="corpo_docente"/>
+            <xs:element type="xs:string" name="destinatarios"/>
+            <xs:element type="xs:string" name="vagas"/>
+            <xs:element type="xs:string" name="vagas_obs"/>
+            <xs:element type="xs:string" name="urlmobilidade"/>
+            <xs:element type="xs:string" name="ano_info"/>
+            <xs:element type="fasesType" name="fases"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="a3esType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="situacao"/>
+            <xs:element type="xs:string" name="numero"/>
+            <xs:element type="xs:string" name="despacho"/>
+            <xs:element type="xs:string" name="data"/>
+            <xs:element type="xs:string" name="deliberacao"/>
+            <xs:element type="xs:string" name="dr"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="acreditacaoType">
+        <xs:sequence minOccurs="0">
+            <xs:element type="xs:string" name="nome"/>
+            <xs:element type="xs:string" name="texto"/>
+            <xs:element type="xs:string" name="imagem"/>
+            <xs:element type="xs:string" name="url"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="acreditacoesType">
+        <xs:sequence minOccurs="0">
+            <xs:element type="acreditacaoType" name="acreditacao"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="cursoType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="guid"/>
+            <xs:element type="xs:string" name="nome"/>
+            <xs:element type="xs:string" name="nota"/>
+            <xs:element type="xs:string" name="imagem"/>
+            <xs:element type="xs:string" name="codigo"/>
+            <xs:element type="xs:string" name="grau"/>
+            <xs:element type="xs:string" name="grauid"/>
+            <xs:element type="xs:string" name="ciclo"/>
+            <xs:element type="xs:string" name="duracao"/>
+            <xs:element type="xs:string" name="ano_inicio"/>
+            <xs:element type="xs:string" name="regime"/>
+            <xs:element type="xs:string" name="horario"/>
+            <xs:element type="xs:string" name="propinas"/>
+            <xs:element type="xs:string" name="subsistema"/>
+            <xs:element type="areasType" name="areas"/>
+            <xs:element type="directorType" name="director"/>
+            <xs:element type="departamentosType" name="departamentos"/>
+            <xs:element type="mediasType" name="medias"/>
+            <xs:element type="vagasType" name="vagas"/>
+            <xs:element type="xs:string" name="abrecandidaturas"/>
+            <xs:element type="xs:string" name="provas"/>
+            <xs:element type="xs:string" name="ano_info"/>
+            <xs:element type="xs:string" name="saidas_profissionais"/>
+            <xs:element type="xs:string" name="objectivos"/>
+            <xs:element type="xs:string" name="observacoes"/>
+            <xs:element type="xs:string" name="testemunho"/>
+            <xs:element type="xs:string" name="pre_requisitos"/>
+            <xs:element type="xs:string" name="local"/>
+            <xs:element type="xs:string" name="urlmaisinfo"/>
+            <xs:element type="xs:string" name="urlcandidaturas"/>
+            <xs:element type="xs:string" name="urlmobilidade"/>
+            <xs:element type="m23Type" name="m23"/>
+            <xs:element type="posgraduacoesType" name="posgraduacoes"/>
+            <xs:element type="a3esType" name="a3es"/>
+            <xs:element type="acreditacoesType" name="acreditacoes"/>
+            <xs:element type="xs:string" name="ultimaalteracao"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -6,75 +6,75 @@ public class E509 {
 
     public static void main(String args[]) {
 
-		int num, primos;
+        int num, primos;
 
-		System.out.println("Programa para verificar quais os números primos entre 1 e x.");
-		System.out.println("------------------------------------------------------------\n");
+        System.out.println("Programa para verificar quais os números primos entre 1 e x.");
+        System.out.println("------------------------------------------------------------\n");
 
-		//testa pra ver se o max é positivo
-		do {
+        //testa pra ver se o max é positivo
+        do {
 
-			System.out.print("Qual o número máximo que queres ver? ");
-			num = keys.nextInt();
+            System.out.print("Qual o número máximo que queres ver? ");
+            num = keys.nextInt();
 
-			if (num <= 1) {
+            if (num <= 1) {
 
-				System.out.println("Número não aceite, coloque um número positivo.\n");
+                System.out.println("Número não aceite, coloque um número positivo.\n");
 
-			}
+            }
 
-		} while(num <= 1);	
+        } while (num <= 1);
 
-		//o 2é aquele madfaka
-		System.out.println("\nNúmeros primos: ");
+        //o 2é aquele madfaka
+        System.out.println("\nNúmeros primos: ");
 
-		primos = 2;
-		
-		System.out.println("\nPrimo # 1:  2");
+        primos = 2;
 
-		for (int i = 2; i <= num; i++) {
+        System.out.println("\nPrimo # 1:  2");
 
-		    if (primo(i)) {
+        for (int i = 2; i <= num; i++) {
 
-				System.out.printf("Primo #%2d: %2d\n", primos, i);
-				primos++;
+            if (primo(i)) {
 
-		    }
+                System.out.printf("Primo #%2d: %2d\n", primos, i);
+                primos++;
 
-		}
+            }
 
-		System.out.println();
+        }
+
+        System.out.println();
 
     }
 
     //testa se é primo
-    public static boolean primo (int num) {
+    public static boolean primo(int num) {
 
-    	boolean prime = true;
+        boolean prime = true;
 
-		if (num % 2 == 0) {
+        if (num % 2 == 0) {
 
-		    prime = false;
+            prime = false;
 
-		}
+        }
 
-		for (int i = 2; i < num; i++) {
+        for (int i = 2; i < num; i++) {
 
-		    if (num % i == 0) {
+            if (num % i == 0) {
 
-				prime = false;
+                prime = false;
 
-				break;
+                break;
 
-		    } else {
+            } else {
 
-				prime = true;
+                prime = true;
 
-		    }
+            }
 
-		}
+        }
 
-		return prime;
+        return prime;
 
     }
 
