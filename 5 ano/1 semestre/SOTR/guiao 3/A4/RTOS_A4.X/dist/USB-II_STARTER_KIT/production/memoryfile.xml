@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/USB-II_STARTER_KIT/production/RTOS_A4.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>531968</length>                 
+      <used>66216</used>                     
+      <free>465752</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>29605</used>                     
+      <free>101467</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
