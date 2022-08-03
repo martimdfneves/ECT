@@ -1,0 +1,8 @@
+sshpass -f password ssh sd111@l040101-ws01.ua.pt 'rm -rf test/'
+sshpass -f password ssh sd111@l040101-ws02.ua.pt 'rm -rf test/'
+sshpass -f password ssh sd111@l040101-ws03.ua.pt 'rm -rf test/'
+sshpass -f password ssh sd111@l040101-ws04.ua.pt 'rm -rf test/'
+sshpass -f password ssh sd111@l040101-ws05.ua.pt 'rm -rf test/'
+sshpass -f password ssh sd111@l040101-ws06.ua.pt 'rm -rf test/'
+sshpass -f password ssh sd111@l040101-ws07.ua.pt 'rm -rf test/'
+sshpass -f password ssh sd111@l040101-ws09.ua.pt 'rm -rf rmiregistry.sh test/'

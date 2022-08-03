@@ -1,0 +1,5 @@
+                                          The Restaurant - Description of the internal state
+
+Chef   Waiter  Stu0   Stu1   Stu2   Stu3   Stu4   Stu5   Stu6  NCourse  NPortion           Table
+State  State  State  State  State  State  State  State  State                     Seat0 Seat1 Seat2 Seat3 Seat4 Seat5 Seat6
+WAFOR  APPST  GGTRT  GGTRT  GGTRT  GGTRT  GGTRT  GGTRT  GGTRT     0        0        _     _     _     _     _     _     _  

@@ -1,0 +1,79 @@
+// CHEF'S LIFE CYCLE
+
+boolean firstCourse = true
+
+Kit.watchTheNews()
+Kit.startPreparation()
+
+do
+	if(not firstCourse)
+		Kit.continuePreparation()
+	else
+		firstCourse = false
+
+	Kit.proceedToPresentation()
+	Bar.alertTheWaiter()
+
+	while(not Kit.haveAllPortionsBeenDelivered())
+		Kit.haveNextPortionReady()
+		Bar.alertTheWaiter()
+
+while(not Kit.hasTheOrderBeenCompleted())
+
+Kit.cleanUp()
+
+
+
+// WAITER'S LIFE CYCLE
+
+while(not Bar.sayGoodbye())
+
+	int c = Bar.lookAround()
+	switch(c)
+		case 1:	Tab.saluteTheClient()
+	
+		case 2:	Bar.getThePad()
+			Kit.handTheNoteToTheChef()
+	
+		case 3:	while(not haveAllClientsBeenServer())
+				Bar.collectPortion()
+				Tab.deliverPortion()
+	
+		case 4:	Bar.prepareTheBill()
+			Tab.presentTheBill()
+	
+		case 5: sayGoodbye()
+	
+	Bar.returnToTheBar()
+
+
+
+// STUDENT'S LIFE CYCLE
+
+id = self.id
+
+Tab.walkABit()
+Tab.enter()
+Tab.readTheMenu()
+
+if(Tab.firstPerson(id))
+	while(not Tab.hasEverybodyChosen())
+		Tab.addUpOnesChoice()
+	Tab.callTheWaiter()
+	Tab.describeTheOrder()
+	Tab.joinTheTalk()
+else
+	Tab.informCompanion()
+	Tab.joinTheTalk()
+
+Tab.startEating()
+Tab.endEating()
+
+while(not hasEverybodyFinished())
+
+Tab.signalTheWaiter()
+
+if(Tab.shouldHaveArrivedEarlier(id))
+	Tab.honourTheBill()
+
+Tab.exit()

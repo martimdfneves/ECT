@@ -1,0 +1,2 @@
+./buildAndGenerateLocal.sh
+./deployAndRun.sh
