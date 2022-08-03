@@ -1,0 +1,8 @@
+# ignore /build, /dist, /laneMerge.egg-info directories created when doing the setup.py installation
+
+build/
+dist/
+laneMerge.egg-info/
+
+# ignore __pycache__ directory created when executing the main script
+__pycache__/

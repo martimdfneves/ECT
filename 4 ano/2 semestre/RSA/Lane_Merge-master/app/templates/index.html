@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lane Merge</title>
+        <link rel="icon" type="image/x-icon" href="static/web_app_icon.jpeg">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT6ZFUslt5wqq1NYoljrPZyyYvAlLRddU&libraries=visualization" async></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <script src="https://kit.fontawesome.com/e347a7d6fb.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+        <script>
+            // An array with all the OBUs
+            var OBUs = []
+            
+            // Create an info window to share between markers.
+            const infoWindow = new google.maps.InfoWindow();
+           
+            // Initializate the map
+            function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 20,
+                    center: {lat: 40.640259, lng: -8.663455},
+                    mapTypeId: "satellite",
+                    streetViewControl: false,
+                    fullscreenControl: false,
+                    mapTypeControl: false,
+                    zoomControl: false,
+                    scrollwheel: false
+                });
+
+                // RSU 
+                var rsu_pos = JSON.parse('{{rsu_pos}}');
+
+                const rsu = new google.maps.Marker({
+                    position: new google.maps.LatLng(rsu_pos[0], rsu_pos[1]),
+                    map: map,
+                    icon: {
+                        url: "static/rsu.png",
+                        scaledSize: new google.maps.Size(60, 60)
+                    },
+                    title: "RSU",
+                });
+            
+                rsu.addListener("click", () => {
+                    infoWindow.close();
+                    infoWindow.setContent(rsu.getTitle());
+                    infoWindow.open(rsu.getMap(), rsu);
+                });
+
+                // OBU 1 
+                var start_obu_1 = JSON.parse('{{obu_1_start_pos}}');
+
+                var obu_1 = new google.maps.Marker({
+                    position: new google.maps.LatLng(start_obu_1[0], start_obu_1[1]),
+                    map: map,
+                    icon: {
+                        url: "static/vehicle_4.png",
+                        scaledSize: new google.maps.Size(50, 50)
+                    },
+                    title: "OBU_1",
+                });
+
+                obu_1.addListener("click", () => {
+                    infoWindow.close();
+                    infoWindow.setContent(obu_1.getTitle());
+                    infoWindow.open(obu_1.getMap(), obu_1);
+                });
+                OBUs.push(obu_1)
+
+                // OBU 2
+                var start_obu_2 = JSON.parse('{{obu_2_start_pos}}');
+
+                var obu_2 = new google.maps.Marker({
+                    position: new google.maps.LatLng(start_obu_2[0], start_obu_2[1]),
+                    map: map,
+                    icon: {
+                        url: "static/vehicle_5.png",
+                        scaledSize: new google.maps.Size(50, 50)
+                    },
+                    title: "OBU_2",
+                });
+            
+                obu_2.addListener("click", () => {
+                    infoWindow.close();
+                    infoWindow.setContent(obu_2.getTitle());
+                    infoWindow.open(obu_2.getMap(), obu_2);
+                });
+                OBUs.push(obu_2)
+        
+                // To update the coordinates of the OBUs to the actual state at the refresh rate indicated
+                setInterval(updateCoordinates, JSON.parse('{{refresh_rate}}'))
+
+                // To update the coordinates of the OBUs to the actual state
+                function updateCoordinates() {
+                    $.get('/update_map', {}, function (data) {
+                        for(i = 0; i < OBUs.length; i++){
+                            obu = OBUs[i];
+                            // OBU 1
+                            if(i == 0){
+                                obu.setPosition(new google.maps.LatLng(data.OBU_1.actual_pos[0], data.OBU_1.actual_pos[1]));
+                                document.getElementById('obu_1').innerText = data.OBU_1.speed + " km/h";
+                                document.getElementById('obu_1_state').innerText = data.OBU_1.state;
+                            }
+                            // OBU 2
+                            else if(i == 1){
+                                obu.setPosition(new google.maps.LatLng(data.OBU_2.actual_pos[0], data.OBU_2.actual_pos[1]));
+                                document.getElementById('obu_2').innerText = data.OBU_2.speed + " km/h";
+                                document.getElementById('obu_2_state').innerText = data.OBU_2.state;
+
+                            }
+                            // OBU 3
+                            else if(i == 2){
+                                obu.setPosition(new google.maps.LatLng(data.OBU_3.actual_pos[0], data.OBU_3.actual_pos[1]));
+                                document.getElementById('obu_3').innerText = data.OBU_3.speed + " km/h";
+                                document.getElementById('obu_3_state').innerText = data.OBU_3.state;
+                            }
+                            // OBU 4
+                            else if(i == 3){
+                                obu.setPosition(new google.maps.LatLng(data.OBU_4.actual_pos[0], data.OBU_4.actual_pos[1]));
+                                document.getElementById('obu_4').innerText = data.OBU_4.speed + " km/h";
+                                document.getElementById('obu_4_state').innerText = data.OBU_4.state;
+                            }
+                        }
+                    });
+                }
+            }
+            
+            var onGoing = false;
+            var stop = 0;
+
+            // To update the map with the OBUs information
+            function updateMap(sub){  
+                if(onGoing == true){
+                    swal({
+                        title: "Lane Merge",
+                        text: "To change the OBUs number of the simulation press the stop button first an then the reset button!",
+                        icon: "warning",
+                    });
+                }         
+                else{
+                    var num = document.getElementById('num').innerText;
+                    
+                    if(num == 2 && sub == -1){
+                        tot_obus = 2;
+                    }
+                    else if(num == 4 && sub == 1){
+                        tot_obus = 4;
+                    }
+                    else{
+                        tot_obus = parseInt(num) + parseInt(sub);
+                    }
+
+                    // Some OBUs are added
+                    if(OBUs.length < tot_obus){
+                        // Going to add OBU 3
+                        if(OBUs.length == 2){
+                            const obu_3 = new google.maps.Marker({
+                                position: new google.maps.LatLng(40.640633, -8.662941),
+                                map: map,
+                                icon: {
+                                    url: "static/vehicle_2.png",
+                                    scaledSize: new google.maps.Size(50, 50)
+                                },
+                                title: "OBU_3",
+                            });
+            
+                            obu_3.addListener("click", () => {
+                                infoWindow.close();
+                                infoWindow.setContent(obu_3.getTitle());
+                                infoWindow.open(obu_3.getMap(), obu_3);
+                            });
+
+                            OBUs.push(obu_3);
+                        }
+                        // Going to add OBU 4
+                        else if(OBUs.length == 3){
+                            const obu_4 = new google.maps.Marker({
+                                position: new google.maps.LatLng(40.640544, -8.663062),
+                                map: map,
+                                icon: {
+                                    url: "static/vehicle_3.png",
+                                    scaledSize: new google.maps.Size(50, 50)
+                                },
+                                title: "OBU_4",
+                            });
+                        
+                            obu_4.addListener("click", () => {
+                                infoWindow.close();
+                                infoWindow.setContent(obu_4.getTitle());
+                                infoWindow.open(obu_4.getMap(), obu_4);
+                            });
+
+                            OBUs.push(obu_4);
+                        }
+                    }
+                    // Some OBUs are deleted
+                    else if(OBUs.length > tot_obus){                    
+                        // Going to delete OBU 3
+                        if(OBUs.length == 3){
+                            OBUs[OBUs.length-1].setMap(null)
+                            OBUs.pop();
+                            document.getElementById('obu_3').innerText = "-- km/h";
+                            document.getElementById('obu_3_state').innerText = "-------";
+                        }
+                        // Going to delete OBU 4
+                        else if(OBUs.length == 4){
+                            OBUs[OBUs.length-1].setMap(null)
+                            OBUs.pop();
+                            document.getElementById('obu_4').innerText = "-- km/h";
+                            document.getElementById('obu_4_state').innerText = "-------";
+                        }
+                    }                
+                    $.post('/update_num_obus', {"msg": OBUs.length});
+                }
+            }
+
+            var count = 0;
+
+            // The start button pressed event
+            function startPressed() {
+                var data = "Start Pressed";
+                count++; 
+                $.post('/update_start_state', {"msg": data, "count": count});
+                onGoing = true;
+            }
+
+            // The stop button pressed event
+            function stopPressed() {
+                var data = "Stop Pressed";
+                $.post('/update_start_state', {"msg": data});
+                stop = 1;
+            }
+
+            // The reset button pressed event
+            function resetPressed() {
+                var data = "Reset Pressed";
+                if(stop == 1){
+                    $.post('/update_start_state', {"msg": data});
+                    stop = 0;
+                    onGoing = false;
+                }
+                else{
+                    swal({
+                        title: "Lane Merge",
+                        text: "To reset the simulation press the stop button first!",
+                        icon: "warning",
+                    });
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="initMap()">
+        <!-- Navbar -->
+        <div class="topnav">
+            <a><img src="static/logo.png" style="width: 305px; height: 80px;"></a>
+        </div>
+        
+        <div>
+            <div class="split left">
+                <h1><i class="fa-solid fa-circle-info fa-xs"></i> Informations</h1>
+
+                <!-- OBU 1 Informations -->
+                <h3>OBU_1</h3>
+                <div class="info">
+                    <p>
+                        <i class="fa-solid fa-gauge-high"></i> <span id="obu_1"> -- km/h </span> &emsp;
+                        <i class="fa-solid fa-car-side"></i> <span id="obu_1_state"> ------- </span>
+                    </p>
+                </div>
+                <hr>
+
+                <!-- OBU 2 Informations -->
+                <h3>OBU_2</h3>
+                <div class="info">
+                    <p>
+                        <i class="fa-solid fa-gauge-high"></i> <span id="obu_2"> -- km/h </span> &emsp; 
+                        <i class="fa-solid fa-car-side"></i> <span id="obu_2_state"> ------- </span>
+                    </p>
+                </div>
+                <hr>
+
+                <!-- OBU 3 Informations -->
+                <h3>OBU_3</h3>
+                <div class="info">
+                    <p>
+                        <i class="fa-solid fa-gauge-high"></i> <span id="obu_3"> -- km/h </span> &emsp;
+                        <i class="fa-solid fa-car-side"></i> <span id="obu_3_state"> ------- </span>
+                    </p>
+                </div>
+                <hr>
+
+                <!-- OBU 4 Informations -->
+                <h3>OBU_4</h3>
+                <div class="info">
+                    <p>
+                        <i class="fa-solid fa-gauge-high"></i> <span id="obu_4"> -- km/h </span> &emsp;
+                        <i class="fa-solid fa-car-side"></i> <span id="obu_4_state"> ------- </span>
+                    </p>
+                </div>
+                <hr>
+
+                <p style="text-align: center; margin-bottom: 0px"><b>Notes:</b> To reset the simulation press the</p>
+                <p style="text-align: center; margin-top: 0px; margin-bottom: 0px"> stop button first.To change the number of OBUs</p>
+                <p style="text-align: center; margin-top: 0px">press the stop first and then the reset button.</p>
+                <div class="buttons"">
+                    <button type="button" class="button" onclick="startPressed()">Start</button>
+                    <button type="button" class="button" onclick="stopPressed()">Stop</button>
+                    <button type="button" class="button" onclick="resetPressed()">Reset</button>
+                </div>
+
+                <h3 style="margin-top: 12px; margin-bottom: 5px">Number of OBUs</h3>
+                <div class="wrapper">
+                    <span class="minus" id="minus" onclick="updateMap(-1)">-</span>
+                    <span class="num" id="num"">2</span>
+                    <span class="plus" id="plus" onclick="updateMap(+1)">+</span>
+                </div>
+
+                <!-- Script to change the number of OBUs with the '+' and '-' buttons -->
+                <script>
+                    const plus = document.querySelector(".plus"),
+                         minus = document.querySelector(".minus"),
+                           num = document.querySelector(".num");
+                                    
+                    let a = 2;
+
+                    plus.addEventListener("click", ()=>{
+                        if(onGoing == false){
+                            if(a < 4){
+                                a++;
+                                num.innerText = a;
+                            }
+                        }
+                    })
+                    minus.addEventListener("click", ()=>{
+                        if(onGoing == false){
+                            if(a > 2){
+                                a--;
+                                num.innerText = a;
+                            }
+                        }
+                    })
+                </script>
+            </div>
+
+            <div class="split right">
+                <div id='map'></div>
+            </div> 
+        </div>
+        
+        <div class="footer">
+            <p>Martim Neves & Tiago Dias<br>
+            TP1 - G04<br>
+            <span>&copy;</span> RSA - 2021/2022</p>
+        </div>
+    </body>
+</html>

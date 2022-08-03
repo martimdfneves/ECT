@@ -1,0 +1,86 @@
+version: '2.4'
+services:
+    rsu:
+        hostname: rsu
+        image: vanetza:test
+        environment:
+            - VANETZA_STATION_ID=0
+            - VANETZA_STATION_TYPE=15
+            - VANETZA_MAC_ADDRESS=6e:06:e0:03:00:01
+            - VANETZA_INTERFACE=eth0
+            - START_EMBEDDED_MOSQUITTO=true
+            - VANETZA_CAM_PERIODICITY=0 
+        networks:
+            vanetzalan0:
+                ipv4_address: 192.168.98.10
+        sysctls:      
+            kernel.msgmax:  16384
+
+    obu_1:
+        hostname: obu_1
+        image: vanetza:test
+        environment:
+            - VANETZA_STATION_ID=1
+            - VANETZA_STATION_TYPE=5
+            - VANETZA_MAC_ADDRESS=6e:06:e0:03:00:02
+            - VANETZA_INTERFACE=eth0
+            - START_EMBEDDED_MOSQUITTO=true
+            - VANETZA_CAM_PERIODICITY=0 
+        networks:
+            vanetzalan0:
+                ipv4_address: 192.168.98.20
+        sysctls:      
+            kernel.msgmax:  16384
+
+    obu_2:
+        hostname: obu_2
+        image: vanetza:test
+        environment:
+            - VANETZA_STATION_ID=2
+            - VANETZA_STATION_TYPE=5
+            - VANETZA_MAC_ADDRESS=6e:06:e0:03:00:03
+            - VANETZA_INTERFACE=eth0
+            - START_EMBEDDED_MOSQUITTO=true
+            - VANETZA_CAM_PERIODICITY=0 
+        networks:
+            vanetzalan0:
+                ipv4_address: 192.168.98.21
+        sysctls:      
+            kernel.msgmax:  16384
+            
+    obu_3:
+        hostname: obu_3
+        image: vanetza:test
+        environment:
+            - VANETZA_STATION_ID=3
+            - VANETZA_STATION_TYPE=5
+            - VANETZA_MAC_ADDRESS=6e:06:e0:03:00:04
+            - VANETZA_INTERFACE=eth0
+            - START_EMBEDDED_MOSQUITTO=true
+            - VANETZA_CAM_PERIODICITY=0 
+        networks:
+            vanetzalan0:
+                ipv4_address: 192.168.98.22
+        sysctls:      
+            kernel.msgmax:  16384
+            
+    obu_4:
+        hostname: obu_4
+        image: vanetza:test
+        environment:
+            - VANETZA_STATION_ID=4
+            - VANETZA_STATION_TYPE=5
+            - VANETZA_MAC_ADDRESS=6e:06:e0:03:00:05
+            - VANETZA_INTERFACE=eth0
+            - START_EMBEDDED_MOSQUITTO=true
+            - VANETZA_CAM_PERIODICITY=0 
+        networks:
+            vanetzalan0:
+                ipv4_address: 192.168.98.23
+        sysctls:      
+            kernel.msgmax:  16384
+            
+networks:
+  vanetzalan0:
+    external: true
+    name: vanetzalan0
