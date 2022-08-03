@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar 21 11:30:13 2022
+# Process ID: 4132
+# Current directory: C:/Users/marti/Desktop/Uni/5 ano/2 semestre/CR/guiao 2/exe2/exe2.runs/synth_1
+# Command line: vivado.exe -log wrapper_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrapper_4.tcl
+# Log file: C:/Users/marti/Desktop/Uni/5 ano/2 semestre/CR/guiao 2/exe2/exe2.runs/synth_1/wrapper_4.vds
+# Journal file: C:/Users/marti/Desktop/Uni/5 ano/2 semestre/CR/guiao 2/exe2/exe2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source wrapper_4.tcl -notrace
