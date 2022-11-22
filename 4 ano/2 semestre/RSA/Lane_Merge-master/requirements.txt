@@ -51,7 +51,7 @@ olefile==0.46
 paho-mqtt==1.6.1
 paramiko==2.9.3
 pexpect==4.8.0
-Pillow==9.0.1
+Pillow==9.3.0
 protobuf==3.12.4
 ptyprocess==0.7.0
 pycairo==1.20.1
